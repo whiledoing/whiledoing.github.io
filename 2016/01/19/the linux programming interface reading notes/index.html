@@ -9,10 +9,12 @@
   <meta name="description" content="这是自己学习the linux programming interface一书的读书笔记。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="the linux programming interface reading notes">
-<meta property="og:url" content="http://yoursite.com/2016/01/18/the linux programming interface reading notes/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/01/19/the linux programming interface reading notes/index.html">
 <meta property="og:site_name" content="whiledoing">
 <meta property="og:description" content="这是自己学习the linux programming interface一书的读书笔记。">
-<meta property="og:updated_time" content="2016-01-18T11:06:11.000Z">
+<meta property="og:image" content="http://static.zybuluo.com/whiledoing/jmxuf3m6ucbw73ur278hbyff/Screen%20Shot%202016-01-19%20at%2010.30.04%20PM.png">
+<meta property="og:image" content="http://static.zybuluo.com/whiledoing/hr3ulnfsqr7jppze8o6zibgk/Screen%20Shot%202016-01-19%20at%2010.29.27%20PM.png">
+<meta property="og:updated_time" content="2016-01-19T15:01:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="the linux programming interface reading notes">
 <meta name="twitter:description" content="这是自己学习the linux programming interface一书的读书笔记。">
@@ -166,8 +168,8 @@
       <div class="body-wrap"><article id="post-the linux programming interface reading notes" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/18/the linux programming interface reading notes/" class="article-date">
-  	<time datetime="2016-01-18T11:05:45.000Z" itemprop="datePublished">2016-01-18</time>
+      <a href="/2016/01/19/the linux programming interface reading notes/" class="article-date">
+  	<time datetime="2016-01-19T15:00:58.000Z" itemprop="datePublished">2016-01-19</time>
 </a>
     </div>
   
@@ -212,6 +214,8 @@
 </li>
 <li><a href="/#chapter-61-socket-&#x9AD8;&#x7EA7;&#x4E3B;&#x9898;">chapter 61 - socket: &#x9AD8;&#x7EA7;&#x4E3B;&#x9898;</a><ul>
 <li><a href="/#&#x6DF1;&#x5165;&#x63A2;&#x8BA8;tcp&#x7684;&#x534F;&#x8BAE;">&#x6DF1;&#x5165;&#x63A2;&#x8BA8;TCP&#x7684;&#x534F;&#x8BAE;</a></li>
+<li><a href="/#tcp&#x7684;&#x72B6;&#x6001;">TCP&#x7684;&#x72B6;&#x6001;</a></li>
+<li><a href="/#netstat">netstat</a></li>
 </ul>
 </li>
 </ul>
@@ -307,6 +311,40 @@
 </ul>
 </li>
 </ol>
+<h3 id="tcp&#x7684;&#x72B6;&#x6001;"><a href="#TCP_u7684_u72B6_u6001" class="headerlink" title="TCP&#x7684;&#x72B6;&#x6001;"></a>TCP&#x7684;&#x72B6;&#x6001;</h3><p>TCP&#x4F7F;&#x7528;<strong>&#x72B6;&#x6001;&#x673A;</strong>&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7EF4;&#x62A4;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x72B6;&#x6001;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x7CFB;&#x53EF;&#x4EE5;&#x7528;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x6765;&#x8868;&#x793A;&#xFF1A;1&#xFF09;&#x8FDE;&#x63A5; 2&#xFF09;&#x5173;&#x95ED;</p>
+<p>&#x8FDE;&#x63A5;&#x7684;&#x60C5;&#x51B5;&#x53C2;&#x8003;&#x4E66;&#x4E2D;&#x7684;&#x622A;&#x56FE;&#xFF1A;</p>
+<center><br><img src="http://static.zybuluo.com/whiledoing/jmxuf3m6ucbw73ur278hbyff/Screen%20Shot%202016-01-19%20at%2010.30.04%20PM.png" alt="Screen Shot 2016-01-19 at 10.30.04 PM.png-220.3kB"><br></center>
+
+<p>&#x5176;&#x4E2D;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#x7684;&#x6D41;&#x7A0B;&#x662F;&#xFF1A;</p>
+<ol>
+<li><code>LISTEN</code>&#x72B6;&#x6001;&#x7684;&#x670D;&#x52A1;&#x7AEF;&#x7B49;&#x5F85;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8FDE;&#x63A5;&#x3002;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x8FDE;&#x63A5;&#x8FDB;&#x5165;<code>SYN_SENT</code>&#x72B6;&#x6001;&#xFF0C;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x9001;&#x4E00;&#x4E2A;<code>syn m</code>&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5EA6;&#x81EA;&#x5DF1;&#x5305;&#x7684;&#x5E8F;&#x53F7;</li>
+<li>&#x670D;&#x52A1;&#x5EA6;&#x6536;&#x5230;<code>syn m</code>&#x6D88;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x8FDB;&#x5165;&#x5230;<code>SYN_RECV</code>&#x72B6;&#x6001;&#xFF0C;&#x7136;&#x540E;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x4E00;&#x4E2A;<code>ack m+1, syn n</code>&#x6D88;&#x606F;&#xFF0C;&#x8868;&#x793A;&#x81EA;&#x5DF1;&#x6536;&#x5230;&#x4E86;<code>syn m</code>&#x6D88;&#x606F;&#xFF0C;&#x540C;&#x65F6;&#x786E;&#x8BA4;&#x4E0B;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x6536;&#x5230;&#x7684;&#x5305;&#x7684;<code>ack</code>&#x5C31;&#x662F;<code>m+1</code>&#xFF0C;&#x540C;&#x65F6;&#x544A;&#x8BC9;&#x5BA2;&#x6237;&#x7AEF;&#x81EA;&#x5DF1;&#x7684;&#x5305;&#x7684;&#x7F16;&#x53F7;&#x3002;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x6536;&#x5230;&#x670D;&#x52A1;&#x7AEF;&#x7684;<code>ack m+1, syn n</code>&#x6D88;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x8FDB;&#x5165;&#x5230;<code>ESTABLISHED</code>&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5E76;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;&#x4E00;&#x4E2A;<code>ack n+1</code>&#x7684;&#x53CD;&#x9988;&#x3002;</li>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x8FDB;&#x5165;&#x5230;<code>ESTABLISHED</code>&#x7684;&#x72B6;&#x6001;&#x3002;</li>
+</ol>
+<p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x4E3B;&#x8981;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#xFF1A;&#x5173;&#x95ED;&#x8FDE;&#x63A5;</p>
+<center><br><img src="http://static.zybuluo.com/whiledoing/hr3ulnfsqr7jppze8o6zibgk/Screen%20Shot%202016-01-19%20at%2010.29.27%20PM.png" alt="Screen Shot 2016-01-19 at 10.29.27 PM.png-214.6kB"><br></center>
+
+<p>&#x5BF9;&#x5E94;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#xFF1A;</p>
+<ol>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x7528;<code>close()</code>&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#xFF0C;&#x8FDB;&#x5165;&#x5230;<code>FIN_WAIT1</code>&#x7684;&#x72B6;&#x6001;&#xFF08;FIN&#x5176;&#x5B9E;&#x5C31;&#x662F;finish&#x7684;&#x610F;&#x601D;&#xFF09;</li>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x6536;&#x5230;&#x540E;&#xFF0C;&#x8FDB;&#x5165;&#x5230;<code>CLOSE_WAIT</code>&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x7136;&#x540E;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x4E00;&#x4E2A;&#x56DE;&#x6267;ack</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x6536;&#x5230;&#x56DE;&#x6267;ack&#x4E4B;&#x540E;&#xFF0C;&#x8FDB;&#x5165;&#x5230;<code>FIN_WAIT2</code>&#x72B6;&#x6001;&#x3002;</li>
+<li>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x670D;&#x52A1;&#x7AEF;&#x8FDB;&#x884C;&#x4E00;&#x5B9A;&#x7684;<code>close()</code>&#x4E4B;&#x524D;&#x5904;&#x7406;&#xFF0C;&#x4E4B;&#x540E;&#x8C03;&#x7528;<code>close()</code>&#x64CD;&#x4F5C;&#xFF0C;&#x5E76;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x4E00;&#x4E2A;FIN&#xFF0C;&#x7136;&#x540E;&#x81EA;&#x5DF1;&#x8FDB;&#x5165;&#x5230;<code>LAST_ACK</code>&#x72B6;&#x6001;&#xFF08;&#x5E94;&#x8BE5;&#x662F;&#x7B49;&#x5F85;&#x6536;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;ack&#x7684;&#x72B6;&#x6001;&#xFF09;&#x3002;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x6536;&#x5230;FIN&#x4E4B;&#x540E;&#xFF0C;&#x8FDB;&#x5165;&#x5230;<code>TIME_WAIT</code>&#x72B6;&#x6001;&#xFF0C;&#x5E76;&#x4E14;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x9001;&#x6536;&#x5230;FIN&#x6D88;&#x606F;&#x7684;ack</li>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x6536;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x7684;ack&#x4E4B;&#x540E;&#xFF0C;&#x8FDB;&#x5165;&#x5230;<code>CLOSE</code>&#x72B6;&#x6001;&#x3002;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x7B49;&#x5F85;<strong>2&#x4E2A;MTL&#xFF08;&#x62A5;&#x6587;&#x6700;&#x5927;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#xFF09;</strong>&#x4E4B;&#x540E;&#xFF0C;&#x8FDB;&#x5165;&#x5230;<code>CLOSE</code>&#x72B6;&#x6001;&#x3002;</li>
+</ol>
+<p>&#x53EA;&#x6240;&#x4EE5;&#x8981;&#x4FDD;&#x5B58;&#x4E00;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#xFF08;&#x5C31;&#x662F;<code>TIME_WAIT</code>&#x72B6;&#x6001;&#xFF09;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x539F;&#x56E0;&#xFF1A;</p>
+<ol>
+<li>&#x786E;&#x4FDD;&#x8FDE;&#x63A5;&#x7EC8;&#x6B62;&#x3002;&#x5982;&#x679C;&#x6700;&#x540E;&#x7684;&#x670D;&#x52A1;&#x7AEF;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x7684;ack&#x6CA1;&#x6709;&#x6536;&#x5230;&#xFF0C;&#x90A3;&#x4E48;&#x670D;&#x52A1;&#x7AEF;&#x4F1A;&#x91CD;&#x65B0;&#x53D1;&#x9001;fin&#x6D88;&#x606F;&#xFF0C;&#x90A3;&#x4E48;&#x5BA2;&#x6237;&#x7AEF;&#x518D;<code>TIME_WAIT</code>&#x72B6;&#x6001;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x53D1;&#x9001;&#x4E00;&#x4E2A;ack&#x3002;&#x6240;&#x4EE5;2&#x4E2A;MTL&#x5C31;&#x662F;&#x4FDD;&#x8BC1;&#x7B2C;&#x4E00;&#x4E2A;ack&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x65F6;&#x95F4;&#xFF08;&#x5047;&#x8BBE;&#x66F4;&#x597D;&#x6CA1;&#x6709;&#x8D76;&#x4E0A;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x52A0;&#x4E0A;&#x670D;&#x52A1;&#x7AEF;&#x91CD;&#x65B0;&#x53D1;&#x9001;fin&#x7684;&#x65F6;&#x95F4;&#x3002;</li>
+<li>&#x4FDD;&#x8BC1;&#x8001;&#x7684;&#x91CD;&#x590D;&#x62A5;&#x6587;&#x5931;&#x6548;&#x3002;&#x56E0;&#x4E3A;&#x52A0;&#x5165;&#x4E86;&#x7F13;&#x5B58;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x4E0D;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x5360;&#x7528;&#x8BE5;socket&#x7AEF;&#x53E3;&#xFF0C;&#x90A3;&#x4E48;&#x65E7;&#x7684;&#x6570;&#x636E;&#x5305;&#x5C31;&#x4F1A;&#x53D1;&#x9001;&#x5230;&#x65E7;&#x8FDE;&#x63A5;&#x4E2D;&#xFF08;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;<code>SO_REUSEADDR</code>&#x53C2;&#x6570;&#x6765;&#x8986;&#x76D6;wait&#x72B6;&#x6001;&#x7684;socket&#xFF0C;&#x540C;&#x65F6;&#x5141;&#x8BB8;&#x4F7F;&#x7528;TIME_WAIT&#x63D0;&#x9AD8;&#x53EF;&#x9760;&#x6027;&#xFF09;</li>
+</ol>
+<h3 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h3><p>&#x4F7F;&#x7528;<code>netstat</code>&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x53C2;&#x770B;&#x7CFB;&#x7EDF;&#x7684;socket&#x72B6;&#x6001;&#xFF1A;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">netstat <span class="operator">-a</span> <span class="comment"># &#x5F97;&#x5230;&#x5F53;&#x524D;&#x6240;&#x6709;&#x7684;socket&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x76D1;&#x542C;</span></span><br><span class="line">netstat <span class="operator">-l</span> <span class="comment"># &#x5F97;&#x5230;&#x76D1;&#x542C;&#x5957;&#x63A5;&#x5B57;</span></span><br><span class="line">netstat <span class="operator">-e</span> <span class="comment"># &#x5F97;&#x5230;&#x6269;&#x5C55;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x6240;&#x5C5E;&#x7684;&#x7528;&#x6237;</span></span><br><span class="line">netstat -n <span class="comment"># &#x4F7F;&#x7528;ip&#x5730;&#x5740;&#xFF0C;&#x7AEF;&#x53E3;&#x53F7;&#x663E;&#x793A;&#xFF0C;&#x800C;&#x4E0D;&#x662F;hostname&#xFF0C;servicename&#x5F62;&#x5F0F;</span></span><br><span class="line">netstat -p <span class="comment"># &#x663E;&#x793A;&#x51FA;&#x8FDB;&#x7A0B;ID&#x53F7;&#x548C;&#x8FDB;&#x7A0B;&#x540D;&#x5B57;</span></span><br><span class="line">netstat --tcp --udp --unix <span class="comment">#&#x53EA;&#x663E;&#x793A;&#x5BF9;&#x5E94;&#x7C7B;&#x578B;&#x7684;&#x5957;&#x63A5;&#x5B57;</span></span><br></pre></td></tr></table></figure>
+<p>&#x6240;&#x4EE5;&#x6BD4;&#x5982;&#x67E5;&#x770B;python&#x5199;&#x7684;&#x670D;&#x52A1;&#x5668;&#x76D1;&#x542C;&#x7684;tcp&#x5957;&#x63A5;&#x5B57;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -alnp --tcp | grep python</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -343,7 +381,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="the linux programming interface reading notes" data-title="the linux programming interface reading notes" data-url="http://yoursite.com/2016/01/18/the linux programming interface reading notes/"></div>
+	<div class="ds-thread" data-thread-key="the linux programming interface reading notes" data-title="the linux programming interface reading notes" data-url="http://yoursite.com/2016/01/19/the linux programming interface reading notes/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
