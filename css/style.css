@@ -1192,6 +1192,15 @@ a {
 #article-nav #article-nav-older {
   float: right;
 }
+.post-reader-num {
+  font-size: 12px;
+  font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+  text-shadow: 0 1px #fff;
+  margin-bottom: 10px;
+  margin-right: 30px;
+  float: right;
+  opacity: 0.6;
+}
 @-moz-keyframes cd-bounce-1 {
   0% {
     opacity: 0;
@@ -1646,6 +1655,7 @@ pre .css ~ * .id {
 .powered-by {
   margin-top: 8px;
   float: left;
+  display: inline-block;
 }
 .share {
   padding: 0px 75px 30px 40px;
