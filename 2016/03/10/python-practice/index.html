@@ -4,18 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>yaml 格式 | whiledoing</title>
+  <title>python-practice | whiledoing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="yaml &amp;#x683C;&amp;#x5F0F;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8F7B;&amp;#x91CF;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;&amp;#x8BED;&amp;#x8A00;&amp;#x3002;&amp;#x8BE5;  &amp;#x6587;&amp;#x7AE0;  &amp;#x5BF9; yaml &amp;#x7684;&amp;#x76F8;&amp;#x5173;&amp;">
+  <meta name="description" content="本文档记录了写 python 代码时候的一些  技巧，实践，心得  等等。
+ 组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="yaml 格式">
-<meta property="og:url" content="http://whiledoing.github.io/2016/01/20/yaml-format/index.html">
+<meta property="og:title" content="python-practice">
+<meta property="og:url" content="http://whiledoing.github.io/2016/03/10/python-practice/index.html">
 <meta property="og:site_name" content="whiledoing">
-<meta property="og:description" content="yaml &amp;#x683C;&amp;#x5F0F;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8F7B;&amp;#x91CF;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;&amp;#x8BED;&amp;#x8A00;&amp;#x3002;&amp;#x8BE5;  &amp;#x6587;&amp;#x7AE0;  &amp;#x5BF9; yaml &amp;#x7684;&amp;#x76F8;&amp;#x5173;&amp;">
-<meta property="og:updated_time" content="2016-02-02T11:32:24.000Z">
+<meta property="og:description" content="本文档记录了写 python 代码时候的一些  技巧，实践，心得  等等。
+ 组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
+<meta property="og:updated_time" content="2016-03-10T14:41:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yaml 格式">
-<meta name="twitter:description" content="yaml &amp;#x683C;&amp;#x5F0F;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8F7B;&amp;#x91CF;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;&amp;#x8BED;&amp;#x8A00;&amp;#x3002;&amp;#x8BE5;  &amp;#x6587;&amp;#x7AE0;  &amp;#x5BF9; yaml &amp;#x7684;&amp;#x76F8;&amp;#x5173;&amp;">
+<meta name="twitter:title" content="python-practice">
+<meta name="twitter:description" content="本文档记录了写 python 代码时候的一些  技巧，实践，心得  等等。
+ 组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
   
     <link rel="alternative" href="/atom.xml" title="whiledoing" type="application/atom+xml">
   
@@ -166,11 +169,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-yaml-format" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-python-practice" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/20/yaml-format/" class="article-date">
-  	<time datetime="2016-01-20T14:46:37.000Z" itemprop="datePublished">2016-01-20</time>
+      <a href="/2016/03/10/python-practice/" class="article-date">
+  	<time datetime="2016-03-10T14:41:31.000Z" itemprop="datePublished">2016-03-10</time>
 </a>
     </div>
   
@@ -183,7 +186,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      yaml 格式
+      python-practice
     </h1>
   
 
@@ -192,7 +195,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/misc/">misc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li></ul>
 	</div>
 
         
@@ -203,14 +206,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><code>yaml</code> &#x683C;&#x5F0F;&#x662F;&#x4E00;&#x79CD;&#x8F7B;&#x91CF;&#x7EA7;&#x522B;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x8BED;&#x8A00;&#x3002;&#x8BE5; <a href="http://einverne.github.io/2015/08/08/yaml.html" target="_blank" rel="external"> &#x6587;&#x7AE0; </a> &#x5BF9; <code>yaml</code> &#x7684;&#x76F8;&#x5173;&#x6765;&#x6E90;&#xFF0C;&#x8BED;&#x6CD5;&#x8FDB;&#x884C;&#x4E86;&#x8BF4;&#x660E;&#x3002;</p>
-<p> &#x4E2A;&#x4EBA;&#x7684;&#x611F;&#x53D7;&#x662F;&#xFF1A;</p>
-<ol>
-<li><code>yaml</code> &#x7684;&#x8BBE;&#x8BA1;&#x7406;&#x5FF5;&#x6709;&#x4E9B;&#x7C7B;&#x4F3C; <code>python</code>&#xFF0C;&#x4F7F;&#x7528;&#x7F29;&#x8FDB;&#xFF0C;&#x7A7A;&#x683C;&#x6765;&#x8868;&#x793A;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;&#x3002;&#xFF08;&#x76F8;&#x6BD4;&#x8F83;&#x4E8E; <code>json</code> &#x4F7F;&#x7528; {}&#xFF09;</li>
-<li><code>yaml</code> &#x662F; <code>json</code> &#x7684;&#x8D85;&#x96C6;&#xFF0C;&#x7406;&#x8BBA;&#x4E0A; <code>yaml</code> &#x7684;&#x89E3;&#x6790;&#x5668;&#x53EF;&#x4EE5;&#x89E3;&#x6790; <code>json</code></li>
-<li><code>yaml</code> &#x7528;&#x4F5C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5E94;&#x8BE5;&#x66F4;&#x52A0;&#x5408;&#x9002;&#xFF0C;&#x56E0;&#x4E3A;&#x53EF;&#x8BFB;&#x6027;&#x66F4;&#x52A0;&#x597D;&#x3002;</li>
-<li> &#x76EE;&#x524D;&#x4ECE;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#xFF0C;&#x66F4;&#x591A;&#x5E94;&#x8BE5;&#x8FD8;&#x662F;&#x4F7F;&#x7528; <code>json</code>&#xFF0C;&#x56E0;&#x4E3A; <code>json</code> &#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x5728;&#x4F20;&#x8F93;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528; <code>stringify()</code> &#x6765;&#x5C06;&#x6240;&#x6709;&#x7684;&#x7A7A;&#x683C;&#x548C;&#x7F29;&#x8FDB;&#x53BB;&#x6389;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x5E94;&#x8BE5;&#x66F4;&#x52A0;&#x5229;&#x4E8E; <strong> &#x8BA1;&#x7B97;&#x673A; </strong> &#x9605;&#x8BFB;&#x5427;&#x3002;&#x53E6;&#x5916;&#x4E00;&#x70B9;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x548C; <code>json</code> &#x66F4;&#x52A0;&#x6210;&#x719F;&#x6709;&#x5173;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x56E0;&#x4E3A; <code>javasrcipt</code> &#x5728; web &#x5F00;&#x53D1;&#x9886;&#x57DF;&#x7684;&#x7EDF;&#x6CBB;&#x5730;&#x4F4D;&#x6709;&#x5173;&#x5427;&#x3002;&#xFF1A;&#xFF09;</li>
-</ol>
+        <p> &#x672C;&#x6587;&#x6863;&#x8BB0;&#x5F55;&#x4E86;&#x5199; python &#x4EE3;&#x7801;&#x65F6;&#x5019;&#x7684;&#x4E00;&#x4E9B; <strong> &#x6280;&#x5DE7;&#xFF0C;&#x5B9E;&#x8DF5;&#xFF0C;&#x5FC3;&#x5F97;</strong> &#x7B49;&#x7B49;&#x3002;</p>
+<p> &#x7EC4;&#x7EC7;&#x7684;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x903B;&#x8F91;&#x6027;&#xFF0C;&#x66F4;&#x591A;&#x7684;&#x5C31;&#x662F;&#x770B;&#x5230;&#x597D;&#x7684;&#x6574;&#x7406;&#x8BB0;&#x5F55;&#x7684;&#x65B0;&#x5F0F;&#x3002;</p>
+<a id="more"></a>
+<h3 id="&#x4F7F;&#x7528;-forelse"><a href="#u4F7F_u7528for_u2026else_u2026" class="headerlink" title=" &#x4F7F;&#x7528; for&#x2026;else&#x2026;"></a> &#x4F7F;&#x7528; for&#x2026;else&#x2026;</h3><p>python &#x7684; for&#x2026;else&#x2026; &#x7ED3;&#x6784;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x8868;&#x793A; for &#x5982;&#x679C;&#x4E0D;&#x662F; break &#x7ED3;&#x675F;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5BF9;&#x4E8E;&#x90A3;&#x79CD; <strong>for &#x67E5;&#x627E; break &#x7684;&#x65B9;&#x5F0F;</strong> &#x5F88; pythonic</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">5</span>):</span><br><span class="line">    <span class="keyword">if</span> find(x):</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;find&apos;</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">&apos;not find&apos;</span></span><br></pre></td></tr></table></figure>
+<h3 id="python-&#x7684;&#x591A;&#x91CD;&#x7EE7;&#x627F;"><a href="#python_u7684_u591A_u91CD_u7EE7_u627F" class="headerlink" title="python &#x7684;&#x591A;&#x91CD;&#x7EE7;&#x627F; "></a>python &#x7684;&#x591A;&#x91CD;&#x7EE7;&#x627F;</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;A&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(B, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;B&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(C, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;C&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(D, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;D&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># A C B D</span></span><br><span class="line">D().f()</span><br><span class="line"></span><br><span class="line"><span class="comment"># A B</span></span><br><span class="line">B().f()</span><br></pre></td></tr></table></figure>
+<p> &#x5982;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x591A;&#x7EE7;&#x627F;&#x7684;&#x8BDD;&#xFF0C;&#x7ED3;&#x6784;&#x5173;&#x7CFB;&#x8C8C;&#x4F3C;&#x5C31;&#x53D8;&#x4E3A;&#x4E86; <code>(D-&gt;B-&gt;C-&gt;A)</code> &#x7684;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x3002;&#x3002;&#x3002;</p>
+<p> &#x6CA1;&#x6709;&#x4ED4;&#x7EC6;&#x7814;&#x7A76;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x5B50;&#x5176;&#x5B9E;&#x6709;&#x597D;&#x5904;&#xFF0C;&#x5C31;&#x662F; B&#xFF0C;&#x548C; C &#x7684;&#x903B;&#x8F91;&#x5BF9;&#x4E8E; A &#x800C;&#x8A00;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x7EC4;&#x5408;&#x4F7F;&#x7528; B &#x548C; C &#x7684;&#x5173;&#x7CFB;&#x7684;&#x8BDD;&#xFF0C;&#x76F8;&#x540C;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>super</code> &#x8C03;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x4E32;&#x8054;&#x8D77;&#x6765;&#x3002;</p>
+<h3 id="python-&#x597D;&#x7684;&#x8D44;&#x6599;&#x6536;&#x96C6;"><a href="#python_u597D_u7684_u8D44_u6599_u6536_u96C6" class="headerlink" title="python &#x597D;&#x7684;&#x8D44;&#x6599;&#x6536;&#x96C6; "></a>python &#x597D;&#x7684;&#x8D44;&#x6599;&#x6536;&#x96C6; </h3><p> &#x5199;&#x4E86; <code>requests</code> &#x5E93;&#x7684;&#x5927;&#x795E;&#x7684; <a href="https://github.com/kennethreitz" target="_blank" rel="external">github</a> &#x975E;&#x5E38;&#x503C;&#x5F97;&#x63A8;&#x8350;&#x53BB;&#x770B;&#x770B;&#x3002;&#x5927;&#x795E;&#x8FD8;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x5173;&#x4E8E; python &#x6700;&#x4F73;&#x65F6;&#x95F4;&#x7684; <a href="http://docs.python-guide.org/en/latest/" target="_blank" rel="external"> &#x4E66;&#x7C4D;</a>&#xFF0C;mark &#x4E0B;&#x3002;</p>
 
       
     </div>
@@ -220,15 +224,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/01/25/self-mac/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          mac 折腾记录
-        
-      </div>
-    </a>
   
+    <a href="/2016/02/03/the-art-of-stop-learn-note-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《止学》学习笔记</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -262,7 +262,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="yaml-format" data-title="yaml 格式" data-url="http://whiledoing.github.io/2016/01/20/yaml-format/"></div>
+	<div class="ds-thread" data-thread-key="python-practice" data-title="python-practice" data-url="http://whiledoing.github.io/2016/03/10/python-practice/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
