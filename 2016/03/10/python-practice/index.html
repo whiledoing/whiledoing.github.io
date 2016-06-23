@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>python 学习 &amp;&amp; 实践 | whiledoing</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文档记录了写 python 代码时候的一些  技巧，实践，心得  等等。
+    
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="whiledoing" />
+
+    
+
+    <meta name="description" content="本文档记录了写 python 代码时候的一些  技巧，实践，心得  等等。
  组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python 学习 && 实践">
@@ -14,166 +23,230 @@
 <meta property="og:site_name" content="whiledoing">
 <meta property="og:description" content="本文档记录了写 python 代码时候的一些  技巧，实践，心得  等等。
  组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
-<meta property="og:updated_time" content="2016-03-24T02:08:09.000Z">
+<meta property="og:updated_time" content="2016-05-11T12:38:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python 学习 && 实践">
 <meta name="twitter:description" content="本文档记录了写 python 代码时候的一些  技巧，实践，心得  等等。
  组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
-  
+
+    <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+    
     <link rel="alternative" href="/atom.xml" title="whiledoing" type="application/atom+xml">
-  
-  
-    <link rel="icon" type='image/x-icon' href="/favicon.ico">
-  
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    
 
-  <!-- add [font-awesome](https://fortawesome.github.io/Font-Awesome/)-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+
+    
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+    
+
+    
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+    
+
+    
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    
+
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    
+    <title>python 学习 &amp;&amp; 实践 | whiledoing</title>
+
+    <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+    <script>
+        var yiliaConfig = {
+            fancybox: true,
+            animate: true,
+            isHome: false,
+            isPost: true,
+            isArchive: false,
+            isTag: false,
+            isCategory: false,
+            open_in_new: false,
+            fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+            scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+            search: undefined
+        }
+    </script>
+
+    
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+    
+
+    
+    <script> yiliaConfig.rootUrl = "\/";</script>
+    
+
+    
+
+    
+
+    <!--add mermaid support [link](http://knsv.github.io/mermaid/#mermaid)-->
+    <script src="/js/mermaid-6.0.0.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <link rel="stylesheet" href="/css/raw_css/mermaid-6.0.0.css">
 </head>
-
 <body>
   <div id="container">
     <div class="left-col">
     <div class="overlay"></div>
 <div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="https://avatars0.githubusercontent.com/u/1644558?v=3&amp;s=460" class="js-avatar">
-			
-		</a>
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.jpeg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">whiledoing</a></h1>
+        </hgroup>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">whiledoing</a></h1>
-		</hgroup>
+        
+        <p class="header-subtitle">喜欢一切简单的设计和她</p>
+        
 
-		
-		<p class="header-subtitle">喜欢一切简单的设计和她</p>
-		
+        
 
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						
-					</ul>
-				</div>
-			</div>
-		
 
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="https://github.com/whiledoing" title="github">github</a>
-					        
-								<a class="douban" target="_blank" href="http://www.douban.com/people/58249409/" title="douban">douban</a>
-					        
-								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="zhihu">zhihu</a>
-					        
-								<a class="mail" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="mail">mail</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/learn-note/" style="font-size: 18px;">learn-note</a> <a href="/tags/life/" style="font-size: 12px;">life</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/osx/" style="font-size: 10px;">osx</a> <a href="/tags/pm/" style="font-size: 10px;">pm</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/self/" style="font-size: 20px;">self</a> <a href="/tags/software-engineer/" style="font-size: 14px;">software-engineer</a> <a href="/tags/unix-linux/" style="font-size: 16px;">unix/linux</a> <a href="/tags/yaml/" style="font-size: 10px;">yaml</a>
-					</div>
-				</section>
-				
-				
-				
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜單</li>
+                        <li>標籤</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
 
-				
-			</div>
-		</div>
-	</header>				
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/whiledoing" title="GitHub"></a>
+                            
+                                <a class="fa 豆瓣" target="_blank" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
+                            
+                                <a class="fa Email" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-note/">learn-note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/osx/">osx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pm/">pm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self/">self</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software-engineer/">software-engineer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unix-linux/">unix/linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+            </div>
+        </div>
+    </header>                
 </div>
-
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">whiledoing</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-			
-				<img lazy-src="https://avatars0.githubusercontent.com/u/1644558?v=3&amp;s=460" class="js-avatar">
-			
-			</div>
-			<hgroup>
-			  <h1 class="header-author">whiledoing</h1>
-			</hgroup>
-			
-			<p class="header-subtitle">喜欢一切简单的设计和她</p>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="https://github.com/whiledoing" title="github">github</a>
-			        
-						<a class="douban" target="_blank" href="http://www.douban.com/people/58249409/" title="douban">douban</a>
-			        
-						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="zhihu">zhihu</a>
-			        
-						<a class="mail" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="mail">mail</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">whiledoing</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.jpeg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">whiledoing</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">喜欢一切简单的设计和她</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/whiledoing" title="GitHub"></a>
+                            
+                                <a class="fa 豆瓣" target="_blank" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
+                            
+                                <a class="fa Email" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-
       <div class="body-wrap"><article id="post-python-practice" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/03/10/python-practice/" class="article-date">
-  	<time datetime="2016-03-10T14:41:31.000Z" itemprop="datePublished">2016-03-10</time>
+      <time datetime="2016-03-10T14:41:31.000Z" itemprop="datePublished">2016-03-10</time>
 </a>
     </div>
   
@@ -194,11 +267,11 @@
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li></ul>
-	</div>
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li></ul>
+    </div>
 
         <div class="clearfix"></div>
       </div>
@@ -206,20 +279,189 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>&#x672C;&#x6587;&#x6863;&#x8BB0;&#x5F55;&#x4E86;&#x5199;python&#x4EE3;&#x7801;&#x65F6;&#x5019;&#x7684;&#x4E00;&#x4E9B;<strong>&#x6280;&#x5DE7;&#xFF0C;&#x5B9E;&#x8DF5;&#xFF0C;&#x5FC3;&#x5F97;</strong>&#x7B49;&#x7B49;&#x3002;</p>
 <p>&#x7EC4;&#x7EC7;&#x7684;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x903B;&#x8F91;&#x6027;&#xFF0C;&#x66F4;&#x591A;&#x7684;&#x5C31;&#x662F;&#x770B;&#x5230;&#x597D;&#x7684;&#x6574;&#x7406;&#x8BB0;&#x5F55;&#x7684;&#x65B0;&#x5F0F;&#x3002;</p>
 <a id="more"></a>
-<h3 id="&#x4F7F;&#x7528;forelse"><a href="#u4F7F_u7528for_u2026else_u2026"class="headerlink"title="&#x4F7F;&#x7528;for&#x2026;else&#x2026;"></a>&#x4F7F;&#x7528;for&#x2026;else&#x2026;</h3><p>python&#x7684;for&#x2026;else&#x2026;&#x7ED3;&#x6784;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x8868;&#x793A;for&#x5982;&#x679C;&#x4E0D;&#x662F;break&#x7ED3;&#x675F;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5BF9;&#x4E8E;&#x90A3;&#x79CD;<strong>for&#x67E5;&#x627E;break&#x7684;&#x65B9;&#x5F0F;</strong>&#x5F88;pythonic</p>
+<h3 id="&#x4F7F;&#x7528;forelse">&#x4F7F;&#x7528;for&#x2026;else&#x2026;</h3>
+<p>python&#x7684;for&#x2026;else&#x2026;&#x7ED3;&#x6784;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x8868;&#x793A;for&#x5982;&#x679C;&#x4E0D;&#x662F;break&#x7ED3;&#x675F;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5BF9;&#x4E8E;&#x90A3;&#x79CD;<strong>for&#x67E5;&#x627E;break&#x7684;&#x65B9;&#x5F0F;</strong>&#x5F88;pythonic</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">5</span>):</span><br><span class="line">    <span class="keyword">if</span> find(x):</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;find&apos;</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">&apos;not find&apos;</span></span><br></pre></td></tr></table></figure>
-<h3 id="python&#x7684;&#x591A;&#x91CD;&#x7EE7;&#x627F;"><a href="#python_u7684_u591A_u91CD_u7EE7_u627F"class="headerlink"title="python&#x7684;&#x591A;&#x91CD;&#x7EE7;&#x627F;"></a>python&#x7684;&#x591A;&#x91CD;&#x7EE7;&#x627F;</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;A&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(B, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;B&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(C, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;C&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(D, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;D&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># A C B D</span></span><br><span class="line">D().f()</span><br><span class="line"></span><br><span class="line"><span class="comment"># A B</span></span><br><span class="line">B().f()</span><br></pre></td></tr></table></figure>
+<h3 id="python&#x7684;&#x591A;&#x91CD;&#x7EE7;&#x627F;">python&#x7684;&#x591A;&#x91CD;&#x7EE7;&#x627F;</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;A&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(B, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;B&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(C, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;C&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(D, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;D&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># A C B D</span></span><br><span class="line">D().f()</span><br><span class="line"></span><br><span class="line"><span class="comment"># A B</span></span><br><span class="line">B().f()</span><br></pre></td></tr></table></figure>
 <p>&#x5982;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x591A;&#x7EE7;&#x627F;&#x7684;&#x8BDD;&#xFF0C;&#x7ED3;&#x6784;&#x5173;&#x7CFB;&#x8C8C;&#x4F3C;&#x5C31;&#x53D8;&#x4E3A;&#x4E86;<code>(D-&gt;B-&gt;C-&gt;A)</code>&#x7684;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x3002;&#x3002;&#x3002;</p>
 <p>&#x6CA1;&#x6709;&#x4ED4;&#x7EC6;&#x7814;&#x7A76;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x5B50;&#x5176;&#x5B9E;&#x6709;&#x597D;&#x5904;&#xFF0C;&#x5C31;&#x662F;B&#xFF0C;&#x548C;C&#x7684;&#x903B;&#x8F91;&#x5BF9;&#x4E8E;A&#x800C;&#x8A00;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x7EC4;&#x5408;&#x4F7F;&#x7528;B&#x548C;C&#x7684;&#x5173;&#x7CFB;&#x7684;&#x8BDD;&#xFF0C;&#x76F8;&#x540C;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>super</code>&#x8C03;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x4E32;&#x8054;&#x8D77;&#x6765;&#x3002;</p>
-<h3 id="python&#x597D;&#x7684;&#x8D44;&#x6599;&#x6536;&#x96C6;"><a href="#python_u597D_u7684_u8D44_u6599_u6536_u96C6"class="headerlink"title="python&#x597D;&#x7684;&#x8D44;&#x6599;&#x6536;&#x96C6;"></a>python&#x597D;&#x7684;&#x8D44;&#x6599;&#x6536;&#x96C6;</h3><p>&#x5199;&#x4E86;<code>requests</code>&#x5E93;&#x7684;&#x5927;&#x795E;&#x7684;<a href="https://github.com/kennethreitz"target="_blank"rel="external">github</a>&#x975E;&#x5E38;&#x503C;&#x5F97;&#x63A8;&#x8350;&#x53BB;&#x770B;&#x770B;&#x3002;&#x5927;&#x795E;&#x8FD8;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;python&#x6700;&#x4F73;&#x65F6;&#x95F4;&#x7684;<a href="http://docs.python-guide.org/en/latest/"target="_blank"rel="external">&#x4E66;&#x7C4D;</a>&#xFF0C;mark&#x4E0B;&#x3002;</p>
-<h3 id="for&#x5FAA;&#x73AF;&#x4E2D;&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;lambda"><a href="#for_u5FAA_u73AF_u4E2D_uFF0C_u5C0F_u5FC3_u4F7F_u7528lambda"class="headerlink"title="for&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;lambda"></a>for&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;lambda</h3><p>&#x8BB0;&#x5F55;&#x4E00;&#x4E2A;&#x5F88;&#x9690;&#x85CF;&#x7684;bug&#xFF0C;&#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#x4F7F;&#x7528;lambda&#x9700;&#x8981;&#x5C0F;&#x5FC3;&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cur_week_str = get_current_week_str()</span><br><span class="line"><span class="keyword">for</span> dst, dst_info <span class="keyword">in</span> self._flower_cache.iteritems():</span><br><span class="line">    <span class="comment"># &#x5728;lambda&#x4E2D;&#x4E3A;&#x4E86;&#x533A;&#x522B;&#x4E0D;&#x540C;&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x5C06;dst&#x653E;&#x5165;&#x5230;lambda&#x53C2;&#x6570;&#x4E2D;</span></span><br><span class="line">    GameAPI.find_and_modify(</span><br><span class="line">        collection_name = <span class="string">&apos;box&apos;</span>,</span><br><span class="line">        query = {<span class="string">&apos;_id&apos;</span> : str2id(dst) },</span><br><span class="line">        update = {<span class="string">&apos;$inc&apos;</span> : inc_value },</span><br><span class="line">        fields = <span class="keyword">None</span>,</span><br><span class="line">        upsert = <span class="keyword">True</span>,</span><br><span class="line">        new = <span class="keyword">True</span>,</span><br><span class="line">        callback = <span class="keyword">lambda</span> st, data : self._on_syn_cache_to_service_into_db_back(st, data, cur_week_str, dst)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="python&#x597D;&#x7684;&#x8D44;&#x6599;&#x6536;&#x96C6;">python&#x597D;&#x7684;&#x8D44;&#x6599;&#x6536;&#x96C6;</h3>
+<p>&#x5199;&#x4E86;<code>requests</code>&#x5E93;&#x7684;&#x5927;&#x795E;&#x7684;<a href="https://github.com/kennethreitz"target="_blank"rel="external">github</a>&#x975E;&#x5E38;&#x503C;&#x5F97;&#x63A8;&#x8350;&#x53BB;&#x770B;&#x770B;&#x3002;&#x5927;&#x795E;&#x8FD8;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;python&#x6700;&#x4F73;&#x65F6;&#x95F4;&#x7684;<a href="http://docs.python-guide.org/en/latest/"target="_blank"rel="external">&#x4E66;&#x7C4D;</a>&#xFF0C;mark&#x4E0B;&#x3002;</p>
+<h3 id="for&#x5FAA;&#x73AF;&#x4E2D;&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;lambda">for&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;lambda</h3>
+<p>&#x8BB0;&#x5F55;&#x4E00;&#x4E2A;&#x5F88;&#x9690;&#x85CF;&#x7684;bug&#xFF0C;&#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#x4F7F;&#x7528;lambda&#x9700;&#x8981;&#x5C0F;&#x5FC3;&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cur_week_str = get_current_week_str()</span><br><span class="line"><span class="keyword">for</span> dst, dst_info <span class="keyword">in</span> self._flower_cache.iteritems():</span><br><span class="line">    <span class="comment"># &#x5728;lambda&#x4E2D;&#x4E3A;&#x4E86;&#x533A;&#x522B;&#x4E0D;&#x540C;&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x5C06;dst&#x653E;&#x5165;&#x5230;lambda&#x53C2;&#x6570;&#x4E2D;</span></span><br><span class="line">    find_and_modify_in_mongodb(</span><br><span class="line">        collection_name = <span class="string">&apos;box&apos;</span>,</span><br><span class="line">        query = {<span class="string">&apos;_id&apos;</span> : str2id(dst) },</span><br><span class="line">        update = {<span class="string">&apos;$inc&apos;</span> : inc_value },</span><br><span class="line">        fields = <span class="keyword">None</span>,</span><br><span class="line">        upsert = <span class="keyword">True</span>,</span><br><span class="line">        new = <span class="keyword">True</span>,</span><br><span class="line">        callback = <span class="keyword">lambda</span> st, data : self._on_syn_cache_to_service_into_db_back(st, data, cur_week_str, dst)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <p>&#x7ED3;&#x679C;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x6240;&#x6709;&#x8FD4;&#x56DE;&#x7684;lambda&#x7684;callback&#x4E2D;dst&#x53C2;&#x6570;&#x90FD;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;lambda&#x5176;&#x5B9E;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;lambda&#x662F;&#x6709;&#x95ED;&#x5305;&#x7684;&#xFF0C;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x5C31;&#x5C06;&#x51FD;&#x6570;lambda&#x4E2D;&#x7684;&#x95ED;&#x5305;&#x4E2D;&#x53C2;&#x6570;&#x66F4;&#x65B0;&#xFF08;&#x7406;&#x89E3;&#x4E3A;&#x6709;&#x72B6;&#x6001;&#x7684;&#x6210;&#x5458;&#x5BF9;&#x8C61;&#x88AB;&#x4FEE;&#x6539;&#xFF09;&#x3002;&#x6240;&#x4EE5;&#x5F53;&#x5F02;&#x6B65;callback&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD8;&#x662F;&#x76F8;&#x540C;&#x7684;lambda&#xFF0C;&#x4F46;&#x662F;&#x6700;&#x540E;&#x7684;dst&#x53C2;&#x6570;&#x5168;&#x90E8;&#x90FD;&#x76F8;&#x540C;&#x4E86;&#x3002;&#xFF08;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x672C;&#x8D28;&#x539F;&#x56E0;&#x662F;&#x56E0;&#x4E3A;&#x5F02;&#x6B65;&#xFF0C;&#x5982;&#x679C;&#x540C;&#x6B65;&#xFF0C;&#x90A3;&#x4E48;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x90FD;&#x662F;&#x6700;&#x6B63;&#x786E;&#x7684;&#x53C2;&#x6570;&#xFF09;</p>
 <p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x91CC;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x67E5;&#x8BE2;&#x7684;_id&#x4E2D;&#x7528;&#x5230;&#x4E86;dst&#xFF0C;&#x8FD4;&#x56DE;&#x7684;data&#x53C2;&#x6570;&#x4E00;&#x5B9A;&#x662F;&#x4E0D;&#x540C;&#x7684;&#xFF0C;&#x6839;&#x636E;&#x8FD4;&#x56DE;&#x7684;data&#x53C2;&#x6570;&#x83B7;&#x53D6;dst&#x5373;&#x53EF;&#xFF0C;&#x5982;&#x679C;&#x5B9E;&#x5728;&#x4E0D;&#x884C; &#xFF0C;&#x5C31;&#x60F3;&#x529E;&#x6CD5;&#x5728;&#x4E00;&#x4E2A;&#x66F4;&#x52A0;&#x5168;&#x5C40;&#x7684;&#x4F4D;&#x7F6E;&#x4FDD;&#x5B58;&#x5373;&#x53EF;&#x3002;</p>
 <p>&#x6240;&#x4EE5;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x9700;&#x8981;&#x7559;&#x610F;&#x7684;&#x5C31;&#x662F;lambda&#x7684;&#x975E;&#x4FEE;&#x6539;&#x53C2;&#x6570;&#x662F;&#x4FDD;&#x5B58;&#x72B6;&#x6001;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#xFF08;&#x4E2A;&#x4EBA;&#x731C;&#x60F3;&#xFF09;lambda&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#x90FD;&#x521B;&#x5EFA;&#xFF0C;&#x4E00;&#x65E6;&#x5B9A;&#x4E49;&#x597D;&#x4E86;&#x683C;&#x5F0F;&#xFF0C;&#x5C31;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF01;&#xFF01;&#xFF01;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#x6301;&#x7EED;&#x6539;&#x53D8;&#xFF01;&#xFF01;&#xFF01;</p>
+<h3 id="python&#x7684;&#x8F93;&#x51FA;">python&#x7684;&#x8F93;&#x51FA;</h3>
+<p>&#x4EE5;&#x524D;&#x4F7F;&#x7528;&#x7684;&#x8F93;&#x51FA;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528;<code>%</code>&#x7B26;&#x5408;&#x8FDB;&#x884C;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x8F93;&#x51FA;&#x3002;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#xFF08;&#x4E5F;&#x662F;PEP3101&#xFF09;&#x5B9A;&#x4E49;&#x7684;&#x4F7F;&#x7528;format&#x7684;&#x683C;&#x5F0F;&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">foo = <span class="string">&apos;foo&apos;</span></span><br><span class="line">bar = <span class="string">&apos;bar&apos;</span></span><br><span class="line">foobar = <span class="string">&apos;%s%s&apos;</span> % (foo, bar) <span class="comment"># It is OK </span></span><br><span class="line">foobar = <span class="string">&apos;{0}{1}&apos;</span>.format(foo, bar) <span class="comment"># It is better </span></span><br><span class="line">foobar = <span class="string">&apos;{foo}{bar}&apos;</span>.format(foo=foo, bar=bar) <span class="comment"># It is best</span></span><br></pre></td></tr></table></figure>
+<p>&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7684;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x5B9A;&#x4F4D;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x8C03;&#x6574;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#x4E5F;&#x4E0D;&#x4F1A;&#x6709;&#x95EE;&#x9898;&#x3002;</p>
+<h3 id="python-with">python with</h3>
+<p>python&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;&#x8BED;&#x6CD5;&#x7279;&#x6027;&#xFF0C;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x5C06;&#x4E0A;&#x4E0B;&#x6587;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x5728;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x6B63;&#x786E;&#x6790;&#x6784;&#x3002;</p>
+<p>&#x6709;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;with&#x8BED;&#x53E5;&#x7684;&#x4F7F;&#x7528;&#xFF1A;</p>
+<ol>
+<li>
+<p>&#x5C31;&#x662F;&#x5DF2;&#x7ECF;&#x652F;&#x6301;with&#x8BED;&#x53E5;&#x7684;API&#xFF0C;&#x6BD4;&#x5982;open&#x3002;</p>
+</li>
+<li>
+<p>&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x7C7B;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x91CD;&#x8F7D;<code>__enter__</code>&#x548C;<code>__exit__</code>&#x65B9;&#x6CD5;&#x3002;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Context</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.file = open(name)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.file</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span><span class="params">(self, ctx_type, ctx_value, ctx_traceback)</span>:</span></span><br><span class="line">        self.file.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> Context(<span class="string">&apos;xxx&apos;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<p>&#x8C03;&#x7528;with&#x4E4B;&#x540E;&#x5176;&#x5B9E;&#x662F;<strong>&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</strong>&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x6784;&#x9020;&#x4E4B;&#x540E;&#x901A;&#x8FC7;<code>__enter__</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7ED9;&#x540E;&#x9762;&#x7684;as&#x8BED;&#x53E5;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x8BBA;&#x662F;&#x5426;&#x51FA;&#x73B0;trace&#xFF0C;&#x90FD;&#x4F1A;&#x518D;&#x6700;&#x540E;&#x8C03;&#x7528;<code>__exit__</code></p>
+</li>
+<li>
+<p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x901A;&#x8FC7;<code>yield</code>&#x65B9;&#x6CD5;&#x6765;<strong>&#x5207;&#x6362;&#x6267;&#x884C;&#x6D41;&#x7A0B;</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> contextlib</span><br><span class="line"></span><br><span class="line"><span class="decorator">@contextlib.contextmanager</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">custom_open</span><span class="params">(filename)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        f = open(filename):</span><br><span class="line">        <span class="keyword">yield</span> f</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> custom_open(<span class="string">&apos;file&apos;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x901A;&#x8FC7;<code>contextmanager</code>&#x5C06;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x51FD;&#x6570;&#x53D8;&#x4E3A;&#x4E86;&#x4E00;&#x4E2A;&#x7BA1;&#x7406;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6267;&#x884C;&#x5230;yield&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5C06;&#x53D8;&#x91CF;&#x8FD4;&#x56DE;&#xFF0C;&#x7136;&#x540E;&#x5207;&#x56DE;&#x6267;&#x884C;&#x73AF;&#x5883;&#x5230;with&#x91CC;&#x9762;&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x6700;&#x540E;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x90FD;&#x6267;&#x884C;finally&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+</li>
+<li>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x7B80;&#x5355;&#x65B9;&#x5F0F;&#xFF0C;&#x5C31;&#x662F;<code>context.closing</code>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x6709;<code>close</code>&#x63A5;&#x53E3;&#x7684;API&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x7BA1;&#x7406;.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> contextlib</span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> contextlib.closing(urllib.urlopen(<span class="string">&apos;http://xxx.org&apos;</span>)) <span class="keyword">as</span> page: </span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<p>&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;&#x4E0A;&#x9762;&#xFF0C;&#x5BF9;&#x6784;&#x9020;&#x961F;&#x5F62;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x7136;&#x540E;<code>__exit__</code>&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;close&#x65B9;&#x6CD5;&#x3002;</p>
+</li>
+</ol>
+<p>&#x603B;&#x7ED3;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x5982;&#x679C;&#x590D;&#x6742;&#x7684;&#x573A;&#x666F;&#x4F7F;&#x7528;class&#x65B9;&#x5F0F;&#x3002;</li>
+<li>&#x7B80;&#x5355;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x4F7F;&#x7528;contextmanager&#x7684;&#x65B9;&#x6CD5;&#x66F4;&#x52A0;&#x76F4;&#x63A5;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#xFF0C;&#x53EA;&#x662F;&#x6790;&#x6784;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x90A3;&#x4E48;&#x90FD;&#x7EDF;&#x4E00;&#x5B9A;&#x4E49;&#x4E3A;close&#x63A5;&#x53E3;&#x3002;</li>
+</ol>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;</p>
+<ol>
+<li><a href="https://pymotw.com/2/contextlib/index.html"target="_blank"rel="external">pymotw contextlib</a></li>
+<li><a href="http://docs.python-guide.org/en/latest/writing/structure/"target="_blank"rel="external">the hitchhikeder&#x2019;s guide to python</a></li>
+</ol>
+<h3 id="python-gotcha-python&#x4E00;&#x4E9B;&#x8BE1;&#x5F02;&#x7684;&#x5751;">python gotcha (python&#x4E00;&#x4E9B;&#x8BE1;&#x5F02;&#x7684;&#x5751;&#xFF09;</h3>
+<h4 id="python&#x7684;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x53C2;&#x6570;">python&#x7684;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x53C2;&#x6570;</h4>
+<p>&#x6CE8;&#x610F;python&#x7684;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x53C2;&#x6570;&#x662F;&#x5728;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x6784;&#x9020;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x90FD;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x5BF9;&#x8C61;&#xFF08;&#x8FD9;&#x4E2A;&#x548C;ruby&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x8003;&#x8651;&#x5230;&#x6548;&#x7387;&#x7684;&#x95EE;&#x9898;&#xFF09;</p>
+<p>&#x6240;&#x4EE5;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x4E0D;&#x8981;&#x5728;python&#x7684;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x4E2D;&#x5B9A;&#x4E49;&#x53EF;&#x53D8;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x5C06;&#x975E;&#x5E38;&#x7684;&#x5371;&#x9669;&#x3002;</p>
+<h4 id="python&#x51FD;&#x6570;&#x7684;lazy-binding-closures">python&#x51FD;&#x6570;&#x7684;lazy binding closures</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span> </span><br><span class="line">    <span class="keyword">return</span> [<span class="keyword">lambda</span> x : i * x <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>)]</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> m <span class="keyword">in</span> create_multipliers():</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>    <span class="keyword">print</span> m(<span class="number">2</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="number">8</span> <span class="number">8</span> <span class="number">8</span> <span class="number">8</span> <span class="number">8</span></span><br></pre></td></tr></table></figure>
+<p>&#x4E0A;&#x9762;&#x7684;&#x8F93;&#x51FA;&#x5C45;&#x7136;&#x6240;&#x6709;&#x7684;i&#x90FD;&#x662F;4&#xFF0C;&#x8FD9;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
+<p>&#x8FD9;&#x662F;&#x56E0;&#x4E3A;python&#x7684;&#x51FD;&#x6570;&#x95ED;&#x5305;&#x662F;&#x5EF6;&#x8FDF;&#x7ED1;&#x5B9A;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#xFF0C;&#x53EA;&#x662F;&#x5B9A;&#x4E49;&#x4E86;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x9645;&#x6267;&#x884C;&#x4F53;&#xFF0C;&#x800C;&#x6CA1;&#x6709;&#x5C06;&#x5BF9;&#x5E94;&#x95ED;&#x5305;&#x7684;&#x53C2;&#x6570;&#x7ED1;&#x5B9A;&#x5230;&#x95ED;&#x5305;&#x4E2D;&#xFF08;&#x731C;&#x60F3;&#x4E5F;&#x662F;&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x6548;&#x7387;&#xFF0C;&#x56E0;&#x4E3A;&#x5F88;&#x591A;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x88AB;&#x6267;&#x884C;&#xFF09;&#x800C;&#x662F;&#x5728;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x624D;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;i&#x7ED1;&#x5B9A;&#x90FD;&#x662F;4.</p>
+<p>&#x800C;&#x4E14;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5E76;&#x4E0D;&#x53EA;&#x662F;lambda&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x662F;&#x6240;&#x6709;&#x7684;&#x51FD;&#x6570;&#x90FD;&#x8FD9;&#x6837;&#x5B50;&#xFF0C;&#x5373;&#x4F7F;&#x4F7F;&#x7528;def&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x4E0B;&#xFF08;&#x4E5F;&#x4E00;&#x6837;&#x6709;&#x95EE;&#x9898;&#xFF09;&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span> </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>): </span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">multiplier</span><span class="params">(x)</span>:</span> </span><br><span class="line">            <span class="keyword">return</span> i * x </span><br><span class="line">        multipliers.append(multiplier) </span><br><span class="line">    <span class="keyword">return</span> multipliers</span><br></pre></td></tr></table></figure>
+<p>&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;hack&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5C31;&#x662F;&#xFF0C;&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;<strong>&#x6784;&#x9020;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6784;&#x9020;&#x51FA;&#x9ED8;&#x8BA4;&#x6570;&#x636E;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x4FEE;&#x6539;&#x4E3A;&#x4E0B;&#x9762;&#x5C31;ok&#x4E86;&#x3002;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#x56E0;&#x4E3A;i=i&#x4F1A;&#x5C06;&#x9ED8;&#x8BA4;&#x503C;&#x7684;i&#x76F4;&#x63A5;&#x7ED1;&#x5B9A;&#x5230;&#x95ED;&#x5305;&#x4E2D;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span> </span><br><span class="line">    <span class="keyword">return</span> [<span class="keyword">lambda</span> x, i=i : i * x <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>)]</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> m <span class="keyword">in</span> create_multipliers():</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>    <span class="keyword">print</span> m(<span class="number">2</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="number">0</span> <span class="number">2</span> <span class="number">4</span> <span class="number">6</span> <span class="number">8</span></span><br></pre></td></tr></table></figure>
+<p>&#x6216;&#x8005;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x7684;partial&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x7ED1;&#x5B9A;&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span> </span><br><span class="line">    <span class="keyword">from</span> operator <span class="keyword">import</span> mul</span><br><span class="line">    <span class="keyword">from</span> functools <span class="keyword">import</span> partial</span><br><span class="line">    <span class="keyword">return</span> [partial(mul, i) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>)]</span><br></pre></td></tr></table></figure>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;: <a href="http://docs.python-guide.org/en/latest/writing/gotchas/"target="_blank"rel="external">common gotach from reitz python guide</a></p>
+<h3 id="python&#x4E0D;&#x8F93;&#x51FA;pyc&#x6587;&#x4EF6;">python&#x4E0D;&#x8F93;&#x51FA;pyc&#x6587;&#x4EF6;</h3>
+<p>&#x5982;&#x679C;&#x975E;&#x5E38;&#x8BA8;&#x538C;pyc&#x6587;&#x4EF6;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x65F6;&#x5019;&#x5C31;&#x4E0D;&#x8F93;&#x51FA;pyc&#x4E86;&#xFF0C;nice&#xFF1A;</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PYTHONDONTWRITEBYTECODE=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h3 id="python-yield">python yield</h3>
+<p>python&#x7684;yield&#x4E5F;&#x7EDD;&#x5BF9;&#x662F;&#x4E00;&#x4E2A;&#x6740;&#x624B;&#x7EA7;&#x522B;&#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x867D;&#x7136;&#x770B;&#x8D77;&#x6765;&#x975E;&#x5E38;&#x7684;&#x4E0D;&#x76F4;&#x89C2;&#x3002;</p>
+<p>&#x6709;&#x51E0;&#x4E2A;&#x6982;&#x5FF5;&#xFF1A;</p>
+<ol>
+<li>&#x8FED;&#x4EE3;&#x5668;(iterator)&#xFF0C;python&#x4E2D;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x7684;&#x6982;&#x5FF5;&#x662F;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;<code>next</code>&#xFF0C;&#x5982;&#x679C;&#x9047;&#x5230;&#x6CA1;&#x6709;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD4;&#x56DE;<code>raise StopIteration</code>&#x3002;&#x8FD9;&#x6837;&#x5B50;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x5C31;&#x53EF;&#x4EE5;&#x548C;&#x5404;&#x79CD;&#x7684;&#x7CFB;&#x7EDF;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x878D;&#x5408;&#x3002;</li>
+<li>&#x751F;&#x6210;&#x5668;(generator)&#xFF0C;&#x751F;&#x6210;&#x5668;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4FDD;&#x5B58;&#x4E86;&#x4E00;&#x4E9B;&#x5217;&#x5E8F;&#x5217;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x901A;&#x8FC7;<code>__iter__</code>&#x63A5;&#x53E3;&#x5F97;&#x5230;&#x8BBF;&#x95EE;&#x5E8F;&#x5217;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x3002;&#xFF08;&#x6709;&#x65F6;&#x5019;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;generator&#x548C;iterator&#x53EF;&#x4EE5;&#x6DF7;&#x5728;&#x4E00;&#x8D77;&#x6765;&#x8C08;&#xFF0C;&#x56E0;&#x4E3A;generator&#x4E5F;&#x5B9E;&#x73B0;&#x4E86;<code>next</code>&#x8FED;&#x4EE3;&#x8BBF;&#x95EE;&#x7684;&#x63A5;&#x53E3;&#xFF09;</li>
+</ol>
+<p>&#x6240;&#x4EE5;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x751F;&#x6210;&#x5668;&#x6784;&#x9020;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Iterator</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">next</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.count &lt; <span class="number">4</span>:</span><br><span class="line">            self.count += <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> self.count</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> StopIteration</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> i <span class="keyword">in</span> Iterator():</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>    <span class="keyword">print</span> i</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<p>&#x6240;&#x4EE5;for&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x5C31;&#x662F;&#xFF1A;</p>
+<ol>
+<li>&#x901A;&#x8FC7;for&#x540E;&#x9762;&#x7684;&#x751F;&#x6210;&#x5668;&#x7684;<code>__iter__</code>&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#x3002;</li>
+<li>&#x7136;&#x540E;&#x4E0D;&#x505C;&#x8C03;&#x7528;<code>next</code>&#x65B9;&#x5F0F;&#x5F97;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x76F4;&#x5230;&#x9047;&#x5230;<code>StopIteration</code>&#x5F02;&#x5E38;</li>
+</ol>
+<p>&#x5927;&#x4F53;&#x4EE3;&#x7801;&#x7C7B;&#x4F3C;&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    iter = Iteration().__iter__()</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        i = iter.next()</span><br><span class="line">        <span class="keyword">print</span> i</span><br><span class="line"><span class="keyword">except</span> StopIteration:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x8FD8;&#x662F;&#x663E;&#x5F97;&#x975E;&#x5E38;&#x9EBB;&#x70E6;&#xFF0C;&#x6709;&#x6CA1;&#x6709;&#x65B9;&#x4FBF;&#x7684;&#x6784;&#x9020;&#x751F;&#x6210;&#x5668;&#x7684;&#x65B9;&#x5F0F;&#x5462;&#xFF1F;&#x6709;&#xFF0C;&#x5C31;&#x662F;<strong>yield</strong>&#x5173;&#x952E;&#x5B57;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x51FD;&#x6570;(generator funcion)&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x4E86;<strong>yield</strong>&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x662F;&#x4E00;&#x4E2A;<strong>&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;</strong>&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x662F;<strong>&#x751F;&#x6210;&#x5668;</strong>&#xFF0C;&#x4E14;&#x63A5;&#x53E3;&#x517C;&#x5BB9;&#x8FED;&#x4EE3;&#x7684;&#x63A5;&#x53E3;&#x3002; &#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_prime_start_from</span><span class="params">(start_num)</span>:</span></span><br><span class="line">    num = start_num</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        <span class="keyword">if</span> is_prime(num):</span><br><span class="line">            <span class="keyword">yield</span> num</span><br><span class="line">        num += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">gene = get_prime_start_from(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>type(gene)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="string">&apos;generator&apos;</span></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>next(gene)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="number">3</span></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>gene.next</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;&#x795E;&#x5947;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E;&#xFF0C;&#x53EF;&#x4EE5;&#xFF1A;</p>
+<ol>
+<li>&#x6267;&#x884C;&#x51FD;&#x6570;&#x903B;&#x8F91;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x4ECE;&#x51FD;&#x6570;&#x6267;&#x884C;&#x5904;(yield)&#x8DF3;&#x51FA;&#x5230;caller&#x7684;&#x5730;&#x65B9;&#x3002;&#x5E76;&#x4E14;&#x4FDD;&#x5B58;&#x4E86;++&#x6240;&#x6709;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x5C40;&#x90E8;&#x53D8;&#x91CF;**&#x7B49;&#x4FE1;&#x606F;</li>
+<li>caller&#x6267;&#x884C;&#xFF0C;caller&#x6267;&#x884C;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>next</code>&#x65B9;&#x5F0F;<ins>&#x5207;&#x6362;&#x5230;&#x521A;&#x624D;&#x7684;&#x51FD;&#x6570;&#x4E2D;&#x7EE7;&#x7EED;&#x6267;&#x884C;</ins></li>
+</ol>
+<hr>
+<p>&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x8BED;&#x6CD5;&#x662F;<code>send_v = yield return_v</code>&#xFF0C;&#x5176;&#x903B;&#x8F91;&#x662F;&#xFF1A;</p>
+<ol>
+<li>&#x901A;&#x8FC7;<code>generator.send(send_v)</code>&#x7684;&#x65B9;&#x5F0F;&#x5C06;&#x6570;&#x503C;&#x5E45;&#x503C;&#x5230;send_v.</li>
+<li>&#x540C;&#x65F6;&#x4E0A;&#x9762;&#x7684;&#x8BED;&#x53E5;&#x8FD4;&#x56DE;<strong>&#x4E0B;&#x4E00;&#x6B21;yield&#x8FD0;&#x884C;&#x7684;retrun_v</strong></li>
+</ol>
+<p>&#x6240;&#x4EE5;&#x7B2C;&#x4E00;&#x6B21;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x4E0B;&#x5C06;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x5230;<strong>&#x7B2C;&#x4E00;&#x6B21;yield&#x6240;&#x5728;&#x7684;&#x4F4D;&#x7F6E;</strong></p>
+<p><a href="https://jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained"target="_blank"rel="external">&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;</a>&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_data</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Return 3 random integers between 0 and 9&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> random.sample(range(<span class="number">10</span>), <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">consume</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Displays a running average across lists of integers sent to it&quot;&quot;&quot;</span></span><br><span class="line">    running_sum = <span class="number">0</span></span><br><span class="line">    data_items_seen = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        data = <span class="keyword">yield</span></span><br><span class="line">        data_items_seen += len(data)</span><br><span class="line">        running_sum += sum(data)</span><br><span class="line">        print(<span class="string">&apos;The running average is {}&apos;</span>.format(running_sum / float(data_items_seen)))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">produce</span><span class="params">(consumer)</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Produces a set of values and forwards them to the pre-defined consumer</span><br><span class="line">    function&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        data = get_data()</span><br><span class="line">        print(<span class="string">&apos;Produced {}&apos;</span>.format(data))</span><br><span class="line">        consumer.send(data)</span><br><span class="line">        <span class="keyword">yield</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&apos;__main__&apos;</span>:</span><br><span class="line">    consumer = consume()</span><br><span class="line">    consumer.send(<span class="keyword">None</span>)</span><br><span class="line">    producer = produce(consumer)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>): </span><br><span class="line">        print(<span class="string">&apos;Producing...&apos;</span>) </span><br><span class="line">        next(producer)</span><br></pre></td></tr></table></figure>
+<p>&#x6240;&#x4EE5;&#x6982;&#x5FF5;&#x4E0A;&#x8FD9;&#x4E2A;&#x8BED;&#x6CD5;&#x5C31;&#x662F;&#x63D0;&#x4F9B;&#x4E86;<strong>&#x4FEE;&#x6539;&#x751F;&#x6210;&#x5668;&#x5185;&#x90E8;&#x6570;&#x636E;&#x7684;&#x5916;&#x90E8;(caller)&#x4FEE;&#x6539;&#x65B9;&#x5F0F;</strong>&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5176;&#x5B9E;consume&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x505C;&#x6D88;&#x5316;&#x6570;&#x636E;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x4E00;&#x6B21;next&#x8FD0;&#x884C;&#x5C31;&#x6D88;&#x5316;&#x4E00;&#x6279;&#x6570;&#x636E;&#xFF08;&#x4E0D;&#x4E00;&#x5B9A;yield&#x5C31;&#x9700;&#x8981;&#x53D1;&#x6325;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x8FD9;&#x6837;&#x5B50;&#x66F4;&#x591A;&#x662F;&#x7528;&#x6765;&#x63A7;&#x5236;&#x6D41;&#x7A0B;&#x7684;&#x6982;&#x5FF5;&#xFF09;&#xFF0C;&#x901A;&#x8FC7;send&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7ED9;&#x5176;&#x5582;&#x6570;&#x636E;&#x3002;&#x540C;&#x7406;&#xFF0C;&#x5BF9;&#x4E8E;produce&#x800C;&#x8A00;&#xFF0C;&#x901A;&#x8FC7;yield&#x6765;&#x5B9E;&#x73B0;<strong>&#x4E00;&#x6B21;&#x6B21;&#x751F;&#x6210;&#x6570;&#x636E;&#xFF0C;&#x53D1;&#x9001;&#x6570;&#x636E;&#x7684;&#x529F;&#x80FD;</strong></p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x8C03;&#x7528;<code>send(None)</code>, &#x5426;&#x5219;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x7B49;&#x5F85;&#x7ED3;&#x679C;&#x7684;<code>yield</code>&#xFF0C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x62A5;&#x9519;&#x3002;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x8C03;&#x7528;<code>send(xxx)</code>&#x5C06;&#x4E0A;&#x4E00;&#x6B21;&#x7684;<code>yield</code>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;<code>next</code>&#xFF0C;&#x8C03;&#x7528;next&#x7B49;&#x4EF7;&#x4E8E;<code>next = send(None)</code>&#x5C31;&#x662F;&#x8BF4;<code>next</code>&#x4F1A;&#x5F97;&#x5230;yield&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4F46;&#x540C;&#x65F6;&#x4F1A;&#x544A;&#x8BC9;&#x8FD4;&#x56DE;&#x503C;&#x662F;None&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x8DEF;&#x8C03;&#x7528;<code>next</code>&#x662F;&#x80AF;&#x5B9A;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7684;&#xFF08;&#x7B2C;&#x4E00;&#x6B21;&#x5C31;&#x662F;&#x9700;&#x8981;None&#xFF09;</p>
+<hr>
+<p>&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5C06;&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;&#x6269;&#x5C55;&#x7406;&#x89E3;&#x4E3A;<mark>&#x4FDD;&#x5B58;&#x4E86;&#x6240;&#x6709;&#x72B6;&#x6001;&#x7684;&#x5B9E;&#x4F8B;: &#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x6BCF;&#x6B21;&#x901A;&#x8FC7;next&#x5207;&#x6362;&#x5230;&#x539F;&#x73AF;&#x5883;&#x4E2D;&#x8FD0;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#x7ED3;&#x675F;&#x540E;&#x4FDD;&#x5B58;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x7B49;&#x5F85;&#x4E0B;&#x4E00;&#x6B21;&#x8FD0;&#x884C;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x548C;caller&#x4EA4;&#x4E92;&#x6570;&#x636E;&#x3002;</mark></p>
+<p>&#x6269;&#x5C55;&#x6765;&#x770B;&#xFF0C;&#x751F;&#x6210;&#x5668;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x5C31;&#x662F;&#x5B8C;&#x5168;&#x7528;&#x6765;&#x751F;&#x6210;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x63A7;&#x5236;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x7684;&#x903B;&#x8F91;&#x3002;&#x6BD4;&#x5982;<a href="http://www.tornadoweb.org/en/stable/guide/coroutines.html"target="_blank"rel="external">tornaod coroutine</a>&#xFF0C; &#x5176;&#x6982;&#x5FF5;&#x5C31;&#x662F;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x7684;&#x4EE3;&#x7801;&#x50CF;&#x5199;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x6267;&#x884C;&#x903B;&#x8F91;&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> tornado <span class="keyword">import</span> gen</span><br><span class="line"></span><br><span class="line"><span class="decorator">@gen.coroutine</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fetch_coroutine</span><span class="params">(url)</span>:</span></span><br><span class="line">    http_client = AsyncHTTPClient()</span><br><span class="line">    response = <span class="keyword">yield</span> http_client.fetch(url)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># In Python versions prior to 3.3, returning a value from # a generator is not allowed and you must use raise gen.Return(response.body) instead.</span></span><br><span class="line">    <span class="keyword">return</span> response.body</span><br></pre></td></tr></table></figure>
+<p><code>fetch</code>&#x4EE3;&#x7801;&#x662F;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x8C03;&#x7528;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<code>Future</code>&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;&#x88AB;tornado&#x7684;ioLoop&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x4E00;&#x65E6;&#x5B8C;&#x6210;&#x8C03;&#x7528;&#xFF0C;&#x901A;&#x8FC7;callback&#x7684;&#x65B9;&#x5F0F;&#x901A;&#x77E5;&#x5B8C;&#x6210;&#x4F53;&#x3002;</p>
+<p>&#x4F7F;&#x7528;coroutine&#x7684;&#x65B9;&#x5F0F;&#x5C06;future&#x548C;callback&#x7684;&#x65B9;&#x5F0F;&#x5199;&#x6210;&#x4E86;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5927;&#x81F4;&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#x4E3A;&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Simplified inner loop of tornado.gen.Runner</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="comment"># send(x) makes the current yield return x. It returns when the next yield is reached </span></span><br><span class="line">    future = self.gen.send(self.next)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">callback</span><span class="params">(f)</span>:</span></span><br><span class="line">        self.next = f.result()</span><br><span class="line">        self.run()</span><br><span class="line">    future.add_done_callback(callback)</span><br></pre></td></tr></table></figure>
+<p>&#x6D41;&#x7A0B;&#x5927;&#x81F4;&#x662F;&#xFF1A;</p>
+<ol>
+<li>&#x8FD0;&#x884C;gen&#xFF0C;&#x5F97;&#x5230;yield&#x7ED3;&#x679C;&#xFF0C;&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x52A0;&#x5165;callback&#x3002;</li>
+<li>yield&#x7ED3;&#x679C;&#x8FD0;&#x884C;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;callback&#x8C03;&#x7528;&#xFF0C;&#x5C06;&#x7ED3;&#x679C;&#x901A;&#x8FC7;send&#x53D1;&#x9001;&#x4F1A;yield&#x5904;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;&#x3002;</li>
+<li>&#x5FAA;&#x73AF;&#xFF0C;&#x540C;&#x7406;&#x53C8;&#x8FD0;&#x884C;&#x7ED3;&#x675F;&#xFF0C;&#x8C03;&#x7528;callback&#xFF0C;&#x7EE7;&#x7EED;&#x4E0B;&#x4E00;&#x4E2A;yield&#x7684;&#x8FD0;&#x884C;&#xFF0C;&#x77E5;&#x9053;&#x8FD0;&#x884C;&#x7ED3;&#x675F;&#x3002;</li>
+</ol>
+<p>&#x597D;NB&#x7684;hook&#xFF0C;&#x76F4;&#x63A5;&#x5C06;&#x5F02;&#x6B65;&#x4EE3;&#x7801;&#x5199;&#x6210;&#x4E86;&#x540C;&#x6B65;&#x7684;&#x611F;&#x89C9;&#xFF0C;&#x5229;&#x7528;yield&#x7684;&#x5207;&#x6362;&#x8FD0;&#x884C;&#x903B;&#x8F91;&#x548C;&#x4FDD;&#x5B58;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x7279;&#x6027;&#x3002;</p>
+<hr>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;</p>
+<ol>
+<li><a href="http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python"target="_blank"rel="external">stackoverflow - yield in python</a></li>
+<li><a href="https://jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/"target="_blank"rel="external">great blog - improve your python yield and generators explained</a></li>
+<li><a href="http://yuedu.163.com/source/cl_dc23b96c2df84533957ffb1089e90604_4"target="_blank"rel="external">&#x7F51;&#x6613;&#x4E91;&#x9605;&#x8BFB; - writing idiomatic python</a></li>
+<li><a href="http://www.tornadoweb.org/en/stable/guide/coroutines.html"target="_blank"rel="external">tornado - coroutines</a></li>
+</ol>
+<h3 id="python-logging">python logging</h3>
+<p>python&#x7684;log&#x6A21;&#x5757;&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#xFF0C;&#x7528;&#x8D77;&#x6765;&#x4E5F;&#x975E;&#x5E38;&#x7684;&#x65B9;&#x4FBF;&#x3002;log&#x6A21;&#x5757;&#x4E3B;&#x8981;&#x6709;&#x56DB;&#x4E2A;&#x7C7B;&#x652F;&#x6491;&#xFF1A;</p>
+<ol>
+<li>log</li>
+<li>handler</li>
+<li>filter</li>
+<li>format</li>
+</ol>
+<p>log&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x6B63;&#x5E38;&#x7684;log&#x8FDB;&#x884C;&#x8F93;&#x51FA;&#xFF0C;&#x800C;handler&#x8868;&#x793A;&#x5C06;log&#x8F93;&#x51FA;&#x5230;&#x4EC0;&#x4E48;&#x4F4D;&#x7F6E;&#xFF0C;&#x6BD4;&#x5982;stream&#x8868;&#x793A;&#x6D41;&#xFF0C;file&#x8868;&#x793A;&#x6587;&#x4EF6;&#x7B49;&#xFF0C;filter&#x8868;&#x793A;&#x8F93;&#x51FA;&#x7684;&#x8FC7;&#x6EE4;&#x89C4;&#x5219;&#xFF0C;&#x800C;format&#x8868;&#x793A;&#x5177;&#x4F53;&#x7684;&#x8F93;&#x51FA;&#x6570;&#x636E;&#x7684;&#x683C;&#x5F0F;&#x3002;&#x51E0;&#x4E2A;&#x7C7B;&#x914D;&#x5408;&#x8D77;&#x6765;&#x8FDB;&#x884C;&#x7EC4;&#x5408;&#x4F7F;&#x7528;&#x3002;</p>
+<p>log&#x662F;&#x6709;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;&#x7684;&#xFF0C;&#x6700;&#x4E0A;&#x5C42;&#x7684;log&#x5C31;&#x662F;root&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;logging&#x6A21;&#x5757;&#x7684;&#x6A21;&#x5757;&#x53D8;&#x91CF;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x4EE3;&#x7801;<code>logger.getLogger()</code>&#x5F97;&#x5230;&#xFF0C;&#x5982;&#x679C;&#x6307;&#x5B9A;logger&#x7684;&#x540D;&#x5B57;&#x5C31;&#x662F;<code>logger.getLogger(log_name)</code>&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;<code>log_name</code>&#x5C31;&#x4F1A;&#x5F97;&#x5230;&#x76F8;&#x540C;&#x7684;log&#xFF0C;&#x8FD9;&#x70B9;&#x4E5F;&#x662F;logging&#x6A21;&#x5757;&#x81EA;&#x5DF1;&#x7EF4;&#x62A4;&#x4E86;&#x4E00;&#x4E2A;log&#x7684;&#x6620;&#x5C04;dict&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;log&#x7684;&#x8F93;&#x51FA;&#x5148;<strong>&#x7ECF;&#x8FC7;&#x5B50;&#x7C7B;&#x7684;handler&#x8F93;&#x51FA;&#xFF0C;&#x4E4B;&#x540E;&#x518D;&#x7ECF;&#x8FC7;&#x7236;&#x7C7B;handler&#xFF0C;&#x4F9D;&#x6B21;&#x4F20;&#x9012;&#x3002;</strong>&#x3002;&#x540D;&#x5B57;&#x53EF;&#x4EE5;&#x4F53;&#x73B0;&#x7236;&#x5B50;&#x5173;&#x7CFB;&#xFF0C;&#x6BD4;&#x5982;<code>base</code>&#x5C31;&#x662F;<code>base.test</code>&#x7684;&#x7236;&#x7C7B;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x7684;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;&#x597D;&#x5904;&#x4F53;&#x73B0;&#x5728;&#xFF1A;</p>
+<ol>
+<li>&#x5C42;&#x7EA7;&#x7684;&#x8F93;&#x51FA;&#x63A7;&#x5236;&#x3002;</li>
+<li>&#x901A;&#x8FC7;&#x5B9A;&#x4E49;root&#x7684;handler&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x5B9A;&#x4E49;&#x4E86;&#x6700;&#x57FA;&#x672C;&#x7684;handler&#xFF0C;&#x540E;&#x9762;&#x751F;&#x6210;&#x7684;log&#x90FD;&#x53EF;&#x4EE5;&#x590D;&#x7528;&#x8FD9;&#x4E2A;handler&#xFF0C;&#x8D77;&#x4E86;&#x590D;&#x7528;&#x7684;&#x4F5C;&#x7528;&#x3002;</li>
+</ol>
+<p>&#x7B80;&#x5355;&#x7684;&#x8C03;&#x7528;log&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;logging&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x7684;&#x51E0;&#x4E2A;&#x5168;&#x5C40;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ol>
+<li>basicConfig : &#x4F1A;&#x5BF9;root log&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x7684;&#x5B9A;&#x4E49;&#x3002;</li>
+<li>error/info/debug : &#x76F4;&#x63A5;&#x5C31;&#x662F;&#x4F7F;&#x7528;root log&#xFF0C;&#x540C;&#x65F6;&#x5982;&#x679C;root log&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;basicConfig&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#x521D;&#x59CB;&#x5316;&#x3002;</li>
+</ol>
+<p>&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;root&#x9ED8;&#x8BA4;&#x7684;<code>debug_level</code>&#x662F;WARNING&#x3002;</p>
+<p><code>debug_level</code>&#x6709;&#x51E0;&#x4E2A;&#x7EF4;&#x5EA6;&#x7684;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ol>
+<li>log&#x5C42;&#x7EA7;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x7B26;&#x5408;log&#x5C42;&#x7EA7;&#x7684;log&#x4E0D;&#x4F1A;&#x8F93;&#x51FA;&#x3002;</li>
+<li>&#x7236;log&#x5C42;&#x7EA7;&#xFF0C;&#x5982;&#x679C;&#x81EA;&#x5DF1;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;log&#x5C42;&#x7EA7;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x4F7F;&#x7528;&#x7236;&#x7C7B;&#x7684;&#xFF0C;&#x4F9D;&#x6B21;&#x627E;&#x4E0A;&#x53BB;&#xFF0C;&#x76F4;&#x5230;root&#x7684;level&#x3002;</li>
+<li>handler&#x5C42;&#x7EA7;&#xFF0C;&#x5982;&#x679C;log&#x5C42;&#x7EA7;&#x7B26;&#x5408;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x7B26;&#x5408;handler&#x5C42;&#x7EA7;&#xFF0C;&#x624D;&#x4F1A;&#x8F93;&#x51FA;&#x5230;handler&#x4E2D;&#x3002;&#x6BD4;&#x5982;log&#x5C42;&#x7EA7;&#x662F;info&#xFF0C;&#x6240;&#x6709;info&#x6570;&#x636E;&#x90FD;&#x4F1A;&#x8FDB;&#x5165;log&#x540E;&#x7EED;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E2A;handler&#x7684;&#x5C42;&#x7EA7;&#xFF08;&#x6BD4;&#x5982;&#x9700;&#x8981;&#x8F93;&#x51FA;&#x6240;&#x6709;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x5230;&#x6587;&#x4EF6;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5C06;handler&#x7684;&#x7EA7;&#x522B;&#x8BBE;&#x7F6E;error&#xFF0C;&#x8FD9;&#x6837;&#x5B50;info&#x7684;&#x6570;&#x636E;&#x90FD;&#x4F1A;&#x8F93;&#x51FA;&#xFF0C;&#x4F46;&#x662F;&#x80FD;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53EA;&#x6709;error&#x7EA7;&#x522B;&#x6570;&#x636E;&#x3002;</li>
+</ol>
+<hr>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;</p>
+<ol>
+<li><a href="https://app.yinxiang.com/shard/s61/nl/2147483647/fd86874d-ae64-4f20-bc8f-c45b76f87125/"target="_blank"rel="external">&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x8BF4;&#x660E;log&#x7684;&#x6587;&#x7AE0;</a></li>
+<li><a href="https://pymotw.com/2/logging/index.html"target="_blank"rel="external">python-motw-logger</a></li>
+</ol>
+<h3 id="python-functools-wraps">python functools wraps</h3>
+<p>python&#x7684;decorator&#x662F;&#x4E00;&#x4E2A;&#x5F3A;&#x5927;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9;&#x4E00;&#x4E2A;&#x65E2;&#x5B9A;&#x7684;&#x51FD;&#x6570;&#x6216;&#x8005;&#x7C7B;&#x8FDB;&#x884C;&#x4FEE;&#x9970;&#xFF0C;&#x8FBE;&#x5230;&#x300C;&#x4E00;&#x952E;&#x6269;&#x5C55;&#x300D;&#x529F;&#x80FD;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x88C5;&#x9970;&#x4E4B;&#x540E;&#x7684;&#x51FD;&#x6570;&#xFF08;&#x6216;&#x8005;&#x7C7B;&#xFF09;&#x7684;&#x5F88;&#x591A;&#x539F;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;<code>__name__ __doc__ __module__</code>&#x90FD;&#x53D8;&#x4E3A;&#x4E86;&#x4FEE;&#x9970;&#x4E4B;&#x540E;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x88AB;&#x4FEE;&#x9970;&#x7684;&#x539F;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x9020;&#x6210;&#x5F88;&#x591A;&#x7684;&#x5947;&#x5F02;&#x7684;&#x5730;&#x65B9;&#x3002;&#x6240;&#x6709;python&#x7CFB;&#x7EDF;&#x5E93;&#x4E2D;&#x5F15;&#x5165;&#x4E86;&#x5DE5;&#x5177;<code>functools.wraps functools.update_wrapper</code>&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x5DE5;&#x5177;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x5C06;&#x5C06;&#x4FEE;&#x9970;&#x5668;&#xFF08;wrapper&#xFF09;&#x7684;&#x5C5E;&#x6027;&#x4FEE;&#x6539;&#x4E3A;&#x88AB;&#x4FEE;&#x9970;&#x7684;&#x5C5E;&#x6027;&#xFF08;wrappered&#xFF09;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x4FEE;&#x9970;&#x4E4B;&#x540E;&#x7684;&#x4E1C;&#x897F;&#x770B;&#x8D77;&#x6765;&#x548C;&#x539F;&#x6765;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#xFF1A;</p>
+<figure class="highlight python"><figcaption><span>example-from-python-doc</span><a href="https://docs.python.org/2/library/functools.html"target="_blank"rel="external">link</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> functools <span class="keyword">import</span> wraps</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">my_decorator</span><span class="params">(f)</span>:</span></span><br><span class="line"><span class="prompt">... </span>    @wraps(f)</span><br><span class="line"><span class="prompt">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kwds)</span>:</span></span><br><span class="line"><span class="prompt">... </span>        <span class="keyword">print</span> <span class="string">&apos;Calling decorated function&apos;</span></span><br><span class="line"><span class="prompt">... </span>        <span class="keyword">return</span> f(*args, **kwds)</span><br><span class="line"><span class="prompt">... </span>    <span class="keyword">return</span> wrapper</span><br><span class="line">...</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>@my_decorator</span><br><span class="line"><span class="prompt">... </span><span class="function"><span class="keyword">def</span> <span class="title">example</span><span class="params">()</span>:</span></span><br><span class="line"><span class="prompt">... </span>    <span class="string">&quot;&quot;&quot;Docstring&quot;&quot;&quot;</span></span><br><span class="line"><span class="prompt">... </span>    <span class="keyword">print</span> <span class="string">&apos;Called example function&apos;</span></span><br><span class="line">...</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>example()</span><br><span class="line">Calling decorated function</span><br><span class="line">Called example function</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>example.__name__</span><br><span class="line"><span class="string">&apos;example&apos;</span></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>example.__doc__</span><br><span class="line"><span class="string">&apos;Docstring&apos;</span></span><br></pre></td></tr></table></figure>
+<p>&#x5176;&#x5B9E;&#x539F;&#x7406;&#x5C31;&#x662F;&#xFF0C;<code>wraps</code>&#x8C03;&#x7528;&#x4E86;<code>update_wrapper</code>&#xFF0C;&#x5C06;wrapped&#x7684;&#x539F;&#x4FE1;&#x606F;&#x90FD;&#x62F7;&#x8D1D;&#x5230;wrapper&#x4E2D;&#xFF0C;&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x770B;&#x8D77;&#x6765;&#x90FD;&#x4E00;&#x6837;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x8D34;&#x4E00;&#x4E0B;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">WRAPPER_ASSIGNMENTS = (<span class="string">&apos;__module__&apos;</span>, <span class="string">&apos;__name__&apos;</span>, <span class="string">&apos;__doc__&apos;</span>)</span><br><span class="line">WRAPPER_UPDATES = (<span class="string">&apos;__dict__&apos;</span>,)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_wrapper</span><span class="params">(wrapper,</span><br><span class="line">                   wrapped,</span><br><span class="line">                   assigned = WRAPPER_ASSIGNMENTS,</span><br><span class="line">                   updated = WRAPPER_UPDATES)</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Update a wrapper function to look like the wrapped function</span><br><span class="line"></span><br><span class="line">       wrapper is the function to be updated</span><br><span class="line">       wrapped is the original function</span><br><span class="line">       assigned is a tuple naming the attributes assigned directly</span><br><span class="line">       from the wrapped function to the wrapper function (defaults to</span><br><span class="line">       functools.WRAPPER_ASSIGNMENTS)</span><br><span class="line">       updated is a tuple naming the attributes of the wrapper that</span><br><span class="line">       are updated with the corresponding attribute from the wrapped</span><br><span class="line">       function (defaults to functools.WRAPPER_UPDATES)</span><br><span class="line">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> attr <span class="keyword">in</span> assigned:</span><br><span class="line">        setattr(wrapper, attr, getattr(wrapped, attr))</span><br><span class="line">    <span class="keyword">for</span> attr <span class="keyword">in</span> updated:</span><br><span class="line">        getattr(wrapper, attr).update(getattr(wrapped, attr, {}))</span><br><span class="line">    <span class="comment"># Return the wrapper so this can be used as a decorator via partial()</span></span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wraps</span><span class="params">(wrapped,</span><br><span class="line">          assigned = WRAPPER_ASSIGNMENTS,</span><br><span class="line">          updated = WRAPPER_UPDATES)</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Decorator factory to apply update_wrapper() to a wrapper function</span><br><span class="line"></span><br><span class="line">       Returns a decorator that invokes update_wrapper() with the decorated</span><br><span class="line">       function as the wrapper argument and the arguments to wraps() as the</span><br><span class="line">       remaining arguments. Default arguments are as for update_wrapper().</span><br><span class="line">       This is a convenience function to simplify applying partial() to</span><br><span class="line">       update_wrapper().</span><br><span class="line">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> partial(update_wrapper, wrapped=wrapped,</span><br><span class="line">                   assigned=assigned, updated=updated)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;</p>
+<ol>
+<li><a href="https://docs.python.org/2/library/functools.html"target="_blank"rel="external">python-functools-doc</a></li>
+<li><a href="https://segmentfault.com/a/1190000000599084"target="_blank"rel="external">segmentfault-blog</a></li>
+<li><a href="http://stackoverflow.com/questions/308999/what-does-functools-wraps-do"target="_blank"rel="external">stackoverflow-what-does-functools.wrap-do</a></li>
+</ol>
 
       
     </div>
@@ -227,150 +469,185 @@
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2016/03/18/book-touchable-tidy-up-life-md/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/2016/03/10/python-practice/">python 学习 &amp;&amp; 实践</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">whiledoing</a></p>
+        <p><span>發布時間:</span>2016-03-10, 22:41:31</p>
+        <p><span>最後更新:</span>2016-05-11, 20:38:45</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/2016/03/10/python-practice/" title="python 学习 &amp;&amp; 实践">http://whiledoing.github.io/2016/03/10/python-practice/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://whiledoing.github.io/2016/03/10/python-practice/　　作者: whiledoing" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
         
-          《怦然心动的人生整理魔法》学习笔记
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/03/18/book-touchable-tidy-up-life-md/">
+                    《怦然心动的人生整理魔法》学习笔记
+                </a>
+            </div>
         
-      </div>
-    </a>
-  
-  
-    <a href="/2016/02/03/the-art-of-stop-learn-note-md/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">《止学》学习笔记</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/02/03/the-art-of-stop-learn-note-md/">
+                    《止学》学习笔记
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
 
-
-
-
-<!-- JiaThis Button BEGIN -->
-<script type="text/javascript" >
-    var jiathis_config={
-        data_track_clickback:true,
-        siteNum:6,
-        sm:"weixin,tsina,evernote,tieba,ydnote,fav",
-        summary:"test",
-        boldNum:6,
-        showClose:true,
-        shortUrl:true,
-        hideMore:true
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目錄</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用forelse"><span class="toc-number">1.</span> <span class="toc-text">使用for…else…</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python的多重继承"><span class="toc-number">2.</span> <span class="toc-text">python的多重继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python好的资料收集"><span class="toc-number">3.</span> <span class="toc-text">python好的资料收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for循环中小心使用lambda"><span class="toc-number">4.</span> <span class="toc-text">for循环中，小心使用lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python的输出"><span class="toc-number">5.</span> <span class="toc-text">python的输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python-with"><span class="toc-number">6.</span> <span class="toc-text">python with</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python-gotcha-python一些诡异的坑"><span class="toc-number">7.</span> <span class="toc-text">python gotcha (python一些诡异的坑）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#python的默认构造参数"><span class="toc-number">7.1.</span> <span class="toc-text">python的默认构造参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python函数的lazy-binding-closures"><span class="toc-number">7.2.</span> <span class="toc-text">python函数的lazy binding closures</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python不输出pyc文件"><span class="toc-number">8.</span> <span class="toc-text">python不输出pyc文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python-yield"><span class="toc-number">9.</span> <span class="toc-text">python yield</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python-logging"><span class="toc-number">10.</span> <span class="toc-text">python logging</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python-functools-wraps"><span class="toc-number">11.</span> <span class="toc-text">python functools wraps</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
     }
+</style>
+
+<input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+<script>
+    yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
 </script>
-<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?uid=2083154&btn=r1.gif&move=0" charset="utf-8"></script>
-<!-- JiaThis Button END -->
 
 
 
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"python 学习 && 实践　| whiledoing　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="python-practice" data-title="python 学习 &amp;&amp; 实践" data-url="http://whiledoing.github.io/2016/03/10/python-practice/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"whiledoing"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
+    
 </div>
 
 
 
 
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/03/18/book-touchable-tidy-up-life-md/" title="上一篇: 《怦然心动的人生整理魔法》学习笔记">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/02/03/the-art-of-stop-learn-note-md/" title="下一篇: 《止学》学习笔记">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/04/22/my-vim/">折腾 vim</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/01/how-to-life-learn-note/">《活法》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/book-liaoge-linux-course-md/">《鸟哥的 Linux 私房菜》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/learn-linux-from-linux-foundation/">linux course from linux foundation 学习记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/21/the-mythical-man-month-learn-note-md/">《人月神话》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/book-touchable-tidy-up-life-md/">《怦然心动的人生整理魔法》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/10/python-practice/">python 学习 && 实践</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/the-art-of-stop-learn-note-md/">《止学》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/the-pragmatic-programmer-learn-note/">《The Pragmatic Programmer》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/02/code-complete-2-learn-note/">《Code Complete 2》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/the-art-of-unix-programming-reading-notes/">《The Art of UNIX Programming》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/self-git/">git 学习记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/hexo-blog/">hexo-blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/the-linux-programming-interface-reading-notes/">《The Linux Programming Interface》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/25/self-mac/">mac 折腾记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/20/yaml-format/">yaml 格式</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2016
-			whiledoing.
-			All Rights Reserved.
-			<i class="icon-next-heart fa fa-heart"></i>
-    	</div>
-
-		<br/>
-		<div class="powered-by">
-			Powered By <a class="theme-link" target='_blank' href="http://hexo.io">Hexo</a> |
-
-			<!-- load theme by config -->
-			Theme By <a class="theme-link" target='_blank' href=https://github.com/litten/hexo-theme-yilia>
-				Yilia
-			</a> |
-
-			<!--[不蒜子统计访问量](http://ibruce.info/2015/04/04/busuanzi/)-->
-            <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <span id="busuanzi_container_site_uv">您是本站第<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>位访问者</span> |
-            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>次</span>
-		</div>
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 whiledoing
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到訪數: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本頁閱讀量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
-  </div>
 </footer>
     </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+    <script src="/js/GithubRepoWidget.js" type="text/javascript"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 3;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: false,
-		isPost: true,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
-
-
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
   </div>
 </body>
 </html>

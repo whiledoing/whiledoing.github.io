@@ -1,176 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>linux course from linux foundation 学习记录 | whiledoing</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="linux foundation 提供了一个不错的  在线 linux 教程 ，里面介绍了 linux 很多基本的概念，历史，操作和使用习惯等知识。">
+    
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="whiledoing" />
+
+    
+
+    <meta name="description" content="linux foundation 提供了一个不错的  在线 linux 教程 ，里面介绍了 linux 很多基本的概念，历史，操作和使用习惯等知识。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux course from linux foundation 学习记录">
 <meta property="og:url" content="http://whiledoing.github.io/2016/03/24/learn-linux-from-linux-foundation/index.html">
 <meta property="og:site_name" content="whiledoing">
 <meta property="og:description" content="linux foundation 提供了一个不错的  在线 linux 教程 ，里面介绍了 linux 很多基本的概念，历史，操作和使用习惯等知识。">
-<meta property="og:updated_time" content="2016-03-24T07:41:13.000Z">
+<meta property="og:updated_time" content="2016-05-31T02:13:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux course from linux foundation 学习记录">
 <meta name="twitter:description" content="linux foundation 提供了一个不错的  在线 linux 教程 ，里面介绍了 linux 很多基本的概念，历史，操作和使用习惯等知识。">
-  
+
+    <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+    
     <link rel="alternative" href="/atom.xml" title="whiledoing" type="application/atom+xml">
-  
-  
-    <link rel="icon" type='image/x-icon' href="/favicon.ico">
-  
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    
 
-  <!-- add [font-awesome](https://fortawesome.github.io/Font-Awesome/)-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+
+    
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+    
+
+    
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+    
+
+    
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    
+
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    
+    <title>linux course from linux foundation 学习记录 | whiledoing</title>
+
+    <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+    <script>
+        var yiliaConfig = {
+            fancybox: true,
+            animate: true,
+            isHome: false,
+            isPost: true,
+            isArchive: false,
+            isTag: false,
+            isCategory: false,
+            open_in_new: false,
+            fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+            scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+            search: undefined
+        }
+    </script>
+
+    
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+    
+
+    
+    <script> yiliaConfig.rootUrl = "\/";</script>
+    
+
+    
+
+    
+
+    <!--add mermaid support [link](http://knsv.github.io/mermaid/#mermaid)-->
+    <script src="/js/mermaid-6.0.0.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <link rel="stylesheet" href="/css/raw_css/mermaid-6.0.0.css">
 </head>
-
 <body>
   <div id="container">
     <div class="left-col">
     <div class="overlay"></div>
 <div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="https://avatars0.githubusercontent.com/u/1644558?v=3&amp;s=460" class="js-avatar">
-			
-		</a>
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.jpeg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">whiledoing</a></h1>
+        </hgroup>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">whiledoing</a></h1>
-		</hgroup>
+        
+        <p class="header-subtitle">喜欢一切简单的设计和她</p>
+        
 
-		
-		<p class="header-subtitle">喜欢一切简单的设计和她</p>
-		
+        
 
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						
-					</ul>
-				</div>
-			</div>
-		
 
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="https://github.com/whiledoing" title="github">github</a>
-					        
-								<a class="douban" target="_blank" href="http://www.douban.com/people/58249409/" title="douban">douban</a>
-					        
-								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="zhihu">zhihu</a>
-					        
-								<a class="mail" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="mail">mail</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/learn-note/" style="font-size: 18px;">learn-note</a> <a href="/tags/life/" style="font-size: 12px;">life</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/osx/" style="font-size: 10px;">osx</a> <a href="/tags/pm/" style="font-size: 10px;">pm</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/self/" style="font-size: 20px;">self</a> <a href="/tags/software-engineer/" style="font-size: 14px;">software-engineer</a> <a href="/tags/unix-linux/" style="font-size: 16px;">unix/linux</a> <a href="/tags/yaml/" style="font-size: 10px;">yaml</a>
-					</div>
-				</section>
-				
-				
-				
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜單</li>
+                        <li>標籤</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
 
-				
-			</div>
-		</div>
-	</header>				
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/whiledoing" title="GitHub"></a>
+                            
+                                <a class="fa 豆瓣" target="_blank" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
+                            
+                                <a class="fa Email" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-note/">learn-note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/osx/">osx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pm/">pm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self/">self</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software-engineer/">software-engineer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unix-linux/">unix/linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+            </div>
+        </div>
+    </header>                
 </div>
-
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">whiledoing</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-			
-				<img lazy-src="https://avatars0.githubusercontent.com/u/1644558?v=3&amp;s=460" class="js-avatar">
-			
-			</div>
-			<hgroup>
-			  <h1 class="header-author">whiledoing</h1>
-			</hgroup>
-			
-			<p class="header-subtitle">喜欢一切简单的设计和她</p>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="https://github.com/whiledoing" title="github">github</a>
-			        
-						<a class="douban" target="_blank" href="http://www.douban.com/people/58249409/" title="douban">douban</a>
-			        
-						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="zhihu">zhihu</a>
-			        
-						<a class="mail" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="mail">mail</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">whiledoing</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.jpeg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">whiledoing</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">喜欢一切简单的设计和她</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/whiledoing" title="GitHub"></a>
+                            
+                                <a class="fa 豆瓣" target="_blank" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
+                            
+                                <a class="fa Email" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-
       <div class="body-wrap"><article id="post-learn-linux-from-linux-foundation" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/03/24/learn-linux-from-linux-foundation/" class="article-date">
-  	<time datetime="2016-03-24T01:58:20.000Z" itemprop="datePublished">2016-03-24</time>
+      <time datetime="2016-03-24T01:58:20.000Z" itemprop="datePublished">2016-03-24</time>
 </a>
     </div>
   
@@ -191,11 +264,11 @@
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unix-linux/">unix/linux</a></li></ul>
-	</div>
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unix-linux/">unix/linux</a></li></ul>
+    </div>
 
         <div class="clearfix"></div>
       </div>
@@ -203,6 +276,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>linux foundation &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x4E0D;&#x9519;&#x7684;<a href="https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS101x.2+1T2015/info"target="_blank"rel="external">&#x5728;&#x7EBF;linux&#x6559;&#x7A0B;</a>&#xFF0C;&#x91CC;&#x9762;&#x4ECB;&#x7ECD;&#x4E86;linux&#x5F88;&#x591A;&#x57FA;&#x672C;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5386;&#x53F2;&#xFF0C;&#x64CD;&#x4F5C;&#x548C;&#x4F7F;&#x7528;&#x4E60;&#x60EF;&#x7B49;&#x77E5;&#x8BC6;&#x3002;</p>
 <a id="more"></a>
 <p>&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x6CD5;&#x8FDB;&#x884C;&#x91CD;&#x5B9A;&#x5411;&#xFF1A;</p>
@@ -248,7 +322,8 @@
 <li>w &#x662F;2</li>
 <li>x &#x662F;1</li>
 </ol>
-<p>rwx &#x5BF9;&#x5E94;7<br>rw &#x5BF9;&#x5E94;6</p>
+<p>rwx &#x5BF9;&#x5E94;7
+rw &#x5BF9;&#x5E94;6</p>
 <p>&#x7B80;&#x5199;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod <span class="number">766</span> xxx-file</span><br></pre></td></tr></table></figure>
 <p>&#x4F7F;&#x7528;chown&#x6539;&#x53D8;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x62E5;&#x6709;&#x8005;&#x3002;chgrp&#x6539;&#x53D8;&#x6587;&#x4EF6;&#x7684;group&#x5185;&#x5BB9;&#x3002;</p>
@@ -274,19 +349,25 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -F set delimiters</span></span><br><span class="line">awk -F : <span class="string">&apos;{print $1}&apos;</span> /etc/passwd</span><br></pre></td></tr></table></figure>
 <p>&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#xFF1A;</p>
 <ol>
-<li><p>sort/uniq &#x6392;&#x5E8F;&#x548C;&#x6D88;&#x91CD;&#x3002;<code>sort -u file</code> &#x5C31;&#x7B49;&#x4E8E; <code>sort file | uniq</code></p>
+<li>
+<p>sort/uniq &#x6392;&#x5E8F;&#x548C;&#x6D88;&#x91CD;&#x3002;<code>sort -u file</code> &#x5C31;&#x7B49;&#x4E8E; <code>sort file | uniq</code></p>
 </li>
-<li><p>paste&#x5C06;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4F7F;&#x7528;&#x5206;&#x9694;&#x7B26;&#x53F7;&#x5408;&#x5E76;</p>
+<li>
+<p>paste&#x5C06;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4F7F;&#x7528;&#x5206;&#x9694;&#x7B26;&#x53F7;&#x5408;&#x5E76;</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># file1&#x548C;file2&#x7684;&#x5BF9;&#x5E94;&#x884C;&#x8FDE;&#x63A5;&#x4E00;&#x884C;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;tab&#x5206;&#x5272;</span></span><br><span class="line">paste <span class="operator">-d</span> <span class="string">&apos;\t&apos;</span> file1 file2        </span><br><span class="line"></span><br><span class="line"><span class="comment"># file1&#x7684;&#x6240;&#x6709;&#x884C;&#x53D8;&#x4E3A;&#x4E00;&#x884C;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&apos;:&apos;&#x5206;&#x5272;</span></span><br><span class="line">paste <span class="operator">-d</span> <span class="string">&apos;:&apos;</span> <span class="operator">-s</span> file1</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>join&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5C06;&#x6709;&#x76F8;&#x540C;&#x5217;&#x4FE1;&#x606F;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E;&#x591A;&#x4E2A;&#x8868;&#x6709;&#x76F8;&#x540C;&#x7684;key&#xFF0C;&#x6839;&#x636E;key&#x5408;&#x5E76;&#x6570;&#x636E;&#xFF09;</p>
+<li>
+<p>join&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5C06;&#x6709;&#x76F8;&#x540C;&#x5217;&#x4FE1;&#x606F;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E;&#x591A;&#x4E2A;&#x8868;&#x6709;&#x76F8;&#x540C;&#x7684;key&#xFF0C;&#x6839;&#x636E;key&#x5408;&#x5E76;&#x6570;&#x636E;&#xFF09;</p>
 </li>
-<li><p>tee&#x547D;&#x4EE4;&#x89C1;&#x8F93;&#x5165;&#x4E00;&#x65B9;&#x9762;&#x8F93;&#x51FA;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x65B9;&#x9762;&#x8F93;&#x51FA;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x4E2D;&#x3002;</p>
+<li>
+<p>tee&#x547D;&#x4EE4;&#x89C1;&#x8F93;&#x5165;&#x4E00;&#x65B9;&#x9762;&#x8F93;&#x51FA;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x65B9;&#x9762;&#x8F93;&#x51FA;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x4E2D;&#x3002;</p>
 </li>
-<li><p>cut&#x4E5F;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5206;&#x5272;&#x4E4B;&#x540E;&#x7684;&#x7684;&#x7279;&#x5B9A;&#x5217;&#xFF1A;</p>
+<li>
+<p>cut&#x4E5F;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5206;&#x5272;&#x4E4B;&#x540E;&#x7684;&#x7684;&#x7279;&#x5B9A;&#x5217;&#xFF1A;</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#x5F97;&#x5230;&#x7B2C;&#x4E00;&#x5217;</span></span><br><span class="line">cut <span class="operator">-d</span> <span class="string">&apos;:&apos;</span> <span class="operator">-f</span> <span class="number">1</span> /etc/passwd</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>strings&#x547D;&#x4EE4;&#x7528;&#x6765;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x4E2D;&#x53EF;&#x8BFB;&#x6587;&#x672C;</p>
+<li>
+<p>strings&#x547D;&#x4EE4;&#x7528;&#x6765;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x4E2D;&#x53EF;&#x8BFB;&#x6587;&#x672C;</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">strings xxx.xls | grep xxx</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
@@ -327,6 +408,14 @@
 <p>&#x7136;&#x540E;&#x7528;<code>Ctrl+Z</code>&#x6682;&#x505C;&#x8BE5;&#x4EFB;&#x52A1;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x7EE7;&#x7EED;&#x8BE5;&#x4EFB;&#x52A1;&#x4F7F;&#x7528;</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">bg</span> %<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>&#x4EFB;&#x52A1;&#x53C8;&#x4F1A;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#xFF0C;&#x4F7F;&#x7528;<code>kill %1</code>&#x6740;&#x6B7B;&#x8BE5;&#x540E;&#x53F0;&#x7A0B;&#x5E8F;&#x3002;</p>
+<h2 id="bash-programming-practice">bash programming practice</h2>
+<hr>
+<p>&#x7F16;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E09;&#x5143;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x6BD4;&#x5982;&#x5E45;&#x503C;&#x8BED;&#x53E5;&#xFF0C;&#x6839;&#x636E;&#x5F53;&#x524D;&#x7684;if&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x662F;&#x4E0D;&#x662F;&#x8BBE;&#x7F6E;&#x5408;&#x7406;&#x7684;&#x6570;&#x503C;&#x3002;</p>
+<p>&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#x4F7F;&#x7528;&#x8FD0;&#x7B97;&#x7B26;&#x6C42;&#x503C;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5F97;&#x5230;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<figure class="highlight bash"><figcaption><span>ternary-operator-in-bash</span><a href="http://stackoverflow.com/questions/3953645/ternary-operator-in-bash"target="_blank"rel="external">link</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#x901A;&#x8FC7;echo&#x5C06;&#x6700;&#x7EC8;&#x7684;&#x6570;&#x503C;&#x901A;&#x8FC7;&#x8FD0;&#x7B97;&#x7B26;&#x8FDB;&#x884C;&#x8FD4;&#x56DE;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x53D8;&#x4E3A;&#x4E86;&#x76F4;&#x63A5;&#x7684;&#x5B8F;&#x66FF;&#x6362;</span></span><br><span class="line">a=$([<span class="string">&quot;<span class="variable">$b</span>&quot;</span> == <span class="number">5</span> ] &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$c</span>&quot;</span> || <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$d</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x901A;&#x8FC7;test&#x6D4B;&#x8BD5;&#xFF0C;&#x5C06;&#x5E45;&#x503C;&#x8BED;&#x53E5;&#x5199;&#x4E24;&#x6B21;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x53CD;&#x800C;&#x597D;&#x50CF;&#x66F4;&#x52A0;&#x7684;&#x6E05;&#x6670;&#x76F4;&#x89C2;()&#xFF1A;</p>
+<figure class="highlight bash"><figcaption><span>conditional-assignment-based-on-environment-variable</span><a href="http://stackoverflow.com/questions/10486263/compound-logical-tests-in-bash"target="_blank"rel="external">link</a></figcaption><table><tr><td class="code"><pre><span class="line">[[<span class="string">&quot;<span class="variable">$MYAPP_ENV</span>&quot;</span> = PROD ]] &amp;&amp; a=<span class="number">1</span> || a=<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<hr>
 
       
     </div>
@@ -334,150 +423,185 @@
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2016/03/24/book-liaoge-linux-course-md/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/2016/03/24/learn-linux-from-linux-foundation/">linux course from linux foundation 学习记录</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">whiledoing</a></p>
+        <p><span>發布時間:</span>2016-03-24, 09:58:20</p>
+        <p><span>最後更新:</span>2016-05-31, 10:13:48</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/2016/03/24/learn-linux-from-linux-foundation/" title="linux course from linux foundation 学习记录">http://whiledoing.github.io/2016/03/24/learn-linux-from-linux-foundation/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://whiledoing.github.io/2016/03/24/learn-linux-from-linux-foundation/　　作者: whiledoing" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
         
-          《鸟哥的 Linux 私房菜》学习笔记
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/03/24/book-liaoge-linux-course-md/">
+                    《鸟哥的 Linux 私房菜》学习笔记
+                </a>
+            </div>
         
-      </div>
-    </a>
-  
-  
-    <a href="/2016/03/21/the-mythical-man-month-learn-note-md/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">《人月神话》学习笔记</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/03/21/the-mythical-man-month-learn-note-md/">
+                    《人月神话》学习笔记
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
 
-
-
-
-<!-- JiaThis Button BEGIN -->
-<script type="text/javascript" >
-    var jiathis_config={
-        data_track_clickback:true,
-        siteNum:6,
-        sm:"weixin,tsina,evernote,tieba,ydnote,fav",
-        summary:"test",
-        boldNum:6,
-        showClose:true,
-        shortUrl:true,
-        hideMore:true
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目錄</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#bash-programming-practice"><span class="toc-number">1.</span> <span class="toc-text">bash programming practice</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
     }
+</style>
+
+<input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+<script>
+    yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
 </script>
-<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?uid=2083154&btn=r1.gif&move=0" charset="utf-8"></script>
-<!-- JiaThis Button END -->
 
 
 
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"linux course from linux foundation 学习记录　| whiledoing　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="learn-linux-from-linux-foundation" data-title="linux course from linux foundation 学习记录" data-url="http://whiledoing.github.io/2016/03/24/learn-linux-from-linux-foundation/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"whiledoing"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
+    
 </div>
 
 
 
 
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/03/24/book-liaoge-linux-course-md/" title="上一篇: 《鸟哥的 Linux 私房菜》学习笔记">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/03/21/the-mythical-man-month-learn-note-md/" title="下一篇: 《人月神话》学习笔记">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/04/22/my-vim/">折腾 vim</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/01/how-to-life-learn-note/">《活法》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/book-liaoge-linux-course-md/">《鸟哥的 Linux 私房菜》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/learn-linux-from-linux-foundation/">linux course from linux foundation 学习记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/21/the-mythical-man-month-learn-note-md/">《人月神话》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/book-touchable-tidy-up-life-md/">《怦然心动的人生整理魔法》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/10/python-practice/">python 学习 && 实践</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/the-art-of-stop-learn-note-md/">《止学》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/the-pragmatic-programmer-learn-note/">《The Pragmatic Programmer》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/02/code-complete-2-learn-note/">《Code Complete 2》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/the-art-of-unix-programming-reading-notes/">《The Art of UNIX Programming》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/self-git/">git 学习记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/hexo-blog/">hexo-blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/the-linux-programming-interface-reading-notes/">《The Linux Programming Interface》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/25/self-mac/">mac 折腾记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/20/yaml-format/">yaml 格式</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2016
-			whiledoing.
-			All Rights Reserved.
-			<i class="icon-next-heart fa fa-heart"></i>
-    	</div>
-
-		<br/>
-		<div class="powered-by">
-			Powered By <a class="theme-link" target='_blank' href="http://hexo.io">Hexo</a> |
-
-			<!-- load theme by config -->
-			Theme By <a class="theme-link" target='_blank' href=https://github.com/litten/hexo-theme-yilia>
-				Yilia
-			</a> |
-
-			<!--[不蒜子统计访问量](http://ibruce.info/2015/04/04/busuanzi/)-->
-            <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <span id="busuanzi_container_site_uv">您是本站第<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>位访问者</span> |
-            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>次</span>
-		</div>
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 whiledoing
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到訪數: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本頁閱讀量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
-  </div>
 </footer>
     </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+    <script src="/js/GithubRepoWidget.js" type="text/javascript"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 3;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: false,
-		isPost: true,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
-
-
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
   </div>
 </body>
 </html>

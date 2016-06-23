@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>yaml 格式 | whiledoing</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="yaml&amp;#x683C;&amp;#x5F0F;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8F7B;&amp;#x91CF;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;&amp;#x8BED;&amp;#x8A00;&amp;#x3002;&amp;#x8BE5;&amp;#x6587;&amp;#x7AE0;&amp;#x5BF9;yaml&amp;#x7684;&amp;#x76F8;&amp;#x5173;&amp;#x6765;">
+    
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="whiledoing" />
+
+    
+
+    <meta name="description" content="yaml&amp;#x683C;&amp;#x5F0F;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8F7B;&amp;#x91CF;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;&amp;#x8BED;&amp;#x8A00;&amp;#x3002;&amp;#x8BE5;&amp;#x6587;&amp;#x7AE0;&amp;#x5BF9;yaml&amp;#x7684;&amp;#x76F8;&amp;#x5173;&amp;#x6765;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="yaml 格式">
 <meta property="og:url" content="http://whiledoing.github.io/2016/01/20/yaml-format/index.html">
@@ -16,161 +25,225 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="yaml 格式">
 <meta name="twitter:description" content="yaml&amp;#x683C;&amp;#x5F0F;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8F7B;&amp;#x91CF;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;&amp;#x8BED;&amp;#x8A00;&amp;#x3002;&amp;#x8BE5;&amp;#x6587;&amp;#x7AE0;&amp;#x5BF9;yaml&amp;#x7684;&amp;#x76F8;&amp;#x5173;&amp;#x6765;">
-  
+
+    <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+    
     <link rel="alternative" href="/atom.xml" title="whiledoing" type="application/atom+xml">
-  
-  
-    <link rel="icon" type='image/x-icon' href="/favicon.ico">
-  
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    
 
-  <!-- add [font-awesome](https://fortawesome.github.io/Font-Awesome/)-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+
+    
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+    
+
+    
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+    
+
+    
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    
+
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    
+    <title>yaml 格式 | whiledoing</title>
+
+    <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+    <script>
+        var yiliaConfig = {
+            fancybox: true,
+            animate: true,
+            isHome: false,
+            isPost: true,
+            isArchive: false,
+            isTag: false,
+            isCategory: false,
+            open_in_new: false,
+            fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+            scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+            search: undefined
+        }
+    </script>
+
+    
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+    
+
+    
+    <script> yiliaConfig.rootUrl = "\/";</script>
+    
+
+    
+
+    
+
+    <!--add mermaid support [link](http://knsv.github.io/mermaid/#mermaid)-->
+    <script src="/js/mermaid-6.0.0.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <link rel="stylesheet" href="/css/raw_css/mermaid-6.0.0.css">
 </head>
-
 <body>
   <div id="container">
     <div class="left-col">
     <div class="overlay"></div>
 <div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="https://avatars0.githubusercontent.com/u/1644558?v=3&amp;s=460" class="js-avatar">
-			
-		</a>
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.jpeg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">whiledoing</a></h1>
+        </hgroup>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">whiledoing</a></h1>
-		</hgroup>
+        
+        <p class="header-subtitle">喜欢一切简单的设计和她</p>
+        
 
-		
-		<p class="header-subtitle">喜欢一切简单的设计和她</p>
-		
+        
 
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						
-					</ul>
-				</div>
-			</div>
-		
 
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="https://github.com/whiledoing" title="github">github</a>
-					        
-								<a class="douban" target="_blank" href="http://www.douban.com/people/58249409/" title="douban">douban</a>
-					        
-								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="zhihu">zhihu</a>
-					        
-								<a class="mail" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="mail">mail</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/learn-note/" style="font-size: 18px;">learn-note</a> <a href="/tags/life/" style="font-size: 12px;">life</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/osx/" style="font-size: 10px;">osx</a> <a href="/tags/pm/" style="font-size: 10px;">pm</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/self/" style="font-size: 20px;">self</a> <a href="/tags/software-engineer/" style="font-size: 14px;">software-engineer</a> <a href="/tags/unix-linux/" style="font-size: 16px;">unix/linux</a> <a href="/tags/yaml/" style="font-size: 10px;">yaml</a>
-					</div>
-				</section>
-				
-				
-				
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜單</li>
+                        <li>標籤</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
 
-				
-			</div>
-		</div>
-	</header>				
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/whiledoing" title="GitHub"></a>
+                            
+                                <a class="fa 豆瓣" target="_blank" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
+                            
+                                <a class="fa Email" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-note/">learn-note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/osx/">osx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pm/">pm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self/">self</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software-engineer/">software-engineer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unix-linux/">unix/linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+            </div>
+        </div>
+    </header>                
 </div>
-
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">whiledoing</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-			
-				<img lazy-src="https://avatars0.githubusercontent.com/u/1644558?v=3&amp;s=460" class="js-avatar">
-			
-			</div>
-			<hgroup>
-			  <h1 class="header-author">whiledoing</h1>
-			</hgroup>
-			
-			<p class="header-subtitle">喜欢一切简单的设计和她</p>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="https://github.com/whiledoing" title="github">github</a>
-			        
-						<a class="douban" target="_blank" href="http://www.douban.com/people/58249409/" title="douban">douban</a>
-			        
-						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="zhihu">zhihu</a>
-			        
-						<a class="mail" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="mail">mail</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">whiledoing</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.jpeg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">whiledoing</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">喜欢一切简单的设计和她</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/whiledoing" title="GitHub"></a>
+                            
+                                <a class="fa 豆瓣" target="_blank" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
+                            
+                                <a class="fa Email" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-
       <div class="body-wrap"><article id="post-yaml-format" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/01/20/yaml-format/" class="article-date">
-  	<time datetime="2016-01-20T14:46:37.000Z" itemprop="datePublished">2016-01-20</time>
+      <time datetime="2016-01-20T14:46:37.000Z" itemprop="datePublished">2016-01-20</time>
 </a>
     </div>
   
@@ -191,11 +264,11 @@
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
-	</div>
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
+    </div>
 
         <div class="clearfix"></div>
       </div>
@@ -203,6 +276,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p><code>yaml</code>&#x683C;&#x5F0F;&#x662F;&#x4E00;&#x79CD;&#x8F7B;&#x91CF;&#x7EA7;&#x522B;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x8BED;&#x8A00;&#x3002;&#x8BE5;<a href="http://einverne.github.io/2015/08/08/yaml.html"target="_blank"rel="external">&#x6587;&#x7AE0;</a>&#x5BF9;<code>yaml</code>&#x7684;&#x76F8;&#x5173;&#x6765;&#x6E90;&#xFF0C;&#x8BED;&#x6CD5;&#x8FDB;&#x884C;&#x4E86;&#x8BF4;&#x660E;&#x3002;</p>
 <p>&#x4E2A;&#x4EBA;&#x7684;&#x611F;&#x53D7;&#x662F;&#xFF1A;</p>
 <ol>
@@ -218,145 +292,177 @@
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2016/01/25/self-mac/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/2016/01/20/yaml-format/">yaml 格式</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">whiledoing</a></p>
+        <p><span>發布時間:</span>2016-01-20, 22:46:37</p>
+        <p><span>最後更新:</span>2016-03-24, 09:53:31</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/2016/01/20/yaml-format/" title="yaml 格式">http://whiledoing.github.io/2016/01/20/yaml-format/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://whiledoing.github.io/2016/01/20/yaml-format/　　作者: whiledoing" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
         
-          mac 折腾记录
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/01/25/self-mac/">
+                    mac 折腾记录
+                </a>
+            </div>
         
-      </div>
-    </a>
-  
-  
-</nav>
+        
+    </nav>
 
   
 </article>
 
-
-
-
-<!-- JiaThis Button BEGIN -->
-<script type="text/javascript" >
-    var jiathis_config={
-        data_track_clickback:true,
-        siteNum:6,
-        sm:"weixin,tsina,evernote,tieba,ydnote,fav",
-        summary:"test",
-        boldNum:6,
-        showClose:true,
-        shortUrl:true,
-        hideMore:true
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目錄</strong>
+    
+</div>
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
     }
+</style>
+
+<input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+<script>
+    yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
 </script>
-<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?uid=2083154&btn=r1.gif&move=0" charset="utf-8"></script>
-<!-- JiaThis Button END -->
 
 
 
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"yaml 格式　| whiledoing　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="yaml-format" data-title="yaml 格式" data-url="http://whiledoing.github.io/2016/01/20/yaml-format/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"whiledoing"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
+    
 </div>
 
 
 
 
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/01/25/self-mac/" title="上一篇: mac 折腾记录">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/04/22/my-vim/">折腾 vim</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/01/how-to-life-learn-note/">《活法》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/book-liaoge-linux-course-md/">《鸟哥的 Linux 私房菜》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/learn-linux-from-linux-foundation/">linux course from linux foundation 学习记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/21/the-mythical-man-month-learn-note-md/">《人月神话》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/book-touchable-tidy-up-life-md/">《怦然心动的人生整理魔法》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/10/python-practice/">python 学习 && 实践</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/the-art-of-stop-learn-note-md/">《止学》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/the-pragmatic-programmer-learn-note/">《The Pragmatic Programmer》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/02/code-complete-2-learn-note/">《Code Complete 2》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/the-art-of-unix-programming-reading-notes/">《The Art of UNIX Programming》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/self-git/">git 学习记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/hexo-blog/">hexo-blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/the-linux-programming-interface-reading-notes/">《The Linux Programming Interface》学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/25/self-mac/">mac 折腾记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/20/yaml-format/">yaml 格式</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2016
-			whiledoing.
-			All Rights Reserved.
-			<i class="icon-next-heart fa fa-heart"></i>
-    	</div>
-
-		<br/>
-		<div class="powered-by">
-			Powered By <a class="theme-link" target='_blank' href="http://hexo.io">Hexo</a> |
-
-			<!-- load theme by config -->
-			Theme By <a class="theme-link" target='_blank' href=https://github.com/litten/hexo-theme-yilia>
-				Yilia
-			</a> |
-
-			<!--[不蒜子统计访问量](http://ibruce.info/2015/04/04/busuanzi/)-->
-            <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <span id="busuanzi_container_site_uv">您是本站第<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>位访问者</span> |
-            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>次</span>
-		</div>
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 whiledoing
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到訪數: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本頁閱讀量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
-  </div>
 </footer>
     </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+    <script src="/js/GithubRepoWidget.js" type="text/javascript"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 3;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: false,
-		isPost: true,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
-
-
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
   </div>
 </body>
 </html>
