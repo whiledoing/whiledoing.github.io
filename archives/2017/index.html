@@ -55,6 +55,27 @@
     <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
     
+<title>Archives: 2017 | whiledoing</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: false,
+        isArchive: true,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+    
     <title>Archives: 2017 | whiledoing</title>
 
     <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
@@ -69,14 +90,13 @@
             isArchive: true,
             isTag: false,
             isCategory: false,
-            open_in_new: false,
+            open_in_new: [object Object],
             fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
             scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
             search: undefined
         }
     </script>
 
-    
     <script>
         yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
     </script>
@@ -166,13 +186,13 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa GitHub" target="_blank" href="https://github.com/whiledoing" title="GitHub"></a>
+                                <a class="fa GitHub" href="https://github.com/whiledoing" title="GitHub"></a>
                             
-                                <a class="fa 豆瓣" target="_blank" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
+                                <a class="fa 豆瓣" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
                             
-                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
+                                <a class="fa 知乎" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
                             
-                                <a class="fa Email" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
+                                <a class="fa Email" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
                             
                         </ul>
                     </nav>
@@ -181,7 +201,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/collection/">collection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-note/">learn-note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/misc/">misc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongo/">mongo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/osx/">osx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pm/">pm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/psychology/">psychology</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self/">self</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self-improvement/">self-improvement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software-engineer/">software-engineer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unix-linux/">unix/linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/collection/">collection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-note/">learn-note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-notes/">learn-notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/misc/">misc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongo/">mongo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/osx/">osx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pm/">pm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self/">self</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self-imporvement/">self-imporvement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self-improvement/">self-improvement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software-engineer/">software-engineer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unix-linux/">unix/linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
                     </div>
                 </section>
                 
@@ -259,14 +279,16 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
           <div class="article-meta">
-              <a href="/2017/01/15/MTBI-analyse/" class="archive-article-date">
-      <time datetime="2017-01-15T09:07:55.000Z" itemprop="datePublished">01-15</time>
+              <a href="/2017/02/19/how-to-measure-your-life-reading-notes/" class="archive-article-date">
+      <time datetime="2017-02-19T05:54:52.000Z" itemprop="datePublished">02-19</time>
 </a>
+
+
         </div>
          
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/15/MTBI-analyse/">我的MTBI性格分析/ENTP</a>
+      <a class="archive-article-title" href="/2017/02/19/how-to-measure-your-life-reading-notes/">《如何衡量你的人生》读书笔记</a>
     </h1>
   
 
@@ -275,7 +297,7 @@
 
           
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/psychology/">psychology</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learn-notes/">learn-notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self-imporvement/">self-imporvement</a></li></ul>
     </div>
 
         </div>
@@ -306,18 +328,16 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >本站到访数: 
-                            <span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
                 
-                    <span>, </span>
+                    <span>| </span>
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -350,12 +370,37 @@
 
 
 
+
 <div class="scroll" id="scroll">
     <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
     <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
     <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--add pangu support-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.2.1/pangu.min.js"></script>
 <script>pangu.spacingPage();</script>
 

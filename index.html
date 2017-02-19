@@ -60,6 +60,27 @@
     <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
     
+<title>whiledoing</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: true,
+        isPost: false,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+    
     <title>whiledoing</title>
 
     <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
@@ -74,14 +95,13 @@
             isArchive: false,
             isTag: false,
             isCategory: false,
-            open_in_new: false,
+            open_in_new: [object Object],
             fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
             scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
             search: undefined
         }
     </script>
 
-    
     <script>
         yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
     </script>
@@ -143,8 +163,8 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
                         
                     </ul>
@@ -171,13 +191,13 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa GitHub" target="_blank" href="https://github.com/whiledoing" title="GitHub"></a>
+                                <a class="fa GitHub" href="https://github.com/whiledoing" title="GitHub"></a>
                             
-                                <a class="fa 豆瓣" target="_blank" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
+                                <a class="fa 豆瓣" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
                             
-                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
+                                <a class="fa 知乎" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
                             
-                                <a class="fa Email" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
+                                <a class="fa Email" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
                             
                         </ul>
                     </nav>
@@ -186,7 +206,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/collection/">collection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-note/">learn-note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/misc/">misc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongo/">mongo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/osx/">osx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pm/">pm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self/">self</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self-improvement/">self-improvement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software-engineer/">software-engineer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unix-linux/">unix/linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/collection/">collection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-note/">learn-note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-notes/">learn-notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/misc/">misc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongo/">mongo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/osx/">osx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pm/">pm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self/">self</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self-imporvement/">self-imporvement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/self-improvement/">self-improvement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software-engineer/">software-engineer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unix-linux/">unix/linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
                     </div>
                 </section>
                 
@@ -245,9 +265,90 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="blog-how-to-measure-your-life-reading-notes" class="article article-type-blog" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/19/how-to-measure-your-life-reading-notes/" class="article-date">
+      <time datetime="2017-02-19T05:54:52.000Z" itemprop="datePublished">2017-02-19</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/19/how-to-measure-your-life-reading-notes/">《如何衡量你的人生》读书笔记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://book.douban.com/subject/20434430/" target="_blank" rel="external">&#x300A;&#x5982;&#x4F55;&#x8861;&#x91CF;&#x4F60;&#x7684;&#x4EBA;&#x751F;&#x300B;</a>&#x7684;&#x4F5C;&#x8005;&#x662F;&#x4E00;&#x540D;&#x54C8;&#x4F5B;&#x5546;&#x5B66;&#x9662;&#x6559;&#x6388;&#xFF0C;&#x4F5C;&#x8005;&#x4ECE;&#x5DE5;&#x4F5C;&#x9009;&#x62E9;&#xFF0C;&#x5BB6;&#x5EAD;&#x6559;&#x80B2;&#xFF0C;&#x4EBA;&#x751F;&#x8FFD;&#x6C42;&#x7B49;&#x591A;&#x4E2A;&#x65B9;&#x9762;&#x6765;&#x8BF4;&#x660E;&#x4EBA;&#x751F;&#x7684;&#x8861;&#x91CF;&#x6807;&#x51C6;&#x3002;&#x867D;&#x7136;&#x6709;&#x4E9B;&#x89C2;&#x70B9;&#x57FA;&#x672C;&#x662F;&#x5E26;&#x7740;&#x666E;&#x4E16;&#x4EF7;&#x503C;&#x9E21;&#x6C64;&#x7684;&#x611F;&#x89C9;&#xFF0C;&#x4F46;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x4E5F;&#x786E;&#x5B9E;&#x6709;&#x6240;&#x542F;&#x53D1;&#x3002;</p>
+<p>&#x672C;&#x4E66;&#x7684;&#x91CD;&#x70B9;&#x5C31;&#x662F;&#x6700;&#x540E;&#x4E00;&#x7AE0;&#xFF0C;&#x5982;&#x4F55;&#x8861;&#x91CF;&#x4F60;&#x7684;&#x4EBA;&#x751F;&#x3002;&#x4F5C;&#x8005;&#x662F;&#x4E00;&#x4F4D;&#x6709;&#x795E;&#x8BBA;&#x8005;&#xFF0C;&#x6240;&#x4EE5;&#x4F5C;&#x8005;&#x89C2;&#x70B9;&#x662F;&#xFF1A;&#x4EBA;&#x751F;&#x8861;&#x91CF;&#x6807;&#x51C6;&#x5E94;&#x8BE5;&#x662F;God&#x770B;&#x6765;&#x6211;&#x4EEC;&#x5F71;&#x54CD;&#x522B;&#x4EBA;&#x7684;&#x7A0B;&#x5EA6;&#x3002;&#x4E0D;&#x8FC7;&#x672C;&#x4EBA;&#x505A;&#x4E3A;&#x4E0D;&#x53EF;&#x77E5;&#x8BBA;&#x8005;&#xFF0C;&#x5E76;&#x4E0D;&#x5B8C;&#x5168;&#x8D5E;&#x540C;&#x8FD9;&#x89C2;&#x70B9;&#xFF0C;&#x6211;&#x66F4;&#x89C9;&#x5F97;&#x4EBA;&#x751F;&#x7684;&#x8861;&#x91CF;&#x6807;&#x51C6;&#x5E94;&#x8BE5;&#x662F;&#x5185;&#x5FC3;&#x7684;&#xFF0C;&#x4E0D;&#x8BBA;&#x4F60;&#x662F;&#x8FFD;&#x6C42;&#x5BCC;&#x88D5;&#xFF0C;&#x5BB6;&#x5EAD;&#xFF0C;&#x591A;&#x6837;&#x7684;&#x4F53;&#x9A8C;&#xFF0C;&#x670D;&#x52A1;&#x4ED6;&#x4EBA;&#x4E5F;&#x597D;&#xFF0C;&#x8FFD;&#x6C42;&#x5185;&#x5FC3;&#x7684;&#x5145;&#x5B9E;&#x6BD4;&#x8FFD;&#x6C42;&#x522B;&#x4EBA;&#x7684;&#x80AF;&#x5B9A;&#x8981;&#x66F4;&#x52A0;&#x6709;&#x4EF7;&#x503C;&#x3002;</p>
+<p>&#x4F5C;&#x8005;&#x8FD8;&#x63D0;&#x5230;&#x4E86;&#x4E00;&#x4E9B;&#x5F88;&#x6709;&#x4EF7;&#x503C;&#x7684;&#x89C2;&#x70B9;&#xFF0C;&#x6458;&#x5F55;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>
+<p>&#x5DE5;&#x4F5C;&#x7684;&#x9009;&#x62E9;&#x9664;&#x4E86;&#x8FFD;&#x6C42;&#x57FA;&#x672C;&#x56E0;&#x7D20;&#x5916;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x8FFD;&#x6C42;&#x5185;&#x5728;&#x7684;&#x52A8;&#x529B;&#xFF0C;&#x6BD4;&#x5982;&#x6709;&#x6311;&#x6218;&#x6027;&#xFF0C;&#x83B7;&#x5F97;&#x8BA4;&#x540C;&#xFF0C;&#x8D23;&#x4EFB;&#x611F;&#xFF0C;&#x4E2A;&#x4EBA;&#x6210;&#x957F;&#x3002;</p>
+</li>
+<li>
+<p>&#x5076;&#x7136;&#x673A;&#x4F1A;&#x548C;&#x5468;&#x5BC6;&#x8BA1;&#x5212;&#x624D;&#x662F;&#x4EBA;&#x751F;&#x5E38;&#x6001;&#x3002;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x7684;&#x6218;&#x7565;&#x90FD;&#x662F;&#x5468;&#x5BC6;&#x8BA1;&#x5212;&#x548C;&#x610F;&#x5916;&#x673A;&#x9047;&#x7ED3;&#x5408;&#x7684;&#x4EA7;&#x7269;&#xFF0C;&#x5173;&#x952E;&#x662F;&#x8981;&#x8D70;&#x51FA;&#x53BB;&#x5E76;&#x884C;&#x52A8;&#x8D77;&#x6765;&#x3002;</p>
+</li>
+<li>
+<p>&#x8981;&#x6CE8;&#x91CD;&#x957F;&#x8FDC;&#x7684;&#x6536;&#x76CA; - focus on tangible but not immediate return VS short horizon.</p>
+</li>
+<li>
+<p>&#x6295;&#x8D44;&#x5BB6;&#x5EAD;&#x6C38;&#x8FDC;&#x662F;&#x7B2C;&#x4E00;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x5BB6;&#x5EAD;&#x7684;&#x6295;&#x8D44;&#x662F;&#x957F;&#x8FDC;&#x7684;&#x6295;&#x8D44;&#x3002;</p>
+</li>
+<li>
+<p>100%&#x7684;&#x575A;&#x6301;&#x6BD4;98%&#x7684;&#x575A;&#x6301;&#x8981;&#x7B80;&#x5355;&#x3002;</p>
+</li>
+</ul>
+<p>&#x6700;&#x540E;&#x4E00;&#x70B9;&#x9700;&#x8981;&#x7279;&#x522B;&#x8BF4;&#x660E;&#x4E0B;&#xFF0C;&#x548B;&#x542C;&#x8D77;&#x6765;&#x6709;&#x70B9;&#x602A;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x662F;&#x975E;&#x5E38;&#x6B63;&#x786E;&#x7684;&#x3002;&#x5982;&#x679C;&#x4F60;&#x575A;&#x6301;&#x4E00;&#x9879;&#x4E8B;&#x60C5;&#xFF0C;&#x4E00;&#x6B21;&#x72AF;&#x9519;&#xFF0C;&#x5C31;&#x5BB9;&#x6613;&#x7EE7;&#x7EED;&#x72AF;&#x9519;&#xFF0C;&#x90A3;&#x4E48;98%&#x7684;&#x9519;&#x8BEF;&#x5C31;&#x4F1A;&#x6162;&#x6162;&#x53D8;&#x6210;&#x66F4;&#x5C0F;&#x7684;&#x575A;&#x6301;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x4E48;&#x5C31;100%&#x7684;&#x575A;&#x6301;&#xFF0C;&#x8981;&#x4E0D;&#x5C31;&#x4E0D;&#x575A;&#x6301;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x9644;&#x4E0A;&#x4F5C;&#x8005;&#x5728;TED&#x4E0A;&#x9762;&#x7684;&#x6F14;&#x8BB2;<a href="https://www.youtube.com/watch?v=tvos4nORf_Y" target="_blank" rel="external">&#x8BF7;&#x6233;</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learn-notes/">learn-notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self-imporvement/">self-imporvement</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="blog-linux-trick" class="article article-type-blog" itemscope itemprop="blogPost">
   
@@ -255,6 +356,8 @@
       <a href="/2016/12/16/linux-trick/" class="article-date">
       <time datetime="2016-12-16T03:07:15.000Z" itemprop="datePublished">2016-12-16</time>
 </a>
+
+
     </div>
   
   <div class="article-inner">
@@ -333,6 +436,8 @@
       <a href="/2016/12/03/learn-javascript/" class="article-date">
       <time datetime="2016-12-03T14:34:24.000Z" itemprop="datePublished">2016-12-03</time>
 </a>
+
+
     </div>
   
   <div class="article-inner">
@@ -395,6 +500,8 @@
       <a href="/2016/08/07/book-change-the-conversation-learn-note/" class="article-date">
       <time datetime="2016-08-07T09:07:05.000Z" itemprop="datePublished">2016-08-07</time>
 </a>
+
+
     </div>
   
   <div class="article-inner">
@@ -457,6 +564,8 @@
       <a href="/2016/07/06/collection-md/" class="article-date">
       <time datetime="2016-07-06T02:41:51.000Z" itemprop="datePublished">2016-07-06</time>
 </a>
+
+
     </div>
   
   <div class="article-inner">
@@ -519,6 +628,8 @@
       <a href="/2016/06/28/book-thinking-about-running-md/" class="article-date">
       <time datetime="2016-06-28T03:08:38.000Z" itemprop="datePublished">2016-06-28</time>
 </a>
+
+
     </div>
   
   <div class="article-inner">
@@ -581,6 +692,8 @@
       <a href="/2016/06/28/learn-mongo-md/" class="article-date">
       <time datetime="2016-06-28T01:18:46.000Z" itemprop="datePublished">2016-06-28</time>
 </a>
+
+
     </div>
   
   <div class="article-inner">
@@ -643,6 +756,8 @@
       <a href="/2016/06/27/peopleware-reading-notes/" class="article-date">
       <time datetime="2016-06-27T08:47:32.000Z" itemprop="datePublished">2016-06-27</time>
 </a>
+
+
     </div>
   
   <div class="article-inner">
@@ -705,6 +820,8 @@
       <a href="/2016/04/22/my-vim/" class="article-date">
       <time datetime="2016-04-22T05:13:50.000Z" itemprop="datePublished">2016-04-22</time>
 </a>
+
+
     </div>
   
   <div class="article-inner">
@@ -767,6 +884,8 @@
       <a href="/2016/04/01/how-to-life-learn-note/" class="article-date">
       <time datetime="2016-04-01T09:16:09.000Z" itemprop="datePublished">2016-04-01</time>
 </a>
+
+
     </div>
   
   <div class="article-inner">
@@ -823,69 +942,6 @@
 
 
   
-    <article id="post-book-liaoge-linux-course-md" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/24/book-liaoge-linux-course-md/" class="article-date">
-      <time datetime="2016-03-24T03:07:05.000Z" itemprop="datePublished">2016-03-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/24/book-liaoge-linux-course-md/">《鸟哥的Linux私房菜》学习笔记</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>这是学习<a href="http://book.douban.com/subject/4889838/">《鸟哥的Linux私房菜》</a>的学习笔记。</p>
-<p>很早就买的书，一直放在家中堆灰。。。终于有空拿出来仔细看了下，陆陆续续看了2周左右，记录一下便于后续参考。</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learn-note/">learn-note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self/">self</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unix-linux/">unix/linux</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/03/24/book-liaoge-linux-course-md/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -900,25 +956,23 @@
                 2016-2017 whiledoing
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >Site Visitors: 
-                            <span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
                 
-                    <span>, </span>
+                    <span>| </span>
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">Page Hits: 
-                            <span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -951,12 +1005,37 @@
 
 
 
+
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--add pangu support-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.2.1/pangu.min.js"></script>
 <script>pangu.spacingPage();</script>
 
