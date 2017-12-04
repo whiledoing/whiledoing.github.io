@@ -1,0 +1,27 @@
+<h1>Contributing to Lazy Load</h1>
+<h2 id="only-one-feature-or-change-per-pull-request">Only one feature or change per pull request</h2>
+<p>Make pull requests only one feature or change at the time. For example you have fixed a bug. You also have optimized some code. Optimization is not related to a bug. These should be submitted as separate pull requests. This way I can easily choose what to include. It is also easier to understand the code changes. Commit messages should be descriptive and full sentences.</p>
+<p>Do not commit minified versions. Do not touch the version number. Make the pull requests against <a href="https://github.com/tuupola/jquery_lazyload/commits/1.9.x">1.9.x branch</a>.</p>
+<h2 id="write-meaningful-commit-messages">Write meaningful commit messages</h2>
+<p>Proper commit message is full sentence. It starts with capital letter but does not end with period. Headlines do not end with period. The GitHub default <code>Update filename.js</code> is not enough. When needed include also longer explanation what the commit does.</p>
+<pre><code class="hljs">Capitalized, <span class="hljs-keyword">short</span> (<span class="hljs-number">50</span> <span class="hljs-keyword">chars</span> <span class="hljs-operator">or</span> less) summary
+
+More <span class="hljs-keyword">detailed</span> explanatory <span class="hljs-keyword">text</span>, <span class="hljs-keyword">if</span> necessary.  Wrap <span class="hljs-keyword">it</span> <span class="hljs-built_in">to</span> about <span class="hljs-number">72</span>
+<span class="hljs-keyword">characters</span> <span class="hljs-operator">or</span> so.  In some contexts, <span class="hljs-operator">the</span> <span class="hljs-keyword">first</span> <span class="hljs-built_in">line</span> is treated <span class="hljs-keyword">as</span> <span class="hljs-operator">the</span>
+subject <span class="hljs-operator">of</span> <span class="hljs-operator">an</span> email <span class="hljs-operator">and</span> <span class="hljs-operator">the</span> rest <span class="hljs-operator">of</span> <span class="hljs-operator">the</span> <span class="hljs-keyword">text</span> <span class="hljs-keyword">as</span> <span class="hljs-operator">the</span> body.  The blank
+<span class="hljs-built_in">line</span> separating <span class="hljs-operator">the</span> summary <span class="hljs-built_in">from</span> <span class="hljs-operator">the</span> body is critical (unless you omit
+<span class="hljs-operator">the</span> body entirely); tools like rebase can <span class="hljs-built_in">get</span> confused <span class="hljs-keyword">if</span> you run <span class="hljs-operator">the</span>
+<span class="hljs-constant">two</span> together.
+</code></pre>
+<p>When in doubt see Tim Pope’s blogpost <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">A Note About Git Commit Messages</a></p>
+<h2 id="follow-the-existing-coding-standards">Follow the existing coding standards</h2>
+<p>When contributing to open source project it is polite to follow the original authors coding standars. They might be different than yours. It is not a holy war. Just follow then original.</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> snake_case = <span class="hljs-string">"something"</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">camelCase</span>(<span class="hljs-params">options</span>) </span>{
+}
+
+<span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span> !== <span class="hljs-literal">false</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"here be dragons"</span>);
+}
+</code></pre>

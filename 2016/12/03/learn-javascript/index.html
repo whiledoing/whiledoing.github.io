@@ -1,308 +1,394 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-    
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="author" content="whiledoing" />
 
-    
 
-    <meta name="description" content="记录一下自己学习javascript的笔记和总结.">
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/favicon.png?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="自写,javascript," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="记录一下自己学习javascript的笔记和总结.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript学习笔记">
 <meta property="og:url" content="http://whiledoing.github.io/2016/12/03/learn-javascript/index.html">
 <meta property="og:site_name" content="whiledoing">
 <meta property="og:description" content="记录一下自己学习javascript的笔记和总结.">
-<meta property="og:updated_time" content="2017-11-30T07:20:05.099Z">
+<meta property="og:updated_time" content="2017-12-04T17:52:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript学习笔记">
 <meta name="twitter:description" content="记录一下自己学习javascript的笔记和总结.">
 
-    <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
-    
-    <link rel="alternative" href="/atom.xml" title="whiledoing" type="application/atom+xml">
-    
 
-    
-    <link rel="shortcut icon" href="/favicon.ico">
-    
-
-    
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-    
-
-    
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-    
-
-    
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-    
-
-    <link rel="stylesheet" href="/css/style.css">
-
-    
-
-    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-    
-<title>javascript学习笔记 | whiledoing</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: false,
-        isPost: true,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
+  };
 </script>
 
-    
-    <title>javascript学习笔记 | whiledoing</title>
 
-    <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
 
-    <script>
-        var yiliaConfig = {
-            fancybox: true,
-            animate: true,
-            isHome: false,
-            isPost: true,
-            isArchive: false,
-            isTag: false,
-            isCategory: false,
-            open_in_new: [object Object],
-            fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-            scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-            search: undefined
-        }
-    </script>
+  <link rel="canonical" href="http://whiledoing.github.io/2016/12/03/learn-javascript/"/>
 
-    <script>
-        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
-    </script>
-    
 
-    
-    <script> yiliaConfig.rootUrl = "\/";</script>
-    
 
-    
 
-    
 
-    <!--add mermaid support [link](http://knsv.github.io/mermaid/#mermaid)-->
-    <script src="/js/mermaid-6.0.0.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-    <link rel="stylesheet" href="/css/raw_css/mermaid-6.0.0.css">
+  <title>javascript学习笔记 | whiledoing</title>
+  
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.2.1/pangu.min.js"></script>
-    <script>pangu.spacingPage();</script>
+
+
+
+
+
+
+
 </head>
 
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/img/avatar.jpeg" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">whiledoing</a></h1>
-        </hgroup>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-        
-        <p class="header-subtitle">喜欢一切简单的设计和她</p>
-        
+  
+  
+    
+  
 
-        
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
 
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        
-                    </ul>
-                </div>
-            </div>
-        
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">whiledoing</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">喜欢一切简单且美的事物，包括人。</p>
+      
+  </div>
 
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" href="https://github.com/whiledoing" title="GitHub"></a>
-                            
-                                <a class="fa 豆瓣" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
-                            
-                                <a class="fa 知乎" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
-                            
-                                <a class="fa Email" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongo/">mongo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/哲理/">哲理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国学/">国学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心理学/">心理学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/理财/">理财</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/职场/">职场</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自写/">自写</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件工程/">软件工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/销售/">销售</a></li></ul>
-                    </div>
-                </section>
-                
-                
-                
-
-                
-            </div>
-        </div>
-    </header>                
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">whiledoing</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/img/avatar.jpeg" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">whiledoing</a></h1>
-            </hgroup>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
             
-            <p class="header-subtitle">喜欢一切简单的设计和她</p>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" target="_blank" href="https://github.com/whiledoing" title="GitHub"></a>
-                            
-                                <a class="fa 豆瓣" target="_blank" href="http://www.douban.com/people/58249409/" title="豆瓣"></a>
-                            
-                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/whiledoing" title="知乎"></a>
-                            
-                                <a class="fa Email" target="_blank" href="mailto:whiledoing@163.com?subject=YourSubjectHere" title="Email"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
-</nav>
-      <div class="body-wrap"><article id="post-learn-javascript" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/03/learn-javascript/" class="article-date">
-      <time datetime="2016-12-03T14:34:24.000Z" itemprop="datePublished">2016-12-03</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      javascript学习笔记
-    </h1>
-  
-
-      </header>
+            首页
+          </a>
+        </li>
       
-      <div class="article-info article-info-post">
         
-
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自写/">自写</a></li></ul>
-    </div>
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
 
-        <div class="clearfix"></div>
-      </div>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <li class="menu-item menu-item-search">
           
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://whiledoing.github.io/2016/12/03/learn-javascript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="whiledoing">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="whiledoing">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">javascript学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-03T22:34:24+08:00">
+                2016-12-03
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-05T01:52:33+08:00">
+                2017-12-05
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  5,446
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
         <p>&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x81EA;&#x5DF1;&#x5B66;&#x4E60;javascript&#x7684;&#x7B14;&#x8BB0;&#x548C;&#x603B;&#x7ED3;.</p>
 <a id="more"></a>
 <h2 id="&#x7C7B;&#x7684;&#x5B9E;&#x73B0;">&#x7C7B;&#x7684;&#x5B9E;&#x73B0;</h2>
@@ -329,34 +415,28 @@
 <p>BOM&#x6A21;&#x578B;&#x4EE5;windows&#x5BF9;&#x8C61;&#x4E3A;&#x4F9D;&#x6258;, &#x8868;&#x793A;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x548C;&#x9875;&#x9762;&#x53EF;&#x89C1;&#x533A;&#x57DF;. &#x540C;&#x65F6;, &#x975E;&#x5E38;&#x9700;&#x8981;&#x7559;&#x610F;&#x7684;&#x662F;, windows&#x5BF9;&#x8C61;&#x4E5F;&#x662F;&#x9ED8;&#x8BA4;&#x7684;ECMAScript&#x4E2D;&#x7684;Global&#x5BF9;&#x8C61;, &#x6240;&#x6709;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x90FD;&#x662F;&#x5B83;&#x7684;&#x5C5E;&#x6027;, &#x4E14;&#x6240;&#x6709;&#x7684;&#x539F;&#x751F;&#x6784;&#x9020;&#x51FD;&#x6570;&#x90FD;&#x5B58;&#x5728;&#x4E8E;&#x4ED6;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E0B;&#x9762;.</p>
 <p>&#x6BD4;&#x5982;&#x5E38;&#x7528;&#x7684;windows&#x63A5;&#x53E3;&#x6709;&#x51E0;&#x4E2A;:</p>
 <ul>
-<li>
-<p>innerHeight/innerWidth/outerWidth/outerHeight&#x8868;&#x793A;&#x7A97;&#x53E3;&#x7684;&#x4FE1;&#x606F;</p>
-</li>
-<li>
-<p>open&#x6253;&#x5F00;&#x65B0;&#x7684;&#x7A97;&#x53E3;</p>
-</li>
-<li>
-<p>setTimeout/setInterval&#x7528;&#x6765;&#x8BBE;&#x5B9A;&#x5B9A;&#x65F6;&#x5668;</p>
-</li>
-<li>
-<p>alert/confirm/prompt&#x7528;&#x6765;&#x5F39;&#x51FA;&#x5BF9;&#x8BDD;&#x6846;</p>
-</li>
+<li>innerHeight/innerWidth/outerWidth/outerHeight&#x8868;&#x793A;&#x7A97;&#x53E3;&#x7684;&#x4FE1;&#x606F;</li>
+<li>open&#x6253;&#x5F00;&#x65B0;&#x7684;&#x7A97;&#x53E3;</li>
+<li>setTimeout/setInterval&#x7528;&#x6765;&#x8BBE;&#x5B9A;&#x5B9A;&#x65F6;&#x5668;</li>
+<li>alert/confirm/prompt&#x7528;&#x6765;&#x5F39;&#x51FA;&#x5BF9;&#x8BDD;&#x6846;</li>
 </ul>
 <p><code>location</code>&#x5BF9;&#x8C61;&#x6BD4;&#x8F83;&#x7279;&#x6B8A;, &#x65E2;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4E8E;<code>window.location</code>&#x4E5F;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4E8E;<code>document.location</code>, &#x4E24;&#x8005;&#x662F;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x7684;.</p>
 <p>&#x5176;&#x4E2D;<code>locatoin.href</code>&#x5BF9;&#x8C61;&#x8868;&#x793A;&#x5F53;&#x524D;&#x9875;&#x9762;&#x5B8C;&#x5168;&#x7684;&#x5730;&#x5740;, &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x8BE5;&#x53C2;&#x6570;, &#x5C31;&#x4F1A;&#x4FEE;&#x6539;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x7684;&#x5730;&#x5740;(&#x8DF3;&#x8F6C;), &#x6BD4;&#x5982;&#x8BBE;&#x5B9A;<code>location.href=&quot;http://xxxx.com&quot;</code></p>
 <p>&#x8C03;&#x7528;<code>location.href</code>&#x5207;&#x6362;&#x5730;&#x5740;&#x4F1A;&#x8BA9;&#x6D4F;&#x89C8;&#x5668;&#x8BA4;&#x5B9A;&#x5F53;&#x524D;&#x662F;&#x5207;&#x6362;&#x4E86;&#x573A;&#x666F;, &#x5982;&#x679C;&#x4E0D;&#x4FDD;&#x7559;&#x5F53;&#x524D;&#x8C03;&#x7528;&#x5806;&#x6808;&#x4FE1;&#x606F;, &#x4F7F;&#x7528;<code>location.replace</code>&#x65B9;&#x6CD5;.</p>
 <p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>location.reload</code>&#x6765;&#x91CD;&#x65B0;&#x5237;&#x65B0;&#x5F53;&#x524D;&#x7684;&#x9875;&#x9762;.</p>
-<h3 id="jquery">jQuery</h3>
+<h3 id="jquery-lib">jQuery lib</h3>
 <p><strong>jQuery is just a javascript framework</strong></p>
 <p>jQuery&#x7B80;&#x5316;&#x4E86;&#x6211;&#x4EEC;&#x64CD;&#x4F5C;DOM&#x7684;&#x65B9;&#x5F0F;, &#x5176;&#x4E2D;&#x6700;&#x7ECF;&#x5178;&#x7684;<code>$</code>&#x7B26;&#x53F7;&#x5C31;&#x662F;&#x8868;&#x793A;jQuery&#x672C;&#x8EAB;, &#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;, &#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x5165;&#x53E3;&#x70B9;.</p>
 <p>&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x7684;&#x4E00;&#x4E9B;&#x65B9;&#x5F0F;, &#x548C;CSS&#x7684;&#x9009;&#x62E9;&#x5668;&#x662F;&#x4E00;&#x6837;&#x7684;</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$(<span class="string">&apos;tag&apos;</span>)</div><div class="line">$(<span class="string">&apos;.class&apos;</span>)</div><div class="line">$(<span class="string">&apos;#id&apos;</span>)</div></pre></td></tr></table></figure>
 <p>&#x8FD8;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x8FDB;&#x884C;&#x76F8;&#x5173;&#x5143;&#x7D20;&#x7684;&#x83B7;&#x53D6;</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$(<span class="string">&apos;tag&apos;</span>).parent()</div><div class="line">$(<span class="string">&apos;tag&apos;</span>).parents()</div><div class="line"></div><div class="line"><span class="comment">// &#x5F97;&#x5230;&#x4E00;&#x5C42;&#x7684;&#x5B69;&#x5B50;</span></div><div class="line">$(<span class="string">&apos;tag&apos;</span>).children()</div><div class="line"></div><div class="line"><span class="comment">// &#x6240;&#x6709;&#x7684;&#x5B69;&#x5B50;&#x8282;&#x70B9;</span></div><div class="line">$(<span class="string">&apos;tag&apos;</span>).find()</div><div class="line">$(<span class="string">&apos;tag&apos;</span>).siblings()</div><div class="line"></div><div class="line"><span class="comment">// &#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x7684;&#x662F;, &#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x5728;&#x67E5;&#x627E;&#x57DF;&#x4E2D;&#x7EE7;&#x7EED;&#x67E5;&#x627E;</span></div><div class="line">$(<span class="string">&apos;tag&apos;</span>).find(<span class="string">&apos;#somebody&apos;</span>)</div></pre></td></tr></table></figure>
-<p>&#x4F7F;&#x7528;<code>toggle</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5207;&#x6362;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x53EF;&#x89C1;&#x6027;, &#x540C;&#x7406;&#x4F7F;&#x7528;<code>toggleClass</code>&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x662F;&#x5426;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;.</p>
-<p>&#x4F7F;&#x7528;<code>text</code>&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x7684;&#x5185;&#x90E8;&#x6587;&#x672C;&#x6570;&#x503C;.</p>
-<p>&#x4F7F;&#x7528;<code>append</code>&#x7528;&#x6765;&#x52A0;&#x5165;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B69;&#x5B50;&#x8282;&#x70B9;&#x4E0A;, &#x76F8;&#x53CD;, &#x4F7F;&#x7528;<code>prepend</code>&#x65B9;&#x6CD5;&#x52A0;&#x5165;&#x8282;&#x70B9;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5B69;&#x5B50;&#x8282;&#x70B9;&#x4E0A;.</p>
-<p>&#x5BF9;&#x5E94;&#x7684;, &#x5982;&#x679C;&#x662F;&#x5144;&#x5F1F;&#x4E4B;&#x95F4;&#x7684;&#x63D2;&#x5165;&#x7684;&#x8BDD;, &#x5C31;&#x662F;&#x4F7F;&#x7528;<code>before</code>&#x548C;&#x76F8;&#x53CD;&#x7684;<code>after</code></p>
+<ul>
+<li>&#x4F7F;&#x7528;<code>toggle</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5207;&#x6362;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x53EF;&#x89C1;&#x6027;, &#x540C;&#x7406;&#x4F7F;&#x7528;<code>toggleClass</code>&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x662F;&#x5426;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;.</li>
+<li>&#x4F7F;&#x7528;<code>text</code>&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x7684;&#x5185;&#x90E8;&#x6587;&#x672C;&#x6570;&#x503C;.</li>
+<li>&#x4F7F;&#x7528;<code>append</code>&#x7528;&#x6765;&#x52A0;&#x5165;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B69;&#x5B50;&#x8282;&#x70B9;&#x4E0A;, &#x76F8;&#x53CD;, &#x4F7F;&#x7528;<code>prepend</code>&#x65B9;&#x6CD5;&#x52A0;&#x5165;&#x8282;&#x70B9;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5B69;&#x5B50;&#x8282;&#x70B9;&#x4E0A;.</li>
+<li>&#x5BF9;&#x5E94;&#x7684;, &#x5982;&#x679C;&#x662F;&#x5144;&#x5F1F;&#x4E4B;&#x95F4;&#x7684;&#x63D2;&#x5165;&#x7684;&#x8BDD;, &#x5C31;&#x662F;&#x4F7F;&#x7528;<code>before</code>&#x548C;&#x76F8;&#x53CD;&#x7684;<code>after</code></li>
+</ul>
 <p>&#x4F7F;&#x7528;<code>css</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;css, &#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x5F97;&#x5230;css&#x5C5E;&#x6027;, &#x5982;&#x679C;&#x8BF4;&#x660E;&#x7684;&#x662F;, &#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x7684;css&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x8BBE;&#x7F6E;&#x4E86;style&#x5C5E;&#x6027;, &#x800C;&#x4E0D;&#x662F;&#x4FEE;&#x6539;&#x4E86;css&#x6587;&#x4EF6;, &#x6240;&#x4EE5;&#x4F60;&#x9700;&#x8981;&#x6743;&#x8861;&#x4E00;&#x4E0B;&#x662F;&#x5426;&#x5E94;&#x8BE5;&#x76F4;&#x63A5;&#x7528;css&#x5B9E;&#x73B0;, &#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;jQuery.</p>
 <p>jQuery&#x8FD4;&#x56DE;&#x7684;&#x5BF9;&#x8C61;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>each</code>&#x65B9;&#x6CD5;&#x5BF9;&#x5F53;&#x524D;&#x7684;&#x7684;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x904D;&#x5386;:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$(.node).each(<span class="function"><span class="keyword">function</span>(<span class="params">index</span>) </span>{</div><div class="line">    <span class="comment">// this&#x4F1A;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#x5F53;&#x524D;&#x9009;&#x62E9;&#x7684;DOM element</span></div><div class="line">    <span class="keyword">this</span>.style.color = <span class="string">&quot;red&quot;</span>;</div><div class="line"></div><div class="line">    <span class="comment">// &#x5982;&#x679C;&#x4F7F;&#x7528;$(this), &#x90A3;&#x4E48;&#x5F97;&#x5230;&#x7684;&#x5C31;&#x662F;jQuery object, &#x5F53;&#x7136;&#x63A8;&#x8350;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x4E86;</span></div><div class="line">    $(<span class="keyword">this</span>).css(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;red&quot;</span>)</div><div class="line">})</div></pre></td></tr></table></figure>
@@ -372,18 +452,10 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">$( <span class="string">&apos;article&apos;</span> ).on( <span class="string">&apos;click&apos;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> evt </span>) </span>{</div><div class="line">    <span class="comment">// &#x4F7F;&#x7528;evt.target&#x53EF;&#x4EE5;&#x5B9A;&#x4F4D;&#x5F53;&#x524D;&#x70B9;&#x51FB;&#x7684;&#x5BF9;&#x8C61;</span></div><div class="line">    $( evt.target ).css( <span class="string">&apos;background&apos;</span>, <span class="string">&apos;red&apos;</span> );</div><div class="line">});</div></pre></td></tr></table></figure>
 <p>&#x522B;&#x7684;&#x51E0;&#x4E2A;&#x6709;&#x7528;&#x7684;event&#x6570;&#x636E;&#x4FE1;&#x606F;&#x6709;:</p>
 <ul>
-<li>
-<p><code>preventDefault()</code>&#x5C4F;&#x853D;&#x6389;&#x9ED8;&#x8BA4;&#x7684;&#x5904;&#x7406;&#x884C;&#x4E3A;, &#x6BD4;&#x5982;click&#x4E8B;&#x4EF6;&#x7684;&#x70B9;&#x51FB;&#x6548;&#x679C;.</p>
-</li>
-<li>
-<p><code>keyCode()</code>&#x5F97;&#x5230;&#x8F93;&#x5165;&#x7684;key&#x4FE1;&#x606F;</p>
-</li>
-<li>
-<p><code>pageX</code>&#x70B9;&#x51FB;&#x4F4D;&#x7F6E;&#x7684;&#x5750;&#x6807;</p>
-</li>
-<li>
-<p><code>type</code>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;, &#x5206;&#x6790;&#x591A;&#x4E2A;&#x65F6;&#x95F4;&#x7684;&#x65F6;&#x5019;&#x6709;&#x6548;</p>
-</li>
+<li><code>preventDefault()</code>&#x5C4F;&#x853D;&#x6389;&#x9ED8;&#x8BA4;&#x7684;&#x5904;&#x7406;&#x884C;&#x4E3A;, &#x6BD4;&#x5982;click&#x4E8B;&#x4EF6;&#x7684;&#x70B9;&#x51FB;&#x6548;&#x679C;.</li>
+<li><code>keyCode()</code>&#x5F97;&#x5230;&#x8F93;&#x5165;&#x7684;key&#x4FE1;&#x606F;</li>
+<li><code>pageX</code>&#x70B9;&#x51FB;&#x4F4D;&#x7F6E;&#x7684;&#x5750;&#x6807;</li>
+<li><code>type</code>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;, &#x5206;&#x6790;&#x591A;&#x4E2A;&#x65F6;&#x95F4;&#x7684;&#x65F6;&#x5019;&#x6709;&#x6548;</li>
 </ul>
 <p>jQuery&#x8FD8;&#x6709;&#x51E0;&#x4E2A;&#x7B80;&#x5199;&#x7684;&#x65B9;&#x5F0F;, &#x6BD4;&#x5982;<code>keypress(cb)</code>&#x5C31;&#x662F;&#x7B49;&#x4EF7;&#x4E8E;<code>on(&apos;keypress, cb)</code>, &#x57FA;&#x672C;&#x4E0A;&#x6240;&#x6709;&#x57FA;&#x672C;&#x4E8B;&#x4EF6;&#x90FD;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x7B80;&#x5199;&#x5F62;&#x5F0F;, &#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x7559;&#x610F;, &#x600E;&#x4E48;&#x7B80;&#x5355;&#x600E;&#x4E48;&#x6765;.</p>
 <p>&#x52A0;&#x5165;&#x4E8B;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x95EE;&#x9898;, &#x5982;&#x679C;&#x52A0;&#x5165;&#x65F6;&#x95F4;&#x7684;&#x8282;&#x70B9;&#x5728;&#x5F00;&#x59CB;&#x65F6;&#x5019;&#x8FD8;&#x6CA1;&#x6709;, &#x90A3;&#x4E48;&#x52A0;&#x5165;&#x5C31;&#x65E0;&#x6548;&#x600E;&#x4E48;&#x529E;. &#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x53D1;&#x751F;, &#x6BD4;&#x5982;&#x7ED9;&#x4E00;&#x4E2A;ul&#x4E2D;&#x7684;li&#x52A0;&#x5165;&#x4E8B;&#x4EF6;, &#x4F46;&#x662F;&#x540E;&#x6765;&#x53C8;&#x65B0;&#x6DFB;&#x52A0;&#x4E86;&#x65B0;&#x7684;li&#x9879;&#x76EE;, &#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x56E0;&#x4E3A;&#x5728;&#x8BBE;&#x7F6E;event&#x4E4B;&#x540E;&#x8C03;&#x7528;, &#x6240;&#x4EE5;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x6210;&#x529F;.</p>
@@ -433,62 +505,36 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">    <span class="keyword">var</span> model = {</div><div class="line">        <span class="attr">init</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</div><div class="line">            <span class="keyword">this</span>.currentCat = <span class="keyword">this</span>.cats[<span class="number">0</span>];</div><div class="line">        },</div><div class="line"></div><div class="line">        <span class="attr">cats</span>: [ { <span class="attr">clickCount</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="string">&apos;Tabby&apos;</span>, <span class="attr">imgSrc</span>: <span class="string">&apos;img/434164568_fea0ad4013_z.jpg&apos;</span>, <span class="attr">imgAttribution</span>: <span class="string">&apos;https://www.flickr.com/photos/bigtallguy/434164568&apos;</span> }, { <span class="attr">clickCount</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="string">&apos;Tiger&apos;</span>, <span class="attr">imgSrc</span>: <span class="string">&apos;img/4154543904_6e2428c421_z.jpg&apos;</span>, <span class="attr">imgAttribution</span>: <span class="string">&apos;https://www.flickr.com/photos/xshamx/4154543904&apos;</span> }, { <span class="attr">clickCount</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="string">&apos;Scaredy&apos;</span>, <span class="attr">imgSrc</span>: <span class="string">&apos;img/22252709_010df3379e_z.jpg&apos;</span>, <span class="attr">imgAttribution</span>: <span class="string">&apos;https://www.flickr.com/photos/kpjas/22252709&apos;</span> }, { <span class="attr">clickCount</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="string">&apos;Shadow&apos;</span>, <span class="attr">imgSrc</span>: <span class="string">&apos;img/1413379559_412a540d29_z.jpg&apos;</span>, <span class="attr">imgAttribution</span>: <span class="string">&apos;https://www.flickr.com/photos/malfet/1413379559&apos;</span> }, { <span class="attr">clickCount</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="string">&apos;Sleepy&apos;</span>, <span class="attr">imgSrc</span>: <span class="string">&apos;img/9648464288_2516b35537_z.jpg&apos;</span>, <span class="attr">imgAttribution</span>: <span class="string">&apos;https://www.flickr.com/photos/onesharp/9648464288&apos;</span> } ]</div><div class="line">    };</div><div class="line"></div><div class="line">    <span class="keyword">var</span> octopus = {</div><div class="line">        <span class="attr">init</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">            model.init();</div><div class="line">            catView.init();</div><div class="line">            catListView.init();</div><div class="line">        },</div><div class="line"></div><div class="line">        <span class="attr">getCats</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">            <span class="keyword">return</span> model.cats;</div><div class="line">        },</div><div class="line"></div><div class="line">        <span class="attr">setCurrentCat</span>: <span class="function"><span class="keyword">function</span> (<span class="params">cat</span>) </span>{</div><div class="line">            model.currentCat = cat;</div><div class="line">        },</div><div class="line"></div><div class="line">        <span class="attr">getCurrentCat</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">            <span class="keyword">return</span> model.currentCat;</div><div class="line">        },</div><div class="line"></div><div class="line">        <span class="attr">incCatCount</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">            model.currentCat.clickCount++;</div><div class="line">            catView.render();</div><div class="line">        }</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">var</span> catListView = {</div><div class="line">        <span class="attr">init</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">            <span class="keyword">this</span>.catListElem = <span class="built_in">document</span>.getElementById(<span class="string">&apos;cat-list&apos;</span>);</div><div class="line">            <span class="keyword">this</span>.render();</div><div class="line">        },</div><div class="line"></div><div class="line">        <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">            <span class="keyword">var</span> cats = octopus.getCats();</div><div class="line">            <span class="keyword">this</span>.catListElem.innerHTML = <span class="string">&apos;&apos;</span>;</div><div class="line"></div><div class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; cats.length; ++i) {</div><div class="line">                <span class="keyword">var</span> cat = cats[i];</div><div class="line">                <span class="keyword">var</span> elem = <span class="built_in">document</span>.createElement(<span class="string">&apos;li&apos;</span>);</div><div class="line">                elem.innerText = cat.name;</div><div class="line">                elem.addEventListener(<span class="string">&apos;click&apos;</span>, (<span class="function"><span class="keyword">function</span> (<span class="params">cat</span>) </span>{</div><div class="line">                    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">                        octopus.setCurrentCat(cat);</div><div class="line">                        catView.render();</div><div class="line">                    };</div><div class="line">                })(cat));</div><div class="line">                <span class="keyword">this</span>.catListElem.appendChild(elem);</div><div class="line">            }</div><div class="line">        }</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">var</span> catView = {</div><div class="line">        <span class="attr">init</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">            <span class="keyword">this</span>.catNameElem = <span class="built_in">document</span>.getElementById(<span class="string">&apos;cat-name&apos;</span>);</div><div class="line">            <span class="keyword">this</span>.catImgElem = <span class="built_in">document</span>.getElementById(<span class="string">&apos;cat-img&apos;</span>);</div><div class="line">            <span class="keyword">this</span>.catClickNumElem = <span class="built_in">document</span>.getElementById(<span class="string">&apos;cat-click-num&apos;</span>);</div><div class="line"></div><div class="line">            <span class="keyword">this</span>.catImgElem.addEventListener(<span class="string">&apos;click&apos;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">                octopus.incCatCount();</div><div class="line">            });</div><div class="line"></div><div class="line">            <span class="keyword">this</span>.render();</div><div class="line">        },</div><div class="line"></div><div class="line">        <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">            <span class="keyword">var</span> cat = octopus.getCurrentCat();</div><div class="line">            <span class="keyword">this</span>.catNameElem.innerText = cat.name;</div><div class="line">            <span class="keyword">this</span>.catImgElem.src = cat.imgSrc;</div><div class="line">            <span class="keyword">this</span>.catImgElem.alt = cat.imgAttribution;</div><div class="line">            <span class="keyword">this</span>.catClickNumElem.innerText = cat.clickCount;</div><div class="line">        }</div><div class="line">    }</div><div class="line"></div><div class="line">    octopus.init();</div><div class="line">}</div></pre></td></tr></table></figure>
 <p>&#x8FD9;&#x91CC;&#x66F4;&#x591A;&#x662F;&#x5B9E;&#x73B0;view&#x7684;&#x63A5;&#x53E3;, view&#x7684;&#x63A5;&#x53E3;&#x6839;&#x636E;&#x5F53;&#x524D;<code>octopus(controller)</code>&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;&#x8BA1;&#x7B97;&#x51FA;&#x6240;&#x6709;&#x7684;&#x9700;&#x8981;&#x663E;&#x793A;&#x7684;list&#x6570;&#x636E;. &#x800C;<code>catView</code>&#x5C31;&#x662F;&#x6839;&#x636E;&#x5F53;&#x524D;<code>currrentCat</code>&#x7684;&#x6570;&#x636E;&#x6765;&#x6E32;&#x67D3;&#x51FA;&#x5F53;&#x524D;&#x9700;&#x8981;&#x663E;&#x793A;&#x7684;cat&#x4FE1;&#x606F;. &#x8FD9;&#x91CC;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x5B9E;&#x73B0;&#x662F;:</p>
 <ul>
-<li>
-<p>&#x7528;<code>init</code>&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;, &#x6BD4;&#x5982;&#x8FDB;&#x884C;&#x5143;&#x7D20;&#x9009;&#x62E9;, &#x6784;&#x9020;&#x76F8;&#x5E94;&#x65B9;&#x6CD5;&#x7B49;&#x903B;&#x8F91;, &#x7136;&#x540E;&#x8C03;&#x7528;render&#x8FDB;&#x884C;&#x6E32;&#x67D3;.</p>
-</li>
-<li>
-<p>&#x5C06;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x770B;&#x6210;&#x4E00;&#x4E2A;Object&#x7684;List&#x7EC4;&#x7EC7;, &#x5F53;&#x524D;&#x7684;&#x6570;&#x636E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x6570;&#x636E;&#x7684;&#x6539;&#x53D8;.</p>
-</li>
+<li>&#x7528;<code>init</code>&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;, &#x6BD4;&#x5982;&#x8FDB;&#x884C;&#x5143;&#x7D20;&#x9009;&#x62E9;, &#x6784;&#x9020;&#x76F8;&#x5E94;&#x65B9;&#x6CD5;&#x7B49;&#x903B;&#x8F91;, &#x7136;&#x540E;&#x8C03;&#x7528;render&#x8FDB;&#x884C;&#x6E32;&#x67D3;.</li>
+<li>&#x5C06;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x770B;&#x6210;&#x4E00;&#x4E2A;Object&#x7684;List&#x7EC4;&#x7EC7;, &#x5F53;&#x524D;&#x7684;&#x6570;&#x636E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x6570;&#x636E;&#x7684;&#x6539;&#x53D8;.</li>
 </ul>
 <h3 id="&#x4F7F;&#x7528;knockoutjs&#x5B9E;&#x73B0;mvvm">&#x4F7F;&#x7528;<a href="http://knockoutjs.com/index.html" target="_blank" rel="external">KnockOutJS</a>&#x5B9E;&#x73B0;MVVM</h3>
 <p>&#x4E0A;&#x9762;&#x7684;&#x5B9E;&#x73B0;&#x8FD8;&#x662F;&#x6709;&#x4E9B;&#x9EBB;&#x70E6;, &#x6BD4;&#x5982;&#x8981;&#x5728;<code>octopus</code>&#x4E2D;&#x5B9A;&#x4E49;&#x5F88;&#x591A;&#x7684;&#x51FD;&#x6570;&#x6765;&#x8FDE;&#x63A5;view&#x548C;model&#x7684;&#x5173;&#x7CFB;, &#x6BD4;&#x5982;&#x4E00;&#x4E2A;model&#x6570;&#x636E;&#x53D8;&#x5316;&#x4E86;, &#x9700;&#x8981;&#x52A0;&#x5165;&#x51FD;&#x6570;, &#x4FEE;&#x6539;&#x6570;&#x636E;, &#x901A;&#x77E5;view&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x6E32;&#x67D3;. &#x5982;&#x679C;&#x903B;&#x8F91;&#x590D;&#x6742;, &#x9700;&#x8981;&#x5199;&#x5F88;&#x591A;&#x7684;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;.</p>
 <p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="http://knockoutjs.com/index.html" target="_blank" rel="external">KnockOutJS</a>&#x5E93;&#x6765;&#x6539;&#x8FDB;. &#x8FD9;&#x4E2A;&#x5E93;&#x4E3B;&#x8981;&#x7684;&#x529F;&#x80FD;&#x5C31;&#x662F;&#x4F7F;&#x7528;observer&#x6A21;&#x5F0F;&#x5EFA;&#x7ACB;view&#x548C;model&#x7684;&#x5173;&#x7CFB;. &#x5728;html&#x4E2D;&#x7ED9;&#x7279;&#x5B9A;&#x7684;&#x6807;&#x7B7E;&#x52A0;&#x5165;&#x7279;&#x5B9A;&#x7684;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;, &#x8BE5;&#x4FE1;&#x606F;&#x548C;&#x5BF9;&#x5E94;&#x7684;<code>ViewModel</code>(controller&#x7684;&#x53D8;&#x79CD;, &#x53CD;&#x6B63;&#x5C31;&#x662F;&#x8FDE;&#x63A5;&#x7528;&#x7684;)&#x7684;&#x6570;&#x636E;&#x5EFA;&#x7ACB;&#x5173;&#x7CFB;, &#x4E00;&#x65E6;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x53D8;&#x5316;, &#x90A3;&#x4E48;html&#x5C31;&#x4F1A;&#x91CD;&#x65B0;&#x6E32;&#x67D3;(&#x6846;&#x67B6;&#x5E2E;&#x6211;&#x505A;&#x4E86;&#x8FD9;&#x4E9B;&#x4E8B;&#x60C5;). &#x8FD9;&#x6837;&#x5B50;&#x7684;&#x597D;&#x5904;&#x5C31;&#x662F;:</p>
 <ul>
-<li>
-<p>&#x57FA;&#x672C;&#x4E0D;&#x7528;&#x5199;view&#x7684;&#x4EE3;&#x7801;&#x4E86;. &#x56E0;&#x4E3A;view&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x5D4C;&#x5957;&#x5230;html&#x4E2D;&#x8FDB;&#x884C;&#x63CF;&#x8FF0;, nice! &#x672C;&#x8EAB;html&#x5C31;&#x662F;&#x4E00;&#x79CD;render&#x7684;&#x63CF;&#x8FF0;&#x65B9;&#x5F0F;, &#x901A;&#x8FC7;&#x6269;&#x5C55;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x5EFA;&#x7ACB;&#x5173;&#x7CFB;.</p>
-</li>
-<li>
-<p>&#x6570;&#x636E;&#x7684;&#x4FEE;&#x6539;&#x4F1A;&#x901A;&#x77E5;&#x5BF9;&#x5E94;&#x89C2;&#x5BDF;&#x8005;&#x7684;html&#x8FDB;&#x884C;&#x4FEE;&#x6539;, &#x76F8;&#x5F53;&#x4E8E;&#x81EA;&#x52A8;&#x8FDB;&#x884C;re-render.</p>
-</li>
+<li>&#x57FA;&#x672C;&#x4E0D;&#x7528;&#x5199;view&#x7684;&#x4EE3;&#x7801;&#x4E86;. &#x56E0;&#x4E3A;view&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x5D4C;&#x5957;&#x5230;html&#x4E2D;&#x8FDB;&#x884C;&#x63CF;&#x8FF0;, nice! &#x672C;&#x8EAB;html&#x5C31;&#x662F;&#x4E00;&#x79CD;render&#x7684;&#x63CF;&#x8FF0;&#x65B9;&#x5F0F;, &#x901A;&#x8FC7;&#x6269;&#x5C55;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x5EFA;&#x7ACB;&#x5173;&#x7CFB;.</li>
+<li>&#x6570;&#x636E;&#x7684;&#x4FEE;&#x6539;&#x4F1A;&#x901A;&#x77E5;&#x5BF9;&#x5E94;&#x89C2;&#x5BDF;&#x8005;&#x7684;html&#x8FDB;&#x884C;&#x4FEE;&#x6539;, &#x76F8;&#x5F53;&#x4E8E;&#x81EA;&#x52A8;&#x8FDB;&#x884C;re-render.</li>
 </ul>
 <p>&#x4FEE;&#x6539;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x4E3A;:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&apos;utf-8&apos;</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&apos;app.js&apos;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- &#x8FD9;&#x91CC;&#x8868;&#x793A;&#x5C06;catList&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x5FAA;&#x73AF;&#x5206;&#x89E3;, &#x7136;&#x540E;&#x5C06;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x91CD;&#x590D;&#x8FDB;&#x884C;&#x66FF;&#x6362;&#x6DFB;&#x52A0;&#x5230;ul&#x4E2D;, &#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x4E00;&#x4E2A;li&#x5BF9;&#x8C61;&#x7684;&#x91CD;&#x590D;&#x6DFB;&#x52A0;--&gt;</span></div><div class="line">    <span class="comment">&lt;!-- li&#x4E2D;&#x7684;&#x6267;&#x884C;&#x73AF;&#x5883;&#x662F;&#x5F53;&#x524D;&#x5F97;&#x5230;&#x7684;catList&#x904D;&#x5386;&#x5230;&#x7684;cat&#x5B50;&#x5BF9;&#x8C61;, &#x800C;setCurrentCat&#x65B9;&#x6CD5;&#x5728;&#x7236;&#x4EB2;&#x65B9;&#x6CD5;&#x4E2D;, &#x4E5F;&#x5C31;&#x662F;VM&#x4E2D;, &#x6240;&#x4EE5;&#x4F7F;&#x7528;$parent&#x4FEE;&#x9970; --&gt;</span></div><div class="line">    <span class="comment">&lt;!-- &#x6BCF;&#x4E00;&#x4E2A;li&#x5BF9;&#x8C61;&#x7684;&#x6267;&#x884C;&#x73AF;&#x5883;&#x662F;&#x4E00;&#x4E2A;cat&#x5B50;&#x5BF9;&#x8C61;, &#x70B9;&#x51FB;&#x65F6;&#x5019;&#x5F97;&#x5230;&#x7684;&#x5BF9;&#x8C61;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x6267;&#x884C;&#x73AF;&#x5883; --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;cat-list&quot;</span> <span class="attr">data-bind</span>=<span class="string">&quot;foreach: catList&quot;</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-bind</span>=<span class="string">&quot;text: name, click: $parent.setCurrentCat&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- &#x4F7F;&#x7528;with&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x8BBE;&#x5B9A;&#x5F53;&#x524D;&#x6267;&#x884C;&#x73AF;&#x5883;, &#x5426;&#x5219;&#x4EE3;&#x7801;&#x90FD;&#x9700;&#x8981;&#x5199;&#x6210;data-bind=currentCat().name --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;cat-show&quot;</span> <span class="attr">data-bind</span>=<span class="string">&quot;with: currentCat&quot;</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;cat-name&quot;</span> <span class="attr">data-bind</span>=<span class="string">&quot;text: name&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;cat-img&quot;</span> <span class="attr">data-bind</span>=<span class="string">&quot;attr: {src: imgSrc}, click: $parent.catImgOnClick&quot;</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;cat-click-num&quot;</span> <span class="attr">data-bind</span>=<span class="string">&quot;text: clickCount&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">    <span class="keyword">var</span> initcatsData = [ { <span class="attr">clickCount</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="string">&apos;Tabby&apos;</span>, <span class="attr">imgSrc</span>: <span class="string">&apos;img/434164568_fea0ad4013_z.jpg&apos;</span>, <span class="attr">imgAttribution</span>: <span class="string">&apos;https://www.flickr.com/photos/bigtallguy/434164568&apos;</span> }, { <span class="attr">clickCount</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="string">&apos;Tiger&apos;</span>, <span class="attr">imgSrc</span>: <span class="string">&apos;img/4154543904_6e2428c421_z.jpg&apos;</span>, <span class="attr">imgAttribution</span>: <span class="string">&apos;https://www.flickr.com/photos/xshamx/4154543904&apos;</span> }, { <span class="attr">clickCount</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="string">&apos;Scaredy&apos;</span>, <span class="attr">imgSrc</span>: <span class="string">&apos;img/22252709_010df3379e_z.jpg&apos;</span>, <span class="attr">imgAttribution</span>: <span class="string">&apos;https://www.flickr.com/photos/kpjas/22252709&apos;</span> }, { <span class="attr">clickCount</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="string">&apos;Shadow&apos;</span>, <span class="attr">imgSrc</span>: <span class="string">&apos;img/1413379559_412a540d29_z.jpg&apos;</span>, <span class="attr">imgAttribution</span>: <span class="string">&apos;https://www.flickr.com/photos/malfet/1413379559&apos;</span> }, { <span class="attr">clickCount</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="string">&apos;Sleepy&apos;</span>, <span class="attr">imgSrc</span>: <span class="string">&apos;img/9648464288_2516b35537_z.jpg&apos;</span>, <span class="attr">imgAttribution</span>: <span class="string">&apos;https://www.flickr.com/photos/onesharp/9648464288&apos;</span> } ];</div><div class="line"></div><div class="line">    <span class="keyword">var</span> Cat = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>{</div><div class="line">        <span class="keyword">this</span>.clickCount = ko.observable(data.clickCount);</div><div class="line">        <span class="keyword">this</span>.name = ko.observable(data.name);</div><div class="line">        <span class="keyword">this</span>.imgSrc = ko.observable(data.imgSrc);</div><div class="line">        <span class="keyword">this</span>.imgAttribution = ko.observable(data.imgAttribution);</div><div class="line">    };</div><div class="line"></div><div class="line">    <span class="keyword">var</span> AppViewModel = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</div><div class="line">        <span class="keyword">var</span> self = <span class="keyword">this</span>;</div><div class="line"></div><div class="line">        <span class="keyword">this</span>.catList = ko.observableArray();</div><div class="line">        initcatsData.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>{</div><div class="line">            self.catList.push(<span class="keyword">new</span> Cat(data));</div><div class="line">        });</div><div class="line"></div><div class="line">        <span class="comment">// &#x5C06;&#x65B9;&#x6CD5;&#x653E;&#x5728;&#x8FD9;&#x91CC;&#x800C;&#x4E0D;&#x662F;&#x653E;&#x5728;Cat&#x7C7B;&#x4E2D;, &#x5E94;&#x8BE5;&#x662F;&#x4E3A;&#x4E86;&#x51CF;&#x5C11;&#x5F53;&#x524D;&#x6784;&#x9020;&#x7684;&#x6B21;&#x6570;, &#x56E0;&#x4E3A;&#x5171;&#x6027;&#x7684;&#x65B9;&#x6CD5;&#x4E0D;&#x9700;&#x8981;&#x6BCF;&#x4E00;&#x4E2A;cat&#x90FD;&#x6784;&#x9020;&#x4E00;&#x6B21;, &#x6709;&#x70B9;&#x50CF;prototype&#x7684;&#x5473;&#x9053;</span></div><div class="line">        <span class="keyword">this</span>.catImgOnClick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</div><div class="line">            <span class="comment">// &#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F;self, &#x56E0;&#x4E3A;&#x8C03;&#x7528;&#x7684;&#x5730;&#x65B9;&#x5C06;&#x5F53;&#x524D;&#x73AF;&#x5883;&#x8BBE;&#x7F6E;&#x4E3A;currentCat&#x4E86;</span></div><div class="line">            <span class="comment">// self.currentCat().clickCount(self.currentCat().clickCount()+1);</span></div><div class="line"></div><div class="line">            <span class="comment">// &#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x4EE3;&#x7801;&#x5199;&#x6210;&#x8FD9;&#x6837;&#x5B50;, &#x56E0;&#x4E3A;&#x5F53;&#x524D;&#x6267;&#x884C;&#x73AF;&#x5883;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x7684;Cat&#x5BF9;&#x8C61;</span></div><div class="line">            <span class="keyword">this</span>.clickCount(<span class="keyword">this</span>.clickCount()+<span class="number">1</span>);</div><div class="line">        };</div><div class="line"></div><div class="line">        <span class="comment">// ko&#x4F1A;&#x5C06;&#x5F53;&#x524D;&#x6267;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x53D6;&#x51FA;&#x6765;&#x653E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E2D;</span></div><div class="line">        <span class="keyword">this</span>.setCurrentCat = <span class="function"><span class="keyword">function</span>(<span class="params">cat</span>) </span>{</div><div class="line">            <span class="comment">// &#x4F7F;&#x7528;obserable&#x53D8;&#x91CF;&#x7684;&#x65F6;&#x5019;, &#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;, &#x56E0;&#x4E3A;&#x9700;&#x8981;&#x8DDF;&#x8E2A;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x4FEE;&#x6539;, &#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x7684;&#x5F62;&#x5F0F;.</span></div><div class="line">            self.currentCat(cat);</div><div class="line">        };</div><div class="line"></div><div class="line">        <span class="keyword">this</span>.currentCat = ko.observable(<span class="keyword">this</span>.catList()[<span class="number">0</span>]);</div><div class="line">    };</div><div class="line"></div><div class="line">    ko.applyBindings(<span class="keyword">new</span> AppViewModel());</div><div class="line">}</div></pre></td></tr></table></figure>
 <p>&#x4EE3;&#x7801;&#x660E;&#x663E;&#x7B80;&#x6D01;&#x4E86;&#x5F88;&#x591A;, &#x4E2A;&#x4EBA;&#x603B;&#x7ED3;&#x7684;&#x51E0;&#x4E2A;&#x8981;&#x70B9;(&#x76EE;&#x524D;&#x8BE5;&#x5E93;&#x638C;&#x63E1;&#x8FD8;&#x5904;&#x4E8E;&#x57FA;&#x7840;&#x9636;&#x6BB5;, &#x53EF;&#x80FD;&#x603B;&#x7ED3;&#x7684;&#x8303;&#x5F0F;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x51C6;&#x786E;):</p>
 <ul>
-<li>
-<p>&#x5728;html&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x9700;&#x8981;&#x76D1;&#x542C;&#x6539;&#x53D8;&#x7684;tag, &#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x6539;&#x53D8;&#x7684;&#x53D8;&#x91CF;&#x4F7F;&#x7528;<code>ko.observable</code>&#x7C7B;&#x578B;&#x751F;&#x6210;.</p>
-</li>
-<li>
-<p>&#x5C06;<code>Cat</code>&#x62BD;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;, &#x5176;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x4FEE;&#x6539;&#x7684;, &#x8FD9;&#x6837;&#x5B50;&#x7684;&#x597D;&#x5904;&#x662F;, &#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5185;&#x5BB9;&#x88AB;&#x53D8;&#x5316;, &#x90A3;&#x4E48;&#x6240;&#x6709;&#x6210;&#x5458;&#x6570;&#x636E;&#x5982;&#x679C;&#x662F;<code>ko.observable</code>&#x7684;, &#x90FD;&#x8BA4;&#x4E3A;&#x53D8;&#x5316;, &#x4F53;&#x73B0;&#x4E86;&#x6574;&#x4F53;&#x52A8;&#x5168;&#x5C40;&#x52A8;&#x7684;&#x6982;&#x5FF5;. &#x800C;&#x5355;&#x4F53;&#x5C5E;&#x6027;, &#x6BD4;&#x5982;<code>clickCount</code>&#x4E5F;&#x8BBE;&#x7F6E;&#x4E3A;<code>ko.observable</code>&#x662F;&#x4E3A;&#x4E86;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x63A7;&#x5236;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x4FEE;&#x6539;, &#x5BF9;&#x7279;&#x5B9A;&#x7684;html&#x4EA7;&#x751F;&#x53D8;&#x5316;.</p>
-</li>
-<li>
-<p>&#x53EF;&#x4EE5;&#x5C06;<code>ko.observable</code>&#x770B;&#x505A;&#x4E00;&#x4E2A;proxy, &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x4EE3;&#x7406;. &#x4E0D;&#x540C;&#x7684;&#x5C31;&#x662F;&#x63A5;&#x53E3;&#x5C42;&#x9762;&#x4E0A;, &#x56E0;&#x4E3A;&#x8981;&#x77E5;&#x9053;&#x6570;&#x636E;&#x4FEE;&#x6539;, &#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x901A;&#x8FC7;set&#x8BED;&#x4E49;&#x8FDB;&#x884C;&#x4FEE;&#x6539;.</p>
-</li>
-<li>
-<p>&#x5BF9;&#x4E8E;<code>ko.observableArray</code>&#x7C7B;&#x578B;&#x7684;<code>catList</code>&#x5BF9;&#x8C61;&#x5C31;&#x597D;&#x7406;&#x89E3;&#x4E86;, &#x672C;&#x8EAB;&#x662F;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x76D1;&#x542C;&#x6539;&#x53D8;&#x7684;&#x6570;&#x636E;(&#x53EF;&#x80FD;&#x52A0;&#x5165;&#x65B0;&#x7684;cat), &#x7136;&#x540E;&#x5176;&#x4FDD;&#x5B58;&#x7684;&#x6570;&#x636E;<strong>&#x5C31;&#x662F;&#x666E;&#x901A;&#x7684;cat&#x5BF9;&#x8C61;(&#x5E76;&#x4E0D;&#x662F;&#x89C2;&#x5BDF;&#x7684;&#x5BF9;&#x8C61;)</strong>, &#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x800C;&#x5DF2;. &#x800C;&#x6211;&#x4EEC;&#x7684;<code>currentCat</code>&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x5F53;&#x524D;&#x7684;<code>Cat</code>&#x6307;&#x9488;&#x53D8;&#x91CF;, &#x56E0;&#x4E3A;&#x9700;&#x8981;&#x76D1;&#x542C;&#x8FD9;&#x4E2A;&#x6307;&#x9488;&#x53D8;&#x5316;, &#x6240;&#x4EE5;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;<code>ko.observable</code>&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;.</p>
-</li>
+<li>&#x5728;html&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x9700;&#x8981;&#x76D1;&#x542C;&#x6539;&#x53D8;&#x7684;tag, &#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x6539;&#x53D8;&#x7684;&#x53D8;&#x91CF;&#x4F7F;&#x7528;<code>ko.observable</code>&#x7C7B;&#x578B;&#x751F;&#x6210;.</li>
+<li>&#x5C06;<code>Cat</code>&#x62BD;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;, &#x5176;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x4FEE;&#x6539;&#x7684;, &#x8FD9;&#x6837;&#x5B50;&#x7684;&#x597D;&#x5904;&#x662F;, &#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5185;&#x5BB9;&#x88AB;&#x53D8;&#x5316;, &#x90A3;&#x4E48;&#x6240;&#x6709;&#x6210;&#x5458;&#x6570;&#x636E;&#x5982;&#x679C;&#x662F;<code>ko.observable</code>&#x7684;, &#x90FD;&#x8BA4;&#x4E3A;&#x53D8;&#x5316;, &#x4F53;&#x73B0;&#x4E86;&#x6574;&#x4F53;&#x52A8;&#x5168;&#x5C40;&#x52A8;&#x7684;&#x6982;&#x5FF5;. &#x800C;&#x5355;&#x4F53;&#x5C5E;&#x6027;, &#x6BD4;&#x5982;<code>clickCount</code>&#x4E5F;&#x8BBE;&#x7F6E;&#x4E3A;<code>ko.observable</code>&#x662F;&#x4E3A;&#x4E86;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x63A7;&#x5236;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x4FEE;&#x6539;, &#x5BF9;&#x7279;&#x5B9A;&#x7684;html&#x4EA7;&#x751F;&#x53D8;&#x5316;.</li>
+<li>&#x53EF;&#x4EE5;&#x5C06;<code>ko.observable</code>&#x770B;&#x505A;&#x4E00;&#x4E2A;proxy, &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x4EE3;&#x7406;. &#x4E0D;&#x540C;&#x7684;&#x5C31;&#x662F;&#x63A5;&#x53E3;&#x5C42;&#x9762;&#x4E0A;, &#x56E0;&#x4E3A;&#x8981;&#x77E5;&#x9053;&#x6570;&#x636E;&#x4FEE;&#x6539;, &#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x901A;&#x8FC7;set&#x8BED;&#x4E49;&#x8FDB;&#x884C;&#x4FEE;&#x6539;.</li>
+<li>&#x5BF9;&#x4E8E;<code>ko.observableArray</code>&#x7C7B;&#x578B;&#x7684;<code>catList</code>&#x5BF9;&#x8C61;&#x5C31;&#x597D;&#x7406;&#x89E3;&#x4E86;, &#x672C;&#x8EAB;&#x662F;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x76D1;&#x542C;&#x6539;&#x53D8;&#x7684;&#x6570;&#x636E;(&#x53EF;&#x80FD;&#x52A0;&#x5165;&#x65B0;&#x7684;cat), &#x7136;&#x540E;&#x5176;&#x4FDD;&#x5B58;&#x7684;&#x6570;&#x636E;<strong>&#x5C31;&#x662F;&#x666E;&#x901A;&#x7684;cat&#x5BF9;&#x8C61;(&#x5E76;&#x4E0D;&#x662F;&#x89C2;&#x5BDF;&#x7684;&#x5BF9;&#x8C61;)</strong>, &#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x800C;&#x5DF2;. &#x800C;&#x6211;&#x4EEC;&#x7684;<code>currentCat</code>&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x5F53;&#x524D;&#x7684;<code>Cat</code>&#x6307;&#x9488;&#x53D8;&#x91CF;, &#x56E0;&#x4E3A;&#x9700;&#x8981;&#x76D1;&#x542C;&#x8FD9;&#x4E2A;&#x6307;&#x9488;&#x53D8;&#x5316;, &#x6240;&#x4EE5;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;<code>ko.observable</code>&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;.</li>
 </ul>
 <script async src="//jsfiddle.net/bycsjp9f/embed/js,html,css,result/dark/"></script>
 <h3 id="angularjs">AngularJS</h3>
 <p>&#x66F4;&#x52A0;&#x5F3A;&#x5927;&#x7684;&#x6846;&#x67B6;AngularJS, &#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x52A0;&#x5F3A;&#x5927;&#x7684;MVC&#x529F;&#x80FD;.</p>
 <p>&#x5927;&#x81F4;&#x5B66;&#x4E60;&#x4E86;&#x4E00;&#x4E0B;, AngularJS&#x548C;KnockOut&#x633A;&#x76F8;&#x4F3C;, &#x90FD;&#x662F;&#x4F7F;&#x7528;&#x6269;&#x5C55;html&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;view&#x548C;&#x6570;&#x636E;&#x7684;&#x81EA;&#x52A8;binding:</p>
 <ul>
-<li>
-<p>view&#x5C31;&#x662F;&#x4E00;&#x4E2A;html, &#x4F7F;&#x7528;template&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7EC4;&#x5408;&#x76F8;&#x5E94;&#x7684;&#x53D8;&#x91CF;&#x6570;&#x636E;.</p>
-</li>
-<li>
-<p>controller&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x548C;view&#x7EC4;&#x5408;&#x4F7F;&#x7528;&#x7684;&#x6982;&#x5FF5;, &#x6BD4;&#x5982;&#x4EE3;&#x7801;<code>&lt;div ng-include=&quot;&apos;views/cat_list.html&apos;&quot; ng-controller=&quot;CatControllerCtrl as cat&quot;&gt;&lt;/div&gt;</code>&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;view&#x548C;&#x5BF9;&#x5E94;&#x7684;controller&#x8FDB;&#x884C;&#x7EC4;&#x5408;, &#x6240;&#x6709;view&#x4E2D;&#x7684;teamplate&#x7684;&#x53D8;&#x91CF;&#x83B7;&#x53D6;&#x90FD;&#x662F;&#x4ECE;controller&#x4E2D;&#x8FDB;&#x884C;&#x83B7;&#x53D6;.</p>
-</li>
-<li>
-<p>service&#x662F;&#x96B6;&#x5C5E;&#x4E8E;controller&#x4E2D;&#x7684;, &#x66F4;&#x591A;&#x7684;&#x662F;&#x8868;&#x793A;<strong>&#x7EAF;&#x6570;&#x636E;</strong>&#x7684;&#x5305;&#x88C5;&#x7C7B;, controller&#x53EF;&#x4EE5;&#x5171;&#x7528;&#x591A;&#x4E2A;service, &#x8FD9;&#x79CD;&#x7EC4;&#x5408;&#x5173;&#x7CFB;&#x4E00;&#x4E0B;&#x5C31;&#x8BA9;controller&#x53D8;&#x5F97;&#x5F3A;&#x5927;, &#x56E0;&#x4E3A;&#x4E0D;&#x540C;&#x7684;controller&#x53EF;&#x4EE5;&#x5171;&#x7528;&#x4E0D;&#x540C;&#x7684;service.</p>
-</li>
-<li>
-<p>module&#x53C8;&#x662F;&#x4E00;&#x4E2A;&#x66F4;&#x52A0;&#x4E0A;&#x5C42;&#x7684;&#x6982;&#x5FF5;, &#x6240;&#x6709;&#x7684;view, controller, service, routing&#x53EF;&#x4EE5;&#x6784;&#x6210;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;, &#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x5171;&#x7528;, &#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x6211;&#x4EEC;&#x7684;app&#x662F;&#x4E00;&#x4E2A;moudle, &#x540C;&#x65F6;&#x6211;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x522B;&#x7684;&#x5199;&#x597D;&#x7684;moudle&#x8FDB;&#x884C;&#x6269;&#x5C55;.</p>
-</li>
-<li>
-<p>&#x611F;&#x89C9;AngularJS&#x5F3A;&#x5927;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E;&#x975E;&#x5E38;&#x7684;&#x7075;&#x6D3B;, template&#x673A;&#x5236;&#x4E5F;&#x975E;&#x5E38;&#x5F3A;&#x5927;(&#x4E0D;&#x9700;&#x8981;&#x60F3;KnockOut&#x90A3;&#x6837;&#x5B50;&#x5B9A;&#x4E49;observable), &#x7EC4;&#x5408;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x975E;&#x5E38;&#x4FBF;&#x4E8E;&#x6269;&#x5C55;.</p>
-</li>
+<li>view&#x5C31;&#x662F;&#x4E00;&#x4E2A;html, &#x4F7F;&#x7528;template&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7EC4;&#x5408;&#x76F8;&#x5E94;&#x7684;&#x53D8;&#x91CF;&#x6570;&#x636E;.</li>
+<li>controller&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x548C;view&#x7EC4;&#x5408;&#x4F7F;&#x7528;&#x7684;&#x6982;&#x5FF5;, &#x6BD4;&#x5982;&#x4EE3;&#x7801;<code>&lt;div ng-include=&quot;&apos;views/cat_list.html&apos;&quot; ng-controller=&quot;CatControllerCtrl as cat&quot;&gt;&lt;/div&gt;</code>&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;view&#x548C;&#x5BF9;&#x5E94;&#x7684;controller&#x8FDB;&#x884C;&#x7EC4;&#x5408;, &#x6240;&#x6709;view&#x4E2D;&#x7684;teamplate&#x7684;&#x53D8;&#x91CF;&#x83B7;&#x53D6;&#x90FD;&#x662F;&#x4ECE;controller&#x4E2D;&#x8FDB;&#x884C;&#x83B7;&#x53D6;.</li>
+<li>service&#x662F;&#x96B6;&#x5C5E;&#x4E8E;controller&#x4E2D;&#x7684;, &#x66F4;&#x591A;&#x7684;&#x662F;&#x8868;&#x793A;<strong>&#x7EAF;&#x6570;&#x636E;</strong>&#x7684;&#x5305;&#x88C5;&#x7C7B;, controller&#x53EF;&#x4EE5;&#x5171;&#x7528;&#x591A;&#x4E2A;service, &#x8FD9;&#x79CD;&#x7EC4;&#x5408;&#x5173;&#x7CFB;&#x4E00;&#x4E0B;&#x5C31;&#x8BA9;controller&#x53D8;&#x5F97;&#x5F3A;&#x5927;, &#x56E0;&#x4E3A;&#x4E0D;&#x540C;&#x7684;controller&#x53EF;&#x4EE5;&#x5171;&#x7528;&#x4E0D;&#x540C;&#x7684;service.</li>
+<li>module&#x53C8;&#x662F;&#x4E00;&#x4E2A;&#x66F4;&#x52A0;&#x4E0A;&#x5C42;&#x7684;&#x6982;&#x5FF5;, &#x6240;&#x6709;&#x7684;view, controller, service, routing&#x53EF;&#x4EE5;&#x6784;&#x6210;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;, &#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x5171;&#x7528;, &#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x6211;&#x4EEC;&#x7684;app&#x662F;&#x4E00;&#x4E2A;moudle, &#x540C;&#x65F6;&#x6211;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x522B;&#x7684;&#x5199;&#x597D;&#x7684;moudle&#x8FDB;&#x884C;&#x6269;&#x5C55;.</li>
+<li>&#x611F;&#x89C9;AngularJS&#x5F3A;&#x5927;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E;&#x975E;&#x5E38;&#x7684;&#x7075;&#x6D3B;, template&#x673A;&#x5236;&#x4E5F;&#x975E;&#x5E38;&#x5F3A;&#x5927;(&#x4E0D;&#x9700;&#x8981;&#x60F3;KnockOut&#x90A3;&#x6837;&#x5B50;&#x5B9A;&#x4E49;observable), &#x7EC4;&#x5408;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x975E;&#x5E38;&#x4FBF;&#x4E8E;&#x6269;&#x5C55;.</li>
 </ul>
 <p>&#x91CD;&#x65B0;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E0B;<code>CatList</code>&#x7684;&#x7A0B;&#x5E8F;, &#x56E0;&#x4E3A;&#x4E0D;&#x662F;&#x5F88;&#x719F;&#x6089;, &#x6240;&#x4EE5;&#x5B9E;&#x73B0;&#x6BD4;&#x8F83;&#x4F4E;&#x7AEF;, &#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- cat_list.html view --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-repeat</span>=<span class="string">&quot;cat_item in cat.catDat&quot;</span> <span class="attr">style</span>=<span class="string">&quot;list-style: disc&quot;</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">ng_click</span>=<span class="string">&quot;cat.on_click(cat_item)&quot;</span>&gt;</span>{{cat_item.name}}<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h3</span>&gt;</span>{{cat.cur_cat.name}}<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>{{cat.cur_cat.clickCount}}<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> <span class="attr">ng-src</span>=<span class="string">&quot;{{cat.cur_cat.imgSrc}}&quot;</span> <span class="attr">ng-click</span>=<span class="string">&quot;cat.cat_click(cat.cur_cat)&quot;</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -512,219 +558,728 @@
       
     </div>
     
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    whiledoing
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://whiledoing.github.io/2016/12/03/learn-javascript/" title="javascript学习笔记">http://whiledoing.github.io/2016/12/03/learn-javascript/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/自写/" rel="tag"># 自写</a>
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/07/book-change-the-conversation-learn-note/" rel="next" title="《解决冲突的关键技巧》读书笔记">
+                <i class="fa fa-chevron-left"></i> 《解决冲突的关键技巧》读书笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/16/linux-trick/" rel="prev" title="linux-trick">
+                linux-trick <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/12/03/learn-javascript/">javascript学习笔记</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">whiledoing</a></p>
-        <p><span>发布时间:</span>2016-12-03, 22:34:24</p>
-        <p><span>最后更新:</span>2017-11-30, 15:20:05</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/12/03/learn-javascript/" title="javascript学习笔记">http://whiledoing.github.io/2016/12/03/learn-javascript/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://whiledoing.github.io/2016/12/03/learn-javascript/　　作者: whiledoing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
     </div>
+  </div>
 
 
+          </div>
+          
 
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/12/16/linux-trick/">
-                    linux-trick
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/08/07/book-change-the-conversation-learn-note/">
-                    《解决冲突的关键技巧》读书笔记
-                </a>
-            </div>
-        
-    </nav>
+
+          
 
   
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#类的实现"><span class="toc-number">1.</span> <span class="toc-text">类的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#new语义"><span class="toc-number">1.1.</span> <span class="toc-text">new语义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类的实现"><span class="toc-number">1.2.</span> <span class="toc-text">类的实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#继承的实现方式"><span class="toc-number">1.3.</span> <span class="toc-text">继承的实现方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考文档"><span class="toc-number">1.4.</span> <span class="toc-text">参考文档</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bom"><span class="toc-number">2.</span> <span class="toc-text">BOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jquery"><span class="toc-number">2.1.</span> <span class="toc-text">jQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jquery监控事件"><span class="toc-number">2.1.1.</span> <span class="toc-text">jQuery监控事件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用严格模式"><span class="toc-number">2.2.</span> <span class="toc-text">使用严格模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考文档"><span class="toc-number">2.3.</span> <span class="toc-text">参考文档</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#immediately-invoked-function-expressioniife"><span class="toc-number">3.</span> <span class="toc-text">Immediately-Invoked Function Expression(IIFE)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mvc模式"><span class="toc-number">4.</span> <span class="toc-text">MVC模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标准实现"><span class="toc-number">4.1.</span> <span class="toc-text">标准实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用knockoutjs实现mvvm"><span class="toc-number">4.2.</span> <span class="toc-text">使用KnockOutJS实现MVVM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#angularjs"><span class="toc-number">4.3.</span> <span class="toc-text">AngularJS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用js来操作dom"><span class="toc-number">5.</span> <span class="toc-text">使用js来操作dom</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#参考文档"><span class="toc-number">5.1.</span> <span class="toc-text">参考文档</span></a></li></ol></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
 
 
 
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"javascript学习笔记　| whiledoing　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2016/12/16/linux-trick/" title="上一篇: linux-trick">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2016/08/07/book-change-the-conversation-learn-note/" title="下一篇: 《解决冲突的关键技巧》读书笔记">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/30/《小狗钱钱》读书笔记/">《富爸爸穷爸爸》&《小狗钱钱》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/14/fenglun-talk-about-life-and-career/">冯仑 - 「职场相对论」演讲听后感 - 如何平衡欲望和能力</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/08/selling-is-everywhere/">《销售无处不在》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/how-to-measure-your-life-reading-notes/">《如何衡量你的人生》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/16/linux-trick/">linux-trick</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/03/learn-javascript/">javascript学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/07/book-change-the-conversation-learn-note/">《解决冲突的关键技巧》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/28/book-thinking-about-running-md/">《当我跑步时我谈些什么》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/28/learn-mongo-md/">mongo学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/peopleware-reading-notes/">《人件》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/22/my-vim/">折腾vim</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/01/how-to-life-learn-note/">《活法》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/book-liaoge-linux-course-md/">《鸟哥的Linux私房菜》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/learn-linux-from-linux-foundation/">linux course from linux foundation 学习记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/21/the-mythical-man-month-learn-note-md/">《人月神话》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/book-touchable-tidy-up-life-md/">《怦然心动的人生整理魔法》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/10/python-practice/">python misc</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/the-art-of-stop-learn-note-md/">《止学》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/the-pragmatic-programmer-learn-note/">《The Pragmatic Programmer》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/02/code-complete-2-learn-note/">《Code Complete 2》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/the-art-of-unix-programming-reading-notes/">《The Art of UNIX Programming》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/self-git/">git学习记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/hexo-blog/">hexo-blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/the-linux-programming-interface-reading-notes/">《The Linux Programming Interface》读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/25/self-mac/">mac折腾记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/20/yaml-format/">yaml格式</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2016-2017 whiledoing
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
-            </div>
         </div>
         
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/img/avatar.jpeg"
+                alt="whiledoing" />
+            
+              <p class="site-author-name" itemprop="name">whiledoing</p>
+              <p class="site-description motion-element" itemprop="description">喜欢一切简单且美的事物，包括人。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#类的实现"><span class="nav-number">1.</span> <span class="nav-text">类的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#new语义"><span class="nav-number">1.1.</span> <span class="nav-text">new语义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类的实现"><span class="nav-number">1.2.</span> <span class="nav-text">类的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承的实现方式"><span class="nav-number">1.3.</span> <span class="nav-text">继承的实现方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文档"><span class="nav-number">1.4.</span> <span class="nav-text">参考文档</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bom"><span class="nav-number">2.</span> <span class="nav-text">BOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery-lib"><span class="nav-number">2.1.</span> <span class="nav-text">jQuery lib</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jquery监控事件"><span class="nav-number">2.1.1.</span> <span class="nav-text">jQuery监控事件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用严格模式"><span class="nav-number">2.2.</span> <span class="nav-text">使用严格模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文档"><span class="nav-number">2.3.</span> <span class="nav-text">参考文档</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#immediately-invoked-function-expressioniife"><span class="nav-number">3.</span> <span class="nav-text">Immediately-Invoked Function Expression(IIFE)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mvc模式"><span class="nav-number">4.</span> <span class="nav-text">MVC模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标准实现"><span class="nav-number">4.1.</span> <span class="nav-text">标准实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用knockoutjs实现mvvm"><span class="nav-number">4.2.</span> <span class="nav-text">使用KnockOutJS实现MVVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#angularjs"><span class="nav-number">4.3.</span> <span class="nav-text">AngularJS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用js来操作dom"><span class="nav-number">5.</span> <span class="nav-text">使用js来操作dom</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文档"><span class="nav-number">5.1.</span> <span class="nav-text">参考文档</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
         
-    </div>
-</footer>
-    </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">whiledoing</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
     
-    <script src="/js/GithubRepoWidget.js"></script>
-
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 3;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">61.8k</span>
+  
 </div>
-<script>
-    // Open in New Window
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
     
-        var oOpenInNew = {
-             github: ".github-widget a", 
-            
-            
-            
-            
-            
-             archives: ".archive-article-title", 
-             miniArchives: "a.post-list-link", 
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
     
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<!--add pangu support-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.2.1/pangu.min.js"></script>
-<script>pangu.spacingPage();</script>
 
-  </div>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+
+
+  
+
 </body>
 </html>
