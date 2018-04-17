@@ -5,21 +5,17 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
 
 
 
@@ -49,10 +45,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -61,45 +53,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.1.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.1.0">
 
 
-  <link rel="mask-icon" href="/favicon.png?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="自写,mongo," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.1.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="这是我学习mongo的笔记">
-<meta property="og:type" content="article">
-<meta property="og:title" content="mongo学习笔记">
-<meta property="og:url" content="http://whiledoing.me/2016/06/28/learn-mongo-md/index.html">
-<meta property="og:site_name" content="whiledoing">
-<meta property="og:description" content="这是我学习mongo的笔记">
-<meta property="og:updated_time" content="2017-11-30T07:20:45.343Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mongo学习笔记">
-<meta name="twitter:description" content="这是我学习mongo的笔记">
 
 
 
@@ -108,15 +80,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
+    version: '6.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -128,12 +98,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="这是我学习mongo的笔记">
+<meta name="keywords" content="自写,mongo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mongo学习笔记">
+<meta property="og:url" content="http://whiledoing.me/2016/06/28/learn-mongo-md/index.html">
+<meta property="og:site_name" content="whiledoing">
+<meta property="og:description" content="这是我学习mongo的笔记">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-30T07:20:45.343Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mongo学习笔记">
+<meta name="twitter:description" content="这是我学习mongo的笔记">
+
+
+
+
+
 
   <link rel="canonical" href="http://whiledoing.me/2016/06/28/learn-mongo-md/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>mongo学习笔记 | whiledoing</title>
   
@@ -141,13 +137,50 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117714040-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117714040-1');
+</script>
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -163,7 +196,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">whiledoing</span>
         <span class="logo-line-after"><i></i></span>
@@ -175,7 +208,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -183,92 +216,67 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -279,6 +287,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -303,37 +313,46 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mongo学习笔记</h1>
+          <h1 class="post-title" itemprop="name headline">mongo学习笔记
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-06-28T09:18:46+08:00">
-                2016-06-28
-              </time>
+                
+              
+
+              <time title="创建于：2016-06-28 09:18:46" itemprop="dateCreated datePublished" datetime="2016-06-28T09:18:46+08:00">2016-06-28</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:20:45" itemprop="dateModified" datetime="2017-11-30T15:20:45+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:20:45+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -348,27 +367,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2,016
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -386,7 +384,7 @@
       
 
       
-        <p>&#x8FD9;&#x662F;&#x6211;&#x5B66;&#x4E60;<a href="https://www.mongodb.com/" target="_blank" rel="external">mongo</a>&#x7684;&#x7B14;&#x8BB0;</p>
+        <p>&#x8FD9;&#x662F;&#x6211;&#x5B66;&#x4E60;<a href="https://www.mongodb.com/" target="_blank" rel="noopener">mongo</a>&#x7684;&#x7B14;&#x8BB0;</p>
 <a id="more"></a>
 <p>&#x7D22;&#x5F15;&#x5B57;&#x6BB5;&#x8F93;&#x51FA;&#x7684;sort&#x6392;&#x5E8F;&#x662F;&#x975E;&#x5E38;&#x9AD8;&#x6548;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x7D22;&#x5F15;&#x5EFA;&#x7ACB;&#x7684;&#x65F6;&#x5019;&#x5DF2;&#x7ECF;&#x8003;&#x8651;&#x4E86;sort&#x9700;&#x6C42;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x987A;&#x5E8F;&#x6216;&#x8005;&#x9006;&#x5E8F;&#x7684;&#x5C06;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x3002;</p>
 <p>covered index&#x8868;&#x793A;&#x8986;&#x76D6;&#x7D22;&#x5F15;&#xFF0C;&#x8868;&#x793A;&#x4EC5;&#x4EC5;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x5C31;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x6240;&#x6709;&#x7684;&#x67E5;&#x8BE2;&#x4FE1;&#x606F;&#x3002;</p>
@@ -419,11 +417,11 @@
 <p>&#x4F7F;&#x7528;&#x56FA;&#x5B9A;&#x96C6;&#x5408;&#x53EF;&#x4EE5;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#x7684;&#x5B9E;&#x73B0;LRU&#x7684;&#x6587;&#x6863;&#x4FDD;&#x5B58;&#x548C;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x3002;</p>
 <h2 id="&#x914D;&#x7F6E;shell&#x73AF;&#x5883;">&#x914D;&#x7F6E;shell&#x73AF;&#x5883;</h2>
 <p>&#x5728;mongo&#x7684;shell&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;<code>.mongorc.js</code>&#x4E2D;&#x8BBE;&#x7F6E;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">EDITOR=<span class="string">&apos;vim&apos;</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">EDITOR=<span class="string">&apos;vim&apos;</span></span><br></pre></td></tr></table></figure>
 <p>&#x5C31;&#x53EF;&#x4EE5;&#x5728;shell&#x4E2D;&#x65B9;&#x4FBF;&#x7684;&#x4F7F;&#x7528;vim&#x8FDB;&#x884C;&#x7F16;&#x8F91;&#xFF0C;&#x6BD4;&#x5982;&#x8BBE;&#x5B9A;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x503C;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">edit foo</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">edit foo</span><br></pre></td></tr></table></figure>
 <p>&#x7F16;&#x8F91;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>foo</code>&#x770B;&#x5230;foo&#x7684;&#x6570;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x4F7F;&#x7528;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">db.test.aggregate(foo)</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">db.test.aggregate(foo)</span><br></pre></td></tr></table></figure>
 <h2 id="aggregate">aggregate</h2>
 <p>&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x5BF9;mongo&#x6570;&#x636E;&#x5E93;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6709;&#x6548;&#x6027;&#x5206;&#x6790;&#xFF08;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;&#x6570;&#x636E;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x901A;&#x8FC7;&#x811A;&#x672C;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x805A;&#x5408;&#x5728;mongo&#x6570;&#x636E;&#x5E93;&#x7EA7;&#x522B;&#x63D0;&#x4F9B;&#x4E86;&#x7EDF;&#x4E00;&#x7684;&#x5904;&#x7406;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x5E94;&#x5BF9;&#x5927;&#x90E8;&#x5206;&#x7684;&#x6570;&#x636E;&#x5206;&#x6790;&#x4EFB;&#x52A1;&#x3002;</p>
 <p>&#x805A;&#x5408;&#x4E3B;&#x8981;&#x7684;&#x6784;&#x4EF6;&#x6709;&#xFF1A;</p>
@@ -436,11 +434,11 @@
 <li>skip</li>
 </ol>
 <p>&#x6BD4;&#x5982;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;project&#x4EFB;&#x52A1;&#xFF1A;</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">{<span class="string">&apos;$project&apos;</span> : {<span class="string">&apos;new-x&apos;</span> : <span class="string">&apos;$x&apos;</span>}}</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">{<span class="string">&apos;$project&apos;</span> : {<span class="string">&apos;new-x&apos;</span> : <span class="string">&apos;$x&apos;</span>}}</span><br></pre></td></tr></table></figure>
 <p>&#x4F7F;&#x7528;<code>$attrName</code>&#x8868;&#x793A;&#x65E7;&#x7684;&#x5C5E;&#x6027;&#x6570;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x8FD8;&#x662F;&#x539F;&#x59CB;&#x5C5E;&#x6027;&#x540D;&#x5B57;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#xFF1A;</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">{<span class="string">&apos;$project&apos;</span> : {<span class="string">&apos;x&apos;</span> : <span class="number">1</span>}}</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">{<span class="string">&apos;$project&apos;</span> : {<span class="string">&apos;x&apos;</span> : <span class="number">1</span>}}</span><br></pre></td></tr></table></figure>
 <p>group&#x5C06;&#x591A;&#x4E2A;&#x76F8;&#x540C;&#x5B57;&#x6BB5;&#x6570;&#x503C;&#x5408;&#x5E76;&#x548C;&#x4E00;&#x4E2A;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;&#xFF1A;</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">{</div><div class="line">    <span class="string">&apos;$group&apos;</span> : {</div><div class="line">        <span class="string">&apos;_id&apos;</span> : <span class="string">&apos;$country&apos;</span>,</div><div class="line">        <span class="string">&apos;total&apos;</span> : { <span class="string">&apos;$sum&apos;</span> : <span class="number">1</span>}</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">{</span><br><span class="line">    <span class="string">&apos;$group&apos;</span> : {</span><br><span class="line">        <span class="string">&apos;_id&apos;</span> : <span class="string">&apos;$country&apos;</span>,</span><br><span class="line">        <span class="string">&apos;total&apos;</span> : { <span class="string">&apos;$sum&apos;</span> : <span class="number">1</span>}</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <p>&#x5176;&#x4E2D;&#x5F97;&#x5230;&#x7684;total&#x5B57;&#x6BB5;&#x8868;&#x793A;&#x6240;&#x6709;&#x76F8;&#x540C;&#x56FD;&#x5BB6;&#x4EBA;&#x7684;&#x603B;&#x6570;&#xFF0C;&#x4F7F;&#x7528;<code>$sum</code>&#x64CD;&#x4F5C;&#x7B26;&#x6765;&#x8FDB;&#x884C;&#x7D2F;&#x52A0;&#xFF0C;value&#x4E3A;1&#x8868;&#x793A;&#x6BCF;&#x6B21;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x4EBA;&#x3002;</p>
 <h2 id="&#x526F;&#x672C;&#x96C6;">&#x526F;&#x672C;&#x96C6;</h2>
 <p>&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x526F;&#x672C;&#x80AF;&#x5B9A;&#x662F;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x81F3;&#x5C11;&#x5B89;&#x5168;&#x5BB9;&#x9519;&#x6027;&#x4E0D;&#x9AD8;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x526F;&#x672C;&#x96C6;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x526F;&#x672C;&#x96C6;&#x5C31;&#x662F;&#x5BF9;&#x4E3B;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x5907;&#x4EFD;&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x603B;&#x4F53;&#x7684;&#x5B89;&#x5168;&#x6027;&#x3002;</p>
@@ -455,12 +453,12 @@
 <h2 id="&#x5206;&#x7247;">&#x5206;&#x7247;</h2>
 <p>&#x5206;&#x7247;&#x662F;&#x5C06;&#x6570;&#x636E;&#x62C6;&#x5206;&#xFF0C;&#x5C06;&#x5176;&#x5206;&#x6563;&#x5B58;&#x653E;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x673A;&#x5668;&#x4E0A;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x6709;&#x65F6;&#x7528;&#x5206;&#x533A;&#xFF08;partioning&#xFF09;&#x6765;&#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x3002;&#x5C06;&#x6570;&#x636E;&#x5206;&#x6563;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x529F;&#x80FD;&#x6700;&#x5927;&#x7684;&#x5927;&#x578B;&#x8BA1;&#x7B97;&#x673A;&#x5C31;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x66F4;&#x591A;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5904;&#x7406;&#x66F4;&#x5927;&#x7684;&#x8D1F;&#x8F7D;&#x3002;</p>
 <p>&#x5F00;&#x542F;&#x5206;&#x7247;&#x529F;&#x80FD;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># &#x5728;&#x5206;&#x7247;&#x96C6;&#x5408;&#x6240;&#x5728;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x542F;&#x52A8;&#x5206;&#x7247;&#x529F;&#x80FD;</span></div><div class="line">&gt; sh.enableSharding(<span class="string">&apos;test&apos;</span>)</div><div class="line"></div><div class="line"><span class="comment"># &#x5728;&#x96C6;&#x5408;&#x4E2D;&#x914D;&#x7F6E;&#x5206;&#x7247;&#x7684;&#x7D22;&#x5F15;</span></div><div class="line">&gt; db.users.ensureIndex({<span class="string">&apos;username&apos;</span> : 1})</div><div class="line"></div><div class="line"><span class="comment"># &#x8BBE;&#x5B9A;&#x96C6;&#x5408;&#x7684;&#x7247;&#x952E;</span></div><div class="line"><span class="comment"># &#x5176;&#x4E2D;username&#x540E;&#x9762;&#x7684;1&#x8868;&#x793A;&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#xFF0C;&#x5728;ensuereIndex&#x548C;shardCollection&#x4E2D;&#x9700;&#x8981;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</span></div><div class="line">&gt; sh.shardCollection({<span class="string">&apos;test.users&apos;</span>, {<span class="string">&apos;username&apos;</span> : 1})</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#x5728;&#x5206;&#x7247;&#x96C6;&#x5408;&#x6240;&#x5728;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x542F;&#x52A8;&#x5206;&#x7247;&#x529F;&#x80FD;</span></span><br><span class="line">&gt; sh.enableSharding(<span class="string">&apos;test&apos;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x5728;&#x96C6;&#x5408;&#x4E2D;&#x914D;&#x7F6E;&#x5206;&#x7247;&#x7684;&#x7D22;&#x5F15;</span></span><br><span class="line">&gt; db.users.ensureIndex({<span class="string">&apos;username&apos;</span> : 1})</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x8BBE;&#x5B9A;&#x96C6;&#x5408;&#x7684;&#x7247;&#x952E;</span></span><br><span class="line"><span class="comment"># &#x5176;&#x4E2D;username&#x540E;&#x9762;&#x7684;1&#x8868;&#x793A;&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#xFF0C;&#x5728;ensuereIndex&#x548C;shardCollection&#x4E2D;&#x9700;&#x8981;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</span></span><br><span class="line">&gt; sh.shardCollection({<span class="string">&apos;test.users&apos;</span>, {<span class="string">&apos;username&apos;</span> : 1})</span><br></pre></td></tr></table></figure>
 <p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;<strong>&#x53EA;&#x6709;&#x88AB;&#x7D22;&#x5F15;&#x8FC7;&#x7684;&#x952E;&#x624D;&#x80FD;&#x591F;&#x6210;&#x4E3A;&#x7247;&#x952E;</strong></p>
 <p>&#x542F;&#x7528;&#x5206;&#x7247;&#x7684;&#x96C6;&#x7FA4;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FDE;&#x63A5;&#x7684;<code>mongos</code>&#x8FDB;&#x7A0B;&#x3002;</p>
 <p>&#x9009;&#x62E9;&#x7247;&#x952E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x8003;&#x8651;&#x5230;&#x70ED;&#x70B9;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x679C;&#x7247;&#x952E;&#x662F;&#x5347;&#x5E8F;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x80FD;&#x6BCF;&#x6B21;&#x63D2;&#x5165;&#x6570;&#x636E;&#x90FD;&#x5728;&#x6700;&#x540E;&#x7684;shard&#x5206;&#x7247;&#x4E0A;&#x9762;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x5C31;&#x9020;&#x6210;&#x4E86;&#x70ED;&#x70B9;&#x3002;</p>
 <p>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x5C06;&#x4F7F;&#x7528;&#x6563;&#x5217;&#x7247;&#x952E;&#xFF1A;&#x6563;&#x5217;&#x7247;&#x952E;&#x662F;&#x5C06;&#x7247;&#x952E;&#x4F7F;&#x7528;&#x6563;&#x5217;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#xFF0C;&#x8BE5;&#x8FC7;&#x7A0B;&#x662F;&#x81EA;&#x52A8;&#x7684;&#x3002;&#x597D;&#x5904;&#x662F;&#x5C06;&#x5347;&#x5E8F;&#x7684;&#x7247;&#x952E;&#x7F16;&#x7A0B;&#x968F;&#x673A;&#x7684;&#x7247;&#x952E;&#xFF0C;&#x4FDD;&#x8BC1;&#x4E86;&#x6570;&#x636E;&#x7684;&#x968F;&#x673A;&#x5206;&#x53D1;&#x3002;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">&gt; db.users.ensureIndex({<span class="string">&apos;username&apos;</span> : <span class="string">&apos;hashed&apos;</span>})</div><div class="line">&gt; sh.shardCollection(<span class="string">&apos;test.username&apos;</span>, {<span class="string">&apos;username&apos;</span> : <span class="string">&apos;hashed&apos;</span>})</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; db.users.ensureIndex({<span class="string">&apos;username&apos;</span> : <span class="string">&apos;hashed&apos;</span>})</span><br><span class="line">&gt; sh.shardCollection(<span class="string">&apos;test.username&apos;</span>, {<span class="string">&apos;username&apos;</span> : <span class="string">&apos;hashed&apos;</span>})</span><br></pre></td></tr></table></figure>
 <p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7B26;&#x5408;&#x7247;&#x952E;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x4F7F;&#x7528;<code>&lt;&#x968F;&#x673A;&#x6570;&#x636E;&#xFF0C;&#x5347;&#x5E8F;key&gt;</code>&#x4F5C;&#x4E3A;&#x7247;&#x952E;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x7B2C;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6570;&#x503C;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x6BD4;&#x8F83;&#x5747;&#x5300;&#x5206;&#x6563;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x5757;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C0F;&#x5757;&#x4E2D;&#x5347;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x70ED;&#x70B9;&#x7684;&#x8303;&#x56F4;&#x5C31;&#x53EA;&#x4F1A;&#x5C40;&#x9650;&#x518D;&#x5C0F;&#x5757;&#x4E2D;&#x3002;</p>
 <p>&#x96C6;&#x7FA4;&#x76F8;&#x5173;&#x7684;&#x6240;&#x6709;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x90FD;&#x4FDD;&#x5B58;&#x5728;&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x5668;&#x7684;config&#x6570;&#x636E;&#x5E93;&#x96C6;&#x5408;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x67E5;&#x770B;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x7684;&#x8BDD;&#xFF0C;&#x5230;config&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8FDB;&#x884C;&#x67E5;&#x770B;&#x3002;</p>
 <h2 id="&#x5DE5;&#x5177;">&#x5DE5;&#x5177;</h2>
@@ -471,20 +469,23 @@
 </ul>
 <h2 id="&#x5B89;&#x5168;&#x9A8C;&#x8BC1;">&#x5B89;&#x5168;&#x9A8C;&#x8BC1;</h2>
 <p>mongo&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5F00;&#x542F;&#xFF0C;&#x5C31;&#x4E0D;&#x4F7F;&#x7528;&#x5B89;&#x5168;&#x68C0;&#x67E5;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x4EFB;&#x4F55;<strong>&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x7EA7;&#x522B;&#x7684;&#x64CD;&#x4F5C;</strong>&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x8BBE;&#x7F6E;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">&gt; use admin</div><div class="line">&gt; db.addUser(<span class="string">&apos;root&apos;</span>, <span class="string">&apos;xxxxx&apos;</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; use admin</span><br><span class="line">&gt; db.addUser(<span class="string">&apos;root&apos;</span>, <span class="string">&apos;xxxxx&apos;</span>)</span><br></pre></td></tr></table></figure>
 <p>&#x5728;mongo&#x4E2D;<code>admin</code>&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x90FD;&#x662F;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x4EFB;&#x4F55;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x8BFB;&#x5199;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x67D0;&#x4E9B;&#x53EA;&#x6709;&#x7BA1;&#x7406;&#x5458;&#x624D;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;<strong>listDatabases</strong>&#x548C;<strong>shutdown</strong></p>
 <p>&#x6240;&#x4EE5;&#x5728;&#x8FDB;&#x884C;mongo&#x6570;&#x636E;&#x5E93;&#x767B;&#x5F55;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F7F;&#x7528;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;&#x767B;&#x9646;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">&gt; mongo --port 27017 -u root -p xxxxx localhost/admin</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; mongo --port 27017 -u root -p xxxxx localhost/admin</span><br></pre></td></tr></table></figure>
 <p>&#x8868;&#x793A;&#x4F7F;&#x7528;<code>root</code>&#x8D26;&#x53F7;&#x8FDB;&#x884C;&#x767B;&#x9646;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x7684;&#x662F;<code>admin</code>&#x6570;&#x636E;&#x5E93;&#x4E0B;&#x7684;&#x8D26;&#x53F7;&#x3002;</p>
 <p>&#x53EF;&#x4EE5;&#x7406;&#x89E3;<code>mongo</code>&#x7684;&#x8D26;&#x53F7;&#x7CFB;&#x7EDF;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x6570;&#x636E;&#x5E93;&#x7EA7;&#x522B;&#x7684;&#xFF08;&#x6216;&#x8005;&#x7406;&#x89E3;&#x4E3A;&#x540D;&#x7A7A;&#x95F4;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x5EFA;&#x7ACB;&#x4E86;&#x5728;<code>admin</code>&#x6570;&#x636E;&#x5E93;&#x4E0B;&#x7684;&#x8D26;&#x53F7;&#xFF0C;&#x5C31;&#x8868;&#x793A;&#x662F;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x7684;&#x8D26;&#x53F7;&#x3002;</p>
 <p>&#x540C;&#x7406;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x522B;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5EFA;&#x7ACB;&#x522B;&#x7684;&#x8D26;&#x53F7;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x8FD9;&#x4E2A;&#x8D26;&#x53F7;&#x53EA;&#x80FD;<strong>&#x7279;&#x5B9A;&#x6570;&#x636E;&#x5E93;</strong>&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;&#x6BD4;&#x5982;&#x5728;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;&#x4E0B;&#x7684;shell&#x4E2D;&#x8C03;&#x7528;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">&gt; use <span class="built_in">test</span></div><div class="line"></div><div class="line"><span class="comment"># &#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x662F;&#x5426;&#x662F;**&#x53EA;&#x8BFB;&#x7684;&#x7528;&#x6237;**&#x3002;</span></div><div class="line">&gt; db.addUser(<span class="string">&apos;read_user&apos;</span>, <span class="string">&apos;xxx&apos;</span>, <span class="literal">true</span>)</div><div class="line">&gt; db.addUser(<span class="string">&apos;read_and_write_user&apos;</span>, <span class="string">&apos;xxx&apos;</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; use <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x662F;&#x5426;&#x662F;**&#x53EA;&#x8BFB;&#x7684;&#x7528;&#x6237;**&#x3002;</span></span><br><span class="line">&gt; db.addUser(<span class="string">&apos;read_user&apos;</span>, <span class="string">&apos;xxx&apos;</span>, <span class="literal">true</span>)</span><br><span class="line">&gt; db.addUser(<span class="string">&apos;read_and_write_user&apos;</span>, <span class="string">&apos;xxx&apos;</span>)</span><br></pre></td></tr></table></figure>
 <p>&#x5982;&#x679C;&#x5728;&#x5F00;&#x542F;&#x4E86;<code>--auth</code>&#x9009;&#x62E9;&#x9879;&#x4E4B;&#x540E;&#xFF0C;&#x767B;&#x9646;&#x5230;mongo&#x7684;shell&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x8FDE;&#x63A5;&#x5230;test&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5982;&#x679C;&#x5E0C;&#x671B;&#x4F7F;&#x7528;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C;auth&#x9A8C;&#x8BC1;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">&gt; use admin</div><div class="line">&gt; db.auth(<span class="string">&apos;root&apos;</span>, <span class="string">&apos;xxxxx&apos;</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; use admin</span><br><span class="line">&gt; db.auth(<span class="string">&apos;root&apos;</span>, <span class="string">&apos;xxxxx&apos;</span>)</span><br></pre></td></tr></table></figure>
 <p>&#x8FD9;&#x6837;&#x5B50;&#x8868;&#x793A;&#x5F53;&#x524D;shell&#x6211;&#x8FDB;&#x884C;&#x4E86;&#x8D26;&#x53F7;&#x767B;&#x9646;&#xFF0C;&#x4E14;&#x662F;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;&#x3002;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;mongo&#x8FDE;&#x63A5;&#x7684;&#x4F7F;&#x7528;&#x4F7F;&#x7528;<code>-u -p</code>&#x7684;&#x65B9;&#x5F0F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7279;&#x5B9A;&#x8D26;&#x53F7;&#x8FDB;&#x884C;&#x767B;&#x9646;&#x3002;</p>
 
       
     </div>
+
+    
+
     
     
     
@@ -497,17 +498,13 @@
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    whiledoing
-  </li>
+    <strong>本文作者： </strong>whiledoing</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     <a href="http://whiledoing.me/2016/06/28/learn-mongo-md/" title="mongo学习笔记">http://whiledoing.me/2016/06/28/learn-mongo-md/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-  </li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -525,18 +522,6 @@
       
 
       
-      
-        <div class="post-widgets">
-        
-          <div class="wp_rating">
-            <div id="wpac-rating"></div>
-          </div>
-        
-
-        
-
-        
-        </div>
       
       
 
@@ -580,9 +565,6 @@
 
 
           </div>
-          
-
-
           
 
   
@@ -630,63 +612,136 @@
               <p class="site-description motion-element" itemprop="description">喜欢一切简单且美的事物，包括人。</p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">51</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">51</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
-
-            
               
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
 
-          </nav>
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
 
           
 
-          <div class="links-of-author motion-element">
-            
+          
+            <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">
-                    GitHub</a>
+                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">GitHub</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">
-                    豆瓣</a>
+                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">豆瓣</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">
-                    知乎</a>
+                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">知乎</a>
+                  
                 </span>
               
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
             
-          </div>
-
           
-          
-
-          
-          
-
           
 
         </div>
@@ -723,25 +778,20 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">whiledoing</span>
 
   
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count">132.6k</span>
+
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -749,12 +799,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.1.0</div>
 
 
 
 
         
+
 
 
 
@@ -769,8 +820,6 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -795,7 +844,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -815,16 +868,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -833,18 +876,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.1.0"></script>
 
 
 
@@ -852,23 +890,19 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.0"></script>
 
 
 
   
-
-
-  
-
 
 
 
@@ -895,387 +929,102 @@
 
 
 
+  
+
+
+
 
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
+  
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
+  
+  
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
+  
+  
 
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+  
 
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
 
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
+  
+  
 
-                // show search results
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
 
-                if (isMatch) {
-                  // sort index by position of keyword
 
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.1.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.1.0"></script>
 
-                  // merge hits into slices
 
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
+  
 
-                      // move to next position of hit
+  
 
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('3');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+  
+  <style>
+    .copy-btn {
+        position: relative;
+        display: inline-block;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #333;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+        user-select: none;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
+    .highlight {
+        position: relative;
+    }
 
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight .copy-btn {
+        transition: opacity .3s ease-in-out;
+        opacity: 0;
+        padding: 2px 6px;
+        position: absolute;
+        right: 4px;
+        top: 8px;
+    }
+
+    .highlight:hover .copy-btn,
+    .highlight .copy-btn:focus {
+        opacity: 1
+    }
+  </style>
+  <script>
+    $('.highlight').prepend($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+      var code = $(e.target).parent().find('.code').find('.line').map(function(i, e){
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'fixed'
+      ta.style.top = 0
+      ta.style.left = 0
+      ta.value = code
+      ta.select()
+      ta.focus()
+      document.execCommand('copy')
+      document.body.removeChild(ta)
+    }))
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-  <script type="text/javascript">
-  wpac_init = window.wpac_init || [];
-  wpac_init.push({widget: 'Rating', id: ,
-    el: 'wpac-rating',
-    color: 'fc6423'
-  });
-  (function() {
-    if ('WIDGETPACK_LOADED' in window) return;
-    WIDGETPACK_LOADED = true;
-    var mc = document.createElement('script');
-    mc.type = 'text/javascript';
-    mc.async = true;
-    mc.src = '//embed.widgetpack.com/widget.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
-  })();
-  </script>
-
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
-
-
-  
 
 </body>
 </html>

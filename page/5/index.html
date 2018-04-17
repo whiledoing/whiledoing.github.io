@@ -5,21 +5,17 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
 
 
 
@@ -49,10 +45,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -61,44 +53,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.1.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.1.0">
 
 
-  <link rel="mask-icon" href="/favicon.png?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="hexo, whiledoing, blog" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.1.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="喜欢一切简单且美的事物，包括人。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="whiledoing">
-<meta property="og:url" content="http://whiledoing.me/page/5/index.html">
-<meta property="og:site_name" content="whiledoing">
-<meta property="og:description" content="喜欢一切简单且美的事物，包括人。">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="whiledoing">
-<meta name="twitter:description" content="喜欢一切简单且美的事物，包括人。">
 
 
 
@@ -107,15 +80,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
+    version: '6.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -127,12 +98,36 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="喜欢一切简单且美的事物，包括人。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="whiledoing">
+<meta property="og:url" content="http://whiledoing.me/page/5/index.html">
+<meta property="og:site_name" content="whiledoing">
+<meta property="og:description" content="喜欢一切简单且美的事物，包括人。">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="whiledoing">
+<meta name="twitter:description" content="喜欢一切简单且美的事物，包括人。">
+
+
+
+
+
 
   <link rel="canonical" href="http://whiledoing.me/page/5/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>whiledoing</title>
   
@@ -140,13 +135,50 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117714040-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117714040-1');
+</script>
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -163,7 +195,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">whiledoing</span>
         <span class="logo-line-after"><i></i></span>
@@ -175,7 +207,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -183,92 +215,67 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -279,6 +286,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -305,37 +314,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/03/18/book-touchable-tidy-up-life-md/" itemprop="url">《怦然心动的人生整理魔法》读书笔记</a></h1>
+                <a class="post-title-link" href="/2016/03/18/book-touchable-tidy-up-life-md/" itemprop="url">
+                  《怦然心动的人生整理魔法》读书笔记
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-18T10:51:31+08:00">
-                2016-03-18
-              </time>
+                
+              
+
+              <time title="创建于：2016-03-18 10:51:31" itemprop="dateCreated datePublished" datetime="2016-03-18T10:51:31+08:00">2016-03-18</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:29:37" itemprop="dateModified" datetime="2017-11-30T15:29:37+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:29:37+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -350,27 +370,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  823
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -389,7 +388,7 @@
 
       
         
-          <p>这是我阅读的<a href="https://book.douban.com/subject/10747883/">怦然心动的人生整理魔法</a>的学习笔记。</p>
+          <p>这是我阅读的<a href="https://book.douban.com/subject/10747883/" target="_blank" rel="noopener">怦然心动的人生整理魔法</a>的学习笔记。</p>
 <p>本书更多是一个讲道的书，而不是讲术的书（也可能是因为我看到术的东西就pass了，毕竟这本书没有插图。。）。不过在我看来这样子更好，术的东西看看整理视频即可了，但是道的东西更加复杂也值得讨论。简单的说，整理的目的就是丢掉生活中不让你「怦然心动」的物品，保持生活状态的简单高效。深层次的说，整理的目的是锻炼自己的决断力，只购买有价值的东西，可以果断地和「过去的错误，未来的焦虑」说再见，并保持好当下的决断力。</p>
 <p>这也许就是整理道义中所体现的「未来不迎，当下不杂，既过不恋」吧。</p>
 <p>人生不就是要不停地做减法吗？</p>
@@ -403,6 +402,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -441,6 +443,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -465,37 +469,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/03/10/python-practice/" itemprop="url">python misc</a></h1>
+                <a class="post-title-link" href="/2016/03/10/python-practice/" itemprop="url">
+                  python misc
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-10T22:41:31+08:00">
-                2016-03-10
-              </time>
+                
+              
+
+              <time title="创建于：2016-03-10 22:41:31" itemprop="dateCreated datePublished" datetime="2016-03-10T22:41:31+08:00">2016-03-10</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:22:14" itemprop="dateModified" datetime="2017-11-30T15:22:14+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:22:14+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -510,27 +525,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  6,807
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -561,6 +555,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -597,6 +594,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -623,37 +622,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/02/03/the-art-of-stop-learn-note-md/" itemprop="url">《止学》读书笔记</a></h1>
+                <a class="post-title-link" href="/2016/02/03/the-art-of-stop-learn-note-md/" itemprop="url">
+                  《止学》读书笔记
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-03T16:53:32+08:00">
-                2016-02-03
-              </time>
+                
+              
+
+              <time title="创建于：2016-02-03 16:53:32" itemprop="dateCreated datePublished" datetime="2016-02-03T16:53:32+08:00">2016-02-03</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:30:51" itemprop="dateModified" datetime="2017-11-30T15:30:51+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:30:51+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -668,27 +678,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,214
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -707,9 +696,9 @@
 
       
         
-          <p>在一次偶然机会下看到了<a href="http://bbs.tianya.cn/m/post-no20-368712-1.shtml?#">《职场20年总结的》</a>天涯神贴，在该帖子中作者多次推荐了这本书。</p>
+          <p>在一次偶然机会下看到了<a href="http://bbs.tianya.cn/m/post-no20-368712-1.shtml?#" target="_blank" rel="noopener">《职场20年总结的》</a>天涯神贴，在该帖子中作者多次推荐了这本书。</p>
 <p>也因为此原因，自己看了该书，一些心得体会记录于此。</p>
-<p><a href="http://book.douban.com/subject/1157084/">《止学》</a>的作者是文中子，魏征的老师。整个文章就几百字，但却字字珠玑。</p>
+<p><a href="http://book.douban.com/subject/1157084/" target="_blank" rel="noopener">《止学》</a>的作者是文中子，魏征的老师。整个文章就几百字，但却字字珠玑。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/02/03/the-art-of-stop-learn-note-md/#more" rel="contents">
@@ -720,6 +709,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -756,6 +748,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -782,37 +776,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/02/03/the-pragmatic-programmer-learn-note/" itemprop="url">《The Pragmatic Programmer》读书笔记</a></h1>
+                <a class="post-title-link" href="/2016/02/03/the-pragmatic-programmer-learn-note/" itemprop="url">
+                  《The Pragmatic Programmer》读书笔记
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-03T14:47:32+08:00">
-                2016-02-03
-              </time>
+                
+              
+
+              <time title="创建于：2016-02-03 14:47:32" itemprop="dateCreated datePublished" datetime="2016-02-03T14:47:32+08:00">2016-02-03</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:31:16" itemprop="dateModified" datetime="2017-11-30T15:31:16+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:31:16+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -827,27 +832,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,815
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -866,7 +850,7 @@
 
       
         
-          <p>记录了一下自己学习<a href="http://book.douban.com/subject/1417047/">The Pragmatic Programmer</a>的读书笔记。</p>
+          <p>记录了一下自己学习<a href="http://book.douban.com/subject/1417047/" target="_blank" rel="noopener">The Pragmatic Programmer</a>的读书笔记。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/02/03/the-pragmatic-programmer-learn-note/#more" rel="contents">
@@ -877,6 +861,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -913,6 +900,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -939,37 +928,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/02/02/code-complete-2-learn-note/" itemprop="url">《Code Complete 2》读书笔记</a></h1>
+                <a class="post-title-link" href="/2016/02/02/code-complete-2-learn-note/" itemprop="url">
+                  《Code Complete 2》读书笔记
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-02T19:07:12+08:00">
-                2016-02-02
-              </time>
+                
+              
+
+              <time title="创建于：2016-02-02 19:07:12" itemprop="dateCreated datePublished" datetime="2016-02-02T19:07:12+08:00">2016-02-02</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:29:42" itemprop="dateModified" datetime="2017-11-30T15:29:42+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:29:42+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -984,27 +984,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2,206
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1023,7 +1002,7 @@
 
       
         
-          <p>这是我阅读<a href="http://book.douban.com/subject/1951158/">代码大全2</a>的读书笔记。</p>
+          <p>这是我阅读<a href="http://book.douban.com/subject/1951158/" target="_blank" rel="noopener">代码大全2</a>的读书笔记。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/02/02/code-complete-2-learn-note/#more" rel="contents">
@@ -1034,6 +1013,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1070,6 +1052,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1096,37 +1080,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/02/01/the-art-of-unix-programming-reading-notes/" itemprop="url">《The Art of UNIX Programming》读书笔记</a></h1>
+                <a class="post-title-link" href="/2016/02/01/the-art-of-unix-programming-reading-notes/" itemprop="url">
+                  《The Art of UNIX Programming》读书笔记
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-01T20:08:14+08:00">
-                2016-02-01
-              </time>
+                
+              
+
+              <time title="创建于：2016-02-01 20:08:14" itemprop="dateCreated datePublished" datetime="2016-02-01T20:08:14+08:00">2016-02-01</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:30:57" itemprop="dateModified" datetime="2017-11-30T15:30:57+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:30:57+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -1141,27 +1136,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  974
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1180,8 +1154,8 @@
 
       
         
-          <p><a href="http://book.douban.com/subject/5387401/">《The Art of UNIX Programming》</a>这本书确实是久仰已久，加之自己最近一直在看linux相关的书籍，所以就带着看了一下。</p>
-<p>花了3个小时将书翻了一下，摘录一下比较好的内容。（其实本来是想着慢慢读的，但是读的时候发现，一来是很多东西自己在别的书中都有了解过（<a href="http://book.douban.com/subject/1417047/">The Pragmatic Programmer</a>, <a href="http://book.douban.com/subject/1432042/">Code Complete</a>），二来是因为很多东西其实也相对比较旧的，也就没有细看了。）</p>
+          <p><a href="http://book.douban.com/subject/5387401/" target="_blank" rel="noopener">《The Art of UNIX Programming》</a>这本书确实是久仰已久，加之自己最近一直在看linux相关的书籍，所以就带着看了一下。</p>
+<p>花了3个小时将书翻了一下，摘录一下比较好的内容。（其实本来是想着慢慢读的，但是读的时候发现，一来是很多东西自己在别的书中都有了解过（<a href="http://book.douban.com/subject/1417047/" target="_blank" rel="noopener">The Pragmatic Programmer</a>, <a href="http://book.douban.com/subject/1432042/" target="_blank" rel="noopener">Code Complete</a>），二来是因为很多东西其实也相对比较旧的，也就没有细看了。）</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/02/01/the-art-of-unix-programming-reading-notes/#more" rel="contents">
@@ -1192,6 +1166,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1230,6 +1207,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1254,37 +1233,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/01/31/self-git/" itemprop="url">git学习记录</a></h1>
+                <a class="post-title-link" href="/2016/01/31/self-git/" itemprop="url">
+                  git学习记录
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-31T22:16:46+08:00">
-                2016-01-31
-              </time>
+                
+              
+
+              <time title="创建于：2016-01-31 22:16:46" itemprop="dateCreated datePublished" datetime="2016-01-31T22:16:46+08:00">2016-01-31</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:22:24" itemprop="dateModified" datetime="2017-11-30T15:22:24+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:22:24+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -1299,27 +1289,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  791
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1349,6 +1318,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1385,6 +1357,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1411,37 +1385,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/01/31/hexo-blog/" itemprop="url">hexo-blog</a></h1>
+                <a class="post-title-link" href="/2016/01/31/hexo-blog/" itemprop="url">
+                  hexo-blog
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-31T02:40:08+08:00">
-                2016-01-31
-              </time>
+                
+              
+
+              <time title="创建于：2016-01-31 02:40:08" itemprop="dateCreated datePublished" datetime="2016-01-31T02:40:08+08:00">2016-01-31</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:16:40" itemprop="dateModified" datetime="2017-11-30T15:16:40+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:16:40+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -1456,27 +1441,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  860
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1495,8 +1459,8 @@
 
       
         
-          <p>记录一下自己折腾<a href="http://whiledoing.github.io">blog</a>的内容。</p>
-<p>blog使用的是静态blog框架<a href="https://hexo.io/zh-cn/">hexo</a></p>
+          <p>记录一下自己折腾<a href="http://whiledoing.github.io" target="_blank" rel="noopener">blog</a>的内容。</p>
+<p>blog使用的是静态blog框架<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo</a></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/01/31/hexo-blog/#more" rel="contents">
@@ -1507,6 +1471,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1543,6 +1510,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1569,37 +1538,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/01/26/the-linux-programming-interface-reading-notes/" itemprop="url">《The Linux Programming Interface》读书笔记</a></h1>
+                <a class="post-title-link" href="/2016/01/26/the-linux-programming-interface-reading-notes/" itemprop="url">
+                  《The Linux Programming Interface》读书笔记
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-26T22:07:09+08:00">
-                2016-01-26
-              </time>
+                
+              
+
+              <time title="创建于：2016-01-26 22:07:09" itemprop="dateCreated datePublished" datetime="2016-01-26T22:07:09+08:00">2016-01-26</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:31:05" itemprop="dateModified" datetime="2017-11-30T15:31:05+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:31:05+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -1614,27 +1594,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  5,194
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1653,7 +1612,7 @@
 
       
         
-          <p>这是自己学习<a href="http://book.douban.com/subject/4292217/">the linux programming interface</a>一书的读书笔记。</p>
+          <p>这是自己学习<a href="http://book.douban.com/subject/4292217/" target="_blank" rel="noopener">the linux programming interface</a>一书的读书笔记。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/01/26/the-linux-programming-interface-reading-notes/#more" rel="contents">
@@ -1664,6 +1623,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1702,6 +1664,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1726,37 +1690,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/01/25/self-mac/" itemprop="url">mac折腾记录</a></h1>
+                <a class="post-title-link" href="/2016/01/25/self-mac/" itemprop="url">
+                  mac折腾记录
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-25T10:01:20+08:00">
-                2016-01-25
-              </time>
+                
+              
+
+              <time title="创建于：2016-01-25 10:01:20" itemprop="dateCreated datePublished" datetime="2016-01-25T10:01:20+08:00">2016-01-25</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:22:35" itemprop="dateModified" datetime="2017-11-30T15:22:35+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:22:35+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -1771,27 +1746,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2,031
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1821,6 +1775,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1855,15 +1812,12 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1898,63 +1852,136 @@
               <p class="site-description motion-element" itemprop="description">喜欢一切简单且美的事物，包括人。</p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">51</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">51</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
-
-            
               
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
 
-          </nav>
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
 
           
 
-          <div class="links-of-author motion-element">
-            
+          
+            <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">
-                    GitHub</a>
+                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">GitHub</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">
-                    豆瓣</a>
+                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">豆瓣</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">
-                    知乎</a>
+                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">知乎</a>
+                  
                 </span>
               
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
             
-          </div>
-
           
-          
-
-          
-          
-
           
 
         </div>
@@ -1975,25 +2002,20 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">whiledoing</span>
 
   
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count">132.6k</span>
+
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -2001,12 +2023,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.1.0</div>
 
 
 
 
         
+
 
 
 
@@ -2021,8 +2044,6 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -2047,7 +2068,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -2067,16 +2092,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -2085,18 +2100,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.1.0"></script>
 
 
 
@@ -2108,15 +2118,11 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.0"></script>
 
 
 
   
-
-
-  
-
 
 
 
@@ -2143,370 +2149,124 @@
 
 
 
+  
+
+
+
 
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
+  
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
+  
+  
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
+  
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
 
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+  
 
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
 
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
+  
+  
 
-                // show search results
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
 
-                if (isMatch) {
-                  // sort index by position of keyword
 
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.1.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.1.0"></script>
 
-                  // merge hits into slices
 
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
+  
 
-                      // move to next position of hit
+  
 
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('3');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+  
+  <style>
+    .copy-btn {
+        position: relative;
+        display: inline-block;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #333;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+        user-select: none;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
+    .highlight {
+        position: relative;
+    }
 
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight .copy-btn {
+        transition: opacity .3s ease-in-out;
+        opacity: 0;
+        padding: 2px 6px;
+        position: absolute;
+        right: 4px;
+        top: 8px;
+    }
+
+    .highlight:hover .copy-btn,
+    .highlight .copy-btn:focus {
+        opacity: 1
+    }
+  </style>
+  <script>
+    $('.highlight').prepend($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+      var code = $(e.target).parent().find('.code').find('.line').map(function(i, e){
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'fixed'
+      ta.style.top = 0
+      ta.style.left = 0
+      ta.value = code
+      ta.select()
+      ta.focus()
+      document.execCommand('copy')
+      document.body.removeChild(ta)
+    }))
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
-
-
-  
 
 </body>
 </html>

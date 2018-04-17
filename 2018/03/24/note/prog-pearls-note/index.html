@@ -5,21 +5,17 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
 
 
 
@@ -49,10 +45,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -61,45 +53,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.1.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.1.0">
 
 
-  <link rel="mask-icon" href="/favicon.png?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="自写,读书笔记,技术面试,算法," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.1.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="最早看编程珠玑是由于上研时一位大牛同学的推荐，书很薄，但是却用了很长时间看完，因为书中写的内容确实非常好，对得起「珠玑」二字。将当时的读书笔记整理如下。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="《编程珠玑》读书笔记">
-<meta property="og:url" content="http://whiledoing.me/2018/03/24/note/prog-pearls-note/index.html">
-<meta property="og:site_name" content="whiledoing">
-<meta property="og:description" content="最早看编程珠玑是由于上研时一位大牛同学的推荐，书很薄，但是却用了很长时间看完，因为书中写的内容确实非常好，对得起「珠玑」二字。将当时的读书笔记整理如下。">
-<meta property="og:updated_time" content="2018-03-24T15:35:08.523Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《编程珠玑》读书笔记">
-<meta name="twitter:description" content="最早看编程珠玑是由于上研时一位大牛同学的推荐，书很薄，但是却用了很长时间看完，因为书中写的内容确实非常好，对得起「珠玑」二字。将当时的读书笔记整理如下。">
 
 
 
@@ -108,15 +80,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
+    version: '6.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -128,12 +98,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="最早看编程珠玑是由于上研时一位大牛同学的推荐，书很薄，但是却用了很长时间看完，因为书中写的内容确实非常好，对得起「珠玑」二字。将当时的读书笔记整理如下。">
+<meta name="keywords" content="自写,读书笔记,技术面试,算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《编程珠玑》读书笔记">
+<meta property="og:url" content="http://whiledoing.me/2018/03/24/note/prog-pearls-note/index.html">
+<meta property="og:site_name" content="whiledoing">
+<meta property="og:description" content="最早看编程珠玑是由于上研时一位大牛同学的推荐，书很薄，但是却用了很长时间看完，因为书中写的内容确实非常好，对得起「珠玑」二字。将当时的读书笔记整理如下。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-24T15:35:08.523Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《编程珠玑》读书笔记">
+<meta name="twitter:description" content="最早看编程珠玑是由于上研时一位大牛同学的推荐，书很薄，但是却用了很长时间看完，因为书中写的内容确实非常好，对得起「珠玑」二字。将当时的读书笔记整理如下。">
+
+
+
+
+
 
   <link rel="canonical" href="http://whiledoing.me/2018/03/24/note/prog-pearls-note/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>《编程珠玑》读书笔记 | whiledoing</title>
   
@@ -141,13 +137,50 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117714040-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117714040-1');
+</script>
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -163,7 +196,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">whiledoing</span>
         <span class="logo-line-after"><i></i></span>
@@ -175,7 +208,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -183,92 +216,67 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -279,6 +287,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -303,37 +313,36 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《编程珠玑》读书笔记</h1>
+          <h1 class="post-title" itemprop="name headline">《编程珠玑》读书笔记
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-24T23:27:46+08:00">
-                2018-03-24
-              </time>
+                
+              
+
+              <time title="创建于：2018-03-24 23:27:46 / 更新于：23:35:08" itemprop="dateCreated datePublished" datetime="2018-03-24T23:27:46+08:00">2018-03-24</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-24T23:35:08+08:00">
-                2018-03-24
-              </time>
             
           </span>
 
@@ -348,27 +357,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3,776
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -386,7 +374,7 @@
       
 
       
-        <p>&#x6700;&#x65E9;&#x770B;<a href="https://book.douban.com/subject/3227098/" target="_blank" rel="external">&#x7F16;&#x7A0B;&#x73E0;&#x7391;</a>&#x662F;&#x7531;&#x4E8E;&#x4E0A;&#x7814;&#x65F6;&#x4E00;&#x4F4D;&#x5927;&#x725B;&#x540C;&#x5B66;&#x7684;&#x63A8;&#x8350;&#xFF0C;&#x4E66;&#x5F88;&#x8584;&#xFF0C;&#x4F46;&#x662F;&#x5374;&#x7528;&#x4E86;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#x770B;&#x5B8C;&#xFF0C;&#x56E0;&#x4E3A;&#x4E66;&#x4E2D;&#x5199;&#x7684;&#x5185;&#x5BB9;&#x786E;&#x5B9E;&#x975E;&#x5E38;&#x597D;&#xFF0C;&#x5BF9;&#x5F97;&#x8D77;&#x300C;&#x73E0;&#x7391;&#x300D;&#x4E8C;&#x5B57;&#x3002;&#x5C06;&#x5F53;&#x65F6;&#x7684;&#x8BFB;&#x4E66;&#x7B14;&#x8BB0;&#x6574;&#x7406;&#x5982;&#x4E0B;&#x3002;</p>
+        <p>&#x6700;&#x65E9;&#x770B;<a href="https://book.douban.com/subject/3227098/" target="_blank" rel="noopener">&#x7F16;&#x7A0B;&#x73E0;&#x7391;</a>&#x662F;&#x7531;&#x4E8E;&#x4E0A;&#x7814;&#x65F6;&#x4E00;&#x4F4D;&#x5927;&#x725B;&#x540C;&#x5B66;&#x7684;&#x63A8;&#x8350;&#xFF0C;&#x4E66;&#x5F88;&#x8584;&#xFF0C;&#x4F46;&#x662F;&#x5374;&#x7528;&#x4E86;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#x770B;&#x5B8C;&#xFF0C;&#x56E0;&#x4E3A;&#x4E66;&#x4E2D;&#x5199;&#x7684;&#x5185;&#x5BB9;&#x786E;&#x5B9E;&#x975E;&#x5E38;&#x597D;&#xFF0C;&#x5BF9;&#x5F97;&#x8D77;&#x300C;&#x73E0;&#x7391;&#x300D;&#x4E8C;&#x5B57;&#x3002;&#x5C06;&#x5F53;&#x65F6;&#x7684;&#x8BFB;&#x4E66;&#x7B14;&#x8BB0;&#x6574;&#x7406;&#x5982;&#x4E0B;&#x3002;</p>
 <a id="more"></a>
 <h2 id="&#x7B2C;&#x5341;&#x4E09;&#x7AE0;-&#x641C;&#x7D22;">&#x7B2C;&#x5341;&#x4E09;&#x7AE0; : &#x641C;&#x7D22;</h2>
 <p>&#x8BE5;&#x7AE0;&#x8282;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x662F;&#x4F7F;&#x7528;&#x96C6;&#x5408;&#x6765;&#x6784;&#x9020;&#x4ECE;n&#x4E2A;&#x6570;&#x503C;&#x91CC;&#x9762;&#x9009;&#x62E9;m&#x4E2A;&#x6570;&#x503C;&#x7684;&#x95EE;&#x9898;.</p>
@@ -453,7 +441,7 @@ BST&#x4E2D;.</p>
 </li>
 </ol>
 <p>&#x4EE3;&#x7801;:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;typeinfo&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="comment">/* &#x94FE;&#x8868;&#x5B9E;&#x73B0; */</span></div><div class="line"><span class="keyword">class</span> ListSet</div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    ListSet(<span class="keyword">int</span> max_value, <span class="keyword">int</span> max_size) : m_max_value(max_value),</div><div class="line">        m_size(max_size) {</div><div class="line">        all_nodes = <span class="keyword">new</span> node[max_size + <span class="number">1</span>];</div><div class="line">        head = sentinel = &amp;all_nodes[<span class="number">0</span>];</div><div class="line">        head-&gt;val = max_value;</div><div class="line">        head-&gt;next = <span class="literal">NULL</span>;</div><div class="line">        n = <span class="number">0</span>;</div><div class="line">    }</div><div class="line"></div><div class="line">    ~ListSet() {</div><div class="line">        <span class="keyword">delete</span>[] all_nodes;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">return</span> n;</div><div class="line">    }</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">report</span><span class="params">(<span class="keyword">int</span>* v)</span></span>;</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="keyword">int</span> m_max_value;</div><div class="line">    <span class="keyword">int</span> m_size;</div><div class="line"></div><div class="line">    <span class="keyword">struct</span> node {</div><div class="line">        <span class="keyword">int</span> val;</div><div class="line">        node* next;</div><div class="line">        node() {}</div><div class="line">        node(<span class="keyword">int</span> v, node* p) : val(v), next(p) {}</div><div class="line">    };</div><div class="line"></div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    node* all_nodes;    <span class="comment">// &#x9884;&#x5148;&#x5206;&#x914D;&#x4E86;&#x6240;&#x6709;&#x5185;&#x5B58;&#x7A7A;&#x95F4;</span></div><div class="line">    node* head;</div><div class="line">    node* sentinel;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">// &#x4F7F;&#x7528;&#x5FAA;&#x73AF;&#x7684;&#x65B9;&#x5F0F;&#x52A0;&#x5165;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</span></div><div class="line"><span class="keyword">void</span> ListSet::insert(<span class="keyword">int</span> t)</div><div class="line">{</div><div class="line">    <span class="comment">/* &#x4E24;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;, &#x7B2C;&#x4E00;&#x79CD;, &#x4FDD;&#x5B58;pre&#x548C;p&#x7684;&#x65B9;&#x5F0F;, &#x8FDB;&#x884C;&#x94FE;&#x8868;&#x7684;&#x63D2;&#x5165; */</span></div><div class="line"></div><div class="line">    <span class="comment">/* &#x7B2C;&#x4E00;&#x79CD;</span></div><div class="line">    node* p = head;</div><div class="line">    node* pre = NULL;</div><div class="line">    while(p-&gt;val &lt; t) {</div><div class="line">        pre = p;</div><div class="line">        p = p-&gt;next;</div><div class="line">    }</div><div class="line"></div><div class="line">    if(p-&gt;val &gt; t) {</div><div class="line">        node* new_node = &amp;all_nodes[++n];   // &#x4ECE;&#x5185;&#x5B58;&#x6C60;&#x4E2D;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8282;&#x70B9;</div><div class="line">        new_node-&gt;val = t;</div><div class="line">        new_node-&gt;next = p;</div><div class="line">        if(pre == NULL)</div><div class="line">            head = new_node;</div><div class="line">        else</div><div class="line">            pre-&gt;next = new_node;</div><div class="line">    }</div><div class="line">    */</div><div class="line"></div><div class="line">    <span class="comment">/* &#x7B2C;&#x4E8C;&#x79CD;, &#x4F7F;&#x7528;&#x76F4;&#x63A5;&#x6539;&#x53D8;&#x524D;&#x4E00;&#x4E2A;&#x6307;&#x9488;next&#x6307;&#x9488;&#x7684;&#x5185;&#x5BB9; */</span></div><div class="line">    node** p = &amp;head;</div><div class="line">    <span class="comment">/* &#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x5C0F;&#x4E8E;&#x7684;&#x8282;&#x70B9; */</span></div><div class="line">    <span class="keyword">for</span>(; (*p)-&gt;val &lt; t; p = &amp;((*p)-&gt;next));</div><div class="line"></div><div class="line">    <span class="comment">/* &#x5982;&#x679C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x5927;, &#x90A3;&#x4E48;&#x5728;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4E4B;&#x524D;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x8282;&#x70B9;, &#x660E;&#x786E;*p&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x5BF9;&#x5E94;&#x4E86;pre&#x7684;next&#x5BF9;&#x5E94;&#x5730;&#x5740;&#x4E2D;&#x7684;&#x5185;&#x5BB9;, &#x76F4;&#x63A5;&#x4FEE;&#x6539; */</span></div><div class="line">    <span class="keyword">if</span>((*p)-&gt;val &gt; t) {</div><div class="line">        node* new_node = &amp;all_nodes[++n];</div><div class="line">        new_node-&gt;val = t;</div><div class="line">        new_node-&gt;next = *p;</div><div class="line">        *p = new_node;</div><div class="line"></div><div class="line">        <span class="comment">/* &#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;&#x5185;&#x5B58;&#x6C60;&#x7684;&#x65B9;&#x5F0F;, &#x4EE3;&#x7801;&#x66F4;&#x52A0;&#x7B80;&#x5355; */</span></div><div class="line">        <span class="comment">/* *p = node(t, *p); */</span></div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">void</span> ListSet::report(<span class="keyword">int</span>* v)</div><div class="line">{</div><div class="line">    <span class="keyword">int</span> j = <span class="number">-1</span>;</div><div class="line">    <span class="keyword">for</span>(node* p = head; p != sentinel; p = p-&gt;next)</div><div class="line">        v[++j] = p-&gt;val;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">class</span> BSTSet</div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    BSTSet(<span class="keyword">int</span> maxv, <span class="keyword">int</span> maxs) : max_val(maxv), max_size(maxs), n(<span class="number">0</span>), root(<span class="number">0</span>) {}</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span> </span>{</div><div class="line">        <span class="comment">/* &#x7B2C;&#x4E00;&#x79CD;&#x4F7F;&#x7528;, reverse insert &#x7684;&#x9012;&#x5F52;&#x5F62;&#x5F0F; */</span></div><div class="line">        <span class="comment">// root = rinsert(root, t);</span></div><div class="line"></div><div class="line">        <span class="comment">/* &#x7B2C;&#x4E8C;&#x79CD;&#x4F7F;&#x7528;, &#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5FAA;&#x73AF;&#x7684;&#x65B9;&#x5F0F;, &#x8FD9;&#x91CC;&#x5C31;&#x4F53;&#x73B0;&#x51FA;&#x4F7F;&#x7528;&#x6307;&#x5411;&#x6307;&#x9488;&#x7684;&#x6307;&#x9488;&#x65B9;&#x6CD5;&#x7684;&#x597D;&#x5904;, &#x4E0D;&#x9700;&#x8981;&#x4FDD;&#x5B58;</span></div><div class="line">        pre&#x6307;&#x9488;, &#x4EE5;&#x53CA;&#x5230;&#x5E95;&#x662F;&#x8D70;&#x4E86;&#x5DE6;&#x5B50;&#x6811;&#x8FD8;&#x662F;&#x53F3;&#x5B50;&#x6811;, &#x751A;&#x81F3;&#x662F;&#x5982;&#x679C;root&#x4E3A;&#x7A7A;, &#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7684;&#x4FEE;&#x6539; */</div><div class="line">        node** p = &amp;root;</div><div class="line">        <span class="keyword">while</span>(*p) {</div><div class="line">            <span class="keyword">if</span>((*p)-&gt;val == t)  <span class="keyword">return</span>;</div><div class="line"></div><div class="line">            <span class="keyword">if</span>(t &lt; (*p)-&gt;val)</div><div class="line">                p = &amp;((*p)-&gt;left);</div><div class="line">            <span class="keyword">else</span></div><div class="line">                p = &amp;((*p)-&gt;right);</div><div class="line">        }</div><div class="line"></div><div class="line">        *p = <span class="keyword">new</span> node(t);</div><div class="line">        ++n;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> <span class="keyword">const</span> </span>{</div><div class="line">        <span class="keyword">return</span> n;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">report</span><span class="params">(<span class="keyword">int</span>* d)</span> </span>{</div><div class="line">        output_p = d;</div><div class="line">        output_count = <span class="number">-1</span>;</div><div class="line">        travse(root);</div><div class="line">    }</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="keyword">struct</span> node {</div><div class="line">        node(<span class="keyword">int</span> t, node* l = <span class="literal">NULL</span>, node* r = <span class="literal">NULL</span>) : val(t), left(l), right(r) {}</div><div class="line">        <span class="keyword">int</span> val;</div><div class="line">        node* left;</div><div class="line">        node* right;</div><div class="line">    };</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">travse</span><span class="params">(node* p)</span> </span>{</div><div class="line">        <span class="keyword">if</span>(p == <span class="literal">NULL</span>)   <span class="keyword">return</span>;</div><div class="line"></div><div class="line">        travse(p-&gt;left);</div><div class="line">        output_p[++output_count] = p-&gt;val;</div><div class="line">        travse(p-&gt;right);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function">node* <span class="title">rinsert</span><span class="params">(node* p, <span class="keyword">int</span> t)</span> </span>{</div><div class="line">        <span class="keyword">if</span>(p == <span class="literal">NULL</span>) {</div><div class="line">            p = <span class="keyword">new</span> node(t);</div><div class="line">            ++n;</div><div class="line">        } <span class="keyword">else</span> <span class="keyword">if</span>(p-&gt;val &gt; t) {</div><div class="line">            p-&gt;left = rinsert(p-&gt;left, t);</div><div class="line">        } <span class="keyword">else</span> <span class="keyword">if</span>(p-&gt;val &lt; t) {</div><div class="line">            p-&gt;right = rinsert(p-&gt;right, t);</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="keyword">return</span> p;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">int</span>* output_p;</div><div class="line">    <span class="keyword">int</span> output_count;</div><div class="line">    node* root;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> n ;</div><div class="line">    <span class="keyword">int</span> max_val;</div><div class="line">    <span class="keyword">int</span> max_size;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">class</span> BitSet</div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    BitSet(<span class="keyword">int</span> maxv, <span class="keyword">int</span> maxs) : max_val(maxv), max_size(maxs), n(<span class="number">0</span>) {</div><div class="line">        <span class="keyword">int</span> size = <span class="number">1</span> + (maxv &gt;&gt; SHIFT);</div><div class="line">        x = <span class="keyword">new</span> <span class="keyword">int32_t</span>[size];</div><div class="line">        <span class="built_in">memset</span>(x, <span class="number">0</span>, <span class="keyword">sizeof</span>(<span class="keyword">int32_t</span>)*size);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">enum</span> { BITSPERWORD = <span class="number">32</span>, SHIFT = <span class="number">5</span>, MASK = <span class="number">0x1f</span> };</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span> </span>{</div><div class="line">        <span class="keyword">if</span>(test(t)) <span class="keyword">return</span>;</div><div class="line">        <span class="built_in">set</span>(t);</div><div class="line">        ++n;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">report</span><span class="params">(<span class="keyword">int</span>* d)</span> </span>{</div><div class="line">        <span class="keyword">int</span> c = <span class="number">-1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max_val; ++i)</div><div class="line">            <span class="keyword">if</span>(test(i))</div><div class="line">                d[++c] = i;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> <span class="keyword">const</span> </span>{</div><div class="line">        <span class="keyword">return</span> n;</div><div class="line">    }</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> i)</span> </span>{</div><div class="line">        <span class="keyword">return</span> x[i &gt;&gt; SHIFT] &amp; (<span class="number">1u</span> &lt;&lt; (i &amp; MASK));</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">clr</span><span class="params">(<span class="keyword">int</span> i)</span> </span>{</div><div class="line">        x[i &gt;&gt; SHIFT] &amp;= ~(<span class="number">1u</span> &lt;&lt; (i &amp; MASK));</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="keyword">int</span> i)</span> </span>{</div><div class="line">        x[i &gt;&gt; SHIFT] |= (<span class="number">1u</span> &lt;&lt; (i &amp; MASK));</div><div class="line">    }</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="keyword">int</span> max_val, max_size;</div><div class="line">    <span class="keyword">int</span>* x;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">/* &#x4F7F;&#x7528;2&#x7684;&#x6574;&#x6570;&#x79D8;&#x8868;&#x793A;bin&#x7684;&#x5927;&#x5C0F; */</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> USING_2_N_SIZE_NUM_PER_BIN</span></div><div class="line"><span class="keyword">class</span> BinSet</div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    BinSet(<span class="keyword">int</span> maxv, <span class="keyword">int</span> maxs) : max_val(maxv), max_size(maxs), n(<span class="number">0</span>) {</div><div class="line">        bins = <span class="keyword">new</span> node*[max_size];</div><div class="line">        sentinel = <span class="keyword">new</span> node(max_val, <span class="literal">NULL</span>);</div><div class="line"></div><div class="line">        <span class="comment">/* &#x6240;&#x6709;&#x94FE;&#x8868;&#x7684;&#x5C3E;&#x8282;&#x70B9;&#x90FD;&#x662F;&#x4E00;&#x4E2A;sentinel */</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max_size; ++i)</div><div class="line">            bins[i] = sentinel;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> less_num_per_bin = max_val / max_size;</div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> USING_2_N_SIZE_NUM_PER_BIN</span></div><div class="line">        <span class="comment">/* &#x8F6C;&#x6362;&#x4E3A;2^bin_shift &gt;= less_num_per_bin&#x7684;&#x6700;&#x5C0F;&#x503C; */</span></div><div class="line">        <span class="keyword">for</span>(bin_shift = <span class="number">0</span>; less_num_per_bin; less_num_per_bin &gt;&gt;= <span class="number">1</span>, ++bin_shift);</div><div class="line">        num_per_bin = <span class="number">1</span> &lt;&lt; bin_shift;</div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line">        num_per_bin = <span class="number">1</span> + less_num_per_bin;</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span> </span>{</div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> USING_2_N_SIZE_NUM_PER_BIN</span></div><div class="line">        <span class="keyword">int</span> index = t &gt;&gt; bin_shift;</div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line">        <span class="keyword">int</span> index = t / num_per_bin;</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line">        bins[index] = rinsert(bins[index], t);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> <span class="keyword">const</span> </span>{</div><div class="line">        <span class="keyword">return</span> n;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">report</span><span class="params">(<span class="keyword">int</span>* d)</span> </span>{</div><div class="line">        <span class="keyword">int</span> c = <span class="number">-1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max_size; ++i)</div><div class="line">            <span class="keyword">for</span>(node* p = bins[i]; p != sentinel; p = p-&gt;next)</div><div class="line">                d[++c] = p-&gt;val;</div><div class="line">    }</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="keyword">struct</span> node {</div><div class="line">        node(<span class="keyword">int</span> v, node* p) : val(v), next(p) {}</div><div class="line">        <span class="keyword">int</span> val;</div><div class="line">        node* next;</div><div class="line">    };</div><div class="line">    node** bins;</div><div class="line">    node* sentinel;</div><div class="line"></div><div class="line">    <span class="function">node* <span class="title">rinsert</span><span class="params">(node* p, <span class="keyword">int</span> t)</span> </span>{</div><div class="line">        <span class="keyword">if</span>(t &gt; p-&gt;val) {</div><div class="line">            p-&gt;next = rinsert(p-&gt;next, t);</div><div class="line">        } <span class="keyword">else</span> <span class="keyword">if</span>(t &lt; p-&gt;val) {</div><div class="line">            p = <span class="keyword">new</span> node(t, p);</div><div class="line">            ++n;</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="keyword">return</span> p;</div><div class="line">    }</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> USING_2_N_SIZE_NUM_PER_BIN</span></div><div class="line">    <span class="keyword">int</span> bin_shift;</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line">    <span class="keyword">int</span> num_per_bin;</div><div class="line">    <span class="keyword">int</span> max_val, max_size;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> SetType&gt;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">gen_n_m</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span></span></div><div class="line">{</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;calling type : &quot;</span> &lt;&lt; <span class="keyword">typeid</span>(SetType).name() &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="function">SetType <span class="title">s</span><span class="params">(n, m)</span></span>;</div><div class="line">    <span class="keyword">while</span>(s.size() != m)</div><div class="line">        s.insert(rand() % n);</div><div class="line"></div><div class="line">    <span class="keyword">int</span>* d = <span class="keyword">new</span> <span class="keyword">int</span>[m];</div><div class="line">    s.report(d);</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i)</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; d[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="keyword">delete</span>[] d;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/* &#x4F7F;&#x7528;floyd&#x7B97;&#x6CD5;&#x53D6;&#x6837; */</span></div><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> SetType&gt;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">gen_n_m_using_floyd</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span></span></div><div class="line">{</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;calling floyd algorithm using type : &quot;</span></div><div class="line">         &lt;&lt; <span class="keyword">typeid</span>(SetType).name() &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="function">SetType <span class="title">s</span><span class="params">(n, m)</span></span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = n - m; i &lt; n; ++i) {</div><div class="line">        <span class="keyword">int</span> t = rand() % (n - m + <span class="number">1</span>);</div><div class="line">        <span class="keyword">int</span> old_size = s.size();</div><div class="line">        s.insert(t);</div><div class="line">        <span class="keyword">if</span>(old_size == s.size())</div><div class="line">            s.insert(i);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">int</span>* d = <span class="keyword">new</span> <span class="keyword">int</span>[m];</div><div class="line">    s.report(d);</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i)</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; d[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="keyword">delete</span>[] d;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/format.hpp&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span>* argv[])</span></span></div><div class="line">{</div><div class="line">    srand(time(<span class="literal">NULL</span>));</div><div class="line"></div><div class="line">    {</div><div class="line">        <span class="keyword">int</span> n = <span class="number">10</span>, m = <span class="number">2</span>;</div><div class="line">        boost::<span class="function">format <span class="title">fmt</span><span class="params">(<span class="string">&quot;select %1% from %2%&quot;</span>)</span></span>;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; (fmt % m % n) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">        gen_n_m&lt;ListSet&gt;(n, m);</div><div class="line">        gen_n_m&lt;BSTSet&gt;(n, m);</div><div class="line">        gen_n_m&lt;BitSet&gt;(n, m);</div><div class="line">        gen_n_m&lt;BinSet&gt;(n, m);</div><div class="line"></div><div class="line">        gen_n_m_using_floyd&lt;ListSet&gt;(n, m);</div><div class="line">        gen_n_m_using_floyd&lt;BSTSet&gt;(n, m);</div><div class="line">        gen_n_m_using_floyd&lt;BitSet&gt;(n, m);</div><div class="line">        gen_n_m_using_floyd&lt;BinSet&gt;(n, m);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">        <span class="keyword">int</span> n = <span class="number">100</span>, m = <span class="number">99</span>;</div><div class="line">        boost::<span class="function">format <span class="title">fmt</span><span class="params">(<span class="string">&quot;select %1% from %2%&quot;</span>)</span></span>;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; (fmt % m % n) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">        gen_n_m&lt;ListSet&gt;(n, m);</div><div class="line">        gen_n_m&lt;BSTSet&gt;(n, m);</div><div class="line">        gen_n_m&lt;BitSet&gt;(n, m);</div><div class="line">        gen_n_m&lt;BinSet&gt;(n, m);</div><div class="line"></div><div class="line">        gen_n_m_using_floyd&lt;ListSet&gt;(n, m);</div><div class="line">        gen_n_m_using_floyd&lt;BSTSet&gt;(n, m);</div><div class="line">        gen_n_m_using_floyd&lt;BitSet&gt;(n, m);</div><div class="line">        gen_n_m_using_floyd&lt;BinSet&gt;(n, m);</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;typeinfo&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x94FE;&#x8868;&#x5B9E;&#x73B0; */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListSet</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ListSet(<span class="keyword">int</span> max_value, <span class="keyword">int</span> max_size) : m_max_value(max_value),</span><br><span class="line">        m_size(max_size) {</span><br><span class="line">        all_nodes = <span class="keyword">new</span> node[max_size + <span class="number">1</span>];</span><br><span class="line">        head = sentinel = &amp;all_nodes[<span class="number">0</span>];</span><br><span class="line">        head-&gt;val = max_value;</span><br><span class="line">        head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        n = <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    ~ListSet() {</span><br><span class="line">        <span class="keyword">delete</span>[] all_nodes;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    }</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">report</span><span class="params">(<span class="keyword">int</span>* v)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> m_max_value;</span><br><span class="line">    <span class="keyword">int</span> m_size;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> {</span></span><br><span class="line">        <span class="keyword">int</span> val;</span><br><span class="line">        node* next;</span><br><span class="line">        node() {}</span><br><span class="line">        node(<span class="keyword">int</span> v, node* p) : val(v), next(p) {}</span><br><span class="line">    };</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    node* all_nodes;    <span class="comment">// &#x9884;&#x5148;&#x5206;&#x914D;&#x4E86;&#x6240;&#x6709;&#x5185;&#x5B58;&#x7A7A;&#x95F4;</span></span><br><span class="line">    node* head;</span><br><span class="line">    node* sentinel;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x4F7F;&#x7528;&#x5FAA;&#x73AF;&#x7684;&#x65B9;&#x5F0F;&#x52A0;&#x5165;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</span></span><br><span class="line"><span class="keyword">void</span> ListSet::insert(<span class="keyword">int</span> t)</span><br><span class="line">{</span><br><span class="line">    <span class="comment">/* &#x4E24;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;, &#x7B2C;&#x4E00;&#x79CD;, &#x4FDD;&#x5B58;pre&#x548C;p&#x7684;&#x65B9;&#x5F0F;, &#x8FDB;&#x884C;&#x94FE;&#x8868;&#x7684;&#x63D2;&#x5165; */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* &#x7B2C;&#x4E00;&#x79CD;</span></span><br><span class="line"><span class="comment">    node* p = head;</span></span><br><span class="line"><span class="comment">    node* pre = NULL;</span></span><br><span class="line"><span class="comment">    while(p-&gt;val &lt; t) {</span></span><br><span class="line"><span class="comment">        pre = p;</span></span><br><span class="line"><span class="comment">        p = p-&gt;next;</span></span><br><span class="line"><span class="comment">    }</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    if(p-&gt;val &gt; t) {</span></span><br><span class="line"><span class="comment">        node* new_node = &amp;all_nodes[++n];   // &#x4ECE;&#x5185;&#x5B58;&#x6C60;&#x4E2D;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8282;&#x70B9;</span></span><br><span class="line"><span class="comment">        new_node-&gt;val = t;</span></span><br><span class="line"><span class="comment">        new_node-&gt;next = p;</span></span><br><span class="line"><span class="comment">        if(pre == NULL)</span></span><br><span class="line"><span class="comment">            head = new_node;</span></span><br><span class="line"><span class="comment">        else</span></span><br><span class="line"><span class="comment">            pre-&gt;next = new_node;</span></span><br><span class="line"><span class="comment">    }</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* &#x7B2C;&#x4E8C;&#x79CD;, &#x4F7F;&#x7528;&#x76F4;&#x63A5;&#x6539;&#x53D8;&#x524D;&#x4E00;&#x4E2A;&#x6307;&#x9488;next&#x6307;&#x9488;&#x7684;&#x5185;&#x5BB9; */</span></span><br><span class="line">    node** p = &amp;head;</span><br><span class="line">    <span class="comment">/* &#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x5C0F;&#x4E8E;&#x7684;&#x8282;&#x70B9; */</span></span><br><span class="line">    <span class="keyword">for</span>(; (*p)-&gt;val &lt; t; p = &amp;((*p)-&gt;next));</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* &#x5982;&#x679C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x5927;, &#x90A3;&#x4E48;&#x5728;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4E4B;&#x524D;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x8282;&#x70B9;, &#x660E;&#x786E;*p&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x5BF9;&#x5E94;&#x4E86;pre&#x7684;next&#x5BF9;&#x5E94;&#x5730;&#x5740;&#x4E2D;&#x7684;&#x5185;&#x5BB9;, &#x76F4;&#x63A5;&#x4FEE;&#x6539; */</span></span><br><span class="line">    <span class="keyword">if</span>((*p)-&gt;val &gt; t) {</span><br><span class="line">        node* new_node = &amp;all_nodes[++n];</span><br><span class="line">        new_node-&gt;val = t;</span><br><span class="line">        new_node-&gt;next = *p;</span><br><span class="line">        *p = new_node;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;&#x5185;&#x5B58;&#x6C60;&#x7684;&#x65B9;&#x5F0F;, &#x4EE3;&#x7801;&#x66F4;&#x52A0;&#x7B80;&#x5355; */</span></span><br><span class="line">        <span class="comment">/* *p = node(t, *p); */</span></span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> ListSet::report(<span class="keyword">int</span>* v)</span><br><span class="line">{</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(node* p = head; p != sentinel; p = p-&gt;next)</span><br><span class="line">        v[++j] = p-&gt;val;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BSTSet</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    BSTSet(<span class="keyword">int</span> maxv, <span class="keyword">int</span> maxs) : max_val(maxv), max_size(maxs), n(<span class="number">0</span>), root(<span class="number">0</span>) {}</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span> </span>{</span><br><span class="line">        <span class="comment">/* &#x7B2C;&#x4E00;&#x79CD;&#x4F7F;&#x7528;, reverse insert &#x7684;&#x9012;&#x5F52;&#x5F62;&#x5F0F; */</span></span><br><span class="line">        <span class="comment">// root = rinsert(root, t);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x7B2C;&#x4E8C;&#x79CD;&#x4F7F;&#x7528;, &#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5FAA;&#x73AF;&#x7684;&#x65B9;&#x5F0F;, &#x8FD9;&#x91CC;&#x5C31;&#x4F53;&#x73B0;&#x51FA;&#x4F7F;&#x7528;&#x6307;&#x5411;&#x6307;&#x9488;&#x7684;&#x6307;&#x9488;&#x65B9;&#x6CD5;&#x7684;&#x597D;&#x5904;, &#x4E0D;&#x9700;&#x8981;&#x4FDD;&#x5B58;</span></span><br><span class="line"><span class="comment">        pre&#x6307;&#x9488;, &#x4EE5;&#x53CA;&#x5230;&#x5E95;&#x662F;&#x8D70;&#x4E86;&#x5DE6;&#x5B50;&#x6811;&#x8FD8;&#x662F;&#x53F3;&#x5B50;&#x6811;, &#x751A;&#x81F3;&#x662F;&#x5982;&#x679C;root&#x4E3A;&#x7A7A;, &#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7684;&#x4FEE;&#x6539; */</span></span><br><span class="line">        node** p = &amp;root;</span><br><span class="line">        <span class="keyword">while</span>(*p) {</span><br><span class="line">            <span class="keyword">if</span>((*p)-&gt;val == t)  <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(t &lt; (*p)-&gt;val)</span><br><span class="line">                p = &amp;((*p)-&gt;left);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                p = &amp;((*p)-&gt;right);</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        *p = <span class="keyword">new</span> node(t);</span><br><span class="line">        ++n;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> <span class="keyword">const</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">report</span><span class="params">(<span class="keyword">int</span>* d)</span> </span>{</span><br><span class="line">        output_p = d;</span><br><span class="line">        output_count = <span class="number">-1</span>;</span><br><span class="line">        travse(root);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> {</span></span><br><span class="line">        node(<span class="keyword">int</span> t, node* l = <span class="literal">NULL</span>, node* r = <span class="literal">NULL</span>) : val(t), left(l), right(r) {}</span><br><span class="line">        <span class="keyword">int</span> val;</span><br><span class="line">        node* left;</span><br><span class="line">        node* right;</span><br><span class="line">    };</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">travse</span><span class="params">(node* p)</span> </span>{</span><br><span class="line">        <span class="keyword">if</span>(p == <span class="literal">NULL</span>)   <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        travse(p-&gt;left);</span><br><span class="line">        output_p[++output_count] = p-&gt;val;</span><br><span class="line">        travse(p-&gt;right);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function">node* <span class="title">rinsert</span><span class="params">(node* p, <span class="keyword">int</span> t)</span> </span>{</span><br><span class="line">        <span class="keyword">if</span>(p == <span class="literal">NULL</span>) {</span><br><span class="line">            p = <span class="keyword">new</span> node(t);</span><br><span class="line">            ++n;</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span>(p-&gt;val &gt; t) {</span><br><span class="line">            p-&gt;left = rinsert(p-&gt;left, t);</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span>(p-&gt;val &lt; t) {</span><br><span class="line">            p-&gt;right = rinsert(p-&gt;right, t);</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> p;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span>* output_p;</span><br><span class="line">    <span class="keyword">int</span> output_count;</span><br><span class="line">    node* root;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n ;</span><br><span class="line">    <span class="keyword">int</span> max_val;</span><br><span class="line">    <span class="keyword">int</span> max_size;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BitSet</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    BitSet(<span class="keyword">int</span> maxv, <span class="keyword">int</span> maxs) : max_val(maxv), max_size(maxs), n(<span class="number">0</span>) {</span><br><span class="line">        <span class="keyword">int</span> size = <span class="number">1</span> + (maxv &gt;&gt; SHIFT);</span><br><span class="line">        x = <span class="keyword">new</span> <span class="keyword">int32_t</span>[size];</span><br><span class="line">        <span class="built_in">memset</span>(x, <span class="number">0</span>, <span class="keyword">sizeof</span>(<span class="keyword">int32_t</span>)*size);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">enum</span> { BITSPERWORD = <span class="number">32</span>, SHIFT = <span class="number">5</span>, MASK = <span class="number">0x1f</span> };</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span> </span>{</span><br><span class="line">        <span class="keyword">if</span>(test(t)) <span class="keyword">return</span>;</span><br><span class="line">        <span class="built_in">set</span>(t);</span><br><span class="line">        ++n;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">report</span><span class="params">(<span class="keyword">int</span>* d)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> c = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max_val; ++i)</span><br><span class="line">            <span class="keyword">if</span>(test(i))</span><br><span class="line">                d[++c] = i;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> <span class="keyword">const</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> i)</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> x[i &gt;&gt; SHIFT] &amp; (<span class="number">1u</span> &lt;&lt; (i &amp; MASK));</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">clr</span><span class="params">(<span class="keyword">int</span> i)</span> </span>{</span><br><span class="line">        x[i &gt;&gt; SHIFT] &amp;= ~(<span class="number">1u</span> &lt;&lt; (i &amp; MASK));</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="keyword">int</span> i)</span> </span>{</span><br><span class="line">        x[i &gt;&gt; SHIFT] |= (<span class="number">1u</span> &lt;&lt; (i &amp; MASK));</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> max_val, max_size;</span><br><span class="line">    <span class="keyword">int</span>* x;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x4F7F;&#x7528;2&#x7684;&#x6574;&#x6570;&#x79D8;&#x8868;&#x793A;bin&#x7684;&#x5927;&#x5C0F; */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> USING_2_N_SIZE_NUM_PER_BIN</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BinSet</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    BinSet(<span class="keyword">int</span> maxv, <span class="keyword">int</span> maxs) : max_val(maxv), max_size(maxs), n(<span class="number">0</span>) {</span><br><span class="line">        bins = <span class="keyword">new</span> node*[max_size];</span><br><span class="line">        sentinel = <span class="keyword">new</span> node(max_val, <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x6240;&#x6709;&#x94FE;&#x8868;&#x7684;&#x5C3E;&#x8282;&#x70B9;&#x90FD;&#x662F;&#x4E00;&#x4E2A;sentinel */</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max_size; ++i)</span><br><span class="line">            bins[i] = sentinel;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> less_num_per_bin = max_val / max_size;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> USING_2_N_SIZE_NUM_PER_BIN</span></span><br><span class="line">        <span class="comment">/* &#x8F6C;&#x6362;&#x4E3A;2^bin_shift &gt;= less_num_per_bin&#x7684;&#x6700;&#x5C0F;&#x503C; */</span></span><br><span class="line">        <span class="keyword">for</span>(bin_shift = <span class="number">0</span>; less_num_per_bin; less_num_per_bin &gt;&gt;= <span class="number">1</span>, ++bin_shift);</span><br><span class="line">        num_per_bin = <span class="number">1</span> &lt;&lt; bin_shift;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line">        num_per_bin = <span class="number">1</span> + less_num_per_bin;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span> </span>{</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> USING_2_N_SIZE_NUM_PER_BIN</span></span><br><span class="line">        <span class="keyword">int</span> index = t &gt;&gt; bin_shift;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line">        <span class="keyword">int</span> index = t / num_per_bin;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">        bins[index] = rinsert(bins[index], t);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> <span class="keyword">const</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">report</span><span class="params">(<span class="keyword">int</span>* d)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> c = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max_size; ++i)</span><br><span class="line">            <span class="keyword">for</span>(node* p = bins[i]; p != sentinel; p = p-&gt;next)</span><br><span class="line">                d[++c] = p-&gt;val;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> {</span></span><br><span class="line">        node(<span class="keyword">int</span> v, node* p) : val(v), next(p) {}</span><br><span class="line">        <span class="keyword">int</span> val;</span><br><span class="line">        node* next;</span><br><span class="line">    };</span><br><span class="line">    node** bins;</span><br><span class="line">    node* sentinel;</span><br><span class="line"></span><br><span class="line">    <span class="function">node* <span class="title">rinsert</span><span class="params">(node* p, <span class="keyword">int</span> t)</span> </span>{</span><br><span class="line">        <span class="keyword">if</span>(t &gt; p-&gt;val) {</span><br><span class="line">            p-&gt;next = rinsert(p-&gt;next, t);</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span>(t &lt; p-&gt;val) {</span><br><span class="line">            p = <span class="keyword">new</span> node(t, p);</span><br><span class="line">            ++n;</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> p;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> USING_2_N_SIZE_NUM_PER_BIN</span></span><br><span class="line">    <span class="keyword">int</span> bin_shift;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="keyword">int</span> num_per_bin;</span><br><span class="line">    <span class="keyword">int</span> max_val, max_size;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> SetType&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">gen_n_m</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;calling type : &quot;</span> &lt;&lt; <span class="keyword">typeid</span>(SetType).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="function">SetType <span class="title">s</span><span class="params">(n, m)</span></span>;</span><br><span class="line">    <span class="keyword">while</span>(s.size() != m)</span><br><span class="line">        s.insert(rand() % n);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span>* d = <span class="keyword">new</span> <span class="keyword">int</span>[m];</span><br><span class="line">    s.report(d);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; d[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">delete</span>[] d;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x4F7F;&#x7528;floyd&#x7B97;&#x6CD5;&#x53D6;&#x6837; */</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> SetType&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">gen_n_m_using_floyd</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;calling floyd algorithm using type : &quot;</span></span><br><span class="line">         &lt;&lt; <span class="keyword">typeid</span>(SetType).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">SetType <span class="title">s</span><span class="params">(n, m)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = n - m; i &lt; n; ++i) {</span><br><span class="line">        <span class="keyword">int</span> t = rand() % (n - m + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> old_size = s.size();</span><br><span class="line">        s.insert(t);</span><br><span class="line">        <span class="keyword">if</span>(old_size == s.size())</span><br><span class="line">            s.insert(i);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span>* d = <span class="keyword">new</span> <span class="keyword">int</span>[m];</span><br><span class="line">    s.report(d);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; d[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">delete</span>[] d;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/format.hpp&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span>* argv[])</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    srand(time(<span class="literal">NULL</span>));</span><br><span class="line"></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">10</span>, m = <span class="number">2</span>;</span><br><span class="line">        boost::<span class="function">format <span class="title">fmt</span><span class="params">(<span class="string">&quot;select %1% from %2%&quot;</span>)</span></span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (fmt % m % n) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">        gen_n_m&lt;ListSet&gt;(n, m);</span><br><span class="line">        gen_n_m&lt;BSTSet&gt;(n, m);</span><br><span class="line">        gen_n_m&lt;BitSet&gt;(n, m);</span><br><span class="line">        gen_n_m&lt;BinSet&gt;(n, m);</span><br><span class="line"></span><br><span class="line">        gen_n_m_using_floyd&lt;ListSet&gt;(n, m);</span><br><span class="line">        gen_n_m_using_floyd&lt;BSTSet&gt;(n, m);</span><br><span class="line">        gen_n_m_using_floyd&lt;BitSet&gt;(n, m);</span><br><span class="line">        gen_n_m_using_floyd&lt;BinSet&gt;(n, m);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">100</span>, m = <span class="number">99</span>;</span><br><span class="line">        boost::<span class="function">format <span class="title">fmt</span><span class="params">(<span class="string">&quot;select %1% from %2%&quot;</span>)</span></span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (fmt % m % n) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">        gen_n_m&lt;ListSet&gt;(n, m);</span><br><span class="line">        gen_n_m&lt;BSTSet&gt;(n, m);</span><br><span class="line">        gen_n_m&lt;BitSet&gt;(n, m);</span><br><span class="line">        gen_n_m&lt;BinSet&gt;(n, m);</span><br><span class="line"></span><br><span class="line">        gen_n_m_using_floyd&lt;ListSet&gt;(n, m);</span><br><span class="line">        gen_n_m_using_floyd&lt;BSTSet&gt;(n, m);</span><br><span class="line">        gen_n_m_using_floyd&lt;BitSet&gt;(n, m);</span><br><span class="line">        gen_n_m_using_floyd&lt;BinSet&gt;(n, m);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <h2 id="&#x7B2C;&#x5341;&#x56DB;&#x7AE0;-heap">&#x7B2C;&#x5341;&#x56DB;&#x7AE0; : heap</h2>
 <p>&#x4E66;&#x4E2D;&#x7ED9;&#x51FA;&#x7684;heap&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x786E;&#x5B9E;&#x662F;&#x5F88;&#x7F8E;&#x5999;, &#x7B80;&#x5355;, &#x6709;&#x6548;.</p>
 <ol>
@@ -473,7 +461,7 @@ BST&#x4E2D;.</p>
 </li>
 </ol>
 <p>&#x4EE3;&#x7801;&#x5982;&#x4E0B;:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;limits&gt;</span></span></div><div class="line"><span class="keyword">class</span> PriorityQueue</div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    PriorityQueue(<span class="keyword">int</span> max_size) : m_max_size(max_size) {</div><div class="line">        data = <span class="keyword">new</span> <span class="keyword">int</span>[m_max_size + <span class="number">1</span>];</div><div class="line">        <span class="comment">/* &#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x4F7F;&#x7528;, &#x4F5C;&#x4E3A;sentinel, &#x4FDD;&#x8BC1;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6700;&#x5C0F;, &#x90A3;&#x4E48;&#x6240;&#x6709;&#x5411;&#x4E0A;&#x8C03;&#x6574;&#x5806;&#x4E0D;&#x4F1A;&#x8D8A;&#x8FC7;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20; */</span></div><div class="line">        data[<span class="number">0</span>] = numeric_limits&lt;<span class="keyword">int</span>&gt;::min();</div><div class="line">        n = <span class="number">0</span>;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">shift_up</span><span class="params">(<span class="keyword">int</span> start_index)</span> </span>{</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = start_index, p = i; data[p = i/<span class="number">2</span>] &gt; data[i]; i = p)</div><div class="line">            swap(data[i], data[p]);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">shift_down</span><span class="params">(<span class="keyword">int</span> max_index)</span> </span>{</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>, c = i; (c = <span class="number">2</span> * i) &lt;= max_index; i = c) {</div><div class="line">            <span class="comment">/* &#x53D6;&#x5F97;&#x4E24;&#x8005;&#x7684;&#x6700;&#x5C0F;&#x503C; */</span></div><div class="line">            <span class="keyword">if</span>(c + <span class="number">1</span> &lt;= max_index &amp;&amp; data[c + <span class="number">1</span>] &lt; data[c])</div><div class="line">                ++c;</div><div class="line">            <span class="keyword">if</span>(data[i] &lt; data[c])</div><div class="line">                <span class="keyword">return</span>;</div><div class="line"></div><div class="line">            swap(data[i], data[c]);</div><div class="line">        }</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span> </span>{</div><div class="line">        <span class="keyword">if</span>(n == m_max_size)  <span class="keyword">return</span>;</div><div class="line"></div><div class="line">        data[++n] = t;</div><div class="line">        shift_up(n);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">extract_min</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">int</span> t = data[<span class="number">1</span>]; data[<span class="number">1</span>] = data[n--];</div><div class="line">        shift_down(n);</div><div class="line">        <span class="keyword">return</span> t;</div><div class="line">    }</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="keyword">int</span> m_max_size;</div><div class="line">    <span class="keyword">int</span>* data;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">class</span> STLMethodPriorityQueue</div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    STLMethodPriorityQueue(<span class="keyword">int</span> max_size) {}</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span> </span>{</div><div class="line">        data.push_back(t);</div><div class="line">        push_heap(data.begin(), data.end(), greater&lt;<span class="keyword">int</span>&gt;());</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">extract_min</span><span class="params">()</span> </span>{</div><div class="line">        pop_heap(data.begin(), data.end(), greater&lt;<span class="keyword">int</span>&gt;());</div><div class="line">        <span class="keyword">int</span> t = data.back();</div><div class="line">        data.pop_back();</div><div class="line">        <span class="keyword">return</span> t;</div><div class="line">    }</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; data;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> QueueType&gt;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">test_priority_queue</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">int</span> max_size = <span class="number">100</span>;</div><div class="line">    <span class="function">QueueType <span class="title">q</span><span class="params">(max_size)</span></span>;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> test_size = <span class="number">20</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; test_size; ++i)</div><div class="line">        q.insert(rand() % (<span class="number">2</span> * max_size));</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; test_size; ++i)</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; q.extract_min() &lt;&lt; <span class="string">&quot; &quot;</span>;</div><div class="line"></div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;limits&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PriorityQueue</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    PriorityQueue(<span class="keyword">int</span> max_size) : m_max_size(max_size) {</span><br><span class="line">        data = <span class="keyword">new</span> <span class="keyword">int</span>[m_max_size + <span class="number">1</span>];</span><br><span class="line">        <span class="comment">/* &#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x4F7F;&#x7528;, &#x4F5C;&#x4E3A;sentinel, &#x4FDD;&#x8BC1;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6700;&#x5C0F;, &#x90A3;&#x4E48;&#x6240;&#x6709;&#x5411;&#x4E0A;&#x8C03;&#x6574;&#x5806;&#x4E0D;&#x4F1A;&#x8D8A;&#x8FC7;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20; */</span></span><br><span class="line">        data[<span class="number">0</span>] = numeric_limits&lt;<span class="keyword">int</span>&gt;::min();</span><br><span class="line">        n = <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">shift_up</span><span class="params">(<span class="keyword">int</span> start_index)</span> </span>{</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = start_index, p = i; data[p = i/<span class="number">2</span>] &gt; data[i]; i = p)</span><br><span class="line">            swap(data[i], data[p]);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">shift_down</span><span class="params">(<span class="keyword">int</span> max_index)</span> </span>{</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>, c = i; (c = <span class="number">2</span> * i) &lt;= max_index; i = c) {</span><br><span class="line">            <span class="comment">/* &#x53D6;&#x5F97;&#x4E24;&#x8005;&#x7684;&#x6700;&#x5C0F;&#x503C; */</span></span><br><span class="line">            <span class="keyword">if</span>(c + <span class="number">1</span> &lt;= max_index &amp;&amp; data[c + <span class="number">1</span>] &lt; data[c])</span><br><span class="line">                ++c;</span><br><span class="line">            <span class="keyword">if</span>(data[i] &lt; data[c])</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">            swap(data[i], data[c]);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span> </span>{</span><br><span class="line">        <span class="keyword">if</span>(n == m_max_size)  <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        data[++n] = t;</span><br><span class="line">        shift_up(n);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">extract_min</span><span class="params">()</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> t = data[<span class="number">1</span>]; data[<span class="number">1</span>] = data[n--];</span><br><span class="line">        shift_down(n);</span><br><span class="line">        <span class="keyword">return</span> t;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> m_max_size;</span><br><span class="line">    <span class="keyword">int</span>* data;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">STLMethodPriorityQueue</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    STLMethodPriorityQueue(<span class="keyword">int</span> max_size) {}</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> t)</span> </span>{</span><br><span class="line">        data.push_back(t);</span><br><span class="line">        push_heap(data.begin(), data.end(), greater&lt;<span class="keyword">int</span>&gt;());</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">extract_min</span><span class="params">()</span> </span>{</span><br><span class="line">        pop_heap(data.begin(), data.end(), greater&lt;<span class="keyword">int</span>&gt;());</span><br><span class="line">        <span class="keyword">int</span> t = data.back();</span><br><span class="line">        data.pop_back();</span><br><span class="line">        <span class="keyword">return</span> t;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; data;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> QueueType&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test_priority_queue</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> max_size = <span class="number">100</span>;</span><br><span class="line">    <span class="function">QueueType <span class="title">q</span><span class="params">(max_size)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> test_size = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; test_size; ++i)</span><br><span class="line">        q.insert(rand() % (<span class="number">2</span> * max_size));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; test_size; ++i)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; q.extract_min() &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <h2 id="&#x7B2C;&#x5341;&#x4E94;&#x7AE0;-&#x5B57;&#x7B26;&#x4E32;">&#x7B2C;&#x5341;&#x4E94;&#x7AE0; : &#x5B57;&#x7B26;&#x4E32;</h2>
 <p>&#x57FA;&#x4E8E;&#x7F16;&#x7A0B;&#x73E0;&#x7391;&#x7B2C;15&#x7AE0;&#x8282;&#x7684;&#x968F;&#x673A;&#x6587;&#x672C;&#x751F;&#x6210;&#x7B97;&#x6CD5;:</p>
 <p>&#x5B9E;&#x73B0;&#x7684;&#x7EC6;&#x8282;&#x8BF4;&#x660E;:</p>
@@ -489,9 +477,12 @@ BST&#x4E2D;.</p>
 <li>&#x4F7F;&#x7528;&#x4F20;&#x7EDF;&#x7684;&#x4E8C;&#x5206;&#x4E0D;&#x80FD;&#x591F;&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x76F8;&#x540C;&#x7684;&#x5143;&#x7D20;, &#x81EA;&#x5DF1;&#x4F53;&#x4F1A;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x4E8C;&#x5206;&#x5199;&#x6CD5;.</li>
 </ol>
 <p>nb&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x554A;!!! :</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><div class="line"><span class="comment">/* &#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x6240;&#x6709;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26; */</span></div><div class="line"><span class="keyword">char</span> inputchars[<span class="number">50000</span>];</div><div class="line"></div><div class="line"><span class="comment">/* &#x4FDD;&#x5B58;&#x6240;&#x6709;&#x7684; `k&#x76F8;&#x90BB;&#x5355;&#x8BCD;` &#x6392;&#x5E8F;&#x540E;&#x7684;&#x540E;&#x7F00;&#x6307;&#x9488;&#x4F4D;&#x7F6E; */</span></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">char</span>*&gt; words;</div><div class="line"></div><div class="line"><span class="comment">/* &#x5355;&#x8BCD;&#x4E2A;&#x6570; */</span></div><div class="line"><span class="keyword">int</span> word_count = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="comment">/* &#x8BA1;&#x7B97;&#x7684;&#x9636;&#x6570; */</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> k = <span class="number">2</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">load_data</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* file_name)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">if</span>(!freopen(file_name, <span class="string">&quot;r&quot;</span>, <span class="built_in">stdin</span>)) {</div><div class="line">        <span class="built_in">puts</span>(<span class="string">&quot;error: load file&quot;</span>);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    }</div><div class="line"></div><div class="line">    words.resize(<span class="number">10000</span>, <span class="number">0</span>);</div><div class="line">    <span class="built_in">memset</span>(inputchars, <span class="keyword">sizeof</span>(inputchars), <span class="number">0</span>);</div><div class="line">    words[<span class="number">0</span>] = inputchars;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, words[i]) != EOF) {</div><div class="line">        words[i + <span class="number">1</span>] = words[i] + <span class="built_in">strlen</span>(words[i]) + <span class="number">1</span>;</div><div class="line">        ++i;</div><div class="line">    }</div><div class="line">    word_count = i;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/* &#x6BD4;&#x8F83;&#x6700;&#x591A;k&#x4E2A;&#x5355;&#x8BCD;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5927;&#x5C0F;, &#x6CE8;&#x610F;&#x5728;inputchars&#x4E2D;&#x672B;&#x5C3E;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;0, &#x6240;&#x4EE5;&#x6700;&#x540E;&#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5904;&#x7406;&#x65F6;&#x5019;&#x4E0D;&#x9700;&#x8981;&#x62C5;&#x5FC3;&#x6EA2;&#x51FA; */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">wordncmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* p, <span class="keyword">const</span> <span class="keyword">char</span>* q)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">int</span> n = k;</div><div class="line">    <span class="keyword">for</span>(; *p == *q; ++p, ++q) {</div><div class="line">        <span class="keyword">if</span>(*p == <span class="number">0</span> &amp;&amp; --n == <span class="number">0</span>)</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">return</span> *p - *q;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/* &#x8F93;&#x51FA;&#x6392;&#x5E8F;&#x5728;&#x7B2C;i&#x4F4D;&#x7F6E;&#x7684;(k+1)&#x5355;&#x8BCD;&#x7684;&#x5185;&#x5BB9; */</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_index_word</span><span class="params">(<span class="keyword">int</span> i)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">char</span>* p = words[i];</div><div class="line">    <span class="keyword">char</span>* q = <span class="literal">NULL</span>;</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">char</span>*&gt; back_up;</div><div class="line"></div><div class="line">    <span class="comment">/* attention : &#x4F7F;&#x7528;&#x524D;k&#x4E2A;&#x5355;&#x8BCD;, &#x7B49;&#x4EF7;&#x4E8E;&#x8981;&#x8F93;&#x5165; (k+1) &#x4E2A;&#x5143;&#x7D20;, &#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5C31;&#x662F;&#x6839;&#x636E;k&#x4E2A;&#x5143;&#x7D20;</span></div><div class="line">     * &#x63A8;&#x5BFC;&#x7684;&#x5143;&#x7D20;, &#x6240;&#x4EE5;&#x9700;&#x8981;k&#x4E2A;&#x95F4;&#x9694;, &#x6267;&#x884C;k&#x6B21;</div><div class="line">     */</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; k; ++j) {</div><div class="line">        <span class="keyword">while</span>(*p) ++p;</div><div class="line">        q = p++; *q = <span class="string">&apos; &apos;</span>;</div><div class="line">        back_up.push_back(q);</div><div class="line">    }</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; words[i] &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; back_up.size(); ++i)</div><div class="line">        *back_up[i] = <span class="number">0</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_k_plus_one_word</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; word_count; ++i) {</div><div class="line">        print_index_word(i);</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/* &#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x4E8E;&#x903B;&#x8F91;&#x7684;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C; */</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_k_word</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    sort(words.begin(), words.begin() + word_count, [](<span class="keyword">const</span> <span class="keyword">char</span> * p,</div><div class="line">    <span class="keyword">const</span> <span class="keyword">char</span> * q) {</div><div class="line">        <span class="keyword">return</span> wordncmp(p, q) &lt; <span class="number">0</span>;</div><div class="line">    });</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/* &#x5C06;&#x5F53;&#x524D;p&#x6307;&#x5411;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x79FB;&#x52A8;num&#x4E2A;&#x5355;&#x8BCD;, &#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x79FB;&#x52A8;&#x4E4B;&#x540E;&#x7684;&#x65B0;&#x7684;&#x5355;&#x8BCD;&#x4F4D;&#x7F6E; */</span></div><div class="line"><span class="function"><span class="keyword">const</span> <span class="keyword">char</span>* <span class="title">skip</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* p, <span class="keyword">int</span> num)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">while</span>(num--) {</div><div class="line">        <span class="keyword">while</span>(*p++);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">return</span> p;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/* &#x4EA7;&#x751F;num&#x4E2A;&#x968F;&#x673A;&#x5355;&#x8BCD; */</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">gene_rand_words</span><span class="params">(<span class="keyword">int</span> num)</span></span></div><div class="line">{</div><div class="line">    <span class="comment">/* &#x4F7F;&#x7528;&#x6587;&#x672C;&#x7684;&#x524D;k&#x4E2A;&#x5355;&#x8BCD;&#x4F5C;&#x4E3A;&#x521D;&#x59CB;&#x8BA1;&#x7B97;&#x7684;&#x79CD;&#x5B50; */</span></div><div class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* phrase = inputchars;</div><div class="line">    <span class="keyword">while</span>(num--) {</div><div class="line"></div><div class="line">        <span class="comment">/* &#x8FD9;&#x91CC;&#x7531;&#x4E8E;&#x6240;&#x6709;&#x7684;&#x8BA1;&#x7B97;&#x4E32;&#x4E00;&#x5B9A;&#x5728;&#x6570;&#x7EC4;&#x4E2D;, &#x6240;&#x4EE5;&#x6240;&#x6709;&#x6570;&#x503C; target &lt;= data[high] */</span></div><div class="line">        <span class="keyword">int</span> low = <span class="number">-1</span>, high = word_count - <span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(low + <span class="number">1</span> != high) {</div><div class="line">            <span class="keyword">int</span> m = (low + high) / <span class="number">2</span>;</div><div class="line">            <span class="keyword">if</span>(wordncmp(words[m], phrase) &lt; <span class="number">0</span>)</div><div class="line">                low = m;</div><div class="line">            <span class="keyword">else</span></div><div class="line">                high = m;</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="comment">/* &#x4E00;&#x5B9A;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x4E32;&#x662F;&#x76F8;&#x540C;&#x7684; */</span></div><div class="line">        assert(wordncmp(words[high], phrase) == <span class="number">0</span>);</div><div class="line"></div><div class="line">        <span class="comment">/* &#x627E;&#x5230;&#x6240;&#x6709;&#x76F8;&#x540C;&#x7684;k&#x524D;&#x7F00;, &#x5F97;&#x5230;&#x968F;&#x673A;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20; */</span></div><div class="line">        <span class="keyword">const</span> <span class="keyword">char</span>* select_p = <span class="literal">NULL</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; wordncmp(words[high + i], phrase) == <span class="number">0</span>; ++i) {</div><div class="line">            <span class="keyword">if</span>((rand() % (i + <span class="number">1</span>)) == <span class="number">0</span>)</div><div class="line">                select_p = words[high + i];</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="comment">/* &#x5224;&#x65AD;&#x662F;&#x5426;&#x751F;&#x6210;&#x7684;k+1&#x4E2A;&#x5143;&#x7D20;&#x5B58;&#x5728; */</span></div><div class="line">        <span class="keyword">if</span>(<span class="built_in">strlen</span>(skip(select_p, k)) == <span class="number">0</span>) <span class="keyword">break</span>;</div><div class="line"></div><div class="line">        <span class="comment">/* &#x8F93;&#x51FA; */</span></div><div class="line">        <span class="built_in">cout</span> &lt;&lt; skip(select_p, k) &lt;&lt; <span class="string">&quot; &quot;</span>;</div><div class="line"></div><div class="line">        <span class="comment">/* &#x5F97;&#x5230;&#x53F3;&#x79FB;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x7684;phrase */</span></div><div class="line">        phrase = skip(select_p, <span class="number">1</span>);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span>* argv[])</span></span></div><div class="line">{</div><div class="line">    srand(time(<span class="literal">NULL</span>));</div><div class="line">    load_data(<span class="string">&quot;gene_rand_words.txt&quot;</span>);</div><div class="line">    sort_k_word();</div><div class="line">    gene_rand_words(<span class="number">100</span>);</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* &#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x6240;&#x6709;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26; */</span></span><br><span class="line"><span class="keyword">char</span> inputchars[<span class="number">50000</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x4FDD;&#x5B58;&#x6240;&#x6709;&#x7684; `k&#x76F8;&#x90BB;&#x5355;&#x8BCD;` &#x6392;&#x5E8F;&#x540E;&#x7684;&#x540E;&#x7F00;&#x6307;&#x9488;&#x4F4D;&#x7F6E; */</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">char</span>*&gt; words;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x5355;&#x8BCD;&#x4E2A;&#x6570; */</span></span><br><span class="line"><span class="keyword">int</span> word_count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x8BA1;&#x7B97;&#x7684;&#x9636;&#x6570; */</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> k = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">load_data</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* file_name)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span>(!freopen(file_name, <span class="string">&quot;r&quot;</span>, <span class="built_in">stdin</span>)) {</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">&quot;error: load file&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    words.resize(<span class="number">10000</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">memset</span>(inputchars, <span class="keyword">sizeof</span>(inputchars), <span class="number">0</span>);</span><br><span class="line">    words[<span class="number">0</span>] = inputchars;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, words[i]) != EOF) {</span><br><span class="line">        words[i + <span class="number">1</span>] = words[i] + <span class="built_in">strlen</span>(words[i]) + <span class="number">1</span>;</span><br><span class="line">        ++i;</span><br><span class="line">    }</span><br><span class="line">    word_count = i;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x6BD4;&#x8F83;&#x6700;&#x591A;k&#x4E2A;&#x5355;&#x8BCD;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5927;&#x5C0F;, &#x6CE8;&#x610F;&#x5728;inputchars&#x4E2D;&#x672B;&#x5C3E;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;0, &#x6240;&#x4EE5;&#x6700;&#x540E;&#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5904;&#x7406;&#x65F6;&#x5019;&#x4E0D;&#x9700;&#x8981;&#x62C5;&#x5FC3;&#x6EA2;&#x51FA; */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">wordncmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* p, <span class="keyword">const</span> <span class="keyword">char</span>* q)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> n = k;</span><br><span class="line">    <span class="keyword">for</span>(; *p == *q; ++p, ++q) {</span><br><span class="line">        <span class="keyword">if</span>(*p == <span class="number">0</span> &amp;&amp; --n == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> *p - *q;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x8F93;&#x51FA;&#x6392;&#x5E8F;&#x5728;&#x7B2C;i&#x4F4D;&#x7F6E;&#x7684;(k+1)&#x5355;&#x8BCD;&#x7684;&#x5185;&#x5BB9; */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_index_word</span><span class="params">(<span class="keyword">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">char</span>* p = words[i];</span><br><span class="line">    <span class="keyword">char</span>* q = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">char</span>*&gt; back_up;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* attention : &#x4F7F;&#x7528;&#x524D;k&#x4E2A;&#x5355;&#x8BCD;, &#x7B49;&#x4EF7;&#x4E8E;&#x8981;&#x8F93;&#x5165; (k+1) &#x4E2A;&#x5143;&#x7D20;, &#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5C31;&#x662F;&#x6839;&#x636E;k&#x4E2A;&#x5143;&#x7D20;</span></span><br><span class="line"><span class="comment">     * &#x63A8;&#x5BFC;&#x7684;&#x5143;&#x7D20;, &#x6240;&#x4EE5;&#x9700;&#x8981;k&#x4E2A;&#x95F4;&#x9694;, &#x6267;&#x884C;k&#x6B21;</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; k; ++j) {</span><br><span class="line">        <span class="keyword">while</span>(*p) ++p;</span><br><span class="line">        q = p++; *q = <span class="string">&apos; &apos;</span>;</span><br><span class="line">        back_up.push_back(q);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; words[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; back_up.size(); ++i)</span><br><span class="line">        *back_up[i] = <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_k_plus_one_word</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; word_count; ++i) {</span><br><span class="line">        print_index_word(i);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x4E8E;&#x903B;&#x8F91;&#x7684;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C; */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_k_word</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    sort(words.begin(), words.begin() + word_count, [](<span class="keyword">const</span> <span class="keyword">char</span> * p,</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span> * q) {</span><br><span class="line">        <span class="keyword">return</span> wordncmp(p, q) &lt; <span class="number">0</span>;</span><br><span class="line">    });</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x5C06;&#x5F53;&#x524D;p&#x6307;&#x5411;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x79FB;&#x52A8;num&#x4E2A;&#x5355;&#x8BCD;, &#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x79FB;&#x52A8;&#x4E4B;&#x540E;&#x7684;&#x65B0;&#x7684;&#x5355;&#x8BCD;&#x4F4D;&#x7F6E; */</span></span><br><span class="line"><span class="function"><span class="keyword">const</span> <span class="keyword">char</span>* <span class="title">skip</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* p, <span class="keyword">int</span> num)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">while</span>(num--) {</span><br><span class="line">        <span class="keyword">while</span>(*p++);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x4EA7;&#x751F;num&#x4E2A;&#x968F;&#x673A;&#x5355;&#x8BCD; */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">gene_rand_words</span><span class="params">(<span class="keyword">int</span> num)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="comment">/* &#x4F7F;&#x7528;&#x6587;&#x672C;&#x7684;&#x524D;k&#x4E2A;&#x5355;&#x8BCD;&#x4F5C;&#x4E3A;&#x521D;&#x59CB;&#x8BA1;&#x7B97;&#x7684;&#x79CD;&#x5B50; */</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* phrase = inputchars;</span><br><span class="line">    <span class="keyword">while</span>(num--) {</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x8FD9;&#x91CC;&#x7531;&#x4E8E;&#x6240;&#x6709;&#x7684;&#x8BA1;&#x7B97;&#x4E32;&#x4E00;&#x5B9A;&#x5728;&#x6570;&#x7EC4;&#x4E2D;, &#x6240;&#x4EE5;&#x6240;&#x6709;&#x6570;&#x503C; target &lt;= data[high] */</span></span><br><span class="line">        <span class="keyword">int</span> low = <span class="number">-1</span>, high = word_count - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(low + <span class="number">1</span> != high) {</span><br><span class="line">            <span class="keyword">int</span> m = (low + high) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(wordncmp(words[m], phrase) &lt; <span class="number">0</span>)</span><br><span class="line">                low = m;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                high = m;</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x4E00;&#x5B9A;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x4E32;&#x662F;&#x76F8;&#x540C;&#x7684; */</span></span><br><span class="line">        assert(wordncmp(words[high], phrase) == <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x627E;&#x5230;&#x6240;&#x6709;&#x76F8;&#x540C;&#x7684;k&#x524D;&#x7F00;, &#x5F97;&#x5230;&#x968F;&#x673A;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20; */</span></span><br><span class="line">        <span class="keyword">const</span> <span class="keyword">char</span>* select_p = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; wordncmp(words[high + i], phrase) == <span class="number">0</span>; ++i) {</span><br><span class="line">            <span class="keyword">if</span>((rand() % (i + <span class="number">1</span>)) == <span class="number">0</span>)</span><br><span class="line">                select_p = words[high + i];</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x5224;&#x65AD;&#x662F;&#x5426;&#x751F;&#x6210;&#x7684;k+1&#x4E2A;&#x5143;&#x7D20;&#x5B58;&#x5728; */</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">strlen</span>(skip(select_p, k)) == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x8F93;&#x51FA; */</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; skip(select_p, k) &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x5F97;&#x5230;&#x53F3;&#x79FB;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x7684;phrase */</span></span><br><span class="line">        phrase = skip(select_p, <span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span>* argv[])</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    srand(time(<span class="literal">NULL</span>));</span><br><span class="line">    load_data(<span class="string">&quot;gene_rand_words.txt&quot;</span>);</span><br><span class="line">    sort_k_word();</span><br><span class="line">    gene_rand_words(<span class="number">100</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
       
     </div>
+
+    
+
     
     
     
@@ -504,17 +495,13 @@ BST&#x4E2D;.</p>
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    whiledoing
-  </li>
+    <strong>本文作者： </strong>whiledoing</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     <a href="http://whiledoing.me/2018/03/24/note/prog-pearls-note/" title="《编程珠玑》读书笔记">http://whiledoing.me/2018/03/24/note/prog-pearls-note/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-  </li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -536,18 +523,6 @@ BST&#x4E2D;.</p>
       
 
       
-      
-        <div class="post-widgets">
-        
-          <div class="wp_rating">
-            <div id="wpac-rating"></div>
-          </div>
-        
-
-        
-
-        
-        </div>
       
       
 
@@ -591,9 +566,6 @@ BST&#x4E2D;.</p>
 
 
           </div>
-          
-
-
           
 
   
@@ -641,63 +613,136 @@ BST&#x4E2D;.</p>
               <p class="site-description motion-element" itemprop="description">喜欢一切简单且美的事物，包括人。</p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">51</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">51</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
-
-            
               
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
 
-          </nav>
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
 
           
 
-          <div class="links-of-author motion-element">
-            
+          
+            <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">
-                    GitHub</a>
+                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">GitHub</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">
-                    豆瓣</a>
+                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">豆瓣</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">
-                    知乎</a>
+                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">知乎</a>
+                  
                 </span>
               
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
             
-          </div>
-
           
-          
-
-          
-          
-
           
 
         </div>
@@ -734,25 +779,20 @@ BST&#x4E2D;.</p>
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">whiledoing</span>
 
   
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count">132.6k</span>
+
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -760,12 +800,13 @@ BST&#x4E2D;.</p>
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.1.0</div>
 
 
 
 
         
+
 
 
 
@@ -780,8 +821,6 @@ BST&#x4E2D;.</p>
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -806,7 +845,11 @@ BST&#x4E2D;.</p>
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -826,16 +869,6 @@ BST&#x4E2D;.</p>
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -844,18 +877,13 @@ BST&#x4E2D;.</p>
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.1.0"></script>
 
 
 
@@ -863,23 +891,19 @@ BST&#x4E2D;.</p>
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.0"></script>
 
 
 
   
-
-
-  
-
 
 
 
@@ -906,387 +930,102 @@ BST&#x4E2D;.</p>
 
 
 
+  
+
+
+
 
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
+  
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
+  
+  
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
+  
+  
 
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+  
 
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
 
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
+  
+  
 
-                // show search results
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
 
-                if (isMatch) {
-                  // sort index by position of keyword
 
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.1.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.1.0"></script>
 
-                  // merge hits into slices
 
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
+  
 
-                      // move to next position of hit
+  
 
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('3');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+  
+  <style>
+    .copy-btn {
+        position: relative;
+        display: inline-block;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #333;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+        user-select: none;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
+    .highlight {
+        position: relative;
+    }
 
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight .copy-btn {
+        transition: opacity .3s ease-in-out;
+        opacity: 0;
+        padding: 2px 6px;
+        position: absolute;
+        right: 4px;
+        top: 8px;
+    }
+
+    .highlight:hover .copy-btn,
+    .highlight .copy-btn:focus {
+        opacity: 1
+    }
+  </style>
+  <script>
+    $('.highlight').prepend($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+      var code = $(e.target).parent().find('.code').find('.line').map(function(i, e){
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'fixed'
+      ta.style.top = 0
+      ta.style.left = 0
+      ta.value = code
+      ta.select()
+      ta.focus()
+      document.execCommand('copy')
+      document.body.removeChild(ta)
+    }))
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-  <script type="text/javascript">
-  wpac_init = window.wpac_init || [];
-  wpac_init.push({widget: 'Rating', id: ,
-    el: 'wpac-rating',
-    color: 'fc6423'
-  });
-  (function() {
-    if ('WIDGETPACK_LOADED' in window) return;
-    WIDGETPACK_LOADED = true;
-    var mc = document.createElement('script');
-    mc.type = 'text/javascript';
-    mc.async = true;
-    mc.src = '//embed.widgetpack.com/widget.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
-  })();
-  </script>
-
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
-
-
-  
 
 </body>
 </html>

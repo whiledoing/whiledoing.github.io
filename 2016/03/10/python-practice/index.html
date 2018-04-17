@@ -5,21 +5,17 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
 
 
 
@@ -49,10 +45,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -61,48 +53,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.1.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.1.0">
 
 
-  <link rel="mask-icon" href="/favicon.png?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="python,自写," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.1.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="本文档记录了写python代码时候的一些技巧，实践，心得等等。
-组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="python misc">
-<meta property="og:url" content="http://whiledoing.me/2016/03/10/python-practice/index.html">
-<meta property="og:site_name" content="whiledoing">
-<meta property="og:description" content="本文档记录了写python代码时候的一些技巧，实践，心得等等。
-组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
-<meta property="og:updated_time" content="2017-11-30T07:22:14.479Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python misc">
-<meta name="twitter:description" content="本文档记录了写python代码时候的一些技巧，实践，心得等等。
-组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
 
 
 
@@ -111,15 +80,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
+    version: '6.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -131,12 +98,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="本文档记录了写python代码时候的一些技巧，实践，心得等等。 组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
+<meta name="keywords" content="python,自写">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python misc">
+<meta property="og:url" content="http://whiledoing.me/2016/03/10/python-practice/index.html">
+<meta property="og:site_name" content="whiledoing">
+<meta property="og:description" content="本文档记录了写python代码时候的一些技巧，实践，心得等等。 组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-30T07:22:14.479Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python misc">
+<meta name="twitter:description" content="本文档记录了写python代码时候的一些技巧，实践，心得等等。 组织的没有什么逻辑性，更多的就是看到好的整理记录的新式。">
+
+
+
+
+
 
   <link rel="canonical" href="http://whiledoing.me/2016/03/10/python-practice/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>python misc | whiledoing</title>
   
@@ -144,13 +137,50 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117714040-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117714040-1');
+</script>
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -166,7 +196,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">whiledoing</span>
         <span class="logo-line-after"><i></i></span>
@@ -178,7 +208,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -186,92 +216,67 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -282,6 +287,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -306,37 +313,46 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python misc</h1>
+          <h1 class="post-title" itemprop="name headline">python misc
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-10T22:41:31+08:00">
-                2016-03-10
-              </time>
+                
+              
+
+              <time title="创建于：2016-03-10 22:41:31" itemprop="dateCreated datePublished" datetime="2016-03-10T22:41:31+08:00">2016-03-10</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:22:14" itemprop="dateModified" datetime="2017-11-30T15:22:14+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:22:14+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -351,27 +367,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  6,807
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -394,22 +389,22 @@
 <a id="more"></a>
 <h3 id="&#x4F7F;&#x7528;forelse">&#x4F7F;&#x7528;for&#x2026;else&#x2026;</h3>
 <p>python&#x7684;for&#x2026;else&#x2026;&#x7ED3;&#x6784;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x8868;&#x793A;for&#x5982;&#x679C;&#x4E0D;&#x662F;break&#x7ED3;&#x675F;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5BF9;&#x4E8E;&#x90A3;&#x79CD;<strong>for&#x67E5;&#x627E;break&#x7684;&#x65B9;&#x5F0F;</strong>&#x5F88;pythonic</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">5</span>):</div><div class="line">    <span class="keyword">if</span> find(x):</div><div class="line">        <span class="keyword">print</span> <span class="string">&apos;find&apos;</span></div><div class="line">        <span class="keyword">break</span></div><div class="line"><span class="keyword">else</span>:</div><div class="line">    <span class="keyword">print</span> <span class="string">&apos;not find&apos;</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">5</span>):</span><br><span class="line">    <span class="keyword">if</span> find(x):</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;find&apos;</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">&apos;not find&apos;</span></span><br></pre></td></tr></table></figure>
 <h3 id="python&#x7684;&#x591A;&#x91CD;&#x7EE7;&#x627F;">python&#x7684;&#x591A;&#x91CD;&#x7EE7;&#x627F;</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">&apos;A&apos;</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></div><div class="line">        super(B, self).f()</div><div class="line">        <span class="keyword">print</span> <span class="string">&apos;B&apos;</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></div><div class="line">        super(C, self).f()</div><div class="line">        <span class="keyword">print</span> <span class="string">&apos;C&apos;</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></div><div class="line">        super(D, self).f()</div><div class="line">        <span class="keyword">print</span> <span class="string">&apos;D&apos;</span></div><div class="line"></div><div class="line"><span class="comment"># A C B D</span></div><div class="line">D().f()</div><div class="line"></div><div class="line"><span class="comment"># A B</span></div><div class="line">B().f()</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;A&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(B, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;B&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(C, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;C&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(D, self).f()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;D&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># A C B D</span></span><br><span class="line">D().f()</span><br><span class="line"></span><br><span class="line"><span class="comment"># A B</span></span><br><span class="line">B().f()</span><br></pre></td></tr></table></figure>
 <p>&#x5982;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x591A;&#x7EE7;&#x627F;&#x7684;&#x8BDD;&#xFF0C;&#x7ED3;&#x6784;&#x5173;&#x7CFB;&#x8C8C;&#x4F3C;&#x5C31;&#x53D8;&#x4E3A;&#x4E86;<code>(D-&gt;B-&gt;C-&gt;A)</code>&#x7684;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x3002;&#x3002;&#x3002;</p>
 <p>&#x6CA1;&#x6709;&#x4ED4;&#x7EC6;&#x7814;&#x7A76;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x5B50;&#x5176;&#x5B9E;&#x6709;&#x597D;&#x5904;&#xFF0C;&#x5C31;&#x662F;B&#xFF0C;&#x548C;C&#x7684;&#x903B;&#x8F91;&#x5BF9;&#x4E8E;A&#x800C;&#x8A00;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x7EC4;&#x5408;&#x4F7F;&#x7528;B&#x548C;C&#x7684;&#x5173;&#x7CFB;&#x7684;&#x8BDD;&#xFF0C;&#x76F8;&#x540C;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>super</code>&#x8C03;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x4E32;&#x8054;&#x8D77;&#x6765;&#x3002;</p>
 <h3 id="python&#x597D;&#x7684;&#x8D44;&#x6599;&#x6536;&#x96C6;">python&#x597D;&#x7684;&#x8D44;&#x6599;&#x6536;&#x96C6;</h3>
-<p>&#x5199;&#x4E86;<code>requests</code>&#x5E93;&#x7684;&#x5927;&#x795E;&#x7684;<a href="https://github.com/kennethreitz" target="_blank" rel="external">github</a>&#x975E;&#x5E38;&#x503C;&#x5F97;&#x63A8;&#x8350;&#x53BB;&#x770B;&#x770B;&#x3002;&#x5927;&#x795E;&#x8FD8;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;python&#x6700;&#x4F73;&#x65F6;&#x95F4;&#x7684;<a href="http://docs.python-guide.org/en/latest/" target="_blank" rel="external">&#x4E66;&#x7C4D;</a>&#xFF0C;mark&#x4E0B;&#x3002;</p>
+<p>&#x5199;&#x4E86;<code>requests</code>&#x5E93;&#x7684;&#x5927;&#x795E;&#x7684;<a href="https://github.com/kennethreitz" target="_blank" rel="noopener">github</a>&#x975E;&#x5E38;&#x503C;&#x5F97;&#x63A8;&#x8350;&#x53BB;&#x770B;&#x770B;&#x3002;&#x5927;&#x795E;&#x8FD8;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;python&#x6700;&#x4F73;&#x65F6;&#x95F4;&#x7684;<a href="http://docs.python-guide.org/en/latest/" target="_blank" rel="noopener">&#x4E66;&#x7C4D;</a>&#xFF0C;mark&#x4E0B;&#x3002;</p>
 <h3 id="for&#x5FAA;&#x73AF;&#x4E2D;&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;lambda">for&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;lambda</h3>
 <p>&#x8BB0;&#x5F55;&#x4E00;&#x4E2A;&#x5F88;&#x9690;&#x85CF;&#x7684;bug&#xFF0C;&#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#x4F7F;&#x7528;lambda&#x9700;&#x8981;&#x5C0F;&#x5FC3;&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line">cur_week_str = get_current_week_str()</div><div class="line"><span class="keyword">for</span> dst, dst_info <span class="keyword">in</span> self._flower_cache.iteritems():</div><div class="line">    <span class="comment"># &#x5728;lambda&#x4E2D;&#x4E3A;&#x4E86;&#x533A;&#x522B;&#x4E0D;&#x540C;&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x5C06;dst&#x653E;&#x5165;&#x5230;lambda&#x53C2;&#x6570;&#x4E2D;</span></div><div class="line">    find_and_modify_in_mongodb(</div><div class="line">        collection_name = <span class="string">&apos;box&apos;</span>,</div><div class="line">        query = { <span class="string">&apos;_id&apos;</span> : str2id(dst) },</div><div class="line">        update = { <span class="string">&apos;$inc&apos;</span> : inc_value },</div><div class="line">        fields = <span class="keyword">None</span>,</div><div class="line">        upsert = <span class="keyword">True</span>,</div><div class="line">        new = <span class="keyword">True</span>,</div><div class="line">        callback = <span class="keyword">lambda</span> st, data : self._on_syn_cache_to_service_into_db_back(st, data, cur_week_str, dst)</div><div class="line">    )</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cur_week_str = get_current_week_str()</span><br><span class="line"><span class="keyword">for</span> dst, dst_info <span class="keyword">in</span> self._flower_cache.iteritems():</span><br><span class="line">    <span class="comment"># &#x5728;lambda&#x4E2D;&#x4E3A;&#x4E86;&#x533A;&#x522B;&#x4E0D;&#x540C;&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x5C06;dst&#x653E;&#x5165;&#x5230;lambda&#x53C2;&#x6570;&#x4E2D;</span></span><br><span class="line">    find_and_modify_in_mongodb(</span><br><span class="line">        collection_name = <span class="string">&apos;box&apos;</span>,</span><br><span class="line">        query = { <span class="string">&apos;_id&apos;</span> : str2id(dst) },</span><br><span class="line">        update = { <span class="string">&apos;$inc&apos;</span> : inc_value },</span><br><span class="line">        fields = <span class="keyword">None</span>,</span><br><span class="line">        upsert = <span class="keyword">True</span>,</span><br><span class="line">        new = <span class="keyword">True</span>,</span><br><span class="line">        callback = <span class="keyword">lambda</span> st, data : self._on_syn_cache_to_service_into_db_back(st, data, cur_week_str, dst)</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
 <p>&#x7ED3;&#x679C;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x6240;&#x6709;&#x8FD4;&#x56DE;&#x7684;lambda&#x7684;callback&#x4E2D;dst&#x53C2;&#x6570;&#x90FD;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;lambda&#x5176;&#x5B9E;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;lambda&#x662F;&#x6709;&#x95ED;&#x5305;&#x7684;&#xFF0C;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x5C31;&#x5C06;&#x51FD;&#x6570;lambda&#x4E2D;&#x7684;&#x95ED;&#x5305;&#x4E2D;&#x53C2;&#x6570;&#x66F4;&#x65B0;&#xFF08;&#x7406;&#x89E3;&#x4E3A;&#x6709;&#x72B6;&#x6001;&#x7684;&#x6210;&#x5458;&#x5BF9;&#x8C61;&#x88AB;&#x4FEE;&#x6539;&#xFF09;&#x3002;&#x6240;&#x4EE5;&#x5F53;&#x5F02;&#x6B65;callback&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD8;&#x662F;&#x76F8;&#x540C;&#x7684;lambda&#xFF0C;&#x4F46;&#x662F;&#x6700;&#x540E;&#x7684;dst&#x53C2;&#x6570;&#x5168;&#x90E8;&#x90FD;&#x76F8;&#x540C;&#x4E86;&#x3002;&#xFF08;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x672C;&#x8D28;&#x539F;&#x56E0;&#x662F;&#x56E0;&#x4E3A;&#x5F02;&#x6B65;&#xFF0C;&#x5982;&#x679C;&#x540C;&#x6B65;&#xFF0C;&#x90A3;&#x4E48;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x90FD;&#x662F;&#x6700;&#x6B63;&#x786E;&#x7684;&#x53C2;&#x6570;&#xFF09;</p>
 <p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x91CC;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x67E5;&#x8BE2;&#x7684;_id&#x4E2D;&#x7528;&#x5230;&#x4E86;dst&#xFF0C;&#x8FD4;&#x56DE;&#x7684;data&#x53C2;&#x6570;&#x4E00;&#x5B9A;&#x662F;&#x4E0D;&#x540C;&#x7684;&#xFF0C;&#x6839;&#x636E;&#x8FD4;&#x56DE;&#x7684;data&#x53C2;&#x6570;&#x83B7;&#x53D6;dst&#x5373;&#x53EF;&#xFF0C;&#x5982;&#x679C;&#x5B9E;&#x5728;&#x4E0D;&#x884C; &#xFF0C;&#x5C31;&#x60F3;&#x529E;&#x6CD5;&#x5728;&#x4E00;&#x4E2A;&#x66F4;&#x52A0;&#x5168;&#x5C40;&#x7684;&#x4F4D;&#x7F6E;&#x4FDD;&#x5B58;&#x5373;&#x53EF;&#x3002;</p>
 <p>&#x6240;&#x4EE5;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x9700;&#x8981;&#x7559;&#x610F;&#x7684;&#x5C31;&#x662F;lambda&#x7684;&#x975E;&#x4FEE;&#x6539;&#x53C2;&#x6570;&#x662F;&#x4FDD;&#x5B58;&#x72B6;&#x6001;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#xFF08;&#x4E2A;&#x4EBA;&#x731C;&#x60F3;&#xFF09;lambda&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#x90FD;&#x521B;&#x5EFA;&#xFF0C;&#x4E00;&#x65E6;&#x5B9A;&#x4E49;&#x597D;&#x4E86;&#x683C;&#x5F0F;&#xFF0C;&#x5C31;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF01;&#xFF01;&#xFF01;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#x6301;&#x7EED;&#x6539;&#x53D8;&#xFF01;&#xFF01;&#xFF01;</p>
 <h3 id="python&#x7684;&#x8F93;&#x51FA;">python&#x7684;&#x8F93;&#x51FA;</h3>
 <p>&#x4EE5;&#x524D;&#x4F7F;&#x7528;&#x7684;&#x8F93;&#x51FA;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528;<code>%</code>&#x7B26;&#x5408;&#x8FDB;&#x884C;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x8F93;&#x51FA;&#x3002;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#xFF08;&#x4E5F;&#x662F;PEP3101&#xFF09;&#x5B9A;&#x4E49;&#x7684;&#x4F7F;&#x7528;format&#x7684;&#x683C;&#x5F0F;&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line">foo = <span class="string">&apos;foo&apos;</span></div><div class="line">bar = <span class="string">&apos;bar&apos;</span></div><div class="line">foobar = <span class="string">&apos;%s%s&apos;</span> % (foo, bar) <span class="comment"># It is OK</span></div><div class="line">foobar = <span class="string">&apos;{0}{1}&apos;</span>.format(foo, bar) <span class="comment"># It is better</span></div><div class="line">foobar = <span class="string">&apos;{foo}{bar}&apos;</span>.format(foo=foo, bar=bar) <span class="comment"># It is best</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">foo = <span class="string">&apos;foo&apos;</span></span><br><span class="line">bar = <span class="string">&apos;bar&apos;</span></span><br><span class="line">foobar = <span class="string">&apos;%s%s&apos;</span> % (foo, bar) <span class="comment"># It is OK</span></span><br><span class="line">foobar = <span class="string">&apos;{0}{1}&apos;</span>.format(foo, bar) <span class="comment"># It is better</span></span><br><span class="line">foobar = <span class="string">&apos;{foo}{bar}&apos;</span>.format(foo=foo, bar=bar) <span class="comment"># It is best</span></span><br></pre></td></tr></table></figure>
 <p>&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7684;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x5B9A;&#x4F4D;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x8C03;&#x6574;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#x4E5F;&#x4E0D;&#x4F1A;&#x6709;&#x95EE;&#x9898;&#x3002;</p>
 <h3 id="python-with">python with</h3>
 <p>python&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;&#x8BED;&#x6CD5;&#x7279;&#x6027;&#xFF0C;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x5C06;&#x4E0A;&#x4E0B;&#x6587;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x5728;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x6B63;&#x786E;&#x6790;&#x6784;&#x3002;</p>
@@ -420,17 +415,17 @@
 </li>
 <li>
 <p>&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x7C7B;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x91CD;&#x8F7D;<code>__enter__</code>&#x548C;<code>__exit__</code>&#x65B9;&#x6CD5;&#x3002;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Context</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></div><div class="line">        self.file = open(name)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.file</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span><span class="params">(self, ctx_type, ctx_value, ctx_traceback)</span>:</span></div><div class="line">        self.file.close()</div><div class="line"></div><div class="line"><span class="keyword">with</span> Context(<span class="string">&apos;xxx&apos;</span>) <span class="keyword">as</span> f:</div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Context</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.file = open(name)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.file</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span><span class="params">(self, ctx_type, ctx_value, ctx_traceback)</span>:</span></span><br><span class="line">        self.file.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> Context(<span class="string">&apos;xxx&apos;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
 <p>&#x8C03;&#x7528;with&#x4E4B;&#x540E;&#x5176;&#x5B9E;&#x662F;<strong>&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</strong>&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x6784;&#x9020;&#x4E4B;&#x540E;&#x901A;&#x8FC7;<code>__enter__</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7ED9;&#x540E;&#x9762;&#x7684;as&#x8BED;&#x53E5;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x8BBA;&#x662F;&#x5426;&#x51FA;&#x73B0;trace&#xFF0C;&#x90FD;&#x4F1A;&#x518D;&#x6700;&#x540E;&#x8C03;&#x7528;<code>__exit__</code></p>
 </li>
 <li>
 <p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x901A;&#x8FC7;<code>yield</code>&#x65B9;&#x6CD5;&#x6765;<strong>&#x5207;&#x6362;&#x6267;&#x884C;&#x6D41;&#x7A0B;</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> contextlib</div><div class="line"></div><div class="line"><span class="meta">@contextlib.contextmanager</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">custom_open</span><span class="params">(filename)</span>:</span></div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        f = open(filename):</div><div class="line">        <span class="keyword">yield</span> f</div><div class="line">    <span class="keyword">finally</span>:</div><div class="line">        f.close()</div><div class="line"></div><div class="line"><span class="keyword">with</span> custom_open(<span class="string">&apos;file&apos;</span>) <span class="keyword">as</span> f:</div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> contextlib</span><br><span class="line"></span><br><span class="line"><span class="meta">@contextlib.contextmanager</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">custom_open</span><span class="params">(filename)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        f = open(filename):</span><br><span class="line">        <span class="keyword">yield</span> f</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> custom_open(<span class="string">&apos;file&apos;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
 <p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x901A;&#x8FC7;<code>contextmanager</code>&#x5C06;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x51FD;&#x6570;&#x53D8;&#x4E3A;&#x4E86;&#x4E00;&#x4E2A;&#x7BA1;&#x7406;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6267;&#x884C;&#x5230;yield&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5C06;&#x53D8;&#x91CF;&#x8FD4;&#x56DE;&#xFF0C;&#x7136;&#x540E;&#x5207;&#x56DE;&#x6267;&#x884C;&#x73AF;&#x5883;&#x5230;with&#x91CC;&#x9762;&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x6700;&#x540E;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x90FD;&#x6267;&#x884C;finally&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
 </li>
 <li>
 <p>&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x7B80;&#x5355;&#x65B9;&#x5F0F;&#xFF0C;&#x5C31;&#x662F;<code>context.closing</code>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x6709;<code>close</code>&#x63A5;&#x53E3;&#x7684;API&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x7BA1;&#x7406;.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> contextlib</div><div class="line"><span class="keyword">import</span> urllib</div><div class="line"></div><div class="line"><span class="keyword">with</span> contextlib.closing(urllib.urlopen(<span class="string">&apos;http://xxx.org&apos;</span>)) <span class="keyword">as</span> page:</div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> contextlib</span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> contextlib.closing(urllib.urlopen(<span class="string">&apos;http://xxx.org&apos;</span>)) <span class="keyword">as</span> page:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
 <p>&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;&#x4E0A;&#x9762;&#xFF0C;&#x5BF9;&#x6784;&#x9020;&#x961F;&#x5F62;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x7136;&#x540E;<code>__exit__</code>&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;close&#x65B9;&#x6CD5;&#x3002;</p>
 </li>
 </ol>
@@ -442,27 +437,27 @@
 </ol>
 <p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;</p>
 <ol>
-<li><a href="https://pymotw.com/2/contextlib/index.html" target="_blank" rel="external">pymotw contextlib</a></li>
-<li><a href="http://docs.python-guide.org/en/latest/writing/structure/" target="_blank" rel="external">the hitchhikeder&#x2019;s guide to python</a></li>
+<li><a href="https://pymotw.com/2/contextlib/index.html" target="_blank" rel="noopener">pymotw contextlib</a></li>
+<li><a href="http://docs.python-guide.org/en/latest/writing/structure/" target="_blank" rel="noopener">the hitchhikeder&#x2019;s guide to python</a></li>
 </ol>
 <h3 id="python-gotcha-python&#x4E00;&#x4E9B;&#x8BE1;&#x5F02;&#x7684;&#x5751;">python gotcha (python&#x4E00;&#x4E9B;&#x8BE1;&#x5F02;&#x7684;&#x5751;&#xFF09;</h3>
 <h4 id="python&#x7684;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x53C2;&#x6570;">python&#x7684;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x53C2;&#x6570;</h4>
 <p>&#x6CE8;&#x610F;python&#x7684;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x53C2;&#x6570;&#x662F;&#x5728;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x6784;&#x9020;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x90FD;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x5BF9;&#x8C61;&#xFF08;&#x8FD9;&#x4E2A;&#x548C;ruby&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x8003;&#x8651;&#x5230;&#x6548;&#x7387;&#x7684;&#x95EE;&#x9898;&#xFF09;</p>
 <p>&#x6240;&#x4EE5;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x4E0D;&#x8981;&#x5728;python&#x7684;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x4E2D;&#x5B9A;&#x4E49;&#x53EF;&#x53D8;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x5C06;&#x975E;&#x5E38;&#x7684;&#x5371;&#x9669;&#x3002;</p>
 <h4 id="python&#x51FD;&#x6570;&#x7684;lazy-binding-closures">python&#x51FD;&#x6570;&#x7684;lazy binding closures</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">return</span> [<span class="keyword">lambda</span> x : i * x <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>)]</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> m <span class="keyword">in</span> create_multipliers():</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>    <span class="keyword">print</span> m(<span class="number">2</span>)</div><div class="line">&gt;&gt;&gt;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">8</span> <span class="number">8</span> <span class="number">8</span> <span class="number">8</span> <span class="number">8</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> [<span class="keyword">lambda</span> x : i * x <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>)]</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> m <span class="keyword">in</span> create_multipliers():</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>    <span class="keyword">print</span> m(<span class="number">2</span>)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">8</span> <span class="number">8</span> <span class="number">8</span> <span class="number">8</span> <span class="number">8</span></span><br></pre></td></tr></table></figure>
 <p>&#x4E0A;&#x9762;&#x7684;&#x8F93;&#x51FA;&#x5C45;&#x7136;&#x6240;&#x6709;&#x7684;i&#x90FD;&#x662F;4&#xFF0C;&#x8FD9;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
 <p>&#x8FD9;&#x662F;&#x56E0;&#x4E3A;python&#x7684;&#x51FD;&#x6570;&#x95ED;&#x5305;&#x662F;&#x5EF6;&#x8FDF;&#x7ED1;&#x5B9A;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#xFF0C;&#x53EA;&#x662F;&#x5B9A;&#x4E49;&#x4E86;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x9645;&#x6267;&#x884C;&#x4F53;&#xFF0C;&#x800C;&#x6CA1;&#x6709;&#x5C06;&#x5BF9;&#x5E94;&#x95ED;&#x5305;&#x7684;&#x53C2;&#x6570;&#x7ED1;&#x5B9A;&#x5230;&#x95ED;&#x5305;&#x4E2D;&#xFF08;&#x731C;&#x60F3;&#x4E5F;&#x662F;&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x6548;&#x7387;&#xFF0C;&#x56E0;&#x4E3A;&#x5F88;&#x591A;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x88AB;&#x6267;&#x884C;&#xFF09;&#x800C;&#x662F;&#x5728;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x624D;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;i&#x7ED1;&#x5B9A;&#x90FD;&#x662F;4.</p>
 <p>&#x800C;&#x4E14;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5E76;&#x4E0D;&#x53EA;&#x662F;lambda&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x662F;&#x6240;&#x6709;&#x7684;&#x51FD;&#x6570;&#x90FD;&#x8FD9;&#x6837;&#x5B50;&#xFF0C;&#x5373;&#x4F7F;&#x4F7F;&#x7528;def&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x4E0B;&#xFF08;&#x4E5F;&#x4E00;&#x6837;&#x6709;&#x95EE;&#x9898;&#xFF09;&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</div><div class="line">        <span class="function"><span class="keyword">def</span> <span class="title">multiplier</span><span class="params">(x)</span>:</span></div><div class="line">            <span class="keyword">return</span> i * x</div><div class="line">        multipliers.append(multiplier)</div><div class="line">    <span class="keyword">return</span> multipliers</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">multiplier</span><span class="params">(x)</span>:</span></span><br><span class="line">            <span class="keyword">return</span> i * x</span><br><span class="line">        multipliers.append(multiplier)</span><br><span class="line">    <span class="keyword">return</span> multipliers</span><br></pre></td></tr></table></figure>
 <p>&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;hack&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5C31;&#x662F;&#xFF0C;&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;<strong>&#x6784;&#x9020;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6784;&#x9020;&#x51FA;&#x9ED8;&#x8BA4;&#x6570;&#x636E;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x4FEE;&#x6539;&#x4E3A;&#x4E0B;&#x9762;&#x5C31;ok&#x4E86;&#x3002;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="comment"># &#x56E0;&#x4E3A;i=i&#x4F1A;&#x5C06;&#x9ED8;&#x8BA4;&#x503C;&#x7684;i&#x76F4;&#x63A5;&#x7ED1;&#x5B9A;&#x5230;&#x95ED;&#x5305;&#x4E2D;</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">return</span> [<span class="keyword">lambda</span> x, i=i : i * x <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>)]</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> m <span class="keyword">in</span> create_multipliers():</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>    <span class="keyword">print</span> m(<span class="number">2</span>)</div><div class="line">&gt;&gt;&gt;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">0</span> <span class="number">2</span> <span class="number">4</span> <span class="number">6</span> <span class="number">8</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#x56E0;&#x4E3A;i=i&#x4F1A;&#x5C06;&#x9ED8;&#x8BA4;&#x503C;&#x7684;i&#x76F4;&#x63A5;&#x7ED1;&#x5B9A;&#x5230;&#x95ED;&#x5305;&#x4E2D;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> [<span class="keyword">lambda</span> x, i=i : i * x <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>)]</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> m <span class="keyword">in</span> create_multipliers():</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>    <span class="keyword">print</span> m(<span class="number">2</span>)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">0</span> <span class="number">2</span> <span class="number">4</span> <span class="number">6</span> <span class="number">8</span></span><br></pre></td></tr></table></figure>
 <p>&#x6216;&#x8005;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x7684;partial&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x7ED1;&#x5B9A;&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">from</span> operator <span class="keyword">import</span> mul</div><div class="line">    <span class="keyword">from</span> functools <span class="keyword">import</span> partial</div><div class="line">    <span class="keyword">return</span> [partial(mul, i) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>)]</div></pre></td></tr></table></figure>
-<p>&#x53C2;&#x8003;&#x6587;&#x6863;: <a href="http://docs.python-guide.org/en/latest/writing/gotchas/" target="_blank" rel="external">common gotach from reitz python guide</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_multipliers</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">from</span> operator <span class="keyword">import</span> mul</span><br><span class="line">    <span class="keyword">from</span> functools <span class="keyword">import</span> partial</span><br><span class="line">    <span class="keyword">return</span> [partial(mul, i) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>)]</span><br></pre></td></tr></table></figure>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;: <a href="http://docs.python-guide.org/en/latest/writing/gotchas/" target="_blank" rel="noopener">common gotach from reitz python guide</a></p>
 <h3 id="python&#x4E0D;&#x8F93;&#x51FA;pyc&#x6587;&#x4EF6;">python&#x4E0D;&#x8F93;&#x51FA;pyc&#x6587;&#x4EF6;</h3>
 <p>&#x5982;&#x679C;&#x975E;&#x5E38;&#x8BA8;&#x538C;pyc&#x6587;&#x4EF6;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x65F6;&#x5019;&#x5C31;&#x4E0D;&#x8F93;&#x51FA;pyc&#x4E86;&#xFF0C;nice&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">export</span> PYTHONDONTWRITEBYTECODE=1</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PYTHONDONTWRITEBYTECODE=1</span><br></pre></td></tr></table></figure>
 <h3 id="python-yield">python yield</h3>
 <p>python&#x7684;yield&#x4E5F;&#x7EDD;&#x5BF9;&#x662F;&#x4E00;&#x4E2A;&#x6740;&#x624B;&#x7EA7;&#x522B;&#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x867D;&#x7136;&#x770B;&#x8D77;&#x6765;&#x975E;&#x5E38;&#x7684;&#x4E0D;&#x76F4;&#x89C2;&#x3002;</p>
 <p>&#x6709;&#x51E0;&#x4E2A;&#x6982;&#x5FF5;&#xFF1A;</p>
@@ -471,18 +466,18 @@
 <li>&#x751F;&#x6210;&#x5668;(generator)&#xFF0C;&#x751F;&#x6210;&#x5668;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4FDD;&#x5B58;&#x4E86;&#x4E00;&#x4E9B;&#x5217;&#x5E8F;&#x5217;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x901A;&#x8FC7;<code>__iter__</code>&#x63A5;&#x53E3;&#x5F97;&#x5230;&#x8BBF;&#x95EE;&#x5E8F;&#x5217;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x3002;&#xFF08;&#x6709;&#x65F6;&#x5019;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;generator&#x548C;iterator&#x53EF;&#x4EE5;&#x6DF7;&#x5728;&#x4E00;&#x8D77;&#x6765;&#x8C08;&#xFF0C;&#x56E0;&#x4E3A;generator&#x4E5F;&#x5B9E;&#x73B0;&#x4E86;<code>next</code>&#x8FED;&#x4EE3;&#x8BBF;&#x95EE;&#x7684;&#x63A5;&#x53E3;&#xFF09;</li>
 </ol>
 <p>&#x6240;&#x4EE5;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x751F;&#x6210;&#x5668;&#x6784;&#x9020;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Iterator</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.count = <span class="number">0</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">next</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">if</span> self.count &lt; <span class="number">4</span>:</div><div class="line">            self.count += <span class="number">1</span></div><div class="line">            <span class="keyword">return</span> self.count</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">raise</span> StopIteration</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> i <span class="keyword">in</span> Iterator():</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>    <span class="keyword">print</span> i</div><div class="line">&gt;&gt;&gt;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Iterator</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">next</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.count &lt; <span class="number">4</span>:</span><br><span class="line">            self.count += <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> self.count</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> StopIteration</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> i <span class="keyword">in</span> Iterator():</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>    <span class="keyword">print</span> i</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
 <p>&#x6240;&#x4EE5;for&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x5C31;&#x662F;&#xFF1A;</p>
 <ol>
 <li>&#x901A;&#x8FC7;for&#x540E;&#x9762;&#x7684;&#x751F;&#x6210;&#x5668;&#x7684;<code>__iter__</code>&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#x3002;</li>
 <li>&#x7136;&#x540E;&#x4E0D;&#x505C;&#x8C03;&#x7528;<code>next</code>&#x65B9;&#x5F0F;&#x5F97;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x76F4;&#x5230;&#x9047;&#x5230;<code>StopIteration</code>&#x5F02;&#x5E38;</li>
 </ol>
 <p>&#x5927;&#x4F53;&#x4EE3;&#x7801;&#x7C7B;&#x4F3C;&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">try</span>:</div><div class="line">    iter = Iteration().__iter__()</div><div class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">        i = iter.next()</div><div class="line">        <span class="keyword">print</span> i</div><div class="line"><span class="keyword">except</span> StopIteration:</div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    iter = Iteration().__iter__()</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        i = iter.next()</span><br><span class="line">        <span class="keyword">print</span> i</span><br><span class="line"><span class="keyword">except</span> StopIteration:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
 <hr>
 <p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x8FD8;&#x662F;&#x663E;&#x5F97;&#x975E;&#x5E38;&#x9EBB;&#x70E6;&#xFF0C;&#x6709;&#x6CA1;&#x6709;&#x65B9;&#x4FBF;&#x7684;&#x6784;&#x9020;&#x751F;&#x6210;&#x5668;&#x7684;&#x65B9;&#x5F0F;&#x5462;&#xFF1F;&#x6709;&#xFF0C;&#x5C31;&#x662F;<strong>yield</strong>&#x5173;&#x952E;&#x5B57;&#x3002;</p>
 <p>&#x4E00;&#x4E2A;&#x51FD;&#x6570;(generator funcion)&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x4E86;<strong>yield</strong>&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x662F;&#x4E00;&#x4E2A;<strong>&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;</strong>&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x662F;<strong>&#x751F;&#x6210;&#x5668;</strong>&#xFF0C;&#x4E14;&#x63A5;&#x53E3;&#x517C;&#x5BB9;&#x8FED;&#x4EE3;&#x7684;&#x63A5;&#x53E3;&#x3002; &#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_prime_start_from</span><span class="params">(start_num)</span>:</span></div><div class="line">    num = start_num</div><div class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">        <span class="keyword">if</span> is_prime(num):</div><div class="line">            <span class="keyword">yield</span> num</div><div class="line">        num += <span class="number">1</span></div><div class="line"></div><div class="line">gene = get_prime_start_from(<span class="number">3</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(gene)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&apos;generator&apos;</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>next(gene)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">3</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>gene.next</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">5</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_prime_start_from</span><span class="params">(start_num)</span>:</span></span><br><span class="line">    num = start_num</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        <span class="keyword">if</span> is_prime(num):</span><br><span class="line">            <span class="keyword">yield</span> num</span><br><span class="line">        num += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">gene = get_prime_start_from(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(gene)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&apos;generator&apos;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>next(gene)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>gene.next</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">5</span></span><br></pre></td></tr></table></figure>
 <p>&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;&#x795E;&#x5947;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E;&#xFF0C;&#x53EF;&#x4EE5;&#xFF1A;</p>
 <ol>
 <li>&#x6267;&#x884C;&#x51FD;&#x6570;&#x903B;&#x8F91;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x4ECE;&#x51FD;&#x6570;&#x6267;&#x884C;&#x5904;(yield)&#x8DF3;&#x51FA;&#x5230;caller&#x7684;&#x5730;&#x65B9;&#x3002;&#x5E76;&#x4E14;&#x4FDD;&#x5B58;&#x4E86;++&#x6240;&#x6709;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x5C40;&#x90E8;&#x53D8;&#x91CF;**&#x7B49;&#x4FE1;&#x606F;</li>
@@ -495,20 +490,20 @@
 <li>&#x540C;&#x65F6;&#x4E0A;&#x9762;&#x7684;&#x8BED;&#x53E5;&#x8FD4;&#x56DE;<strong>&#x4E0B;&#x4E00;&#x6B21;yield&#x8FD0;&#x884C;&#x7684;retrun_v</strong></li>
 </ol>
 <p>&#x6240;&#x4EE5;&#x7B2C;&#x4E00;&#x6B21;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x4E0B;&#x5C06;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x5230;<strong>&#x7B2C;&#x4E00;&#x6B21;yield&#x6240;&#x5728;&#x7684;&#x4F4D;&#x7F6E;</strong></p>
-<p><a href="https://jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained" target="_blank" rel="external">&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;</a>&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> random</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_data</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">&quot;&quot;&quot;Return 3 random integers between 0 and 9&quot;&quot;&quot;</span></div><div class="line">    <span class="keyword">return</span> random.sample(range(<span class="number">10</span>), <span class="number">3</span>)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">consume</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">&quot;&quot;&quot;Displays a running average across lists of integers sent to it&quot;&quot;&quot;</span></div><div class="line">    running_sum = <span class="number">0</span></div><div class="line">    data_items_seen = <span class="number">0</span></div><div class="line"></div><div class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">        data = <span class="keyword">yield</span></div><div class="line">        data_items_seen += len(data)</div><div class="line">        running_sum += sum(data)</div><div class="line">        print(<span class="string">&apos;The running average is {}&apos;</span>.format(running_sum / float(data_items_seen)))</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">produce</span><span class="params">(consumer)</span>:</span></div><div class="line">    <span class="string">&quot;&quot;&quot;Produces a set of values and forwards them to the pre-defined consumer</span></div><div class="line">    function&quot;&quot;&quot;</div><div class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">        data = get_data()</div><div class="line">        print(<span class="string">&apos;Produced {}&apos;</span>.format(data))</div><div class="line">        consumer.send(data)</div><div class="line">        <span class="keyword">yield</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">&apos;__main__&apos;</span>:</div><div class="line">    consumer = consume()</div><div class="line">    consumer.send(<span class="keyword">None</span>)</div><div class="line">    producer = produce(consumer)</div><div class="line"></div><div class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">        print(<span class="string">&apos;Producing...&apos;</span>)</div><div class="line">        next(producer)</div></pre></td></tr></table></figure>
+<p><a href="https://jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained" target="_blank" rel="noopener">&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;</a>&#xFF1A;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_data</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Return 3 random integers between 0 and 9&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> random.sample(range(<span class="number">10</span>), <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">consume</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Displays a running average across lists of integers sent to it&quot;&quot;&quot;</span></span><br><span class="line">    running_sum = <span class="number">0</span></span><br><span class="line">    data_items_seen = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        data = <span class="keyword">yield</span></span><br><span class="line">        data_items_seen += len(data)</span><br><span class="line">        running_sum += sum(data)</span><br><span class="line">        print(<span class="string">&apos;The running average is {}&apos;</span>.format(running_sum / float(data_items_seen)))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">produce</span><span class="params">(consumer)</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Produces a set of values and forwards them to the pre-defined consumer</span></span><br><span class="line"><span class="string">    function&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        data = get_data()</span><br><span class="line">        print(<span class="string">&apos;Produced {}&apos;</span>.format(data))</span><br><span class="line">        consumer.send(data)</span><br><span class="line">        <span class="keyword">yield</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&apos;__main__&apos;</span>:</span><br><span class="line">    consumer = consume()</span><br><span class="line">    consumer.send(<span class="keyword">None</span>)</span><br><span class="line">    producer = produce(consumer)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">        print(<span class="string">&apos;Producing...&apos;</span>)</span><br><span class="line">        next(producer)</span><br></pre></td></tr></table></figure>
 <p>&#x6240;&#x4EE5;&#x6982;&#x5FF5;&#x4E0A;&#x8FD9;&#x4E2A;&#x8BED;&#x6CD5;&#x5C31;&#x662F;&#x63D0;&#x4F9B;&#x4E86;<strong>&#x4FEE;&#x6539;&#x751F;&#x6210;&#x5668;&#x5185;&#x90E8;&#x6570;&#x636E;&#x7684;&#x5916;&#x90E8;(caller)&#x4FEE;&#x6539;&#x65B9;&#x5F0F;</strong>&#x3002;</p>
 <p>&#x6BD4;&#x5982;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5176;&#x5B9E;consume&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x505C;&#x6D88;&#x5316;&#x6570;&#x636E;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x4E00;&#x6B21;next&#x8FD0;&#x884C;&#x5C31;&#x6D88;&#x5316;&#x4E00;&#x6279;&#x6570;&#x636E;&#xFF08;&#x4E0D;&#x4E00;&#x5B9A;yield&#x5C31;&#x9700;&#x8981;&#x53D1;&#x6325;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x8FD9;&#x6837;&#x5B50;&#x66F4;&#x591A;&#x662F;&#x7528;&#x6765;&#x63A7;&#x5236;&#x6D41;&#x7A0B;&#x7684;&#x6982;&#x5FF5;&#xFF09;&#xFF0C;&#x901A;&#x8FC7;send&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7ED9;&#x5176;&#x5582;&#x6570;&#x636E;&#x3002;&#x540C;&#x7406;&#xFF0C;&#x5BF9;&#x4E8E;produce&#x800C;&#x8A00;&#xFF0C;&#x901A;&#x8FC7;yield&#x6765;&#x5B9E;&#x73B0;<strong>&#x4E00;&#x6B21;&#x6B21;&#x751F;&#x6210;&#x6570;&#x636E;&#xFF0C;&#x53D1;&#x9001;&#x6570;&#x636E;&#x7684;&#x529F;&#x80FD;</strong></p>
 <p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x8C03;&#x7528;<code>send(None)</code>, &#x5426;&#x5219;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x7B49;&#x5F85;&#x7ED3;&#x679C;&#x7684;<code>yield</code>&#xFF0C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x62A5;&#x9519;&#x3002;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x8C03;&#x7528;<code>send(xxx)</code>&#x5C06;&#x4E0A;&#x4E00;&#x6B21;&#x7684;<code>yield</code>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x3002;</p>
 <p>&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;<code>next</code>&#xFF0C;&#x8C03;&#x7528;next&#x7B49;&#x4EF7;&#x4E8E;<code>next = send(None)</code>&#x5C31;&#x662F;&#x8BF4;<code>next</code>&#x4F1A;&#x5F97;&#x5230;yield&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4F46;&#x540C;&#x65F6;&#x4F1A;&#x544A;&#x8BC9;&#x8FD4;&#x56DE;&#x503C;&#x662F;None&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x8DEF;&#x8C03;&#x7528;<code>next</code>&#x662F;&#x80AF;&#x5B9A;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7684;&#xFF08;&#x7B2C;&#x4E00;&#x6B21;&#x5C31;&#x662F;&#x9700;&#x8981;None&#xFF09;</p>
 <hr>
 <p>&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5C06;&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;&#x6269;&#x5C55;&#x7406;&#x89E3;&#x4E3A;<mark>&#x4FDD;&#x5B58;&#x4E86;&#x6240;&#x6709;&#x72B6;&#x6001;&#x7684;&#x5B9E;&#x4F8B;: &#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x6BCF;&#x6B21;&#x901A;&#x8FC7;next&#x5207;&#x6362;&#x5230;&#x539F;&#x73AF;&#x5883;&#x4E2D;&#x8FD0;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#x7ED3;&#x675F;&#x540E;&#x4FDD;&#x5B58;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x7B49;&#x5F85;&#x4E0B;&#x4E00;&#x6B21;&#x8FD0;&#x884C;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x548C;caller&#x4EA4;&#x4E92;&#x6570;&#x636E;&#x3002;</mark></p>
-<p>&#x6269;&#x5C55;&#x6765;&#x770B;&#xFF0C;&#x751F;&#x6210;&#x5668;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x5C31;&#x662F;&#x5B8C;&#x5168;&#x7528;&#x6765;&#x751F;&#x6210;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x63A7;&#x5236;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x7684;&#x903B;&#x8F91;&#x3002;&#x6BD4;&#x5982;<a href="http://www.tornadoweb.org/en/stable/guide/coroutines.html" target="_blank" rel="external">tornaod coroutine</a>&#xFF0C; &#x5176;&#x6982;&#x5FF5;&#x5C31;&#x662F;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x7684;&#x4EE3;&#x7801;&#x50CF;&#x5199;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x6269;&#x5C55;&#x6765;&#x770B;&#xFF0C;&#x751F;&#x6210;&#x5668;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x5C31;&#x662F;&#x5B8C;&#x5168;&#x7528;&#x6765;&#x751F;&#x6210;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x63A7;&#x5236;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x7684;&#x903B;&#x8F91;&#x3002;&#x6BD4;&#x5982;<a href="http://www.tornadoweb.org/en/stable/guide/coroutines.html" target="_blank" rel="noopener">tornaod coroutine</a>&#xFF0C; &#x5176;&#x6982;&#x5FF5;&#x5C31;&#x662F;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x7684;&#x4EE3;&#x7801;&#x50CF;&#x5199;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
 <p>&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x6267;&#x884C;&#x903B;&#x8F91;&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">from</span> tornado <span class="keyword">import</span> gen</div><div class="line"></div><div class="line"><span class="meta">@gen.coroutine</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fetch_coroutine</span><span class="params">(url)</span>:</span></div><div class="line">    http_client = AsyncHTTPClient()</div><div class="line">    response = <span class="keyword">yield</span> http_client.fetch(url)</div><div class="line"></div><div class="line">    <span class="comment"># In Python versions prior to 3.3, returning a value from # a generator is not allowed and you must use raise gen.Return(response.body) instead.</span></div><div class="line">    <span class="keyword">return</span> response.body</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> tornado <span class="keyword">import</span> gen</span><br><span class="line"></span><br><span class="line"><span class="meta">@gen.coroutine</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fetch_coroutine</span><span class="params">(url)</span>:</span></span><br><span class="line">    http_client = AsyncHTTPClient()</span><br><span class="line">    response = <span class="keyword">yield</span> http_client.fetch(url)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># In Python versions prior to 3.3, returning a value from # a generator is not allowed and you must use raise gen.Return(response.body) instead.</span></span><br><span class="line">    <span class="keyword">return</span> response.body</span><br></pre></td></tr></table></figure>
 <p><code>fetch</code>&#x4EE3;&#x7801;&#x662F;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x8C03;&#x7528;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<code>Future</code>&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;&#x88AB;tornado&#x7684;ioLoop&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x4E00;&#x65E6;&#x5B8C;&#x6210;&#x8C03;&#x7528;&#xFF0C;&#x901A;&#x8FC7;callback&#x7684;&#x65B9;&#x5F0F;&#x901A;&#x77E5;&#x5B8C;&#x6210;&#x4F53;&#x3002;</p>
 <p>&#x4F7F;&#x7528;coroutine&#x7684;&#x65B9;&#x5F0F;&#x5C06;future&#x548C;callback&#x7684;&#x65B9;&#x5F0F;&#x5199;&#x6210;&#x4E86;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5927;&#x81F4;&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#x4E3A;&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Simplified inner loop of tornado.gen.Runner</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></div><div class="line">    <span class="comment"># send(x) makes the current yield return x. It returns when the next yield is reached</span></div><div class="line">    future = self.gen.send(self.next)</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">callback</span><span class="params">(f)</span>:</span></div><div class="line">        self.next = f.result()</div><div class="line">        self.run()</div><div class="line">    future.add_done_callback(callback)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Simplified inner loop of tornado.gen.Runner</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="comment"># send(x) makes the current yield return x. It returns when the next yield is reached</span></span><br><span class="line">    future = self.gen.send(self.next)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">callback</span><span class="params">(f)</span>:</span></span><br><span class="line">        self.next = f.result()</span><br><span class="line">        self.run()</span><br><span class="line">    future.add_done_callback(callback)</span><br></pre></td></tr></table></figure>
 <p>&#x6D41;&#x7A0B;&#x5927;&#x81F4;&#x662F;&#xFF1A;</p>
 <ol>
 <li>&#x8FD0;&#x884C;gen&#xFF0C;&#x5F97;&#x5230;yield&#x7ED3;&#x679C;&#xFF0C;&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x52A0;&#x5165;callback&#x3002;</li>
@@ -519,10 +514,10 @@
 <hr>
 <p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;</p>
 <ol>
-<li><a href="http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python" target="_blank" rel="external">stackoverflow - yield in python</a></li>
-<li><a href="https://jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/" target="_blank" rel="external">great blog - improve your python yield and generators explained</a></li>
-<li><a href="http://yuedu.163.com/source/cl_dc23b96c2df84533957ffb1089e90604_4" target="_blank" rel="external">&#x7F51;&#x6613;&#x4E91;&#x9605;&#x8BFB; - writing idiomatic python</a></li>
-<li><a href="http://www.tornadoweb.org/en/stable/guide/coroutines.html" target="_blank" rel="external">tornado - coroutines</a></li>
+<li><a href="http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python" target="_blank" rel="noopener">stackoverflow - yield in python</a></li>
+<li><a href="https://jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/" target="_blank" rel="noopener">great blog - improve your python yield and generators explained</a></li>
+<li><a href="http://yuedu.163.com/source/cl_dc23b96c2df84533957ffb1089e90604_4" target="_blank" rel="noopener">&#x7F51;&#x6613;&#x4E91;&#x9605;&#x8BFB; - writing idiomatic python</a></li>
+<li><a href="http://www.tornadoweb.org/en/stable/guide/coroutines.html" target="_blank" rel="noopener">tornado - coroutines</a></li>
 </ol>
 <h3 id="python-logging">python logging</h3>
 <p>python&#x7684;log&#x6A21;&#x5757;&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#xFF0C;&#x7528;&#x8D77;&#x6765;&#x4E5F;&#x975E;&#x5E38;&#x7684;&#x65B9;&#x4FBF;&#x3002;log&#x6A21;&#x5757;&#x4E3B;&#x8981;&#x6709;&#x56DB;&#x4E2A;&#x7C7B;&#x652F;&#x6491;&#xFF1A;</p>
@@ -568,27 +563,27 @@
 <li>&#x4F46;&#x662F;handler&#x7684;filter&#x4F1A;&#x7528;&#x6765;handler&#x81EA;&#x5DF1;&#x7684;&#x8F93;&#x51FA;&#x68C0;&#x6D4B;&#x4E2D;, &#x4E5F;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x5B50;&#x7C7B;&#x548C;&#x7236;&#x7C7B;&#x516C;&#x7528;(&#x56E0;&#x4E3A;&#x90FD;&#x4F1A;&#x8BBF;&#x95EE;&#x5230;&#x8FD9;&#x4E2A;handler)</li>
 </ol>
 <p>&#x51FA;&#x4E86;&#x624B;&#x52A8;&#x914D;&#x7F6E;logger&#x7684;&#x65B9;&#x5F0F;, &#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x6587;&#x4EF6;, &#x6216;&#x8005;&#x662F;&#x914D;&#x7F6E;dict, &#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4F7F;&#x7528;dict&#x8FDB;&#x884C;&#x914D;&#x7F6E;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> logging</div><div class="line"><span class="keyword">from</span> logging.config <span class="keyword">import</span> dictConfig</div><div class="line"></div><div class="line"><span class="comment"># &#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;, &#x6240;&#x6709;&#x7684;&#x76F8;&#x5173;&#x5F15;&#x7528;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x5B57;&#x6BB5;&#x7684;key&#x6807;&#x8BC6;</span></div><div class="line">logging_config = dict(</div><div class="line">	version = <span class="number">1</span>,</div><div class="line">	formatters = {</div><div class="line">		<span class="string">&apos;f&apos;</span>: {<span class="string">&apos;format&apos;</span>: <span class="string">&apos;%(asctime)s %(name)s %(levelname)-8s %(message)s&apos;</span>}</div><div class="line">	},</div><div class="line">	handlers = {</div><div class="line">		<span class="string">&apos;h&apos;</span>: {<span class="string">&apos;class&apos;</span>: <span class="string">&apos;logging.StreamHandler&apos;</span>, <span class="string">&apos;formatter&apos;</span>: <span class="string">&apos;f&apos;</span>, <span class="string">&apos;level&apos;</span>: logging.DEBUG}</div><div class="line">	},</div><div class="line">	root = {<span class="string">&apos;handlers&apos;</span>: [<span class="string">&apos;h&apos;</span>], <span class="string">&apos;level&apos;</span>: logging.DEBUG},</div><div class="line">	loggers = dict(</div><div class="line">		error_log = { <span class="string">&apos;level&apos;</span>: logging.ERROR }</div><div class="line">	)</div><div class="line">)</div><div class="line"></div><div class="line">dictConfig(logging_config)</div><div class="line">logger.debug(<span class="string">&apos;often makes a very good meal of %s&apos;</span>, <span class="string">&apos;visiting tourists&apos;</span>)</div><div class="line">logging.getLogger(<span class="string">&apos;error_log&apos;</span>).error(<span class="string">&apos;this is test log&apos;</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">from</span> logging.config <span class="keyword">import</span> dictConfig</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;, &#x6240;&#x6709;&#x7684;&#x76F8;&#x5173;&#x5F15;&#x7528;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x5B57;&#x6BB5;&#x7684;key&#x6807;&#x8BC6;</span></span><br><span class="line">logging_config = dict(</span><br><span class="line">	version = <span class="number">1</span>,</span><br><span class="line">	formatters = {</span><br><span class="line">		<span class="string">&apos;f&apos;</span>: {<span class="string">&apos;format&apos;</span>: <span class="string">&apos;%(asctime)s %(name)s %(levelname)-8s %(message)s&apos;</span>}</span><br><span class="line">	},</span><br><span class="line">	handlers = {</span><br><span class="line">		<span class="string">&apos;h&apos;</span>: {<span class="string">&apos;class&apos;</span>: <span class="string">&apos;logging.StreamHandler&apos;</span>, <span class="string">&apos;formatter&apos;</span>: <span class="string">&apos;f&apos;</span>, <span class="string">&apos;level&apos;</span>: logging.DEBUG}</span><br><span class="line">	},</span><br><span class="line">	root = {<span class="string">&apos;handlers&apos;</span>: [<span class="string">&apos;h&apos;</span>], <span class="string">&apos;level&apos;</span>: logging.DEBUG},</span><br><span class="line">	loggers = dict(</span><br><span class="line">		error_log = { <span class="string">&apos;level&apos;</span>: logging.ERROR }</span><br><span class="line">	)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">dictConfig(logging_config)</span><br><span class="line">logger.debug(<span class="string">&apos;often makes a very good meal of %s&apos;</span>, <span class="string">&apos;visiting tourists&apos;</span>)</span><br><span class="line">logging.getLogger(<span class="string">&apos;error_log&apos;</span>).error(<span class="string">&apos;this is test log&apos;</span>)</span><br></pre></td></tr></table></figure>
 <hr>
 <p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;</p>
 <ol>
-<li><a href="https://app.yinxiang.com/shard/s61/nl/2147483647/fd86874d-ae64-4f20-bc8f-c45b76f87125/" target="_blank" rel="external">&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x8BF4;&#x660E;log&#x7684;&#x6587;&#x7AE0;</a></li>
-<li><a href="https://pymotw.com/2/logging/index.html" target="_blank" rel="external">python-motw-logger</a></li>
-<li><a href="http://www.saltycrane.com/blog/2014/02/python-logging-filters-do-not-propagate-like-handlers-and-levels-do/" target="_blank" rel="external">python-logging-prograte</a></li>
-<li><a href="http://docs.python-guide.org/en/latest/writing/logging/#logging-in-an-application" target="_blank" rel="external">python-logging-config</a></li>
+<li><a href="https://app.yinxiang.com/shard/s61/nl/2147483647/fd86874d-ae64-4f20-bc8f-c45b76f87125/" target="_blank" rel="noopener">&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x8BF4;&#x660E;log&#x7684;&#x6587;&#x7AE0;</a></li>
+<li><a href="https://pymotw.com/2/logging/index.html" target="_blank" rel="noopener">python-motw-logger</a></li>
+<li><a href="http://www.saltycrane.com/blog/2014/02/python-logging-filters-do-not-propagate-like-handlers-and-levels-do/" target="_blank" rel="noopener">python-logging-prograte</a></li>
+<li><a href="http://docs.python-guide.org/en/latest/writing/logging/#logging-in-an-application" target="_blank" rel="noopener">python-logging-config</a></li>
 </ol>
 <h3 id="python-functools-wraps">python functools wraps</h3>
 <p>python&#x7684;decorator&#x662F;&#x4E00;&#x4E2A;&#x5F3A;&#x5927;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9;&#x4E00;&#x4E2A;&#x65E2;&#x5B9A;&#x7684;&#x51FD;&#x6570;&#x6216;&#x8005;&#x7C7B;&#x8FDB;&#x884C;&#x4FEE;&#x9970;&#xFF0C;&#x8FBE;&#x5230;&#x300C;&#x4E00;&#x952E;&#x6269;&#x5C55;&#x300D;&#x529F;&#x80FD;&#x7684;&#x6548;&#x679C;&#x3002;</p>
 <p>&#x4F46;&#x662F;&#x88C5;&#x9970;&#x4E4B;&#x540E;&#x7684;&#x51FD;&#x6570;&#xFF08;&#x6216;&#x8005;&#x7C7B;&#xFF09;&#x7684;&#x5F88;&#x591A;&#x539F;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;<code>__name__ __doc__ __module__</code>&#x90FD;&#x53D8;&#x4E3A;&#x4E86;&#x4FEE;&#x9970;&#x4E4B;&#x540E;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x88AB;&#x4FEE;&#x9970;&#x7684;&#x539F;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x9020;&#x6210;&#x5F88;&#x591A;&#x7684;&#x5947;&#x5F02;&#x7684;&#x5730;&#x65B9;&#x3002;&#x6240;&#x6709;python&#x7CFB;&#x7EDF;&#x5E93;&#x4E2D;&#x5F15;&#x5165;&#x4E86;&#x5DE5;&#x5177;<code>functools.wraps functools.update_wrapper</code>&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x5DE5;&#x5177;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x5C06;&#x5C06;&#x4FEE;&#x9970;&#x5668;&#xFF08;wrapper&#xFF09;&#x7684;&#x5C5E;&#x6027;&#x4FEE;&#x6539;&#x4E3A;&#x88AB;&#x4FEE;&#x9970;&#x7684;&#x5C5E;&#x6027;&#xFF08;wrappered&#xFF09;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x4FEE;&#x9970;&#x4E4B;&#x540E;&#x7684;&#x4E1C;&#x897F;&#x770B;&#x8D77;&#x6765;&#x548C;&#x539F;&#x6765;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#xFF1A;</p>
-<figure class="highlight python"><figcaption><span>example-from-python-doc</span><a href="https://docs.python.org/2/library/functools.html" target="_blank" rel="external">link</a></figcaption><table><tr><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> functools <span class="keyword">import</span> wraps</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">my_decorator</span><span class="params">(f)</span>:</span></div><div class="line"><span class="meta">... </span>    @wraps(f)</div><div class="line"><span class="meta">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kwds)</span>:</span></div><div class="line"><span class="meta">... </span>        <span class="keyword">print</span> <span class="string">&apos;Calling decorated function&apos;</span></div><div class="line"><span class="meta">... </span>        <span class="keyword">return</span> f(*args, **kwds)</div><div class="line"><span class="meta">... </span>    <span class="keyword">return</span> wrapper</div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>@my_decorator</div><div class="line"><span class="meta">... </span><span class="function"><span class="keyword">def</span> <span class="title">example</span><span class="params">()</span>:</span></div><div class="line"><span class="meta">... </span>    <span class="string">&quot;&quot;&quot;Docstring&quot;&quot;&quot;</span></div><div class="line"><span class="meta">... </span>    <span class="keyword">print</span> <span class="string">&apos;Called example function&apos;</span></div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>example()</div><div class="line">Calling decorated function</div><div class="line">Called example function</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>example.__name__</div><div class="line"><span class="string">&apos;example&apos;</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>example.__doc__</div><div class="line"><span class="string">&apos;Docstring&apos;</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><figcaption><span>example-from-python-doc</span><a href="https://docs.python.org/2/library/functools.html" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> functools <span class="keyword">import</span> wraps</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">my_decorator</span><span class="params">(f)</span>:</span></span><br><span class="line"><span class="meta">... </span>    @wraps(f)</span><br><span class="line"><span class="meta">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kwds)</span>:</span></span><br><span class="line"><span class="meta">... </span>        <span class="keyword">print</span> <span class="string">&apos;Calling decorated function&apos;</span></span><br><span class="line"><span class="meta">... </span>        <span class="keyword">return</span> f(*args, **kwds)</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> wrapper</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>@my_decorator</span><br><span class="line"><span class="meta">... </span><span class="function"><span class="keyword">def</span> <span class="title">example</span><span class="params">()</span>:</span></span><br><span class="line"><span class="meta">... </span>    <span class="string">&quot;&quot;&quot;Docstring&quot;&quot;&quot;</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> <span class="string">&apos;Called example function&apos;</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>example()</span><br><span class="line">Calling decorated function</span><br><span class="line">Called example function</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>example.__name__</span><br><span class="line"><span class="string">&apos;example&apos;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>example.__doc__</span><br><span class="line"><span class="string">&apos;Docstring&apos;</span></span><br></pre></td></tr></table></figure>
 <p>&#x5176;&#x5B9E;&#x539F;&#x7406;&#x5C31;&#x662F;&#xFF0C;<code>wraps</code>&#x8C03;&#x7528;&#x4E86;<code>update_wrapper</code>&#xFF0C;&#x5C06;wrapped&#x7684;&#x539F;&#x4FE1;&#x606F;&#x90FD;&#x62F7;&#x8D1D;&#x5230;wrapper&#x4E2D;&#xFF0C;&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x770B;&#x8D77;&#x6765;&#x90FD;&#x4E00;&#x6837;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x8D34;&#x4E00;&#x4E0B;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line">WRAPPER_ASSIGNMENTS = (<span class="string">&apos;__module__&apos;</span>, <span class="string">&apos;__name__&apos;</span>, <span class="string">&apos;__doc__&apos;</span>)</div><div class="line">WRAPPER_UPDATES = (<span class="string">&apos;__dict__&apos;</span>,)</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_wrapper</span><span class="params">(wrapper,</span></span></div><div class="line">                   wrapped,</div><div class="line">                   assigned = WRAPPER_ASSIGNMENTS,</div><div class="line">                   updated = WRAPPER_UPDATES):</div><div class="line">    <span class="string">&quot;&quot;&quot;Update a wrapper function to look like the wrapped function</span></div><div class="line"></div><div class="line">       wrapper is the function to be updated</div><div class="line">       wrapped is the original function</div><div class="line">       assigned is a tuple naming the attributes assigned directly</div><div class="line">       from the wrapped function to the wrapper function (defaults to</div><div class="line">       functools.WRAPPER_ASSIGNMENTS)</div><div class="line">       updated is a tuple naming the attributes of the wrapper that</div><div class="line">       are updated with the corresponding attribute from the wrapped</div><div class="line">       function (defaults to functools.WRAPPER_UPDATES)</div><div class="line">    &quot;&quot;&quot;</div><div class="line">    <span class="keyword">for</span> attr <span class="keyword">in</span> assigned:</div><div class="line">        setattr(wrapper, attr, getattr(wrapped, attr))</div><div class="line">    <span class="keyword">for</span> attr <span class="keyword">in</span> updated:</div><div class="line">        getattr(wrapper, attr).update(getattr(wrapped, attr, {}))</div><div class="line">    <span class="comment"># Return the wrapper so this can be used as a decorator via partial()</span></div><div class="line">    <span class="keyword">return</span> wrapper</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">wraps</span><span class="params">(wrapped,</span></span></div><div class="line">          assigned = WRAPPER_ASSIGNMENTS,</div><div class="line">          updated = WRAPPER_UPDATES):</div><div class="line">    <span class="string">&quot;&quot;&quot;Decorator factory to apply update_wrapper() to a wrapper function</span></div><div class="line"></div><div class="line">       Returns a decorator that invokes update_wrapper() with the decorated</div><div class="line">       function as the wrapper argument and the arguments to wraps() as the</div><div class="line">       remaining arguments. Default arguments are as for update_wrapper().</div><div class="line">       This is a convenience function to simplify applying partial() to</div><div class="line">       update_wrapper().</div><div class="line">    &quot;&quot;&quot;</div><div class="line">    <span class="keyword">return</span> partial(update_wrapper, wrapped=wrapped,</div><div class="line">                   assigned=assigned, updated=updated)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">WRAPPER_ASSIGNMENTS = (<span class="string">&apos;__module__&apos;</span>, <span class="string">&apos;__name__&apos;</span>, <span class="string">&apos;__doc__&apos;</span>)</span><br><span class="line">WRAPPER_UPDATES = (<span class="string">&apos;__dict__&apos;</span>,)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_wrapper</span><span class="params">(wrapper,</span></span></span><br><span class="line"><span class="function"><span class="params">                   wrapped,</span></span></span><br><span class="line"><span class="function"><span class="params">                   assigned = WRAPPER_ASSIGNMENTS,</span></span></span><br><span class="line"><span class="function"><span class="params">                   updated = WRAPPER_UPDATES)</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Update a wrapper function to look like the wrapped function</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">       wrapper is the function to be updated</span></span><br><span class="line"><span class="string">       wrapped is the original function</span></span><br><span class="line"><span class="string">       assigned is a tuple naming the attributes assigned directly</span></span><br><span class="line"><span class="string">       from the wrapped function to the wrapper function (defaults to</span></span><br><span class="line"><span class="string">       functools.WRAPPER_ASSIGNMENTS)</span></span><br><span class="line"><span class="string">       updated is a tuple naming the attributes of the wrapper that</span></span><br><span class="line"><span class="string">       are updated with the corresponding attribute from the wrapped</span></span><br><span class="line"><span class="string">       function (defaults to functools.WRAPPER_UPDATES)</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> attr <span class="keyword">in</span> assigned:</span><br><span class="line">        setattr(wrapper, attr, getattr(wrapped, attr))</span><br><span class="line">    <span class="keyword">for</span> attr <span class="keyword">in</span> updated:</span><br><span class="line">        getattr(wrapper, attr).update(getattr(wrapped, attr, {}))</span><br><span class="line">    <span class="comment"># Return the wrapper so this can be used as a decorator via partial()</span></span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wraps</span><span class="params">(wrapped,</span></span></span><br><span class="line"><span class="function"><span class="params">          assigned = WRAPPER_ASSIGNMENTS,</span></span></span><br><span class="line"><span class="function"><span class="params">          updated = WRAPPER_UPDATES)</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Decorator factory to apply update_wrapper() to a wrapper function</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">       Returns a decorator that invokes update_wrapper() with the decorated</span></span><br><span class="line"><span class="string">       function as the wrapper argument and the arguments to wraps() as the</span></span><br><span class="line"><span class="string">       remaining arguments. Default arguments are as for update_wrapper().</span></span><br><span class="line"><span class="string">       This is a convenience function to simplify applying partial() to</span></span><br><span class="line"><span class="string">       update_wrapper().</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> partial(update_wrapper, wrapped=wrapped,</span><br><span class="line">                   assigned=assigned, updated=updated)</span><br></pre></td></tr></table></figure>
 <hr>
 <p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;</p>
 <ul>
-<li><a href="https://docs.python.org/2/library/functools.html" target="_blank" rel="external">python-functools-doc</a></li>
-<li><a href="https://segmentfault.com/a/1190000000599084" target="_blank" rel="external">segmentfault-blog</a></li>
-<li><a href="http://stackoverflow.com/questions/308999/what-does-functools-wraps-do" target="_blank" rel="external">stackoverflow-what-does-functools.wrap-do</a></li>
+<li><a href="https://docs.python.org/2/library/functools.html" target="_blank" rel="noopener">python-functools-doc</a></li>
+<li><a href="https://segmentfault.com/a/1190000000599084" target="_blank" rel="noopener">segmentfault-blog</a></li>
+<li><a href="http://stackoverflow.com/questions/308999/what-does-functools-wraps-do" target="_blank" rel="noopener">stackoverflow-what-does-functools.wrap-do</a></li>
 </ul>
 <h3 id="metaclass">metaclass</h3>
 <ol>
@@ -596,7 +591,7 @@
 <li>metaclass&#x7684;&#x8BDD;&#x6784;&#x9020;&#x51FA;&#x6765;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;metaclass&#x4E2D;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#x4EFB;&#x52A1;&#x662F;class-object&#x7684;&#x7C7B;&#x65B9;&#x6CD5;&#x3002;</li>
 <li>&#x539F;&#x6765;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x7C7B;&#x7684;&#x6784;&#x9020;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5BF9;&#x7C7B;&#x751F;&#x6210;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x6210;&#x5458;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x63A7;&#x5236;&#x3002;</li>
 </ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Meta</span><span class="params">(type)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__call__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">&apos;Enter Meta.__call__: &apos;</span>, self</div><div class="line">        obj = type.__call__(self)</div><div class="line">        <span class="keyword">print</span> <span class="string">&apos;Exit Meta.__call__: &apos;</span>, obj</div><div class="line">        <span class="keyword">return</span> obj</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(metacls, name, bases, dictionary)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">&apos;Enter Meta.__new__:&apos;</span>, metacls, name, bases, dictionary</div><div class="line">        newClass = type.__new__(metacls, name, bases, dictionary)</div><div class="line">        <span class="keyword">print</span> <span class="string">&apos;Exit Meta.__new__: &apos;</span>, newClass</div><div class="line">        <span class="keyword">return</span> newClass</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(cls, name, bases, dictionary)</span>:</span></div><div class="line">        <span class="keyword">print</span> <span class="string">&apos;Enter Meta.__init__: &apos;</span>, cls, name, bases, dictionary</div><div class="line">        super(Meta, cls).__init__(name, bases, dictionary)</div><div class="line">        <span class="keyword">print</span> <span class="string">&apos;Exit Meta.__init__&apos;</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></div><div class="line">    __metaclass__ = Meta</div><div class="line"><span class="keyword">print</span> <span class="string">&apos;Create instance of class A&apos;</span></div><div class="line">A()</div><div class="line"></div><div class="line"><span class="comment"># Create class A</span></div><div class="line"><span class="comment"># Enter Meta.__new__: &lt;class &apos;__main__.Meta&apos;&gt; A (&lt;type &apos;object&apos;&gt;,) {}</span></div><div class="line"><span class="comment"># Exit Meta.__new__:  &lt;class &apos;__main__.A&apos;&gt;</span></div><div class="line"><span class="comment"># Enter Meta.__init__:  &lt;class &apos;__main__.A&apos;&gt; A (&lt;type &apos;object&apos;&gt;,) {}</span></div><div class="line"><span class="comment"># Exit Meta.__init__</span></div><div class="line"><span class="comment"># Create instance of class A</span></div><div class="line"><span class="comment"># Enter Meta.__call__:  &lt;class &apos;__main__.A&apos;&gt;</span></div><div class="line"><span class="comment"># Exit Meta.__call__:  &lt;__main__.A object at 0xb76a9ccc&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Meta</span><span class="params">(type)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__call__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;Enter Meta.__call__: &apos;</span>, self</span><br><span class="line">        obj = type.__call__(self)</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;Exit Meta.__call__: &apos;</span>, obj</span><br><span class="line">        <span class="keyword">return</span> obj</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(metacls, name, bases, dictionary)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;Enter Meta.__new__:&apos;</span>, metacls, name, bases, dictionary</span><br><span class="line">        newClass = type.__new__(metacls, name, bases, dictionary)</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;Exit Meta.__new__: &apos;</span>, newClass</span><br><span class="line">        <span class="keyword">return</span> newClass</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(cls, name, bases, dictionary)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;Enter Meta.__init__: &apos;</span>, cls, name, bases, dictionary</span><br><span class="line">        super(Meta, cls).__init__(name, bases, dictionary)</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&apos;Exit Meta.__init__&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    __metaclass__ = Meta</span><br><span class="line"><span class="keyword">print</span> <span class="string">&apos;Create instance of class A&apos;</span></span><br><span class="line">A()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create class A</span></span><br><span class="line"><span class="comment"># Enter Meta.__new__: &lt;class &apos;__main__.Meta&apos;&gt; A (&lt;type &apos;object&apos;&gt;,) {}</span></span><br><span class="line"><span class="comment"># Exit Meta.__new__:  &lt;class &apos;__main__.A&apos;&gt;</span></span><br><span class="line"><span class="comment"># Enter Meta.__init__:  &lt;class &apos;__main__.A&apos;&gt; A (&lt;type &apos;object&apos;&gt;,) {}</span></span><br><span class="line"><span class="comment"># Exit Meta.__init__</span></span><br><span class="line"><span class="comment"># Create instance of class A</span></span><br><span class="line"><span class="comment"># Enter Meta.__call__:  &lt;class &apos;__main__.A&apos;&gt;</span></span><br><span class="line"><span class="comment"># Exit Meta.__call__:  &lt;__main__.A object at 0xb76a9ccc&gt;</span></span><br></pre></td></tr></table></figure>
 <p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6709;&#x51E0;&#x4E2A;&#x53EF;&#x4EE5;&#x8BF4;&#x660E;&#x7684;&#x5730;&#x65B9;&#xFF1A;</p>
 <ol>
 <li>&#x7C7B;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;<strong>&#x5BF9;&#x8C61;</strong>&#xFF0C;&#x7C7B;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x6784;&#x9020;&#x7684;&#x5B9E;&#x9645;&#x662F;&#x7C7B;&#x5B9A;&#x4E49;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x5019;</li>
@@ -607,38 +602,38 @@
 <p>ORM&#x7684;&#x5B9E;&#x73B0;&#x53EF;&#x80FD;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;metaclass&#xFF0C;&#x56E0;&#x4E3A;ORM&#x9700;&#x8981;&#x6839;&#x636E;&#x5F53;&#x524D;&#x7C7B;&#x4E2D;&#x7684;&#x7C7B;&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x77E5;&#x9053;&#x5F53;&#x524D;&#x7C7B;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x7684;&#x683C;&#x5F0F;&#x8981;&#x6C42;&#xFF0C;&#x4F7F;&#x7528;metaclass&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x8BE5;&#x683C;&#x5F0F;&#x8981;&#x6C42;&#x8F6C;&#x53D8;&#x4E3A;&#x6709;&#x6548;&#x7684;&#x540E;&#x7EED;&#x64CD;&#x4F5C;&#x3002;</p>
 <p>&#x51E0;&#x4E2A;&#x53C2;&#x8003;&#x6587;&#x7AE0;</p>
 <ul>
-<li><a href="http://xiaocong.github.io/blog/2012/06/12/python-metaclass/" target="_blank" rel="external">&#x793A;&#x4F8B;&#x6765;&#x6E90;&#x6587;&#x7AE0;</a></li>
-<li><a href="http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386820064557c69858840b4c48d2b8411bc2ea9099ba00" target="_blank" rel="external">&#x5B9E;&#x73B0;ORM</a></li>
-<li><a href="http://blog.jobbole.com/21351/" target="_blank" rel="external">stackoverflow&#x4E0A;&#x7684;&#x56DE;&#x7B54;</a></li>
+<li><a href="http://xiaocong.github.io/blog/2012/06/12/python-metaclass/" target="_blank" rel="noopener">&#x793A;&#x4F8B;&#x6765;&#x6E90;&#x6587;&#x7AE0;</a></li>
+<li><a href="http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386820064557c69858840b4c48d2b8411bc2ea9099ba00" target="_blank" rel="noopener">&#x5B9E;&#x73B0;ORM</a></li>
+<li><a href="http://blog.jobbole.com/21351/" target="_blank" rel="noopener">stackoverflow&#x4E0A;&#x7684;&#x56DE;&#x7B54;</a></li>
 </ul>
 <h3 id="pythonic-way">pythonic way</h3>
 <h4 id="list&#x7684;dict&#x6309;&#x7167;dict&#x7684;&#x7279;&#x5B9A;subkey&#x8FDB;&#x884C;&#x6392;&#x5E8F;">list&#x7684;dict&#xFF0C;&#x6309;&#x7167;dict&#x7684;&#x7279;&#x5B9A;subkey&#x8FDB;&#x884C;&#x6392;&#x5E8F;</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>a=[{<span class="string">&apos;a&apos;</span>:<span class="number">1</span>}, {<span class="string">&apos;a&apos;</span>:<span class="number">0</span>}]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> operator</div><div class="line"></div><div class="line"><span class="comment"># &#x5176;&#x4E2D;sort&#x65F6;&#x5019;&#x7684;key&#x8868;&#x793A;&#x6BCF;&#x4E00;&#x4E2A;item&#x6309;&#x7167;&#x4EC0;&#x4E48;key&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;itemgetter&#x521A;&#x597D;&#x5C06;subkey&#x7684;&#x5B57;&#x6BB5;&#x53D6;&#x51FA;&#x6765;</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a.sort(key=operator.itemgetter(<span class="string">&apos;a&apos;</span>))</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a=[{<span class="string">&apos;a&apos;</span>:<span class="number">1</span>}, {<span class="string">&apos;a&apos;</span>:<span class="number">0</span>}]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> operator</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x5176;&#x4E2D;sort&#x65F6;&#x5019;&#x7684;key&#x8868;&#x793A;&#x6BCF;&#x4E00;&#x4E2A;item&#x6309;&#x7167;&#x4EC0;&#x4E48;key&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;itemgetter&#x521A;&#x597D;&#x5C06;subkey&#x7684;&#x5B57;&#x6BB5;&#x53D6;&#x51FA;&#x6765;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.sort(key=operator.itemgetter(<span class="string">&apos;a&apos;</span>))</span><br></pre></td></tr></table></figure>
 <h4 id="dict&#x7684;key&#x6309;&#x7167;value&#x8FDB;&#x884C;&#x6392;&#x5E8F;">dict&#x7684;key&#x6309;&#x7167;value&#x8FDB;&#x884C;&#x6392;&#x5E8F;</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>d={<span class="string">&apos;a&apos;</span>: <span class="number">2</span>, <span class="string">&apos;b&apos;</span>: <span class="number">1</span>}</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sorted(d, key=d.get)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>d={<span class="string">&apos;a&apos;</span>: <span class="number">2</span>, <span class="string">&apos;b&apos;</span>: <span class="number">1</span>}</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sorted(d, key=d.get)</span><br></pre></td></tr></table></figure>
 <p>&#x9996;&#x5148;&#x9700;&#x8981;&#x8003;&#x8651;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x9700;&#x8981;&#x5F97;&#x5230;dict&#x7684;key&#x7684;&#x6392;&#x5E8F;&#xFF0C;&#x6240;&#x4EE5;&#x5C06;d&#x653E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x8FED;&#x4EE3;&#x5668;&#x7684;&#x6E90;&#x5934;&#x3002;&#x7136;&#x540E;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#xFF0C;&#x5982;&#x4F55;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;key&#x5C06;&#x6BD4;&#x8F83;&#x7684;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x8F6C;&#x5316;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;value&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;
 &#x6240;&#x4EE5;&#x5B9E;&#x9645;&#x4E0A;sorted&#x7684;&#x6BD4;&#x8F83;&#x8FC7;&#x7A0B;&#x662F;&#x5C06;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7528;key&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x7528;cmp&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x5F97;&#x5230;&#x7ED3;&#x679C;&#x3002;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line">cmp(key(element_a), key(elemenet_b))</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cmp(key(element_a), key(elemenet_b))</span><br></pre></td></tr></table></figure>
 <h3 id="python-collections">python collections</h3>
 <p>python&#x7684;collections&#x5373;&#x53EF;&#x5E93;&#x4E2D;&#x6709;&#x51E0;&#x4E2A;&#x6709;&#x610F;&#x601D;&#x548C;&#x4F7F;&#x7528;&#x7684;&#x5E93;&#x3002;&#x8FD9;&#x91CC;&#x5927;&#x6982;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;</p>
 <h4 id="defaultdict">defaultdict</h4>
 <p>&#x4F20;&#x5165;&#x4E00;&#x4E2A;callable&#x7684;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x5C5E;&#x6027;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F7F;&#x7528;&#x5DE5;&#x5382;&#x51FD;&#x6570;&#x4EA7;&#x751F;&#x7684;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x7684;&#x6570;&#x503C;&#x3002;</p>
 <p>&#x6BD4;&#x5982;&#x6211;&#x9700;&#x8981;&#x4E00;&#x4E2A;dict&#x7684;value&#x662F;list&#x8BB0;&#x5F55;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</div><div class="line">word_line_counter = defaultdict(list)</div><div class="line"></div><div class="line"><span class="comment"># not need to check existence</span></div><div class="line"><span class="keyword">for</span> line, word <span class="keyword">in</span> enumerate(some_source):</div><div class="line">    word_line_counter[line].append(word)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line">word_line_counter = defaultdict(list)</span><br><span class="line"></span><br><span class="line"><span class="comment"># not need to check existence</span></span><br><span class="line"><span class="keyword">for</span> line, word <span class="keyword">in</span> enumerate(some_source):</span><br><span class="line">    word_line_counter[line].append(word)</span><br></pre></td></tr></table></figure>
 <h4 id="namedtuple">namedtuple</h4>
 <p>namedtuple&#x5982;&#x540C;&#x540D;&#x5B57;&#x4E00;&#x6837;&#xFF0C;&#x5C31;&#x662F;tuple&#x53D8;&#x6210;&#x53EF;&#x901A;&#x8FC7;dot.attr_name&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x7684;&#x7ED3;&#x6784;&#x3002;&#x6B63;&#x5E38;&#x7684;tuple&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;tuple&#x7684;&#x6570;&#x636E;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x7D22;&#x5F15;&#x7684;&#x65B9;&#x5F0F;&#x4E0D;&#x76F4;&#x89C2;&#x3002;&#x5F53;&#x7136;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x5C31;&#x662F;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;class&#xFF0C;&#x4F46;&#x662F;python&#x7684;&#x5B9E;&#x73B0;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;class&#x7ED3;&#x6784;&#x4F53;&#x90FD;&#x6709;&#x4E00;&#x4E2A;__dict__&#x5BF9;&#x8C61;&#xFF0C;not memory friendly&#x3002;&#x6240;&#x4EE5;&#x7ED3;&#x5408;tuple&#x5185;&#x5B58;&#x9AD8;&#x6548;&#x548C;&#x5B58;&#x50A8;&#x65B9;&#x4FBF;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x5F15;&#x5165;&#x4E86;nametuple&#x7C7B;&#x3002;</p>
 <p>&#x5176;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x662F;&#x4EA7;&#x751F;nametuple&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF08;&#x5176;&#x5B9E;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x5BF9;&#x8C61;&#xFF0C;&#x53EA;&#x662F;&#x4F7F;&#x7528;tuple&#x57FA;&#x7C7B;&#x548C;&#x63D0;&#x4F9B;&#x6269;&#x5C55;&#x63A5;&#x53E3;&#xFF09;&#x6784;&#x9020;&#x4E86;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x4F7F;&#x7528;&#x6A21;&#x677F;&#x7684;&#x65B9;&#x5F0F;&#x52A8;&#x6001;&#x751F;&#x6210;:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line">_class_template = <span class="string">&apos;&apos;&apos;\</span></div><div class="line">class {typename}(tuple):</div><div class="line">    &apos;{typename}({arg_list})&apos;</div><div class="line"></div><div class="line">    __slots__ = ()</div><div class="line"></div><div class="line">    _fields = {field_names!r}</div><div class="line"></div><div class="line">    def __new__(_cls, {arg_list}):</div><div class="line">        &apos;Create new instance of {typename}({arg_list})&apos;</div><div class="line">        return _tuple.__new__(_cls, ({arg_list}))</div><div class="line"></div><div class="line">    @classmethod</div><div class="line">    def _make(cls, iterable, new=tuple.__new__, len=len):</div><div class="line">        &apos;Make a new {typename} object from a sequence or iterable&apos;</div><div class="line">        result = new(cls, iterable)</div><div class="line">        if len(result) != {num_fields:d}:</div><div class="line">            raise TypeError(&apos;Expected {num_fields:d} arguments, got %d&apos; % len(result))</div><div class="line">        return result</div><div class="line"></div><div class="line">    def __repr__(self):</div><div class="line">        &apos;Return a nicely formatted representation string&apos;</div><div class="line">        return &apos;{typename}({repr_fmt})&apos; % self</div><div class="line"></div><div class="line">    def _asdict(self):</div><div class="line">        &apos;Return a new OrderedDict which maps field names to their values&apos;</div><div class="line">        return OrderedDict(zip(self._fields, self))</div><div class="line"></div><div class="line">    def _replace(_self, **kwds):</div><div class="line">        &apos;Return a new {typename} object replacing specified fields with new values&apos;</div><div class="line">        result = _self._make(map(kwds.pop, {field_names!r}, _self))</div><div class="line">        if kwds:</div><div class="line">            raise ValueError(&apos;Got unexpected field names: %r&apos; % kwds.keys())</div><div class="line">        return result</div><div class="line"></div><div class="line">    def __getnewargs__(self):</div><div class="line">        &apos;Return self as a plain tuple.  Used by copy and pickle.&apos;</div><div class="line">        return tuple(self)</div><div class="line"></div><div class="line">    __dict__ = _property(_asdict)</div><div class="line"></div><div class="line">    def __getstate__(self):</div><div class="line">        &apos;Exclude the OrderedDict from pickling&apos;</div><div class="line">        pass</div><div class="line"></div><div class="line">{field_defs}</div><div class="line">&apos;&apos;&apos;</div><div class="line"></div><div class="line"><span class="comment"># Fill-in the class template</span></div><div class="line">class_definition = _class_template.format(</div><div class="line">    typename = typename,</div><div class="line">    field_names = tuple(field_names),</div><div class="line">    num_fields = len(field_names),</div><div class="line">    arg_list = repr(tuple(field_names)).replace(<span class="string">&quot;&apos;&quot;</span>, <span class="string">&quot;&quot;</span>)[<span class="number">1</span>:<span class="number">-1</span>],</div><div class="line">    repr_fmt = <span class="string">&apos;, &apos;</span>.join(_repr_template.format(name=name)</div><div class="line">                         <span class="keyword">for</span> name <span class="keyword">in</span> field_names),</div><div class="line">    field_defs = <span class="string">&apos;\n&apos;</span>.join(_field_template.format(index=index, name=name)</div><div class="line">                           <span class="keyword">for</span> index, name <span class="keyword">in</span> enumerate(field_names))</div><div class="line">)</div><div class="line"><span class="keyword">if</span> verbose:</div><div class="line">    <span class="keyword">print</span> class_definition</div><div class="line"></div><div class="line"><span class="comment"># Execute the template string in a temporary namespace and support</span></div><div class="line"><span class="comment"># tracing utilities by setting a value for frame.f_globals[&apos;__name__&apos;]</span></div><div class="line">namespace = dict(_itemgetter=_itemgetter, __name__=<span class="string">&apos;namedtuple_%s&apos;</span> % typename,</div><div class="line">                 OrderedDict=OrderedDict, _property=property, _tuple=tuple)</div><div class="line"><span class="keyword">try</span>:</div><div class="line">    <span class="keyword">exec</span> class_definition <span class="keyword">in</span> namespace</div><div class="line"><span class="keyword">except</span> SyntaxError <span class="keyword">as</span> e:</div><div class="line">    <span class="keyword">raise</span> SyntaxError(e.message + <span class="string">&apos;:\n&apos;</span> + class_definition)</div><div class="line">result = namespace[typename]</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">_class_template = <span class="string">&apos;&apos;&apos;\</span></span><br><span class="line"><span class="string">class {typename}(tuple):</span></span><br><span class="line"><span class="string">    &apos;{typename}({arg_list})&apos;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    __slots__ = ()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    _fields = {field_names!r}</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    def __new__(_cls, {arg_list}):</span></span><br><span class="line"><span class="string">        &apos;Create new instance of {typename}({arg_list})&apos;</span></span><br><span class="line"><span class="string">        return _tuple.__new__(_cls, ({arg_list}))</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    @classmethod</span></span><br><span class="line"><span class="string">    def _make(cls, iterable, new=tuple.__new__, len=len):</span></span><br><span class="line"><span class="string">        &apos;Make a new {typename} object from a sequence or iterable&apos;</span></span><br><span class="line"><span class="string">        result = new(cls, iterable)</span></span><br><span class="line"><span class="string">        if len(result) != {num_fields:d}:</span></span><br><span class="line"><span class="string">            raise TypeError(&apos;Expected {num_fields:d} arguments, got %d&apos; % len(result))</span></span><br><span class="line"><span class="string">        return result</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    def __repr__(self):</span></span><br><span class="line"><span class="string">        &apos;Return a nicely formatted representation string&apos;</span></span><br><span class="line"><span class="string">        return &apos;{typename}({repr_fmt})&apos; % self</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    def _asdict(self):</span></span><br><span class="line"><span class="string">        &apos;Return a new OrderedDict which maps field names to their values&apos;</span></span><br><span class="line"><span class="string">        return OrderedDict(zip(self._fields, self))</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    def _replace(_self, **kwds):</span></span><br><span class="line"><span class="string">        &apos;Return a new {typename} object replacing specified fields with new values&apos;</span></span><br><span class="line"><span class="string">        result = _self._make(map(kwds.pop, {field_names!r}, _self))</span></span><br><span class="line"><span class="string">        if kwds:</span></span><br><span class="line"><span class="string">            raise ValueError(&apos;Got unexpected field names: %r&apos; % kwds.keys())</span></span><br><span class="line"><span class="string">        return result</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    def __getnewargs__(self):</span></span><br><span class="line"><span class="string">        &apos;Return self as a plain tuple.  Used by copy and pickle.&apos;</span></span><br><span class="line"><span class="string">        return tuple(self)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    __dict__ = _property(_asdict)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    def __getstate__(self):</span></span><br><span class="line"><span class="string">        &apos;Exclude the OrderedDict from pickling&apos;</span></span><br><span class="line"><span class="string">        pass</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">{field_defs}</span></span><br><span class="line"><span class="string">&apos;&apos;&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Fill-in the class template</span></span><br><span class="line">class_definition = _class_template.format(</span><br><span class="line">    typename = typename,</span><br><span class="line">    field_names = tuple(field_names),</span><br><span class="line">    num_fields = len(field_names),</span><br><span class="line">    arg_list = repr(tuple(field_names)).replace(<span class="string">&quot;&apos;&quot;</span>, <span class="string">&quot;&quot;</span>)[<span class="number">1</span>:<span class="number">-1</span>],</span><br><span class="line">    repr_fmt = <span class="string">&apos;, &apos;</span>.join(_repr_template.format(name=name)</span><br><span class="line">                         <span class="keyword">for</span> name <span class="keyword">in</span> field_names),</span><br><span class="line">    field_defs = <span class="string">&apos;\n&apos;</span>.join(_field_template.format(index=index, name=name)</span><br><span class="line">                           <span class="keyword">for</span> index, name <span class="keyword">in</span> enumerate(field_names))</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> verbose:</span><br><span class="line">    <span class="keyword">print</span> class_definition</span><br><span class="line"></span><br><span class="line"><span class="comment"># Execute the template string in a temporary namespace and support</span></span><br><span class="line"><span class="comment"># tracing utilities by setting a value for frame.f_globals[&apos;__name__&apos;]</span></span><br><span class="line">namespace = dict(_itemgetter=_itemgetter, __name__=<span class="string">&apos;namedtuple_%s&apos;</span> % typename,</span><br><span class="line">                 OrderedDict=OrderedDict, _property=property, _tuple=tuple)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">exec</span> class_definition <span class="keyword">in</span> namespace</span><br><span class="line"><span class="keyword">except</span> SyntaxError <span class="keyword">as</span> e:</span><br><span class="line">    <span class="keyword">raise</span> SyntaxError(e.message + <span class="string">&apos;:\n&apos;</span> + class_definition)</span><br><span class="line">result = namespace[typename]</span><br></pre></td></tr></table></figure>
 <p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4EE3;&#x7801;&#x751F;&#x6210;&#x4E00;&#x4E2A;Point&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x662F;&#x52A8;&#x6001;&#x7684;&#x751F;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x4F18;&#x5316;&#x7684;tuple&#xFF0C;&#x540C;&#x65F6;&#x63D0;&#x4F9B;&#x8BBF;&#x95EE;&#x63A5;&#x53E3;:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>Point = namedtuple(<span class="string">&apos;Point&apos;</span>, [<span class="string">&apos;x&apos;</span>, <span class="string">&apos;y&apos;</span>])</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>p = Point(<span class="number">11</span>, y=<span class="number">22</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>p[<span class="number">0</span>] + p[<span class="number">1</span>]                     <span class="comment"># indexable like a plain tuple</span></div><div class="line"><span class="number">33</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>x, y = p                        <span class="comment"># unpack like a regular tuple</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>x, y</div><div class="line">(<span class="number">11</span>, <span class="number">22</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>p.x + p.y                       <span class="comment"># fields also accessable by name</span></div><div class="line"><span class="number">33</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>d = p._asdict()                 <span class="comment"># convert to a dictionary</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>Point = namedtuple(<span class="string">&apos;Point&apos;</span>, [<span class="string">&apos;x&apos;</span>, <span class="string">&apos;y&apos;</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = Point(<span class="number">11</span>, y=<span class="number">22</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p[<span class="number">0</span>] + p[<span class="number">1</span>]                     <span class="comment"># indexable like a plain tuple</span></span><br><span class="line"><span class="number">33</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x, y = p                        <span class="comment"># unpack like a regular tuple</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x, y</span><br><span class="line">(<span class="number">11</span>, <span class="number">22</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p.x + p.y                       <span class="comment"># fields also accessable by name</span></span><br><span class="line"><span class="number">33</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = p._asdict()                 <span class="comment"># convert to a dictionary</span></span><br></pre></td></tr></table></figure>
 <p>&#x4E0D;&#x8FC7;namedtuple&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x57FA;&#x4E8E;tuple&#xFF0C;&#x521B;&#x5EFA;&#x51FA;&#x6765;&#x4E4B;&#x540E;&#x662F;<strong>immutable</strong>&#x7684;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x662F;mutable&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;**__slots<strong>&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#xFF0C;&#x5C31;&#x662F;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#xFF0C;&#x5229;&#x7528;</strong>__slots__&#x7684;&#x65B9;&#x5F0F;&#x63D0;&#x9AD8;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x6548;&#x7387;**. &#x8FD9;&#x91CC;&#x522B;&#x4EBA;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;&#x63A5;&#x53E3;&#x7684;<strong>namedlist</strong>&#x4EE5;&#x53CA;&#x57FA;&#x4E8E;CPython&#x5B9E;&#x73B0;&#x7684;<strong>recordclass</strong>, &#x8FD9;&#x91CC;&#x6BD4;&#x8F83;&#x63A8;&#x8350;&#x4F7F;&#x7528;<strong>namedlist</strong>&#x5E93;&#xFF0C;&#x57FA;&#x4E8E;python&#x5B9E;&#x73B0;&#xFF0C;&#x7B80;&#x5355;&#x9AD8;&#x6548;&#x3002;</p>
 <hr>
 <p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;</p>
 <ul>
-<li><a href="https://dbader.org/blog/writing-clean-python-with-namedtuples" target="_blank" rel="external">why-use-namedtuple</a></li>
-<li><a href="http://nbviewer.jupyter.org/urls/bitbucket.org/intellimath/recordclass/raw/default/examples/what_is_recordclass.ipynb" target="_blank" rel="external">mutable-namedtuple-version-implementation-from-C</a></li>
-<li><a href="https://pypi.python.org/pypi/namedlist" target="_blank" rel="external">namelist-python-index</a></li>
-<li><a href="https://stackoverflow.com/questions/472000/usage-of-slots" target="_blank" rel="external">about-python-slots</a></li>
+<li><a href="https://dbader.org/blog/writing-clean-python-with-namedtuples" target="_blank" rel="noopener">why-use-namedtuple</a></li>
+<li><a href="http://nbviewer.jupyter.org/urls/bitbucket.org/intellimath/recordclass/raw/default/examples/what_is_recordclass.ipynb" target="_blank" rel="noopener">mutable-namedtuple-version-implementation-from-C</a></li>
+<li><a href="https://pypi.python.org/pypi/namedlist" target="_blank" rel="noopener">namelist-python-index</a></li>
+<li><a href="https://stackoverflow.com/questions/472000/usage-of-slots" target="_blank" rel="noopener">about-python-slots</a></li>
 </ul>
 <h4 id="orderdict">OrderDict</h4>
 <p>&#x8FD9;&#x4E2A;&#x4F7F;&#x7528;&#x5C31;&#x5E7F;&#x4E86;&#xFF0C;&#x7ECF;&#x5E38;&#x6709;&#x9700;&#x6C42;&#x662F;&#x4E00;&#x65B9;&#x9762;&#x4F7F;&#x7528;dict&#x7684;O(1)&#x64CD;&#x4F5C;&#x529F;&#x80FD;&#xFF0C;&#x4E00;&#x65B9;&#x9762;&#x53C8;&#x6709;list&#x7684;&#x987A;&#x5E8F;&#x8BB0;&#x5F55;&#x529F;&#x80FD;&#x3002;</p>
@@ -648,12 +643,15 @@
 <li>&#x4E00;&#x4E2A;&#x989D;&#x5916;dict&#x6765;&#x8BB0;&#x5F55;&#x5BF9;&#x5E94;key&#x5728;list&#x4E2D;&#x4F4D;&#x7F6E;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x5220;&#x9664;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;O(1)&#x627E;&#x5230;&#x5BF9;&#x5E94;list&#x8282;&#x70B9;&#xFF0C;&#x8FDB;&#x800C;&#x6267;&#x884C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x3002;</li>
 </ol>
 <p>&#x8D34;&#x4E00;&#x4E0B;python&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x4F7F;&#x7528;list&#x4F5C;&#x4E3A;&#x53EF;&#x53D8;&#x8282;&#x70B9;&#x7684;&#x5B58;&#x50A8;&#x7ED3;&#x6784;&#xFF08;&#x867D;&#x7136;&#x4E0D;&#x591F;&#x9AD8;&#x6548;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x662F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x7684;struct&#x5B9E;&#x73B0;&#xFF09;&#xFF0C;&#x4F7F;&#x7528;<strong>sentinel&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7B80;&#x5316;&#x7B97;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x590D;&#x6742;&#x7A0B;&#x5EA6;</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">OrderedDict</span><span class="params">(dict)</span>:</span></div><div class="line">    <span class="string">&apos;Dictionary that remembers insertion order&apos;</span></div><div class="line">    <span class="comment"># An inherited dict maps keys to values.</span></div><div class="line">    <span class="comment"># The inherited dict provides __getitem__, __len__, __contains__, and get.</span></div><div class="line">    <span class="comment"># The remaining methods are order-aware.</span></div><div class="line">    <span class="comment"># Big-O running times for all methods are the same as regular dictionaries.</span></div><div class="line"></div><div class="line">    <span class="comment"># The internal self.__map dict maps keys to links in a doubly linked list.</span></div><div class="line">    <span class="comment"># The circular doubly linked list starts and ends with a sentinel element.</span></div><div class="line">    <span class="comment"># The sentinel element never gets deleted (this simplifies the algorithm).</span></div><div class="line">    <span class="comment"># Each link is stored as a list of length three:  [PREV, NEXT, KEY].</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(*args, **kwds)</span>:</span></div><div class="line">        <span class="string">&apos;&apos;&apos;Initialize an ordered dictionary.  The signature is the same as</span></div><div class="line">        regular dictionaries, but keyword arguments are not recommended because</div><div class="line">        their insertion order is arbitrary.</div><div class="line"></div><div class="line">        &apos;&apos;&apos;</div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> args:</div><div class="line">            <span class="keyword">raise</span> TypeError(<span class="string">&quot;descriptor &apos;__init__&apos; of &apos;OrderedDict&apos; object &quot;</span></div><div class="line">                            <span class="string">&quot;needs an argument&quot;</span>)</div><div class="line">        self = args[<span class="number">0</span>]</div><div class="line">        args = args[<span class="number">1</span>:]</div><div class="line">        <span class="keyword">if</span> len(args) &gt; <span class="number">1</span>:</div><div class="line">            <span class="keyword">raise</span> TypeError(<span class="string">&apos;expected at most 1 arguments, got %d&apos;</span> % len(args))</div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            self.__root</div><div class="line">        <span class="keyword">except</span> AttributeError:</div><div class="line">            self.__root = root = []                     <span class="comment"># sentinel node</span></div><div class="line">            root[:] = [root, root, <span class="keyword">None</span>]</div><div class="line">            self.__map = {}</div><div class="line">        self.__update(*args, **kwds)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__setitem__</span><span class="params">(self, key, value, dict_setitem=dict.__setitem__)</span>:</span></div><div class="line">        <span class="string">&apos;od.__setitem__(i, y) &lt;==&gt; od[i]=y&apos;</span></div><div class="line">        <span class="comment"># Setting a new item creates a new link at the end of the linked list,</span></div><div class="line">        <span class="comment"># and the inherited dictionary is updated with the new key/value pair.</span></div><div class="line">        <span class="keyword">if</span> key <span class="keyword">not</span> <span class="keyword">in</span> self:</div><div class="line">            root = self.__root</div><div class="line">            last = root[<span class="number">0</span>]</div><div class="line"></div><div class="line">            <span class="comment"># &#x8FD9;&#x91CC;&#x975E;&#x5E38;&#x7684;cool&#xFF0C;&#x4F7F;&#x7528;sentinel&#x7684;&#x65B9;&#x5F0F;&#x6781;&#x5927;&#x7684;&#x63D0;&#x9AD8;&#x4E86;&#x5B9E;&#x73B0;&#x7B80;&#x5355;&#x7A0B;&#x5EA6;</span></div><div class="line">            last[<span class="number">1</span>] = root[<span class="number">0</span>] = self.__map[key] = [last, root, key]</div><div class="line">        <span class="keyword">return</span> dict_setitem(self, key, value)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__delitem__</span><span class="params">(self, key, dict_delitem=dict.__delitem__)</span>:</span></div><div class="line">        <span class="string">&apos;od.__delitem__(y) &lt;==&gt; del od[y]&apos;</span></div><div class="line">        <span class="comment"># Deleting an existing item uses self.__map to find the link which gets</span></div><div class="line">        <span class="comment"># removed by updating the links in the predecessor and successor nodes.</span></div><div class="line">        dict_delitem(self, key)</div><div class="line">        link_prev, link_next, _ = self.__map.pop(key)</div><div class="line">        link_prev[<span class="number">1</span>] = link_next                        <span class="comment"># update link_prev[NEXT]</span></div><div class="line">        link_next[<span class="number">0</span>] = link_prev                        <span class="comment"># update link_next[PREV]</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">&apos;od.__iter__() &lt;==&gt; iter(od)&apos;</span></div><div class="line">        <span class="comment"># Traverse the linked list in order.</span></div><div class="line">        root = self.__root</div><div class="line">        curr = root[<span class="number">1</span>]                                  <span class="comment"># start at the first node</span></div><div class="line">        <span class="keyword">while</span> curr <span class="keyword">is</span> <span class="keyword">not</span> root:</div><div class="line">            <span class="keyword">yield</span> curr[<span class="number">2</span>]                               <span class="comment"># yield the curr[KEY]</span></div><div class="line">            curr = curr[<span class="number">1</span>]                              <span class="comment"># move to next node</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__reversed__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">&apos;od.__reversed__() &lt;==&gt; reversed(od)&apos;</span></div><div class="line">        <span class="comment"># Traverse the linked list in reverse order.</span></div><div class="line">        root = self.__root</div><div class="line">        curr = root[<span class="number">0</span>]                                  <span class="comment"># start at the last node</span></div><div class="line">        <span class="keyword">while</span> curr <span class="keyword">is</span> <span class="keyword">not</span> root:</div><div class="line">            <span class="keyword">yield</span> curr[<span class="number">2</span>]                               <span class="comment"># yield the curr[KEY]</span></div><div class="line">            curr = curr[<span class="number">0</span>]                              <span class="comment"># move to previous node</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OrderedDict</span><span class="params">(dict)</span>:</span></span><br><span class="line">    <span class="string">&apos;Dictionary that remembers insertion order&apos;</span></span><br><span class="line">    <span class="comment"># An inherited dict maps keys to values.</span></span><br><span class="line">    <span class="comment"># The inherited dict provides __getitem__, __len__, __contains__, and get.</span></span><br><span class="line">    <span class="comment"># The remaining methods are order-aware.</span></span><br><span class="line">    <span class="comment"># Big-O running times for all methods are the same as regular dictionaries.</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># The internal self.__map dict maps keys to links in a doubly linked list.</span></span><br><span class="line">    <span class="comment"># The circular doubly linked list starts and ends with a sentinel element.</span></span><br><span class="line">    <span class="comment"># The sentinel element never gets deleted (this simplifies the algorithm).</span></span><br><span class="line">    <span class="comment"># Each link is stored as a list of length three:  [PREV, NEXT, KEY].</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(*args, **kwds)</span>:</span></span><br><span class="line">        <span class="string">&apos;&apos;&apos;Initialize an ordered dictionary.  The signature is the same as</span></span><br><span class="line"><span class="string">        regular dictionaries, but keyword arguments are not recommended because</span></span><br><span class="line"><span class="string">        their insertion order is arbitrary.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        &apos;&apos;&apos;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> args:</span><br><span class="line">            <span class="keyword">raise</span> TypeError(<span class="string">&quot;descriptor &apos;__init__&apos; of &apos;OrderedDict&apos; object &quot;</span></span><br><span class="line">                            <span class="string">&quot;needs an argument&quot;</span>)</span><br><span class="line">        self = args[<span class="number">0</span>]</span><br><span class="line">        args = args[<span class="number">1</span>:]</span><br><span class="line">        <span class="keyword">if</span> len(args) &gt; <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">raise</span> TypeError(<span class="string">&apos;expected at most 1 arguments, got %d&apos;</span> % len(args))</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.__root</span><br><span class="line">        <span class="keyword">except</span> AttributeError:</span><br><span class="line">            self.__root = root = []                     <span class="comment"># sentinel node</span></span><br><span class="line">            root[:] = [root, root, <span class="keyword">None</span>]</span><br><span class="line">            self.__map = {}</span><br><span class="line">        self.__update(*args, **kwds)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__setitem__</span><span class="params">(self, key, value, dict_setitem=dict.__setitem__)</span>:</span></span><br><span class="line">        <span class="string">&apos;od.__setitem__(i, y) &lt;==&gt; od[i]=y&apos;</span></span><br><span class="line">        <span class="comment"># Setting a new item creates a new link at the end of the linked list,</span></span><br><span class="line">        <span class="comment"># and the inherited dictionary is updated with the new key/value pair.</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">not</span> <span class="keyword">in</span> self:</span><br><span class="line">            root = self.__root</span><br><span class="line">            last = root[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">            <span class="comment"># &#x8FD9;&#x91CC;&#x975E;&#x5E38;&#x7684;cool&#xFF0C;&#x4F7F;&#x7528;sentinel&#x7684;&#x65B9;&#x5F0F;&#x6781;&#x5927;&#x7684;&#x63D0;&#x9AD8;&#x4E86;&#x5B9E;&#x73B0;&#x7B80;&#x5355;&#x7A0B;&#x5EA6;</span></span><br><span class="line">            last[<span class="number">1</span>] = root[<span class="number">0</span>] = self.__map[key] = [last, root, key]</span><br><span class="line">        <span class="keyword">return</span> dict_setitem(self, key, value)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__delitem__</span><span class="params">(self, key, dict_delitem=dict.__delitem__)</span>:</span></span><br><span class="line">        <span class="string">&apos;od.__delitem__(y) &lt;==&gt; del od[y]&apos;</span></span><br><span class="line">        <span class="comment"># Deleting an existing item uses self.__map to find the link which gets</span></span><br><span class="line">        <span class="comment"># removed by updating the links in the predecessor and successor nodes.</span></span><br><span class="line">        dict_delitem(self, key)</span><br><span class="line">        link_prev, link_next, _ = self.__map.pop(key)</span><br><span class="line">        link_prev[<span class="number">1</span>] = link_next                        <span class="comment"># update link_prev[NEXT]</span></span><br><span class="line">        link_next[<span class="number">0</span>] = link_prev                        <span class="comment"># update link_next[PREV]</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">&apos;od.__iter__() &lt;==&gt; iter(od)&apos;</span></span><br><span class="line">        <span class="comment"># Traverse the linked list in order.</span></span><br><span class="line">        root = self.__root</span><br><span class="line">        curr = root[<span class="number">1</span>]                                  <span class="comment"># start at the first node</span></span><br><span class="line">        <span class="keyword">while</span> curr <span class="keyword">is</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">yield</span> curr[<span class="number">2</span>]                               <span class="comment"># yield the curr[KEY]</span></span><br><span class="line">            curr = curr[<span class="number">1</span>]                              <span class="comment"># move to next node</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__reversed__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">&apos;od.__reversed__() &lt;==&gt; reversed(od)&apos;</span></span><br><span class="line">        <span class="comment"># Traverse the linked list in reverse order.</span></span><br><span class="line">        root = self.__root</span><br><span class="line">        curr = root[<span class="number">0</span>]                                  <span class="comment"># start at the last node</span></span><br><span class="line">        <span class="keyword">while</span> curr <span class="keyword">is</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">yield</span> curr[<span class="number">2</span>]                               <span class="comment"># yield the curr[KEY]</span></span><br><span class="line">            curr = curr[<span class="number">0</span>]                              <span class="comment"># move to previous node</span></span><br></pre></td></tr></table></figure>
 <h3 id="python-exception-hierarchy">python exception hierarchy</h3>
-<figure class="highlight ada"><table><tr><td class="code"><pre><div class="line">BaseException</div><div class="line"> +<span class="comment">-- SystemExit</span></div><div class="line"> +<span class="comment">-- KeyboardInterrupt</span></div><div class="line"> +<span class="comment">-- GeneratorExit</span></div><div class="line"> +<span class="comment">-- Exception</span></div><div class="line">      +<span class="comment">-- StopIteration</span></div><div class="line">      +<span class="comment">-- StandardError</span></div><div class="line">      |    +<span class="comment">-- BufferError</span></div><div class="line">      |    +<span class="comment">-- ArithmeticError</span></div><div class="line">      |    |    +<span class="comment">-- FloatingPointError</span></div><div class="line">      |    |    +<span class="comment">-- OverflowError</span></div><div class="line">      |    |    +<span class="comment">-- ZeroDivisionError</span></div><div class="line">      |    +<span class="comment">-- AssertionError</span></div><div class="line">      |    +<span class="comment">-- AttributeError</span></div><div class="line">      |    +<span class="comment">-- EnvironmentError</span></div><div class="line">      |    |    +<span class="comment">-- IOError</span></div><div class="line">      |    |    +<span class="comment">-- OSError</span></div><div class="line">      |    |         +<span class="comment">-- WindowsError (Windows)</span></div><div class="line">      |    |         +<span class="comment">-- VMSError (VMS)</span></div><div class="line">      |    +<span class="comment">-- EOFError</span></div><div class="line">      |    +<span class="comment">-- ImportError</span></div><div class="line">      |    +<span class="comment">-- LookupError</span></div><div class="line">      |    |    +<span class="comment">-- IndexError</span></div><div class="line">      |    |    +<span class="comment">-- KeyError</span></div><div class="line">      |    +<span class="comment">-- MemoryError</span></div><div class="line">      |    +<span class="comment">-- NameError</span></div><div class="line">      |    |    +<span class="comment">-- UnboundLocalError</span></div><div class="line">      |    +<span class="comment">-- ReferenceError</span></div><div class="line">      |    +<span class="comment">-- RuntimeError</span></div><div class="line">      |    |    +<span class="comment">-- NotImplementedError</span></div><div class="line">      |    +<span class="comment">-- SyntaxError</span></div><div class="line">      |    |    +<span class="comment">-- IndentationError</span></div><div class="line">      |    |         +<span class="comment">-- TabError</span></div><div class="line">      |    +<span class="comment">-- SystemError</span></div><div class="line">      |    +<span class="comment">-- TypeError</span></div><div class="line">      |    +<span class="comment">-- ValueError</span></div><div class="line">      |         +<span class="comment">-- UnicodeError</span></div><div class="line">      |              +<span class="comment">-- UnicodeDecodeError</span></div><div class="line">      |              +<span class="comment">-- UnicodeEncodeError</span></div><div class="line">      |              +<span class="comment">-- UnicodeTranslateError</span></div><div class="line">      +<span class="comment">-- Warning</span></div><div class="line">           +<span class="comment">-- DeprecationWarning</span></div><div class="line">           +<span class="comment">-- PendingDeprecationWarning</span></div><div class="line">           +<span class="comment">-- RuntimeWarning</span></div><div class="line">           +<span class="comment">-- SyntaxWarning</span></div><div class="line">           +<span class="comment">-- UserWarning</span></div><div class="line">           +<span class="comment">-- FutureWarning</span></div><div class="line">	   +<span class="comment">-- ImportWarning</span></div><div class="line">	   +<span class="comment">-- UnicodeWarning</span></div><div class="line">	   +<span class="comment">-- BytesWarning</span></div></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">BaseException</span><br><span class="line"> +<span class="comment">-- SystemExit</span></span><br><span class="line"> +<span class="comment">-- KeyboardInterrupt</span></span><br><span class="line"> +<span class="comment">-- GeneratorExit</span></span><br><span class="line"> +<span class="comment">-- Exception</span></span><br><span class="line">      +<span class="comment">-- StopIteration</span></span><br><span class="line">      +<span class="comment">-- StandardError</span></span><br><span class="line">      |    +<span class="comment">-- BufferError</span></span><br><span class="line">      |    +<span class="comment">-- ArithmeticError</span></span><br><span class="line">      |    |    +<span class="comment">-- FloatingPointError</span></span><br><span class="line">      |    |    +<span class="comment">-- OverflowError</span></span><br><span class="line">      |    |    +<span class="comment">-- ZeroDivisionError</span></span><br><span class="line">      |    +<span class="comment">-- AssertionError</span></span><br><span class="line">      |    +<span class="comment">-- AttributeError</span></span><br><span class="line">      |    +<span class="comment">-- EnvironmentError</span></span><br><span class="line">      |    |    +<span class="comment">-- IOError</span></span><br><span class="line">      |    |    +<span class="comment">-- OSError</span></span><br><span class="line">      |    |         +<span class="comment">-- WindowsError (Windows)</span></span><br><span class="line">      |    |         +<span class="comment">-- VMSError (VMS)</span></span><br><span class="line">      |    +<span class="comment">-- EOFError</span></span><br><span class="line">      |    +<span class="comment">-- ImportError</span></span><br><span class="line">      |    +<span class="comment">-- LookupError</span></span><br><span class="line">      |    |    +<span class="comment">-- IndexError</span></span><br><span class="line">      |    |    +<span class="comment">-- KeyError</span></span><br><span class="line">      |    +<span class="comment">-- MemoryError</span></span><br><span class="line">      |    +<span class="comment">-- NameError</span></span><br><span class="line">      |    |    +<span class="comment">-- UnboundLocalError</span></span><br><span class="line">      |    +<span class="comment">-- ReferenceError</span></span><br><span class="line">      |    +<span class="comment">-- RuntimeError</span></span><br><span class="line">      |    |    +<span class="comment">-- NotImplementedError</span></span><br><span class="line">      |    +<span class="comment">-- SyntaxError</span></span><br><span class="line">      |    |    +<span class="comment">-- IndentationError</span></span><br><span class="line">      |    |         +<span class="comment">-- TabError</span></span><br><span class="line">      |    +<span class="comment">-- SystemError</span></span><br><span class="line">      |    +<span class="comment">-- TypeError</span></span><br><span class="line">      |    +<span class="comment">-- ValueError</span></span><br><span class="line">      |         +<span class="comment">-- UnicodeError</span></span><br><span class="line">      |              +<span class="comment">-- UnicodeDecodeError</span></span><br><span class="line">      |              +<span class="comment">-- UnicodeEncodeError</span></span><br><span class="line">      |              +<span class="comment">-- UnicodeTranslateError</span></span><br><span class="line">      +<span class="comment">-- Warning</span></span><br><span class="line">           +<span class="comment">-- DeprecationWarning</span></span><br><span class="line">           +<span class="comment">-- PendingDeprecationWarning</span></span><br><span class="line">           +<span class="comment">-- RuntimeWarning</span></span><br><span class="line">           +<span class="comment">-- SyntaxWarning</span></span><br><span class="line">           +<span class="comment">-- UserWarning</span></span><br><span class="line">           +<span class="comment">-- FutureWarning</span></span><br><span class="line">	   +<span class="comment">-- ImportWarning</span></span><br><span class="line">	   +<span class="comment">-- UnicodeWarning</span></span><br><span class="line">	   +<span class="comment">-- BytesWarning</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
+
+    
+
     
     
     
@@ -666,17 +664,13 @@
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    whiledoing
-  </li>
+    <strong>本文作者： </strong>whiledoing</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     <a href="http://whiledoing.me/2016/03/10/python-practice/" title="python misc">http://whiledoing.me/2016/03/10/python-practice/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-  </li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -694,18 +688,6 @@
       
 
       
-      
-        <div class="post-widgets">
-        
-          <div class="wp_rating">
-            <div id="wpac-rating"></div>
-          </div>
-        
-
-        
-
-        
-        </div>
       
       
 
@@ -749,9 +731,6 @@
 
 
           </div>
-          
-
-
           
 
   
@@ -799,63 +778,136 @@
               <p class="site-description motion-element" itemprop="description">喜欢一切简单且美的事物，包括人。</p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">51</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">51</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
-
-            
               
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
 
-          </nav>
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
 
           
 
-          <div class="links-of-author motion-element">
-            
+          
+            <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">
-                    GitHub</a>
+                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">GitHub</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">
-                    豆瓣</a>
+                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">豆瓣</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">
-                    知乎</a>
+                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">知乎</a>
+                  
                 </span>
               
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
             
-          </div>
-
           
-          
-
-          
-          
-
           
 
         </div>
@@ -892,25 +944,20 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">whiledoing</span>
 
   
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count">132.6k</span>
+
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -918,12 +965,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.1.0</div>
 
 
 
 
         
+
 
 
 
@@ -938,8 +986,6 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -964,7 +1010,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -984,16 +1034,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1002,18 +1042,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.1.0"></script>
 
 
 
@@ -1021,23 +1056,19 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.0"></script>
 
 
 
   
-
-
-  
-
 
 
 
@@ -1064,387 +1095,102 @@
 
 
 
+  
+
+
+
 
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
+  
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
+  
+  
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
+  
+  
 
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+  
 
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
 
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
+  
+  
 
-                // show search results
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
 
-                if (isMatch) {
-                  // sort index by position of keyword
 
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.1.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.1.0"></script>
 
-                  // merge hits into slices
 
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
+  
 
-                      // move to next position of hit
+  
 
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('3');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+  
+  <style>
+    .copy-btn {
+        position: relative;
+        display: inline-block;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #333;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+        user-select: none;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
+    .highlight {
+        position: relative;
+    }
 
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight .copy-btn {
+        transition: opacity .3s ease-in-out;
+        opacity: 0;
+        padding: 2px 6px;
+        position: absolute;
+        right: 4px;
+        top: 8px;
+    }
+
+    .highlight:hover .copy-btn,
+    .highlight .copy-btn:focus {
+        opacity: 1
+    }
+  </style>
+  <script>
+    $('.highlight').prepend($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+      var code = $(e.target).parent().find('.code').find('.line').map(function(i, e){
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'fixed'
+      ta.style.top = 0
+      ta.style.left = 0
+      ta.value = code
+      ta.select()
+      ta.focus()
+      document.execCommand('copy')
+      document.body.removeChild(ta)
+    }))
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-  <script type="text/javascript">
-  wpac_init = window.wpac_init || [];
-  wpac_init.push({widget: 'Rating', id: ,
-    el: 'wpac-rating',
-    color: 'fc6423'
-  });
-  (function() {
-    if ('WIDGETPACK_LOADED' in window) return;
-    WIDGETPACK_LOADED = true;
-    var mc = document.createElement('script');
-    mc.type = 'text/javascript';
-    mc.async = true;
-    mc.src = '//embed.widgetpack.com/widget.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
-  })();
-  </script>
-
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
-
-
-  
 
 </body>
 </html>

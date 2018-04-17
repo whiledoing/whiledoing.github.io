@@ -5,21 +5,17 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
 
 
 
@@ -49,10 +45,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -61,44 +53,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.1.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.1.0">
 
 
-  <link rel="mask-icon" href="/favicon.png?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="hexo, whiledoing, blog" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.1.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="喜欢一切简单且美的事物，包括人。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="whiledoing">
-<meta property="og:url" content="http://whiledoing.me/index.html">
-<meta property="og:site_name" content="whiledoing">
-<meta property="og:description" content="喜欢一切简单且美的事物，包括人。">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="whiledoing">
-<meta name="twitter:description" content="喜欢一切简单且美的事物，包括人。">
 
 
 
@@ -107,15 +80,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
+    version: '6.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -127,12 +98,36 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="喜欢一切简单且美的事物，包括人。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="whiledoing">
+<meta property="og:url" content="http://whiledoing.me/index.html">
+<meta property="og:site_name" content="whiledoing">
+<meta property="og:description" content="喜欢一切简单且美的事物，包括人。">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="whiledoing">
+<meta name="twitter:description" content="喜欢一切简单且美的事物，包括人。">
+
+
+
+
+
 
   <link rel="canonical" href="http://whiledoing.me/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>whiledoing</title>
   
@@ -140,13 +135,50 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117714040-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117714040-1');
+</script>
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -163,7 +195,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">whiledoing</span>
         <span class="logo-line-after"><i></i></span>
@@ -175,7 +207,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -183,92 +215,67 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -279,6 +286,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -305,37 +314,38 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/12/note/pyramid-thinking-note/" itemprop="url">《金字塔原理》与《重构》：关于KISS原则的实践</a></h1>
+                <a class="post-title-link" href="/2018/04/12/note/pyramid-thinking-note/" itemprop="url">
+                  《金字塔原理》与《重构》：关于KISS原则的实践
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-12T08:51:14+08:00">
-                2018-04-12
-              </time>
+                
+              
+
+              <time title="创建于：2018-04-12 08:51:14 / 更新于：13:40:58" itemprop="dateCreated datePublished" datetime="2018-04-12T08:51:14+08:00">2018-04-12</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-12T13:40:58+08:00">
-                2018-04-12
-              </time>
             
           </span>
 
@@ -350,27 +360,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,032
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -402,6 +391,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -438,6 +430,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -464,37 +458,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/11/note/coursera-machine-learning-course-note/" itemprop="url">Coursera - Andrew Ng - Machine Learning - 学习笔记</a></h1>
+                <a class="post-title-link" href="/2018/04/11/note/coursera-machine-learning-course-note/" itemprop="url">
+                  Coursera - Andrew Ng - Machine Learning - 学习笔记
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T16:04:47+08:00">
-                2018-04-11
-              </time>
+                
+              
+
+              <time title="创建于：2018-04-11 16:04:47" itemprop="dateCreated datePublished" datetime="2018-04-11T16:04:47+08:00">2018-04-11</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2018-04-17 11:50:59" itemprop="dateModified" datetime="2018-04-17T11:50:59+08:00">2018-04-17</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-15T21:45:15+08:00">
-                2018-04-15
-              </time>
             
           </span>
 
@@ -509,27 +514,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  6,924
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -548,8 +532,8 @@
 
       
         
-          <p>非常好的机器学习入门教程 <a href="https://www.coursera.org/learn/machine-learning">Coursera - Andrew Ng - Machine Learning</a>。记录一下我的学习笔记。</p>
-<p>课后编程作业非常有意思：<a href="https://github.com/whiledoing/coursera-machine-learning-course-homework">实现代码</a></p>
+          <p>非常好的机器学习入门教程 <a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="noopener">Coursera - Andrew Ng - Machine Learning</a>。记录一下我的学习笔记。</p>
+<p>课后编程作业非常有意思：<a href="https://github.com/whiledoing/coursera-machine-learning-course-homework" target="_blank" rel="noopener">实现代码</a></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/11/note/coursera-machine-learning-course-note/#more" rel="contents">
@@ -560,6 +544,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -598,6 +585,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -622,37 +611,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/09/summary/summary-take-care-of-grandpa/" itemprop="url">照顾爷爷的这120天</a></h1>
+                <a class="post-title-link" href="/2018/04/09/summary/summary-take-care-of-grandpa/" itemprop="url">
+                  照顾爷爷的这120天
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-09T13:22:09+08:00">
-                2018-04-09
-              </time>
+                
+              
+
+              <time title="创建于：2018-04-09 13:22:09" itemprop="dateCreated datePublished" datetime="2018-04-09T13:22:09+08:00">2018-04-09</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2018-04-11 16:03:36" itemprop="dateModified" datetime="2018-04-11T16:03:36+08:00">2018-04-11</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-11T16:03:36+08:00">
-                2018-04-11
-              </time>
             
           </span>
 
@@ -667,27 +667,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3,614
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -718,6 +697,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -754,6 +736,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -780,37 +764,38 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/08/note/one-men's-view-of-the-world-note/" itemprop="url">《李光耀观天下》与实用主义「信仰」的思考</a></h1>
+                <a class="post-title-link" href="/2018/04/08/note/one-men's-view-of-the-world-note/" itemprop="url">
+                  《李光耀观天下》与实用主义「信仰」的思考
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-08T17:47:33+08:00">
-                2018-04-08
-              </time>
+                
+              
+
+              <time title="创建于：2018-04-08 17:47:33 / 更新于：21:47:22" itemprop="dateCreated datePublished" datetime="2018-04-08T17:47:33+08:00">2018-04-08</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-08T21:47:22+08:00">
-                2018-04-08
-              </time>
             
           </span>
 
@@ -825,27 +810,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3,581
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -865,7 +829,7 @@
       
         
           <p><img src="http://static.zybuluo.com/whiledoing/u03y9kmor7egmfqcm93lmhqg/image_1caib372j1rq11p481qlfdjvp929.png" alt="image_1caib372j1rq11p481qlfdjvp929.png-154.8kB"></p>
-<p>还记得看<a href="https://img3.doubanio.com/lpic/s28095832.jpg">《李光耀观天下》</a>这本书是在一个工作日的午后。我本来只是打算看一会书就去午休，结果没想到一直看了很久，进而下午都没怎么干活。。（当然，负责任的我最后加班了 😉）。</p>
+<p>还记得看<a href="https://img3.doubanio.com/lpic/s28095832.jpg" target="_blank" rel="noopener">《李光耀观天下》</a>这本书是在一个工作日的午后。我本来只是打算看一会书就去午休，结果没想到一直看了很久，进而下午都没怎么干活。。（当然，负责任的我最后加班了 😉）。</p>
 <p>看完这本书，震撼极大：</p>
 <ol>
 <li>政治原来也可以如此有趣。一个国家的文化，经济，历史，地缘关系可以对国家的演变，国际形势的演变起到如此深刻的影响。</li>
@@ -889,6 +853,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -925,6 +892,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -951,37 +920,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/25/prog/my-leetcode-summary/" itemprop="url">leetcode解题记录</a></h1>
+                <a class="post-title-link" href="/2018/03/25/prog/my-leetcode-summary/" itemprop="url">
+                  leetcode解题记录
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-25T16:25:23+08:00">
-                2018-03-25
-              </time>
+                
+              
+
+              <time title="创建于：2018-03-25 16:25:23" itemprop="dateCreated datePublished" datetime="2018-03-25T16:25:23+08:00">2018-03-25</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2018-04-03 13:20:56" itemprop="dateModified" datetime="2018-04-03T13:20:56+08:00">2018-04-03</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-03T13:20:56+08:00">
-                2018-04-03
-              </time>
             
           </span>
 
@@ -996,27 +976,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  5,409
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1035,7 +994,7 @@
 
       
         
-          <p>自己之前刷<a href="https://leetcode.com/">leetcode</a>的解题报告。</p>
+          <p>自己之前刷<a href="https://leetcode.com/" target="_blank" rel="noopener">leetcode</a>的解题报告。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/25/prog/my-leetcode-summary/#more" rel="contents">
@@ -1046,6 +1005,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1082,6 +1044,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1108,37 +1072,38 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/24/note/prog-pearls-note/" itemprop="url">《编程珠玑》读书笔记</a></h1>
+                <a class="post-title-link" href="/2018/03/24/note/prog-pearls-note/" itemprop="url">
+                  《编程珠玑》读书笔记
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-24T23:27:46+08:00">
-                2018-03-24
-              </time>
+                
+              
+
+              <time title="创建于：2018-03-24 23:27:46 / 更新于：23:35:08" itemprop="dateCreated datePublished" datetime="2018-03-24T23:27:46+08:00">2018-03-24</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-24T23:35:08+08:00">
-                2018-03-24
-              </time>
             
           </span>
 
@@ -1153,27 +1118,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3,776
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1192,7 +1136,7 @@
 
       
         
-          <p>最早看<a href="https://book.douban.com/subject/3227098/">编程珠玑</a>是由于上研时一位大牛同学的推荐，书很薄，但是却用了很长时间看完，因为书中写的内容确实非常好，对得起「珠玑」二字。将当时的读书笔记整理如下。</p>
+          <p>最早看<a href="https://book.douban.com/subject/3227098/" target="_blank" rel="noopener">编程珠玑</a>是由于上研时一位大牛同学的推荐，书很薄，但是却用了很长时间看完，因为书中写的内容确实非常好，对得起「珠玑」二字。将当时的读书笔记整理如下。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/24/note/prog-pearls-note/#more" rel="contents">
@@ -1203,6 +1147,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1239,6 +1186,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1265,37 +1214,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/24/note/beauty-of-prog-note/" itemprop="url">《编程之美》读书笔记</a></h1>
+                <a class="post-title-link" href="/2018/03/24/note/beauty-of-prog-note/" itemprop="url">
+                  《编程之美》读书笔记
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-24T10:27:54+08:00">
-                2018-03-24
-              </time>
+                
+              
+
+              <time title="创建于：2018-03-24 10:27:54" itemprop="dateCreated datePublished" datetime="2018-03-24T10:27:54+08:00">2018-03-24</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2018-03-25 16:24:06" itemprop="dateModified" datetime="2018-03-25T16:24:06+08:00">2018-03-25</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-25T16:24:06+08:00">
-                2018-03-25
-              </time>
             
           </span>
 
@@ -1310,27 +1270,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  23,033
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1349,7 +1288,7 @@
 
       
         
-          <p>2014年我研究生毕业找工作时候认认真真看了一遍<a href="https://book.douban.com/subject/3004255/">编程之美</a>，刚好这段时间整理自己以前写的东西，就将当时的学习笔记整理成文。</p>
+          <p>2014年我研究生毕业找工作时候认认真真看了一遍<a href="https://book.douban.com/subject/3004255/" target="_blank" rel="noopener">编程之美</a>，刚好这段时间整理自己以前写的东西，就将当时的学习笔记整理成文。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/24/note/beauty-of-prog-note/#more" rel="contents">
@@ -1360,6 +1299,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1396,6 +1338,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1422,37 +1366,48 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/16/use-vps/" itemprop="url">使用vps</a></h1>
+                <a class="post-title-link" href="/2018/03/16/use-vps/" itemprop="url">
+                  使用vps
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-16T20:23:24+08:00">
-                2018-03-16
-              </time>
+                
+              
+
+              <time title="创建于：2018-03-16 20:23:24" itemprop="dateCreated datePublished" datetime="2018-03-16T20:23:24+08:00">2018-03-16</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2018-03-22 17:30:23" itemprop="dateModified" datetime="2018-03-22T17:30:23+08:00">2018-03-22</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-22T17:30:23+08:00">
-                2018-03-22
-              </time>
             
           </span>
 
@@ -1467,27 +1422,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  446
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1508,15 +1442,15 @@
         
           
             <h2 id="&#x8D2D;&#x4E70;vps">&#x8D2D;&#x4E70;vps</h2>
-<p>&#x4E4B;&#x524D;&#x7528;&#x8FC7;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#x7684;<a href="https://my.vultr.com/%20vultr%20vps" target="_blank" rel="external">vultr</a>&#x65E5;&#x672C;vps&#xFF0C;&#x4EF7;&#x683C;&#x5F88;&#x4FBF;&#x5B9C;&#xFF0C;&#x4F46;&#x662F;&#x603B;&#x662F;&#x611F;&#x89C9;ssh&#x4E0A;&#x53BB;&#x4F1A;&#x4E2D;&#x65AD;&#xFF0C;&#x7D22;&#x6027;&#x6CA1;&#x6709;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;&#xFF0C;&#x800C;&#x662F;&#x63A8;&#x8350;&#x90FD;&#x6BD4;&#x8F83;&#x591A;&#x4EBA;&#x4F7F;&#x7528;&#x7684;<a href="http://bwg.yiqimaila.com/bwg/buy.html" title="&#x642C;&#x74E6;&#x5DE5;" target="_blank" rel="external">&#x642C;&#x74E6;&#x5DE5;</a>&#x8FD9;&#x4E2A;&#x8001;&#x724C;vps&#x8FD0;&#x884C;&#x5546;&#x4E0A;&#x9762;&#x3002;</p>
+<p>&#x4E4B;&#x524D;&#x7528;&#x8FC7;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#x7684;<a href="https://my.vultr.com/%20vultr%20vps" target="_blank" rel="noopener">vultr</a>&#x65E5;&#x672C;vps&#xFF0C;&#x4EF7;&#x683C;&#x5F88;&#x4FBF;&#x5B9C;&#xFF0C;&#x4F46;&#x662F;&#x603B;&#x662F;&#x611F;&#x89C9;ssh&#x4E0A;&#x53BB;&#x4F1A;&#x4E2D;&#x65AD;&#xFF0C;&#x7D22;&#x6027;&#x6CA1;&#x6709;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;&#xFF0C;&#x800C;&#x662F;&#x63A8;&#x8350;&#x90FD;&#x6BD4;&#x8F83;&#x591A;&#x4EBA;&#x4F7F;&#x7528;&#x7684;<a href="http://bwg.yiqimaila.com/bwg/buy.html" title="&#x642C;&#x74E6;&#x5DE5;" target="_blank" rel="noopener">&#x642C;&#x74E6;&#x5DE5;</a>&#x8FD9;&#x4E2A;&#x8001;&#x724C;vps&#x8FD0;&#x884C;&#x5546;&#x4E0A;&#x9762;&#x3002;</p>
 <p>&#x6298;&#x817E;&#x4E86;&#x4E00;&#x4E2A;&#x7F8E;&#x56FD;&#x7684;CN2&#x7535;&#x4FE1;&#x76F4;&#x8FDE;&#x7EBF;&#x8DEF;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E73;&#x5747;ping&#x503C;&#x5728;180ms&#x5DE6;&#x53F3;&#xFF0C;&#x52C9;&#x5F3A;&#x591F;&#x7528;&#xFF0C;1G&#x7684;&#x6708;&#x6D41;&#x91CF;&#x4E5F;&#x662F;&#x591F;&#x6211;&#x4F7F;&#x7528;youtube&#x770B;&#x89C6;&#x9891;&#x4E86;&#x3002;</p>
 <h2 id="&#x90E8;&#x7F72;&#x670D;&#x52A1;&#x5668;ssh">&#x90E8;&#x7F72;&#x670D;&#x52A1;&#x5668;ssh</h2>
 <h3 id="&#x5EFA;&#x7ACB;&#x7528;&#x6237;">&#x5EFA;&#x7ACB;&#x7528;&#x6237;</h3>
-<p>&#x5EFA;&#x7ACB;&#x7528;&#x6237;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x8BBE;&#x7F6E;&#x597D;&#x5BC6;&#x7801;&#xFF0C;&#x5426;&#x5219;&#x7528;&#x6237;&#x4F1A;&#x56E0;&#x4E3A;locked&#x72B6;&#x6001;&#x5BFC;&#x81F4;&#x540E;&#x671F;ssh&#x767B;&#x9646;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x53EF;&#x4EE5;<a href="http://www.golinuxhub.com/2014/08/how-to-check-lock-status-of-any-user.html" target="_blank" rel="external">&#x53C2;&#x8003;</a>&#x3002;</p>
+<p>&#x5EFA;&#x7ACB;&#x7528;&#x6237;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x8BBE;&#x7F6E;&#x597D;&#x5BC6;&#x7801;&#xFF0C;&#x5426;&#x5219;&#x7528;&#x6237;&#x4F1A;&#x56E0;&#x4E3A;locked&#x72B6;&#x6001;&#x5BFC;&#x81F4;&#x540E;&#x671F;ssh&#x767B;&#x9646;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x53EF;&#x4EE5;<a href="http://www.golinuxhub.com/2014/08/how-to-check-lock-status-of-any-user.html" target="_blank" rel="noopener">&#x53C2;&#x8003;</a>&#x3002;</p>
 <p>&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6700;&#x540E;&#x52A0;&#x4E0A;<code>wheel</code>&#x8FD9;&#x4E2A;group&#xFF0C;&#x8FD9;&#x6837;&#x5B50;<code>visudo</code>&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x7279;&#x5B9A;&#x7684;&#x7EC4;&#x8BBE;&#x7F6E;&#x4E3A;&#x9AD8;&#x6743;&#x9650;&#x5373;&#x53EF;&#x3002;&#x6240;&#x6709;&#x521B;&#x5EFA;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#xFF1A;</p>
 <pre><code class="hljs">useradd -p xxxx -G wheel account_name
 </code></pre>
-<p>&#x5176;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;<code>-G</code>&#x53C2;&#x6570;&#x52A0;&#x5165;secondary user group&#x800C;&#x4E0D;&#x662F;&#x5C06;wheel&#x4F5C;&#x4E3A;&#x4E3B;&#x7528;&#x6237;&#x7EC4;&#x66F4;&#x52A0;&#x597D;&#xFF0C;&#x8FD9;&#x7BC7;<a href="https://www.cyberciti.biz/faq/howto-linux-add-user-to-group/" target="_blank" rel="external">&#x6587;&#x7AE0;</a>&#x6709;&#x8BF4;&#x660E;&#x5176;&#x4E2D;&#x7684;&#x533A;&#x522B;&#x3002;</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;<code>-G</code>&#x53C2;&#x6570;&#x52A0;&#x5165;secondary user group&#x800C;&#x4E0D;&#x662F;&#x5C06;wheel&#x4F5C;&#x4E3A;&#x4E3B;&#x7528;&#x6237;&#x7EC4;&#x66F4;&#x52A0;&#x597D;&#xFF0C;&#x8FD9;&#x7BC7;<a href="https://www.cyberciti.biz/faq/howto-linux-add-user-to-group/" target="_blank" rel="noopener">&#x6587;&#x7AE0;</a>&#x6709;&#x8BF4;&#x660E;&#x5176;&#x4E2D;&#x7684;&#x533A;&#x522B;&#x3002;</p>
 <h3 id="&#x914D;&#x7F6E;sshd">&#x914D;&#x7F6E;sshd</h3>
 <p>&#x76EE;&#x6807;&#x662F;&#x65E0;&#x5BC6;&#x7801;&#x7684;&#x767B;&#x9646;&#x8FDB;&#x5165;&#x6211;&#x7684;&#x65B0;&#x7528;&#x6237;&#x8D26;&#x53F7;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x786E;&#x4FDD;<code>/etc/ssh/sshd_config</code>&#x4E2D;&#x7684;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x5F00;&#x542F;&#xFF08;&#x4E00;&#x822C;&#x9ED8;&#x8BA4;&#x5C31;&#x662F;&#x5F00;&#x542F;&#x7684;&#xFF09;&#xFF1A;</p>
 <pre><code class="hljs">RSAAuthentication yes
@@ -1534,14 +1468,17 @@ chmod 600 ~/.ssh/authorized_keys
 </ol>
 <p>&#x53C2;&#x8003;&#xFF1A;</p>
 <ul>
-<li><a href="https://my.oschina.net/leejun2005/blog/1527765" target="_blank" rel="external">&#x8BB0;&#x4E00;&#x6B21;&#x8BE1;&#x5F02;&#x7684; ssh &#x4E92;&#x4FE1;&#x514D;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x5931;&#x8D25;</a></li>
-<li><a href="https://unix.stackexchange.com/questions/36540/why-am-i-still-getting-a-password-prompt-with-ssh-with-public-key-authentication.html" target="_blank" rel="external">Why am I still getting a password prompt with ssh with public key authentication?</a></li>
+<li><a href="https://my.oschina.net/leejun2005/blog/1527765" target="_blank" rel="noopener">&#x8BB0;&#x4E00;&#x6B21;&#x8BE1;&#x5F02;&#x7684; ssh &#x4E92;&#x4FE1;&#x514D;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x5931;&#x8D25;</a></li>
+<li><a href="https://unix.stackexchange.com/questions/36540/why-am-i-still-getting-a-password-prompt-with-ssh-with-public-key-authentication.html" target="_blank" rel="noopener">Why am I still getting a password prompt with ssh with public key authentication?</a></li>
 </ul>
 
           
         
       
     </div>
+
+    
+
     
     
     
@@ -1580,6 +1517,8 @@ chmod 600 ~/.ssh/authorized_keys
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1604,37 +1543,48 @@ chmod 600 ~/.ssh/authorized_keys
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/04/diary/diary-2018-01-04-THU/" itemprop="url">diary-2018-01-04-THU</a></h1>
+                <a class="post-title-link" href="/2018/01/04/diary/diary-2018-01-04-THU/" itemprop="url">
+                  diary-2018-01-04-THU
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T23:13:18+08:00">
-                2018-01-04
-              </time>
+                
+              
+
+              <time title="创建于：2018-01-04 23:13:18" itemprop="dateCreated datePublished" datetime="2018-01-04T23:13:18+08:00">2018-01-04</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2018-03-25 23:27:33" itemprop="dateModified" datetime="2018-03-25T23:27:33+08:00">2018-03-25</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-25T23:27:33+08:00">
-                2018-03-25
-              </time>
             
           </span>
 
@@ -1649,27 +1599,6 @@ chmod 600 ~/.ssh/authorized_keys
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,491
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1705,6 +1634,9 @@ chmod 600 ~/.ssh/authorized_keys
         
       
     </div>
+
+    
+
     
     
     
@@ -1743,6 +1675,8 @@ chmod 600 ~/.ssh/authorized_keys
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1767,37 +1701,48 @@ chmod 600 ~/.ssh/authorized_keys
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/01/summary-2017/" itemprop="url">关于2017</a></h1>
+                <a class="post-title-link" href="/2018/01/01/summary-2017/" itemprop="url">
+                  关于2017
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-01T02:18:54+08:00">
-                2018-01-01
-              </time>
+                
+              
+
+              <time title="创建于：2018-01-01 02:18:54" itemprop="dateCreated datePublished" datetime="2018-01-01T02:18:54+08:00">2018-01-01</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2018-01-04 23:25:32" itemprop="dateModified" datetime="2018-01-04T23:25:32+08:00">2018-01-04</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-01-04T23:25:32+08:00">
-                2018-01-04
-              </time>
             
           </span>
 
@@ -1812,27 +1757,6 @@ chmod 600 ~/.ssh/authorized_keys
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  5,701
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -1863,6 +1787,9 @@ chmod 600 ~/.ssh/authorized_keys
         
       
     </div>
+
+    
+
     
     
     
@@ -1897,15 +1824,12 @@ chmod 600 ~/.ssh/authorized_keys
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1940,63 +1864,136 @@ chmod 600 ~/.ssh/authorized_keys
               <p class="site-description motion-element" itemprop="description">喜欢一切简单且美的事物，包括人。</p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">51</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">51</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
-
-            
               
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
 
-          </nav>
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
 
           
 
-          <div class="links-of-author motion-element">
-            
+          
+            <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">
-                    GitHub</a>
+                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">GitHub</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">
-                    豆瓣</a>
+                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">豆瓣</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">
-                    知乎</a>
+                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">知乎</a>
+                  
                 </span>
               
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
             
-          </div>
-
           
-          
-
-          
-          
-
           
 
         </div>
@@ -2017,25 +2014,20 @@ chmod 600 ~/.ssh/authorized_keys
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">whiledoing</span>
 
   
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count">132.6k</span>
+
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -2043,12 +2035,13 @@ chmod 600 ~/.ssh/authorized_keys
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.1.0</div>
 
 
 
 
         
+
 
 
 
@@ -2063,8 +2056,6 @@ chmod 600 ~/.ssh/authorized_keys
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -2089,7 +2080,11 @@ chmod 600 ~/.ssh/authorized_keys
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -2109,16 +2104,6 @@ chmod 600 ~/.ssh/authorized_keys
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -2127,18 +2112,13 @@ chmod 600 ~/.ssh/authorized_keys
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.1.0"></script>
 
 
 
@@ -2150,15 +2130,11 @@ chmod 600 ~/.ssh/authorized_keys
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.0"></script>
 
 
 
   
-
-
-  
-
 
 
 
@@ -2185,370 +2161,131 @@ chmod 600 ~/.ssh/authorized_keys
 
 
 
+  
+
+
+
 
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
+  
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
+  
+  
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
+  
+  
+    
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
 
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+  
+    
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.7.1/dist/katex.min.css" type="text/css">
 
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
+   
+  
 
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
 
-                // show search results
+  
+  
 
-                if (isMatch) {
-                  // sort index by position of keyword
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
 
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
 
-                  // merge hits into slices
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.1.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.1.0"></script>
 
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
 
-                      // move to next position of hit
+  
 
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
+  
 
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('3');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+  
+  <style>
+    .copy-btn {
+        position: relative;
+        display: inline-block;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #333;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+        user-select: none;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
+    .highlight {
+        position: relative;
+    }
 
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight .copy-btn {
+        transition: opacity .3s ease-in-out;
+        opacity: 0;
+        padding: 2px 6px;
+        position: absolute;
+        right: 4px;
+        top: 8px;
+    }
+
+    .highlight:hover .copy-btn,
+    .highlight .copy-btn:focus {
+        opacity: 1
+    }
+  </style>
+  <script>
+    $('.highlight').prepend($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+      var code = $(e.target).parent().find('.code').find('.line').map(function(i, e){
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'fixed'
+      ta.style.top = 0
+      ta.style.left = 0
+      ta.value = code
+      ta.select()
+      ta.focus()
+      document.execCommand('copy')
+      document.body.removeChild(ta)
+    }))
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
-
-
-  
 
 </body>
 </html>

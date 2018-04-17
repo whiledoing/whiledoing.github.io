@@ -5,21 +5,17 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
 
 
 
@@ -49,10 +45,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -61,48 +53,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.1.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.1.0">
 
 
-  <link rel="mask-icon" href="/favicon.png?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="自写,读书笔记,linux," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.1.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="这是学习《鸟哥的Linux私房菜》的学习笔记。
-很早就买的书，一直放在家中堆灰。。。终于有空拿出来仔细看了下，陆陆续续看了2周左右，记录一下便于后续参考。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="《鸟哥的Linux私房菜》读书笔记">
-<meta property="og:url" content="http://whiledoing.me/2016/03/24/book-liaoge-linux-course-md/index.html">
-<meta property="og:site_name" content="whiledoing">
-<meta property="og:description" content="这是学习《鸟哥的Linux私房菜》的学习笔记。
-很早就买的书，一直放在家中堆灰。。。终于有空拿出来仔细看了下，陆陆续续看了2周左右，记录一下便于后续参考。">
-<meta property="og:updated_time" content="2017-11-30T07:29:17.625Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《鸟哥的Linux私房菜》读书笔记">
-<meta name="twitter:description" content="这是学习《鸟哥的Linux私房菜》的学习笔记。
-很早就买的书，一直放在家中堆灰。。。终于有空拿出来仔细看了下，陆陆续续看了2周左右，记录一下便于后续参考。">
 
 
 
@@ -111,15 +80,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
+    version: '6.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -131,12 +98,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="这是学习《鸟哥的Linux私房菜》的学习笔记。 很早就买的书，一直放在家中堆灰。。。终于有空拿出来仔细看了下，陆陆续续看了2周左右，记录一下便于后续参考。">
+<meta name="keywords" content="自写,读书笔记,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《鸟哥的Linux私房菜》读书笔记">
+<meta property="og:url" content="http://whiledoing.me/2016/03/24/book-liaoge-linux-course-md/index.html">
+<meta property="og:site_name" content="whiledoing">
+<meta property="og:description" content="这是学习《鸟哥的Linux私房菜》的学习笔记。 很早就买的书，一直放在家中堆灰。。。终于有空拿出来仔细看了下，陆陆续续看了2周左右，记录一下便于后续参考。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-30T07:29:17.625Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《鸟哥的Linux私房菜》读书笔记">
+<meta name="twitter:description" content="这是学习《鸟哥的Linux私房菜》的学习笔记。 很早就买的书，一直放在家中堆灰。。。终于有空拿出来仔细看了下，陆陆续续看了2周左右，记录一下便于后续参考。">
+
+
+
+
+
 
   <link rel="canonical" href="http://whiledoing.me/2016/03/24/book-liaoge-linux-course-md/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>《鸟哥的Linux私房菜》读书笔记 | whiledoing</title>
   
@@ -144,13 +137,50 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117714040-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117714040-1');
+</script>
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -166,7 +196,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">whiledoing</span>
         <span class="logo-line-after"><i></i></span>
@@ -178,7 +208,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -186,92 +216,67 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -282,6 +287,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -306,37 +313,46 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《鸟哥的Linux私房菜》读书笔记</h1>
+          <h1 class="post-title" itemprop="name headline">《鸟哥的Linux私房菜》读书笔记
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-24T11:07:05+08:00">
-                2016-03-24
-              </time>
+                
+              
+
+              <time title="创建于：2016-03-24 11:07:05" itemprop="dateCreated datePublished" datetime="2016-03-24T11:07:05+08:00">2016-03-24</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于&#58;</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="更新于：2017-11-30 15:29:17" itemprop="dateModified" datetime="2017-11-30T15:29:17+08:00">2017-11-30</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-30T15:29:17+08:00">
-                2017-11-30
-              </time>
             
           </span>
 
@@ -351,27 +367,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  8,014
-                </span>
-              
-
-              
-
-              
-            </div>
           
 
           
@@ -389,7 +384,7 @@
       
 
       
-        <p>&#x8FD9;&#x662F;&#x5B66;&#x4E60;<a href="http://book.douban.com/subject/4889838/" target="_blank" rel="external">&#x300A;&#x9E1F;&#x54E5;&#x7684;Linux&#x79C1;&#x623F;&#x83DC;&#x300B;</a>&#x7684;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;&#x3002;</p>
+        <p>&#x8FD9;&#x662F;&#x5B66;&#x4E60;<a href="http://book.douban.com/subject/4889838/" target="_blank" rel="noopener">&#x300A;&#x9E1F;&#x54E5;&#x7684;Linux&#x79C1;&#x623F;&#x83DC;&#x300B;</a>&#x7684;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;&#x3002;</p>
 <p>&#x5F88;&#x65E9;&#x5C31;&#x4E70;&#x7684;&#x4E66;&#xFF0C;&#x4E00;&#x76F4;&#x653E;&#x5728;&#x5BB6;&#x4E2D;&#x5806;&#x7070;&#x3002;&#x3002;&#x3002;&#x7EC8;&#x4E8E;&#x6709;&#x7A7A;&#x62FF;&#x51FA;&#x6765;&#x4ED4;&#x7EC6;&#x770B;&#x4E86;&#x4E0B;&#xFF0C;&#x9646;&#x9646;&#x7EED;&#x7EED;&#x770B;&#x4E86;2&#x5468;&#x5DE6;&#x53F3;&#xFF0C;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x4FBF;&#x4E8E;&#x540E;&#x7EED;&#x53C2;&#x8003;&#x3002;</p>
 <a id="more"></a>
 <h3 id="&#x8D26;&#x53F7;&#x7BA1;&#x7406;">&#x8D26;&#x53F7;&#x7BA1;&#x7406;</h3>
@@ -448,7 +443,7 @@ usermod -s /sbin/nologin test
 </code></pre>
 <h3 id="linux&#x6587;&#x4EF6;-&#x76EE;&#x5F55;">linux&#x6587;&#x4EF6; &amp;&amp; &#x76EE;&#x5F55;</h3>
 <p><code>ls -l</code>&#x547D;&#x4EE4;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;&#x7B2C;&#x4E00;&#x5217;&#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x662F;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># &#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x8868;&#x793A;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x6709;</span></div><div class="line"><span class="comment"># - &#x8868;&#x793A;&#x666E;&#x901A;&#x6587;&#x4EF6;</span></div><div class="line"><span class="comment"># d &#x8868;&#x793A;&#x6587;&#x4EF6;&#x5939;</span></div><div class="line"><span class="comment"># l &#x8868;&#x793A;&#x8FDE;&#x63A5;&#x6587;&#x4EF6;</span></div><div class="line"><span class="comment"># b &#x8868;&#x793A;&#x5B58;&#x50A8;&#x7684;&#x63A5;&#x53E3;&#x8BBE;&#x5907;</span></div><div class="line"><span class="comment"># s &#x8868;&#x793A;&#x5957;&#x63A5;&#x5B57;</span></div><div class="line">-rw-r--r--   1 whiledoing  staff    66K Sep 25 19:35 10001_party_reward.data</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x8868;&#x793A;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x6709;</span></span><br><span class="line"><span class="comment"># - &#x8868;&#x793A;&#x666E;&#x901A;&#x6587;&#x4EF6;</span></span><br><span class="line"><span class="comment"># d &#x8868;&#x793A;&#x6587;&#x4EF6;&#x5939;</span></span><br><span class="line"><span class="comment"># l &#x8868;&#x793A;&#x8FDE;&#x63A5;&#x6587;&#x4EF6;</span></span><br><span class="line"><span class="comment"># b &#x8868;&#x793A;&#x5B58;&#x50A8;&#x7684;&#x63A5;&#x53E3;&#x8BBE;&#x5907;</span></span><br><span class="line"><span class="comment"># s &#x8868;&#x793A;&#x5957;&#x63A5;&#x5B57;</span></span><br><span class="line">-rw-r--r--   1 whiledoing  staff    66K Sep 25 19:35 10001_party_reward.data</span><br></pre></td></tr></table></figure>
 <p>&#x4E4B;&#x540E;&#x7684;&#x5185;&#x5BB9;&#x8868;&#x793A;<strong>&#x6587;&#x4EF6;/&#x6587;&#x4EF6;&#x5939;</strong>&#x5BF9;&#x4E8E;<strong>&#x81EA;&#x5DF1;/&#x7EC4;/&#x5176;&#x4ED6;</strong>&#x7684;&#x6743;&#x9650;&#x3002;</p>
 <p>&#x4F7F;&#x7528;<code>chown</code>&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x6240;&#x6709;&#x8005;&#x6216;&#x8005;&#x7EC4;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
 <pre><code class="hljs">chown user:test xxx
@@ -459,11 +454,11 @@ chown :test xxx
 <ol>
 <li>
 <p>&#x4F7F;&#x7528;&#x6570;&#x5B57;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">chmod 744 xxx.data</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 744 xxx.data</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>&#x4F7F;&#x7528;&#x63A7;&#x5236;&#x683C;&#x5F0F;&#xFF0C;&#x5176;&#x4E2D;&#x6709;<strong>u/g/o/a</strong>&#x5206;&#x522B;&#x8868;&#x793A;<strong>&#x81EA;&#x5DF1;/&#x7EC4;/&#x5176;&#x4ED6;&#x4EBA;/&#x6240;&#x6709;</strong>&#x7684;&#x6807;&#x8BC6;&#xFF0C;&#x6709;&#x51E0;&#x79CD;&#x63A7;&#x5236;&#x65B9;&#x5F0F;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">chmod u=rwx,go=rx xxx</div><div class="line">chmod g=rx xxx</div><div class="line">chmod u+x xxx</div><div class="line">chmod a+x xxx</div><div class="line"></div><div class="line"><span class="comment"># &#x5982;&#x679C;&#x4E0D;&#x8BF4;&#x660E;&#x63A7;&#x5236;&#x57DF;&#xFF0C;&#x90A3;&#x4E48;&#x9ED8;&#x8BA4;&#x662F;&#x5BF9;a&#x8FDB;&#x884C;&#x63A7;&#x5236;</span></div><div class="line">chmod -x xxx</div><div class="line">chmod +x xxx</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod u=rwx,go=rx xxx</span><br><span class="line">chmod g=rx xxx</span><br><span class="line">chmod u+x xxx</span><br><span class="line">chmod a+x xxx</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x5982;&#x679C;&#x4E0D;&#x8BF4;&#x660E;&#x63A7;&#x5236;&#x57DF;&#xFF0C;&#x90A3;&#x4E48;&#x9ED8;&#x8BA4;&#x662F;&#x5BF9;a&#x8FDB;&#x884C;&#x63A7;&#x5236;</span></span><br><span class="line">chmod -x xxx</span><br><span class="line">chmod +x xxx</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h4 id="&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x7684;&#x6743;&#x9650;&#x8BF4;&#x660E;">&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x7684;&#x6743;&#x9650;&#x8BF4;&#x660E;</h4>
@@ -563,14 +558,14 @@ whereis -b ls
 <p>&#x4F7F;&#x7528;<code>env</code>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5F53;&#x524D;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x4F7F;&#x7528;<code>set</code>&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x9664;&#x4E86;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5F97;&#x5230;<strong>&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;</strong>&#x4EE5;&#x53CA;<strong>bash&#x7CFB;&#x7EDF;&#x81EA;&#x5DF1;&#x7528;&#x5230;&#x7684;&#x53D8;&#x91CF;</strong></p>
 <p>&#x4F7F;&#x7528;<code>export</code>&#x53EF;&#x4EE5;&#x5C06;&#x5F53;&#x524D;&#x7684;&#x53D8;&#x91CF;&#x53D8;&#x4E3A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x5355;&#x72EC;&#x4F7F;&#x7528;<code>export</code>&#x6307;&#x4EE4;&#x5C31;&#x662F;&#x663E;&#x793A;&#x5F53;&#x524D;&#x7684;&#x6240;&#x6709;<code>&#x73AF;&#x5883;&#x53D8;&#x91CF;</code></p>
 <p>&#x4F7F;&#x7528;<code>declare</code>&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#xFF0C;&#x6709;&#x51E0;&#x79CD;&#x6709;&#x7528;&#x7684;&#x7528;&#x6CD5;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x8C03;&#x7528;export</span></div><div class="line"><span class="built_in">declare</span> -x sum</div><div class="line"></div><div class="line"><span class="comment"># &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;int&#x53D8;&#x91CF;</span></div><div class="line"><span class="built_in">declare</span> -i sum=100+300+400</div><div class="line"></div><div class="line"><span class="comment"># &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;readonly&#x53D8;&#x91CF;</span></div><div class="line"><span class="built_in">declare</span> -r sum=0</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x8C03;&#x7528;export</span></span><br><span class="line"><span class="built_in">declare</span> -x sum</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;int&#x53D8;&#x91CF;</span></span><br><span class="line"><span class="built_in">declare</span> -i sum=100+300+400</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;readonly&#x53D8;&#x91CF;</span></span><br><span class="line"><span class="built_in">declare</span> -r sum=0</span><br></pre></td></tr></table></figure>
 <p>&#x4F7F;&#x7528;<code>dd</code>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x8BBE;&#x5907;&#x4E4B;&#x95F4;&#x7684;&#x62F7;&#x8D1D;&#xFF0C;&#x6BD4;&#x5982;&#x7ECF;&#x5E38;&#x7528;&#x6765;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x6307;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x6587;&#x4EF6;:</p>
 <pre><code class="hljs">dd if=/dev/zero of=new_file bs=1M count=20
 </code></pre>
 <p>&#x4F7F;&#x7528;<code>ulimit</code>&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5F53;&#x524D;&#x7528;&#x6237;&#x4F7F;&#x7528;shell&#x65F6;&#x5019;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x6BD4;&#x5982;&#x6700;&#x5927;&#x6587;&#x4EF6;&#x5BB9;&#x91CF;&#xFF0C;&#x6700;&#x5927;&#x8FDB;&#x7A0B;&#x6570;&#x76EE;&#xFF0C;&#x6700;&#x5927;CPU&#x65F6;&#x95F4;&#x7B49;&#x3002;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># &#x5F97;&#x5230;&#x6240;&#x6709;&#x9650;&#x5236;&#x4FE1;&#x606F;</span></div><div class="line"><span class="built_in">ulimit</span> <span class="_">-a</span></div><div class="line"></div><div class="line"><span class="comment"># &#x5F97;&#x5230;&#x6700;&#x5927;&#x6587;&#x4EF6;&#x5927;&#x5C0F;</span></div><div class="line"><span class="built_in">ulimit</span> <span class="_">-f</span></div><div class="line"></div><div class="line"><span class="comment"># &#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x6587;&#x4EF6;&#x5927;&#x5C0F;</span></div><div class="line"><span class="built_in">ulimit</span> <span class="_">-f</span> 100</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#x5F97;&#x5230;&#x6240;&#x6709;&#x9650;&#x5236;&#x4FE1;&#x606F;</span></span><br><span class="line"><span class="built_in">ulimit</span> -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x5F97;&#x5230;&#x6700;&#x5927;&#x6587;&#x4EF6;&#x5927;&#x5C0F;</span></span><br><span class="line"><span class="built_in">ulimit</span> -f</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x6587;&#x4EF6;&#x5927;&#x5C0F;</span></span><br><span class="line"><span class="built_in">ulimit</span> -f 100</span><br></pre></td></tr></table></figure>
 <p>&#x5728;shell&#x4E2D;&#x4F7F;&#x7528;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;&#xFF08;&#x8FD9;&#x4E9B;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#x8FD8;&#x662F;&#x5F88;&#x6709;&#x7528;&#x7684;&#x7B80;&#x5316;&#x4E86;&#x4EE3;&#x7801;&#x7684;&#x7F16;&#x5199;&#xFF0C;&#x7F16;&#x5199;&#x811A;&#x672C;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x60F3;&#x5230;&#x53BB;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x7EC4;&#x5408;&#x903B;&#x8F91;&#xFF09;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># if A then B else C</span></div><div class="line">A &amp;&amp; B || C</div><div class="line"></div><div class="line"><span class="comment"># if A then C else B -&gt; C</span></div><div class="line">A || B &amp;&amp; C</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if A then B else C</span></span><br><span class="line">A &amp;&amp; B || C</span><br><span class="line"></span><br><span class="line"><span class="comment"># if A then C else B -&gt; C</span></span><br><span class="line">A || B &amp;&amp; C</span><br></pre></td></tr></table></figure>
 <h4 id="login-shell-none-login-shell-interactive-shell-none-interactive-shell">login shell | none-login shell | interactive shell | none-interactive shell</h4>
 <p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;<code>&#x7528;&#x6237;&#x540D;&#xFF0C;&#x5BC6;&#x7801;</code>&#x767B;&#x9646;&#x7CFB;&#x7EDF;&#x7684;shell&#xFF0C;&#x90A3;&#x4E48;&#x5F97;&#x5230;&#x7684;&#x662F;<code>login shell</code>&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x7528;<code>su -</code>&#x5F97;&#x5230;&#x7684;&#x5C31;&#x662F;&#x4E00;&#x4E2A;<code>login shell</code>&#xFF0C;&#x53E6;&#x5916;&#x65B9;&#x5F0F;&#x5F97;&#x5230;&#x7684;&#x662F;&#x975E;login&#x7684;&#x5F62;&#x5F0F;&#x3002;</p>
 <p>&#x5176;&#x4E2D;&#xFF0C;<code>login</code>&#x7684;&#x5F62;&#x5F0F;&#x662F;&#x6BD4;&#x8F83;&#x5B8C;&#x5907;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x8868;&#x793A;&#x7528;&#x6237;&#x662F;&#x767B;&#x9646;&#x4E4B;&#x540E;&#x5F97;&#x5230;&#x7684;shell&#xFF0C;&#x8BBE;&#x7F6E;&#x7684;&#x53D8;&#x91CF;&#x548C;&#x73AF;&#x5883;&#x4E5F;&#x76F8;&#x5BF9;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x548C;&#x6709;&#x6548;&#xFF0C;&#x542F;&#x52A8;&#x987A;&#x5E8F;&#x662F;&#xFF1A;</p>
@@ -591,8 +586,8 @@ whereis -b ls
 <p>&#x540C;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;<code>bash</code>&#x5F97;&#x5230;&#x7684;&#x662F;&#x4E00;&#x4E2A;<code>none-login</code>&#x7684;shell&#xFF0C;&#x800C;&#x4F7F;&#x7528;<code>bash --login</code>&#x5F97;&#x5230;&#x7684;&#x5C31;&#x662F;<code>login</code>&#x7684;&#x3002;</p>
 <p>&#x6211;&#x4EEC;&#x5728;&#x6BD4;&#x8F83;&#x4E00;&#x4E0B;<code>interactive</code>&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5728;<code>GUI</code>&#x7684;&#x5F62;&#x5F0F;&#x4E2D;&#x542F;&#x52A8;shell&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x662F;&#x4EA4;&#x4E92;&#x7684;&#x3002;&#x800C;&#x5728;&#x811A;&#x672C;&#x4E2D;&#x8C03;&#x7528;&#x7684;<code>bash</code>&#x5219;&#x662F;<code>none-interactive</code>&#x3002;&#x4E24;&#x8005;&#x533A;&#x522B;&#x5C31;&#x5728;&#x4E8E;<code>interactive</code>&#x7684;&#x5F62;&#x5F0F;&#x4F1A;&#x5206;&#x6790;<code>~/.bashrc</code>&#xFF0C;&#x800C;&#x540E;&#x8005;&#x4E0D;&#x4F1A;&#x3002;(&#x6240;&#x4EE5;&#x8FD9;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528;bash&#x6267;&#x884C;&#x4E00;&#x4E9B;&#x5B9A;&#x4E49;&#x5728;<code>.bashrc</code>&#x4E2D;&#x5B9A;&#x4E49;&#x7684;alias&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x8C03;&#x7528;&#x4EE3;&#x7801;<code>bash -ic some-alias-defined-in-bashrc</code>&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x542F;&#x52A8;&#x4EA4;&#x4E92;&#x7684;bash&#x6A21;&#x5F0F;&#xFF09;</p>
 <p>&#x81F3;&#x4E8E;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#xFF0C;&#x4E2A;&#x4EBA;&#x8BA4;&#x4E3A;&#x5C31;&#x662F;<strong>&#x7075;&#x6D3B;</strong>&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9700;&#x8981;&#x7684;&#x914D;&#x7F6E;&#x548C;&#x8BBE;&#x7F6E;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x8FDB;&#x800C;&#x5F71;&#x54CD;&#x4E86;&#x542F;&#x52A8;&#x901F;&#x5EA6;&#x548C;&#x8FD0;&#x884C;&#x901F;&#x5EA6;&#x3002;</p>
-<p><a href="http://www.cnblogs.com/qcly/p/3273373.html" target="_blank" rel="external">&#x5BF9;&#x4E8E;&#x51E0;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x8BF4;&#x660E;</a>
-<a href="http://howtolamp.com/articles/difference-between-login-and-non-login-shell/" target="_blank" rel="external">&#x5BF9;&#x4E8E;login&#x548C;none-login&#x5206;&#x6790;&#x7684;&#x6BD4;&#x8F83;&#x597D;</a></p>
+<p><a href="http://www.cnblogs.com/qcly/p/3273373.html" target="_blank" rel="noopener">&#x5BF9;&#x4E8E;&#x51E0;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x8BF4;&#x660E;</a>
+<a href="http://howtolamp.com/articles/difference-between-login-and-non-login-shell/" target="_blank" rel="noopener">&#x5BF9;&#x4E8E;login&#x548C;none-login&#x5206;&#x6790;&#x7684;&#x6BD4;&#x8F83;&#x597D;</a></p>
 <p>&#x4F7F;&#x7528;<code>echo $0</code>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5F53;&#x524D;&#x662F;&#x4E0D;&#x662F;<code>login</code>&#x7684;shell&#xFF0C;&#x5982;&#x679C;&#x662F;<code>-sh</code>&#x8868;&#x662F;&#x662F;<code>login</code>&#x7684;&#xFF0C;&#x5982;&#x679C;&#x662F;<code>sh</code>&#x8868;&#x793A;&#x4E0D;&#x662F;<code>login</code>&#x7684;&#x3002;</p>
 <p>&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x800C;&#x8A00;&#xFF0C;&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x662F;&#x4FEE;&#x6539;<code>~/.bashrc</code>&#x6587;&#x4EF6;&#xFF0C;&#x4EE5;&#x53CA;&#x5168;&#x5C40;&#x7684;&#x811A;&#x672C;&#x63A7;&#x5236;&#x653E;&#x5728;<code>/etc/profile.d/*.sh</code>&#x4E2D;&#x3002;</p>
 <p>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x5C31;&#x662F;&#xFF1A;</p>
@@ -656,18 +651,18 @@ find /home -name .bashrc &amp;&gt; xxx.data
 <p>&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x4E00;&#x4E2A;&#x975E;&#x5E38;NB&#x7684;&#x6D41;&#x7F16;&#x8F91;&#x5668;<code>sed(stream editor)</code>&#x3002;sed&#x53EF;&#x4EE5;&#x5728;&#x5B57;&#x7B26;&#x6D41;&#x4E2D;&#x5BF9;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x5305;&#x62EC;&#x589E;&#x52A0;&#xFF0C;&#x66FF;&#x6362;&#xFF0C;&#x5220;&#x9664;&#x7B49;&#xFF0C;&#x4E3B;&#x8981;&#x5728;&#x81EA;&#x52A8;&#x5316;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#xFF0C;&#x8BD5;&#x60F3;&#x4F60;&#x6BCF;&#x6B21;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;conf&#x6587;&#x4EF6;&#x90FD;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>vim</code>&#x6765;&#x7F16;&#x8F91;&#x4E00;&#x4E0B;&#x662F;&#x591A;&#x4E48;&#x7684;&#x75DB;&#x82E6;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x53EF;&#x4EE5;&#x5C06;&#x76F8;&#x5173;&#x7684;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x64CD;&#x4F5C;&#x7F16;&#x7A0B;&#x7279;&#x5B9A;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x5C31;&#x975E;&#x5E38;&#x7684;&#x65B9;&#x4FBF;&#x4E86;&#x3002;</p>
 <p>&#x4E00;&#x822C;<code>sed</code>&#x7684;&#x5904;&#x7406;&#x6D41;&#x7A0B;&#x662F;&#xFF0C;&#x8BFB;&#x53D6;&#x4E00;&#x884C;&#xFF0C;&#x8F93;&#x51FA;&#x5230;&#x5C4F;&#x5E55;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x5904;&#x7406;&#x4E00;&#x884C;&#xFF0C;&#x6839;&#x636E;&#x63A7;&#x5236;&#x53C2;&#x6570;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8F93;&#x51FA;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x3002;</p>
 <p>&#x6709;&#x51E0;&#x4E2A;&#x4E3B;&#x8981;&#x7684;&#x63A7;&#x5236;&#x53C2;&#x6570;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># -n &#x8868;&#x793A;&#x4E0D;&#x8F93;&#x51FA;&#x5339;&#x914D;&#x7684;&#x884C;&#x7684;&#x9ED8;&#x8BA4;&#x8F93;&#x51FA;&#xFF0C;&#x7ECF;&#x5E38;&#x548C;p&#x5904;&#x7406;&#x52A8;&#x4F5C;&#x4E00;&#x8D77;</span></div><div class="line">sed -n <span class="string">&apos;p&apos;</span> /etc/passwd</div><div class="line"></div><div class="line"><span class="comment"># -i &#x5BF9;&#x6587;&#x4EF6;&#x76F4;&#x63A5;&#x751F;&#x6548;</span></div><div class="line"><span class="comment"># i&#x52A8;&#x4F5C;&#x8868;&#x793A;&#x63D2;&#x5165;&#xFF0C;&#x8FD9;&#x91CC;&#x8868;&#x793A;&#x5728;&#x7B2C;&#x4E8C;&#x884C;&#x63D2;&#x5165;</span></div><div class="line">sed -i <span class="string">&apos;2i\hello world&apos;</span> test.data</div><div class="line"></div><div class="line"><span class="comment"># -e &#x8868;&#x793A;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x64CD;&#x4F5C;&#x4F7F;&#x7528;</span></div><div class="line"><span class="comment"># a&#x52A8;&#x4F5C;&#x8868;&#x793A;&#x5728;&#x6DFB;&#x52A0;&#xFF0C;c&#x8868;&#x793A;&#x4FEE;&#x6539;</span></div><div class="line">sed <span class="_">-e</span> <span class="string">&apos;2a\hello world&apos;</span> <span class="_">-e</span> <span class="string">&apos;3,$c\delete&apos;</span> test.data</div><div class="line"></div><div class="line"><span class="comment"># -r &#x8868;&#x793A;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F62;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;`()`&#x4E0D;&#x9700;&#x8981;&#x8F6C;&#x4E49;&#x5904;&#x7406;</span></div><div class="line"><span class="comment"># &#x8FD9;&#x91CC;&#x8868;&#x793A;&#x5339;&#x914D;&#x5230;&#x5F00;&#x5934;&#x4E3A;test&#x7684;&#x884C;&#x90FD;&#x66FF;&#x6362;&#x4E3A;test&#xFF0C;&#x533A;&#x522B;&#x4F7F;&#x7528;`-r`&#x548C;&#x4E0D;&#x9002;&#x7528;&#x7684;&#x533A;&#x522B;</span></div><div class="line">sed -r <span class="string">&apos;s/^(test).*/\1/&apos;</span> test.data</div><div class="line">sed <span class="string">&apos;s/^\(test\).*/\1/&apos;</span> test.data</div><div class="line"></div><div class="line"><span class="comment"># &#x5F53;&#x7136;&#x8FD8;&#x6709;&#x5220;&#x9664;&#x7684;&#x52A8;&#x4F5C;</span></div><div class="line"><span class="comment"># &#x8FD9;&#x91CC;&#x4F7F;&#x7528;`/repr/`&#x4E2D;&#x8868;&#x793A;&#x5339;&#x914D;&#x7684;&#x884C;&#x7684;&#x6B63;&#x5219;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;`d`&#x52A8;&#x4F5C;&#x8FDB;&#x884C;&#x5220;&#x9664;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5220;&#x9664;&#x4E86;&#x6240;&#x6709;&#x5F00;&#x5934;&#x4E3A;`#`&#x7684;&#x884C;</span></div><div class="line">sed <span class="string">&apos;/^#.*/d&apos;</span> test.data</div></pre></td></tr></table></figure>
-<p>&#x66F4;&#x597D;&#x7684;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x7684;&#x5728;&#x811A;&#x672C;&#x4E2D;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x5904;&#x7406;&#xFF0C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="http://www.jikexueyuan.com/course/2020_5.html?ss=2" target="_blank" rel="external">sed&#x7684;&#x5B9E;&#x4F8B;&#x4F7F;&#x7528;&#x89C6;&#x9891;</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -n &#x8868;&#x793A;&#x4E0D;&#x8F93;&#x51FA;&#x5339;&#x914D;&#x7684;&#x884C;&#x7684;&#x9ED8;&#x8BA4;&#x8F93;&#x51FA;&#xFF0C;&#x7ECF;&#x5E38;&#x548C;p&#x5904;&#x7406;&#x52A8;&#x4F5C;&#x4E00;&#x8D77;</span></span><br><span class="line">sed -n <span class="string">&apos;p&apos;</span> /etc/passwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># -i &#x5BF9;&#x6587;&#x4EF6;&#x76F4;&#x63A5;&#x751F;&#x6548;</span></span><br><span class="line"><span class="comment"># i&#x52A8;&#x4F5C;&#x8868;&#x793A;&#x63D2;&#x5165;&#xFF0C;&#x8FD9;&#x91CC;&#x8868;&#x793A;&#x5728;&#x7B2C;&#x4E8C;&#x884C;&#x63D2;&#x5165;</span></span><br><span class="line">sed -i <span class="string">&apos;2i\hello world&apos;</span> test.data</span><br><span class="line"></span><br><span class="line"><span class="comment"># -e &#x8868;&#x793A;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x64CD;&#x4F5C;&#x4F7F;&#x7528;</span></span><br><span class="line"><span class="comment"># a&#x52A8;&#x4F5C;&#x8868;&#x793A;&#x5728;&#x6DFB;&#x52A0;&#xFF0C;c&#x8868;&#x793A;&#x4FEE;&#x6539;</span></span><br><span class="line">sed -e <span class="string">&apos;2a\hello world&apos;</span> -e <span class="string">&apos;3,$c\delete&apos;</span> test.data</span><br><span class="line"></span><br><span class="line"><span class="comment"># -r &#x8868;&#x793A;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F62;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;`()`&#x4E0D;&#x9700;&#x8981;&#x8F6C;&#x4E49;&#x5904;&#x7406;</span></span><br><span class="line"><span class="comment"># &#x8FD9;&#x91CC;&#x8868;&#x793A;&#x5339;&#x914D;&#x5230;&#x5F00;&#x5934;&#x4E3A;test&#x7684;&#x884C;&#x90FD;&#x66FF;&#x6362;&#x4E3A;test&#xFF0C;&#x533A;&#x522B;&#x4F7F;&#x7528;`-r`&#x548C;&#x4E0D;&#x9002;&#x7528;&#x7684;&#x533A;&#x522B;</span></span><br><span class="line">sed -r <span class="string">&apos;s/^(test).*/\1/&apos;</span> test.data</span><br><span class="line">sed <span class="string">&apos;s/^\(test\).*/\1/&apos;</span> test.data</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x5F53;&#x7136;&#x8FD8;&#x6709;&#x5220;&#x9664;&#x7684;&#x52A8;&#x4F5C;</span></span><br><span class="line"><span class="comment"># &#x8FD9;&#x91CC;&#x4F7F;&#x7528;`/repr/`&#x4E2D;&#x8868;&#x793A;&#x5339;&#x914D;&#x7684;&#x884C;&#x7684;&#x6B63;&#x5219;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;`d`&#x52A8;&#x4F5C;&#x8FDB;&#x884C;&#x5220;&#x9664;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5220;&#x9664;&#x4E86;&#x6240;&#x6709;&#x5F00;&#x5934;&#x4E3A;`#`&#x7684;&#x884C;</span></span><br><span class="line">sed <span class="string">&apos;/^#.*/d&apos;</span> test.data</span><br></pre></td></tr></table></figure>
+<p>&#x66F4;&#x597D;&#x7684;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x7684;&#x5728;&#x811A;&#x672C;&#x4E2D;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x5904;&#x7406;&#xFF0C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="http://www.jikexueyuan.com/course/2020_5.html?ss=2" target="_blank" rel="noopener">sed&#x7684;&#x5B9E;&#x4F8B;&#x4F7F;&#x7528;&#x89C6;&#x9891;</a></p>
 <p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5E38;&#x7528;&#x7684;&#x5DE5;&#x5177;&#x662F;<code>awk</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x4E3B;&#x8981;&#x7528;&#x6765;&#x8FDB;&#x884C;&#x5B57;&#x7B26;&#x7684;&#x5206;&#x5272;&#x548C;&#x5904;&#x7406;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;<code>cut</code>&#x6765;&#x8FDB;&#x884C;&#x5206;&#x5272;&#xFF0C;&#x53EA;&#x80FD;&#x5F97;&#x5230;&#x7279;&#x5B9A;&#x7684;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x5C06;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7EC4;&#x5408;&#x5F97;&#x5230;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>awk</code>&#x4E86;&#x3002;</p>
 <p>&#x5927;&#x81F4;&#x4F7F;&#x7528;&#x7528;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># &#x4F7F;&#x7528;-F&#x8868;&#x793A;&#x5206;&#x9694;&#x7B26;</span></div><div class="line"><span class="comment"># &#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x4E86;&#x7A7A;&#x683C;&#x6216;&#x8005;:&#x8FDB;&#x884C;&#x5206;&#x5272;</span></div><div class="line">awk -F <span class="string">&apos;[ :]&apos;</span> <span class="string">&apos;{print $1}&apos;</span> /etc/passwd</div><div class="line"></div><div class="line"><span class="comment"># &#x7279;&#x5B9A;&#x7684;&#x53D8;&#x91CF;&#xFF0C;NF&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x5B57;&#x6BB5;&#x603B;&#x6570;&#xFF0C;NR&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x884C;&#x53F7;&#xFF0C;FS&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x5206;&#x9694;&#x7B26;</span></div><div class="line"><span class="comment"># &#x5728;`{}`&#x4E2D;&#x95F4;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x4F7F;&#x7528;&#x53CC;&#x5F15;&#x53F7;&#x62EC;&#x8D77;&#x6765;</span></div><div class="line">last -n 5 | awk <span class="string">&apos;{print $1 &quot;\t lines:&quot; NR &quot;\t columns:&quot; NF}&apos;</span></div><div class="line"></div><div class="line"><span class="comment"># awk&#x6709;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#xFF0C;&#x8BED;&#x6CD5;&#x4E3A; awk &apos;&#x6761;&#x4EF6;&#x7C7B;&#x578B;{&#x52A8;&#x4F5C;1} &#x6761;&#x4EF6;&#x7C7B;&#x578B;{&#x52A8;&#x4F5C;2}&apos;</span></div><div class="line"><span class="comment"># &#x8FD9;&#x6837;&#x5B50;&#x4F1A;&#x5C06;&#x7B2C;&#x4E09;&#x5217;&#x5C0F;&#x4E8E;10&#x7684;&#x884C;&#x8FDB;&#x884C;&#x5206;&#x5272;&#x5904;&#x7406;</span></div><div class="line">awk <span class="string">&apos;$3 &lt; 10 {print $1 &quot;\t&quot; $3}&apos;</span> /etc/passwd</div><div class="line"></div><div class="line"><span class="comment"># &#x8FD9;&#x6837;&#x5B50;&#x53EA;&#x4F1A;&#x5904;&#x7406;&#x7B2C;&#x4E00;&#x884C;</span></div><div class="line">awk <span class="string">&apos;NR==1 {print $1}&apos;</span> /etc/passwd</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#x4F7F;&#x7528;-F&#x8868;&#x793A;&#x5206;&#x9694;&#x7B26;</span></span><br><span class="line"><span class="comment"># &#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x4E86;&#x7A7A;&#x683C;&#x6216;&#x8005;:&#x8FDB;&#x884C;&#x5206;&#x5272;</span></span><br><span class="line">awk -F <span class="string">&apos;[ :]&apos;</span> <span class="string">&apos;{print $1}&apos;</span> /etc/passwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x7279;&#x5B9A;&#x7684;&#x53D8;&#x91CF;&#xFF0C;NF&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x5B57;&#x6BB5;&#x603B;&#x6570;&#xFF0C;NR&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x884C;&#x53F7;&#xFF0C;FS&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x5206;&#x9694;&#x7B26;</span></span><br><span class="line"><span class="comment"># &#x5728;`{}`&#x4E2D;&#x95F4;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x4F7F;&#x7528;&#x53CC;&#x5F15;&#x53F7;&#x62EC;&#x8D77;&#x6765;</span></span><br><span class="line">last -n 5 | awk <span class="string">&apos;{print $1 &quot;\t lines:&quot; NR &quot;\t columns:&quot; NF}&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># awk&#x6709;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#xFF0C;&#x8BED;&#x6CD5;&#x4E3A; awk &apos;&#x6761;&#x4EF6;&#x7C7B;&#x578B;{&#x52A8;&#x4F5C;1} &#x6761;&#x4EF6;&#x7C7B;&#x578B;{&#x52A8;&#x4F5C;2}&apos;</span></span><br><span class="line"><span class="comment"># &#x8FD9;&#x6837;&#x5B50;&#x4F1A;&#x5C06;&#x7B2C;&#x4E09;&#x5217;&#x5C0F;&#x4E8E;10&#x7684;&#x884C;&#x8FDB;&#x884C;&#x5206;&#x5272;&#x5904;&#x7406;</span></span><br><span class="line">awk <span class="string">&apos;$3 &lt; 10 {print $1 &quot;\t&quot; $3}&apos;</span> /etc/passwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x8FD9;&#x6837;&#x5B50;&#x53EA;&#x4F1A;&#x5904;&#x7406;&#x7B2C;&#x4E00;&#x884C;</span></span><br><span class="line">awk <span class="string">&apos;NR==1 {print $1}&apos;</span> /etc/passwd</span><br></pre></td></tr></table></figure>
 <h3 id="shell-script">shell script</h3>
 <p>&#x5982;&#x679C;&#x662F;&#x6570;&#x503C;&#x7684;&#x8FD0;&#x7B97;&#xFF0C;&#x4F7F;&#x7528;<code>$$(&#x8FD0;&#x7B97;&#x5F0F;)$$</code>&#x7684;&#x65B9;&#x5F0F;&#x8BA1;&#x7B97;&#xFF0C;&#x6BD4;&#x5982;<code>res=$(($a*$b))</code>.</p>
 <p>script&#x7684;&#x6267;&#x884C;&#x65B9;&#x5F0F;&#x6709;&#x4E24;&#x79CD;&#xFF0C;&#x4E00;&#x79CD;&#x4F7F;&#x7528;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5373;&#x4F7F;&#x4F7F;&#x7528;<code>bash</code>&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x6267;&#x884C;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x5728;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x4E2D;&#x6267;&#x884C;&#xFF0C;&#x4F7F;&#x7528;<code>source</code>&#x7684;&#x65B9;&#x5F0F;&#x3002;
 &#x6240;&#x4EE5;&#x6BCF;&#x6B21;&#x4F7F;&#x7528;<code>source .bashrc</code>&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x5C06;&#x5F53;&#x524D;&#x8BBE;&#x7F6E;&#x76F4;&#x63A5;&#x6709;&#x6548;&#x5728;&#x5F53;&#x524D;bash&#x4E2D;&#x3002;</p>
 <p>&#x5728;shell&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>test</code>&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#xFF0C;&#x6709;&#x51E0;&#x4E2A;&#x5E38;&#x7528;&#x7684;&#x5224;&#x65AD;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># &#x662F;&#x4E0D;&#x662F;&#x5B58;&#x5728;&#x6587;&#x4EF6;</span></div><div class="line"><span class="built_in">test</span> <span class="_">-e</span> xxx.file</div><div class="line"></div><div class="line"><span class="comment"># &#x662F;&#x4E0D;&#x662F;&#x6709;&#x6548;&#x7684;&#x6587;&#x4EF6;</span></div><div class="line"><span class="built_in">test</span> <span class="_">-f</span> xxx.file</div><div class="line"></div><div class="line"><span class="comment"># &#x662F;&#x4E0D;&#x662F;&#x76EE;&#x5F55;</span></div><div class="line"><span class="built_in">test</span> <span class="_">-d</span> xxx</div><div class="line"></div><div class="line"><span class="comment"># &#x6570;&#x503C;&#x7684;&#x6BD4;&#x8F83;</span></div><div class="line"><span class="built_in">test</span> a <span class="_">-eq</span> <span class="_">-ne</span> <span class="_">-gt</span> -ge <span class="_">-lt</span> -le b</div><div class="line"></div><div class="line"><span class="comment"># &#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4E0D;&#x662F;&#x7A7A;</span></div><div class="line"><span class="built_in">test</span> -z string</div><div class="line"></div><div class="line"><span class="comment"># &#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;</span></div><div class="line"><span class="built_in">test</span> cond_a <span class="_">-a</span> cond_b</div><div class="line"><span class="built_in">test</span> cond_a -o cond_b</div><div class="line"><span class="built_in">test</span> ! cond_a</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#x662F;&#x4E0D;&#x662F;&#x5B58;&#x5728;&#x6587;&#x4EF6;</span></span><br><span class="line"><span class="built_in">test</span> -e xxx.file</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x662F;&#x4E0D;&#x662F;&#x6709;&#x6548;&#x7684;&#x6587;&#x4EF6;</span></span><br><span class="line"><span class="built_in">test</span> -f xxx.file</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x662F;&#x4E0D;&#x662F;&#x76EE;&#x5F55;</span></span><br><span class="line"><span class="built_in">test</span> -d xxx</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x6570;&#x503C;&#x7684;&#x6BD4;&#x8F83;</span></span><br><span class="line"><span class="built_in">test</span> a -eq -ne -gt -ge -lt -le b</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4E0D;&#x662F;&#x7A7A;</span></span><br><span class="line"><span class="built_in">test</span> -z string</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;</span></span><br><span class="line"><span class="built_in">test</span> cond_a -a cond_b</span><br><span class="line"><span class="built_in">test</span> cond_a -o cond_b</span><br><span class="line"><span class="built_in">test</span> ! cond_a</span><br></pre></td></tr></table></figure>
 <p>&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x4F7F;&#x7528;<code>test</code>&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x4F7F;&#x7528;<code>[]</code>&#x65B9;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;<strong>&#x4E2D;&#x62EC;&#x53F7;&#x5728;&#x5F88;&#x591A;&#x5730;&#x65B9;&#xFF0C;&#x6BD4;&#x5982;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4F7F;&#x7528;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x7684;&#x8BED;&#x6CD5;&#x662F;<code>[ cond_a ]</code>&#xFF0C;&#x5728;&#x4E24;&#x8FB9;&#x90FD;&#x7559;&#x6709;<strong>&#x7A7A;&#x683C;</strong></p>
 <pre><code class="hljs">[ -f xxxx ] &amp;&amp; echo &quot;file exist&quot; || echo &quot;file not exist&quot;
 </code></pre>
@@ -690,21 +685,21 @@ a=&quot;a b&quot;
 <h4 id="&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;">&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;</h4>
 <h5 id="if">if</h5>
 <p>&#x9700;&#x8981;&#x7559;&#x610F;&#x8BED;&#x6CD5;&#x4E2D;&#x7684;<code>then</code>&#x548C;&#x7ED3;&#x675F;<code>fi</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> [ <span class="_">-f</span> xxxx ]; <span class="keyword">then</span></div><div class="line">    <span class="built_in">echo</span> <span class="string">&quot;xxxx file exist&quot;</span></div><div class="line"><span class="keyword">fi</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> [ <span class="_">-f</span> xxxx ]; <span class="keyword">then</span></div><div class="line">    <span class="built_in">echo</span> <span class="string">&quot;xxxx file exist&quot;</span></div><div class="line"><span class="keyword">elif</span> [ <span class="_">-f</span> other ]; <span class="keyword">then</span></div><div class="line">    <span class="built_in">echo</span> <span class="string">&quot;other file exist&quot;</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> [ -f xxxx ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;xxxx file exist&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -f xxxx ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;xxxx file exist&quot;</span></span><br><span class="line"><span class="keyword">elif</span> [ -f other ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;other file exist&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 <h5 id="case">case</h5>
 <p>&#x5728;<code>/etc/init.d/*.sh</code>&#x4E2D;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#xFF0C;&#x6211;&#x8D34;&#x4E00;&#x4E2A;&#x5176;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># &#x51E0;&#x4E2A;&#x6CE8;&#x610F;&#x7684;&#x5730;&#x65B9;</span></div><div class="line"><span class="comment"># 1. &#x4F7F;&#x7528;in&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x9009;&#x62E9;</span></div><div class="line"><span class="comment"># 2. &#x4F7F;&#x7528;option&#xFF09;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x9009;&#x62E9;</span></div><div class="line"><span class="comment"># 3. ;;&#x8FDB;&#x884C;&#x7ED3;&#x675F;</span></div><div class="line"><span class="comment"># 4. *) &#x8868;&#x793A;&#x6700;&#x540E;&#x7684;&#x9009;&#x62E9;</span></div><div class="line"><span class="comment"># 5. esac &#x8868;&#x793A;&#x7ED3;&#x675F;&#xFF08;case&#x53CD;&#x8FC7;&#x6765;&#xFF09;</span></div><div class="line"></div><div class="line"><span class="keyword">case</span> <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="keyword">in</span></div><div class="line">  start)</div><div class="line">    load_modules || <span class="literal">true</span></div><div class="line">    log_begin_msg <span class="string">&quot;Starting ACPI services...&quot;</span></div><div class="line">    start-stop-daemon --start --quiet --oknodo --exec <span class="string">&quot;<span class="variable">$ACPID</span>&quot;</span> -- <span class="variable">$OPTIONS</span></div><div class="line">    log_end_msg $?</div><div class="line">    ;;</div><div class="line">  stop)</div><div class="line">    log_begin_msg <span class="string">&quot;Stopping ACPI services...&quot;</span></div><div class="line">    start-stop-daemon --stop --quiet --oknodo --retry 2 --exec <span class="string">&quot;<span class="variable">$ACPID</span>&quot;</span></div><div class="line">    log_end_msg $?</div><div class="line">    ;;</div><div class="line">  restart)</div><div class="line">    <span class="variable">$0</span> stop</div><div class="line">    sleep 1</div><div class="line">    <span class="variable">$0</span> start</div><div class="line">    ;;</div><div class="line">  reload|force-reload)</div><div class="line">    log_begin_msg <span class="string">&quot;Reloading ACPI services...&quot;</span></div><div class="line">    start-stop-daemon --stop --signal 1 --exec <span class="string">&quot;<span class="variable">$ACPID</span>&quot;</span></div><div class="line">    log_end_msg $?</div><div class="line">    ;;</div><div class="line">  status)</div><div class="line">    status_of_proc <span class="string">&quot;<span class="variable">$ACPID</span>&quot;</span> acpid</div><div class="line">    ;;</div><div class="line">  *)</div><div class="line">    log_success_msg <span class="string">&quot;Usage: /etc/init.d/acpid {start|stop|restart|reload|force-reload|status}&quot;</span></div><div class="line">    <span class="built_in">exit</span> 1</div><div class="line"><span class="keyword">esac</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#x51E0;&#x4E2A;&#x6CE8;&#x610F;&#x7684;&#x5730;&#x65B9;</span></span><br><span class="line"><span class="comment"># 1. &#x4F7F;&#x7528;in&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x9009;&#x62E9;</span></span><br><span class="line"><span class="comment"># 2. &#x4F7F;&#x7528;option&#xFF09;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x9009;&#x62E9;</span></span><br><span class="line"><span class="comment"># 3. ;;&#x8FDB;&#x884C;&#x7ED3;&#x675F;</span></span><br><span class="line"><span class="comment"># 4. *) &#x8868;&#x793A;&#x6700;&#x540E;&#x7684;&#x9009;&#x62E9;</span></span><br><span class="line"><span class="comment"># 5. esac &#x8868;&#x793A;&#x7ED3;&#x675F;&#xFF08;case&#x53CD;&#x8FC7;&#x6765;&#xFF09;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="keyword">in</span></span><br><span class="line">  start)</span><br><span class="line">    load_modules || <span class="literal">true</span></span><br><span class="line">    log_begin_msg <span class="string">&quot;Starting ACPI services...&quot;</span></span><br><span class="line">    start-stop-daemon --start --quiet --oknodo --<span class="built_in">exec</span> <span class="string">&quot;<span class="variable">$ACPID</span>&quot;</span> -- <span class="variable">$OPTIONS</span></span><br><span class="line">    log_end_msg $?</span><br><span class="line">    ;;</span><br><span class="line">  stop)</span><br><span class="line">    log_begin_msg <span class="string">&quot;Stopping ACPI services...&quot;</span></span><br><span class="line">    start-stop-daemon --stop --quiet --oknodo --retry 2 --<span class="built_in">exec</span> <span class="string">&quot;<span class="variable">$ACPID</span>&quot;</span></span><br><span class="line">    log_end_msg $?</span><br><span class="line">    ;;</span><br><span class="line">  restart)</span><br><span class="line">    <span class="variable">$0</span> stop</span><br><span class="line">    sleep 1</span><br><span class="line">    <span class="variable">$0</span> start</span><br><span class="line">    ;;</span><br><span class="line">  reload|force-reload)</span><br><span class="line">    log_begin_msg <span class="string">&quot;Reloading ACPI services...&quot;</span></span><br><span class="line">    start-stop-daemon --stop --signal 1 --<span class="built_in">exec</span> <span class="string">&quot;<span class="variable">$ACPID</span>&quot;</span></span><br><span class="line">    log_end_msg $?</span><br><span class="line">    ;;</span><br><span class="line">  status)</span><br><span class="line">    status_of_proc <span class="string">&quot;<span class="variable">$ACPID</span>&quot;</span> acpid</span><br><span class="line">    ;;</span><br><span class="line">  *)</span><br><span class="line">    log_success_msg <span class="string">&quot;Usage: /etc/init.d/acpid {start|stop|restart|reload|force-reload|status}&quot;</span></span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
 <h5 id="while">while</h5>
 <p>&#x8BED;&#x6CD5;&#x5927;&#x81F4;&#x51E0;&#x4E2A;&#x5730;&#x65B9;&#x6CE8;&#x610F;&#xFF1A;</p>
 <ol>
 <li>&#x4F7F;&#x7528;<code>while do done</code>&#x7ED3;&#x6784;</li>
 <li>&#x4F7F;&#x7528;<code>[]</code>&#x8FDB;&#x884C;&#x63A7;&#x5236;</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">s=0</div><div class="line">i=0</div><div class="line"><span class="keyword">while</span> [ <span class="string">&quot;<span class="variable">$i</span>&quot;</span> != 100 ]; <span class="keyword">do</span></div><div class="line">    <span class="variable">$i</span>=$((<span class="variable">$i</span>+1))</div><div class="line">    <span class="variable">$s</span>=$((<span class="variable">$s</span>+<span class="variable">$i</span>))</div><div class="line"><span class="keyword">done</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">s=0</span><br><span class="line">i=0</span><br><span class="line"><span class="keyword">while</span> [ <span class="string">&quot;<span class="variable">$i</span>&quot;</span> != 100 ]; <span class="keyword">do</span></span><br><span class="line">    <span class="variable">$i</span>=$((<span class="variable">$i</span>+1))</span><br><span class="line">    <span class="variable">$s</span>=$((<span class="variable">$s</span>+<span class="variable">$i</span>))</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 <h5 id="for">for</h5>
-<p>&#x8FD9;&#x4E2A;&#x7528;&#x6CD5;&#x5C31;&#x6709;&#x70B9;&#x591A;&#x4E86;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;<a href="http://www.thegeekstuff.com/2011/07/bash-for-loop-examples/" target="_blank" rel="external">bash for example</a></p>
+<p>&#x8FD9;&#x4E2A;&#x7528;&#x6CD5;&#x5C31;&#x6709;&#x70B9;&#x591A;&#x4E86;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;<a href="http://www.thegeekstuff.com/2011/07/bash-for-loop-examples/" target="_blank" rel="noopener">bash for example</a></p>
 <p>&#x51E0;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x7528;&#x6CD5;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># in&#x7684;&#x6A21;&#x5F0F;</span></div><div class="line"><span class="comment"># &#x5C06;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x5143;&#x7D20;&#x5F97;&#x5230;</span></div><div class="line"><span class="comment"># id&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x7528;&#x6237;&#x7684;id&#x4FE1;&#x606F;&#xFF0C;finger&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x7528;&#x6237;shell&#xFF0C;&#x4E3B;&#x76EE;&#x5F55;&#x7B49;&#x4FE1;&#x606F;</span></div><div class="line"><span class="keyword">for</span> user <span class="keyword">in</span> $(awk -F <span class="string">&apos;:&apos;</span> <span class="string">&apos;{print $1}&apos;</span> /etc/passwd); <span class="keyword">do</span></div><div class="line">    id <span class="variable">$user</span></div><div class="line">    finger <span class="variable">$user</span></div><div class="line"><span class="keyword">done</span></div><div class="line"></div><div class="line"><span class="comment"># &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5BF9;&#x76EE;&#x5F55;&#x4E2D;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</span></div><div class="line"><span class="built_in">cd</span> ~</div><div class="line"><span class="keyword">for</span> file <span class="keyword">in</span> *; <span class="keyword">do</span></div><div class="line">    <span class="built_in">echo</span> <span class="variable">$file</span></div><div class="line"><span class="keyword">done</span></div><div class="line"></div><div class="line"><span class="comment"># &#x6307;&#x4EE4;&#x76EE;&#x5F55;&#xFF08;&#x7C7B;&#x4F3C;ls&#x7684;&#x8BED;&#x6CD5;&#xFF09;</span></div><div class="line"><span class="keyword">for</span> file <span class="keyword">in</span> /etc/conf/[abcd]*.conf; <span class="keyword">do</span></div><div class="line">    <span class="built_in">echo</span> <span class="variable">$file</span></div><div class="line"><span class="keyword">done</span></div><div class="line"></div><div class="line"><span class="comment"># &#x8303;&#x56F4;&#x8FD8;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B50;&#x73A9;</span></div><div class="line"><span class="comment"># 1 2 3 4 5 6 7 8 9 10</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> $(seq 10);</div><div class="line">    ...</div><div class="line"><span class="keyword">done</span></div><div class="line"></div><div class="line"><span class="comment"># 1 2 3 4 5 6 7 8 9 10</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> {1..10}; <span class="keyword">do</span></div><div class="line">    ...</div><div class="line"><span class="keyword">done</span></div><div class="line"></div><div class="line"><span class="comment"># 1 3 5 7 9</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> {1..10..2}; <span class="keyword">do</span></div><div class="line">    ...</div><div class="line"><span class="keyword">done</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># in&#x7684;&#x6A21;&#x5F0F;</span></span><br><span class="line"><span class="comment"># &#x5C06;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x5143;&#x7D20;&#x5F97;&#x5230;</span></span><br><span class="line"><span class="comment"># id&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x7528;&#x6237;&#x7684;id&#x4FE1;&#x606F;&#xFF0C;finger&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x7528;&#x6237;shell&#xFF0C;&#x4E3B;&#x76EE;&#x5F55;&#x7B49;&#x4FE1;&#x606F;</span></span><br><span class="line"><span class="keyword">for</span> user <span class="keyword">in</span> $(awk -F <span class="string">&apos;:&apos;</span> <span class="string">&apos;{print $1}&apos;</span> /etc/passwd); <span class="keyword">do</span></span><br><span class="line">    id <span class="variable">$user</span></span><br><span class="line">    finger <span class="variable">$user</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5BF9;&#x76EE;&#x5F55;&#x4E2D;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</span></span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> *; <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$file</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x6307;&#x4EE4;&#x76EE;&#x5F55;&#xFF08;&#x7C7B;&#x4F3C;ls&#x7684;&#x8BED;&#x6CD5;&#xFF09;</span></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> /etc/conf/[abcd]*.conf; <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$file</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x8303;&#x56F4;&#x8FD8;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B50;&#x73A9;</span></span><br><span class="line"><span class="comment"># 1 2 3 4 5 6 7 8 9 10</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> $(seq 10);</span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1 2 3 4 5 6 7 8 9 10</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> {1..10}; <span class="keyword">do</span></span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1 3 5 7 9</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> {1..10..2}; <span class="keyword">do</span></span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 <h4 id="&#x8C03;&#x8BD5;">&#x8C03;&#x8BD5;</h4>
 <p>shell&#x7684;&#x8C03;&#x8BD5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>bash</code>&#x7684;&#x63A7;&#x5236;&#x53C2;&#x6570;&#xFF1A;</p>
 <ol>
@@ -868,6 +863,9 @@ test=${test:-default_value}
 
       
     </div>
+
+    
+
     
     
     
@@ -880,17 +878,13 @@ test=${test:-default_value}
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    whiledoing
-  </li>
+    <strong>本文作者： </strong>whiledoing</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     <a href="http://whiledoing.me/2016/03/24/book-liaoge-linux-course-md/" title="《鸟哥的Linux私房菜》读书笔记">http://whiledoing.me/2016/03/24/book-liaoge-linux-course-md/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-  </li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -910,18 +904,6 @@ test=${test:-default_value}
       
 
       
-      
-        <div class="post-widgets">
-        
-          <div class="wp_rating">
-            <div id="wpac-rating"></div>
-          </div>
-        
-
-        
-
-        
-        </div>
       
       
 
@@ -965,9 +947,6 @@ test=${test:-default_value}
 
 
           </div>
-          
-
-
           
 
   
@@ -1015,63 +994,136 @@ test=${test:-default_value}
               <p class="site-description motion-element" itemprop="description">喜欢一切简单且美的事物，包括人。</p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">51</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">51</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
-
-            
               
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
 
-          </nav>
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
 
           
 
-          <div class="links-of-author motion-element">
-            
+          
+            <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">
-                    GitHub</a>
+                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">GitHub</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">
-                    豆瓣</a>
+                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">豆瓣</a>
+                  
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">
-                    知乎</a>
+                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">知乎</a>
+                  
                 </span>
               
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
             
-          </div>
-
           
-          
-
-          
-          
-
           
 
         </div>
@@ -1087,7 +1139,7 @@ test=${test:-default_value}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#账号管理"><span class="nav-number">1.</span> <span class="nav-text">账号管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux文件-目录"><span class="nav-number">2.</span> <span class="nav-text">linux文件 && 目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文件和目录的权限说明"><span class="nav-number">2.1.</span> <span class="nav-text">文件和目录的权限说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fhs"><span class="nav-number">2.2.</span> <span class="nav-text">FHS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件目录相关命令"><span class="nav-number">2.3.</span> <span class="nav-text">文件，目录相关命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件和文件系统的压缩与打包"><span class="nav-number">2.4.</span> <span class="nav-text">文件和文件系统的压缩与打包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习bash"><span class="nav-number">3.</span> <span class="nav-text">学习bash</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#bash的基本知识"><span class="nav-number">3.1.</span> <span class="nav-text">bash的基本知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#login-shell-none-login-shell-interactive-shell-none-interactive-shell"><span class="nav-number">3.2.</span> <span class="nav-text">login shell | none-login shell | interactive shell | none-interactive shell</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据流的重定向"><span class="nav-number">3.3.</span> <span class="nav-text">数据流的重定向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用正则表达式与文件的格式化处理"><span class="nav-number">3.4.</span> <span class="nav-text">使用正则表达式与文件的格式化处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shell-script"><span class="nav-number">4.</span> <span class="nav-text">shell script</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑表达式"><span class="nav-number">4.1.</span> <span class="nav-text">逻辑表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#if"><span class="nav-number">4.1.1.</span> <span class="nav-text">if</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#case"><span class="nav-number">4.1.2.</span> <span class="nav-text">case</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#while"><span class="nav-number">4.1.3.</span> <span class="nav-text">while</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#for"><span class="nav-number">4.1.4.</span> <span class="nav-text">for</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调试"><span class="nav-number">4.2.</span> <span class="nav-text">调试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例行性工作"><span class="nav-number">5.</span> <span class="nav-text">例行性工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#at"><span class="nav-number">5.1.</span> <span class="nav-text">at</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cron"><span class="nav-number">5.2.</span> <span class="nav-text">cron</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序管理"><span class="nav-number">6.</span> <span class="nav-text">程序管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作管理"><span class="nav-number">6.1.</span> <span class="nav-text">工作管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程管理"><span class="nav-number">6.2.</span> <span class="nav-text">进程管理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#misc"><span class="nav-number">7.</span> <span class="nav-text">misc</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#账号管理"><span class="nav-number">1.</span> <span class="nav-text">账号管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux文件-目录"><span class="nav-number">2.</span> <span class="nav-text">linux文件 &amp;&amp; 目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文件和目录的权限说明"><span class="nav-number">2.1.</span> <span class="nav-text">文件和目录的权限说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fhs"><span class="nav-number">2.2.</span> <span class="nav-text">FHS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件目录相关命令"><span class="nav-number">2.3.</span> <span class="nav-text">文件，目录相关命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件和文件系统的压缩与打包"><span class="nav-number">2.4.</span> <span class="nav-text">文件和文件系统的压缩与打包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习bash"><span class="nav-number">3.</span> <span class="nav-text">学习bash</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#bash的基本知识"><span class="nav-number">3.1.</span> <span class="nav-text">bash的基本知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#login-shell-none-login-shell-interactive-shell-none-interactive-shell"><span class="nav-number">3.2.</span> <span class="nav-text">login shell | none-login shell | interactive shell | none-interactive shell</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据流的重定向"><span class="nav-number">3.3.</span> <span class="nav-text">数据流的重定向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用正则表达式与文件的格式化处理"><span class="nav-number">3.4.</span> <span class="nav-text">使用正则表达式与文件的格式化处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shell-script"><span class="nav-number">4.</span> <span class="nav-text">shell script</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑表达式"><span class="nav-number">4.1.</span> <span class="nav-text">逻辑表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#if"><span class="nav-number">4.1.1.</span> <span class="nav-text">if</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#case"><span class="nav-number">4.1.2.</span> <span class="nav-text">case</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#while"><span class="nav-number">4.1.3.</span> <span class="nav-text">while</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#for"><span class="nav-number">4.1.4.</span> <span class="nav-text">for</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调试"><span class="nav-number">4.2.</span> <span class="nav-text">调试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例行性工作"><span class="nav-number">5.</span> <span class="nav-text">例行性工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#at"><span class="nav-number">5.1.</span> <span class="nav-text">at</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cron"><span class="nav-number">5.2.</span> <span class="nav-text">cron</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序管理"><span class="nav-number">6.</span> <span class="nav-text">程序管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作管理"><span class="nav-number">6.1.</span> <span class="nav-text">工作管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程管理"><span class="nav-number">6.2.</span> <span class="nav-text">进程管理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#misc"><span class="nav-number">7.</span> <span class="nav-text">misc</span></a></li></ol></div>
             
 
           </div>
@@ -1108,25 +1160,20 @@ test=${test:-default_value}
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">whiledoing</span>
 
   
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count">132.6k</span>
+
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -1134,12 +1181,13 @@ test=${test:-default_value}
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.1.0</div>
 
 
 
 
         
+
 
 
 
@@ -1154,8 +1202,6 @@ test=${test:-default_value}
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -1180,7 +1226,11 @@ test=${test:-default_value}
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1200,16 +1250,6 @@ test=${test:-default_value}
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1218,18 +1258,13 @@ test=${test:-default_value}
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.1.0"></script>
 
 
 
@@ -1237,23 +1272,19 @@ test=${test:-default_value}
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.0"></script>
 
 
 
   
-
-
-  
-
 
 
 
@@ -1280,387 +1311,102 @@ test=${test:-default_value}
 
 
 
+  
+
+
+
 
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
+  
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
+  
+  
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
+  
+  
 
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+  
 
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
 
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
+  
+  
 
-                // show search results
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
 
-                if (isMatch) {
-                  // sort index by position of keyword
 
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.1.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.1.0"></script>
 
-                  // merge hits into slices
 
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
+  
 
-                      // move to next position of hit
+  
 
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('3');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+  
+  <style>
+    .copy-btn {
+        position: relative;
+        display: inline-block;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #333;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+        user-select: none;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
+    .highlight {
+        position: relative;
+    }
 
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight .copy-btn {
+        transition: opacity .3s ease-in-out;
+        opacity: 0;
+        padding: 2px 6px;
+        position: absolute;
+        right: 4px;
+        top: 8px;
+    }
+
+    .highlight:hover .copy-btn,
+    .highlight .copy-btn:focus {
+        opacity: 1
+    }
+  </style>
+  <script>
+    $('.highlight').prepend($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+      var code = $(e.target).parent().find('.code').find('.line').map(function(i, e){
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'fixed'
+      ta.style.top = 0
+      ta.style.left = 0
+      ta.value = code
+      ta.select()
+      ta.focus()
+      document.execCommand('copy')
+      document.body.removeChild(ta)
+    }))
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-  <script type="text/javascript">
-  wpac_init = window.wpac_init || [];
-  wpac_init.push({widget: 'Rating', id: ,
-    el: 'wpac-rating',
-    color: 'fc6423'
-  });
-  (function() {
-    if ('WIDGETPACK_LOADED' in window) return;
-    WIDGETPACK_LOADED = true;
-    var mc = document.createElement('script');
-    mc.type = 'text/javascript';
-    mc.async = true;
-    mc.src = '//embed.widgetpack.com/widget.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
-  })();
-  </script>
-
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
-
-
-  
 
 </body>
 </html>
