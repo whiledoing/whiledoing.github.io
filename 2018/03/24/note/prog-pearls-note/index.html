@@ -104,14 +104,14 @@
 
 
   <meta name="description" content="最早看编程珠玑是由于上研时一位大牛同学的推荐，书很薄，但是却用了很长时间看完，因为书中写的内容确实非常好，对得起「珠玑」二字。将当时的读书笔记整理如下。">
-<meta name="keywords" content="自写,读书笔记,技术面试,算法">
+<meta name="keywords" content="读书笔记,技术面试,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《编程珠玑》读书笔记">
 <meta property="og:url" content="http://whiledoing.me/2018/03/24/note/prog-pearls-note/index.html">
 <meta property="og:site_name" content="whiledoing">
 <meta property="og:description" content="最早看编程珠玑是由于上研时一位大牛同学的推荐，书很薄，但是却用了很长时间看完，因为书中写的内容确实非常好，对得起「珠玑」二字。将当时的读书笔记整理如下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-24T15:35:08.523Z">
+<meta property="og:updated_time" content="2018-04-17T13:29:52.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《编程珠玑》读书笔记">
 <meta name="twitter:description" content="最早看编程珠玑是由于上研时一位大牛同学的推荐，书很薄，但是却用了很长时间看完，因为书中写的内容确实非常好，对得起「珠玑」二字。将当时的读书笔记整理如下。">
@@ -331,18 +331,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
 
               
                 
               
 
-              <time title="创建于：2018-03-24 23:27:46 / 更新于：23:35:08" itemprop="dateCreated datePublished" datetime="2018-03-24T23:27:46+08:00">2018-03-24</time>
+              <time title="创建于：2018-03-24 23:27:46" itemprop="dateCreated datePublished" datetime="2018-03-24T23:27:46+08:00">2018-03-24</time>
             
 
-            
-              
-
-              
             
           </span>
 
@@ -478,8 +476,53 @@ BST&#x4E2D;.</p>
 </ol>
 <p>nb&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x554A;!!! :</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* &#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x6240;&#x6709;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26; */</span></span><br><span class="line"><span class="keyword">char</span> inputchars[<span class="number">50000</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x4FDD;&#x5B58;&#x6240;&#x6709;&#x7684; `k&#x76F8;&#x90BB;&#x5355;&#x8BCD;` &#x6392;&#x5E8F;&#x540E;&#x7684;&#x540E;&#x7F00;&#x6307;&#x9488;&#x4F4D;&#x7F6E; */</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">char</span>*&gt; words;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x5355;&#x8BCD;&#x4E2A;&#x6570; */</span></span><br><span class="line"><span class="keyword">int</span> word_count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x8BA1;&#x7B97;&#x7684;&#x9636;&#x6570; */</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> k = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">load_data</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* file_name)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span>(!freopen(file_name, <span class="string">&quot;r&quot;</span>, <span class="built_in">stdin</span>)) {</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">&quot;error: load file&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    words.resize(<span class="number">10000</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">memset</span>(inputchars, <span class="keyword">sizeof</span>(inputchars), <span class="number">0</span>);</span><br><span class="line">    words[<span class="number">0</span>] = inputchars;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, words[i]) != EOF) {</span><br><span class="line">        words[i + <span class="number">1</span>] = words[i] + <span class="built_in">strlen</span>(words[i]) + <span class="number">1</span>;</span><br><span class="line">        ++i;</span><br><span class="line">    }</span><br><span class="line">    word_count = i;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x6BD4;&#x8F83;&#x6700;&#x591A;k&#x4E2A;&#x5355;&#x8BCD;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5927;&#x5C0F;, &#x6CE8;&#x610F;&#x5728;inputchars&#x4E2D;&#x672B;&#x5C3E;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;0, &#x6240;&#x4EE5;&#x6700;&#x540E;&#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5904;&#x7406;&#x65F6;&#x5019;&#x4E0D;&#x9700;&#x8981;&#x62C5;&#x5FC3;&#x6EA2;&#x51FA; */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">wordncmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* p, <span class="keyword">const</span> <span class="keyword">char</span>* q)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> n = k;</span><br><span class="line">    <span class="keyword">for</span>(; *p == *q; ++p, ++q) {</span><br><span class="line">        <span class="keyword">if</span>(*p == <span class="number">0</span> &amp;&amp; --n == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> *p - *q;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x8F93;&#x51FA;&#x6392;&#x5E8F;&#x5728;&#x7B2C;i&#x4F4D;&#x7F6E;&#x7684;(k+1)&#x5355;&#x8BCD;&#x7684;&#x5185;&#x5BB9; */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_index_word</span><span class="params">(<span class="keyword">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">char</span>* p = words[i];</span><br><span class="line">    <span class="keyword">char</span>* q = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">char</span>*&gt; back_up;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* attention : &#x4F7F;&#x7528;&#x524D;k&#x4E2A;&#x5355;&#x8BCD;, &#x7B49;&#x4EF7;&#x4E8E;&#x8981;&#x8F93;&#x5165; (k+1) &#x4E2A;&#x5143;&#x7D20;, &#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5C31;&#x662F;&#x6839;&#x636E;k&#x4E2A;&#x5143;&#x7D20;</span></span><br><span class="line"><span class="comment">     * &#x63A8;&#x5BFC;&#x7684;&#x5143;&#x7D20;, &#x6240;&#x4EE5;&#x9700;&#x8981;k&#x4E2A;&#x95F4;&#x9694;, &#x6267;&#x884C;k&#x6B21;</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; k; ++j) {</span><br><span class="line">        <span class="keyword">while</span>(*p) ++p;</span><br><span class="line">        q = p++; *q = <span class="string">&apos; &apos;</span>;</span><br><span class="line">        back_up.push_back(q);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; words[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; back_up.size(); ++i)</span><br><span class="line">        *back_up[i] = <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_k_plus_one_word</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; word_count; ++i) {</span><br><span class="line">        print_index_word(i);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x4E8E;&#x903B;&#x8F91;&#x7684;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C; */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_k_word</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    sort(words.begin(), words.begin() + word_count, [](<span class="keyword">const</span> <span class="keyword">char</span> * p,</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span> * q) {</span><br><span class="line">        <span class="keyword">return</span> wordncmp(p, q) &lt; <span class="number">0</span>;</span><br><span class="line">    });</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x5C06;&#x5F53;&#x524D;p&#x6307;&#x5411;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x79FB;&#x52A8;num&#x4E2A;&#x5355;&#x8BCD;, &#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x79FB;&#x52A8;&#x4E4B;&#x540E;&#x7684;&#x65B0;&#x7684;&#x5355;&#x8BCD;&#x4F4D;&#x7F6E; */</span></span><br><span class="line"><span class="function"><span class="keyword">const</span> <span class="keyword">char</span>* <span class="title">skip</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* p, <span class="keyword">int</span> num)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">while</span>(num--) {</span><br><span class="line">        <span class="keyword">while</span>(*p++);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/* &#x4EA7;&#x751F;num&#x4E2A;&#x968F;&#x673A;&#x5355;&#x8BCD; */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">gene_rand_words</span><span class="params">(<span class="keyword">int</span> num)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="comment">/* &#x4F7F;&#x7528;&#x6587;&#x672C;&#x7684;&#x524D;k&#x4E2A;&#x5355;&#x8BCD;&#x4F5C;&#x4E3A;&#x521D;&#x59CB;&#x8BA1;&#x7B97;&#x7684;&#x79CD;&#x5B50; */</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* phrase = inputchars;</span><br><span class="line">    <span class="keyword">while</span>(num--) {</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x8FD9;&#x91CC;&#x7531;&#x4E8E;&#x6240;&#x6709;&#x7684;&#x8BA1;&#x7B97;&#x4E32;&#x4E00;&#x5B9A;&#x5728;&#x6570;&#x7EC4;&#x4E2D;, &#x6240;&#x4EE5;&#x6240;&#x6709;&#x6570;&#x503C; target &lt;= data[high] */</span></span><br><span class="line">        <span class="keyword">int</span> low = <span class="number">-1</span>, high = word_count - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(low + <span class="number">1</span> != high) {</span><br><span class="line">            <span class="keyword">int</span> m = (low + high) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(wordncmp(words[m], phrase) &lt; <span class="number">0</span>)</span><br><span class="line">                low = m;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                high = m;</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x4E00;&#x5B9A;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x4E32;&#x662F;&#x76F8;&#x540C;&#x7684; */</span></span><br><span class="line">        assert(wordncmp(words[high], phrase) == <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x627E;&#x5230;&#x6240;&#x6709;&#x76F8;&#x540C;&#x7684;k&#x524D;&#x7F00;, &#x5F97;&#x5230;&#x968F;&#x673A;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20; */</span></span><br><span class="line">        <span class="keyword">const</span> <span class="keyword">char</span>* select_p = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; wordncmp(words[high + i], phrase) == <span class="number">0</span>; ++i) {</span><br><span class="line">            <span class="keyword">if</span>((rand() % (i + <span class="number">1</span>)) == <span class="number">0</span>)</span><br><span class="line">                select_p = words[high + i];</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x5224;&#x65AD;&#x662F;&#x5426;&#x751F;&#x6210;&#x7684;k+1&#x4E2A;&#x5143;&#x7D20;&#x5B58;&#x5728; */</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">strlen</span>(skip(select_p, k)) == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x8F93;&#x51FA; */</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; skip(select_p, k) &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* &#x5F97;&#x5230;&#x53F3;&#x79FB;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x7684;phrase */</span></span><br><span class="line">        phrase = skip(select_p, <span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span>* argv[])</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    srand(time(<span class="literal">NULL</span>));</span><br><span class="line">    load_data(<span class="string">&quot;gene_rand_words.txt&quot;</span>);</span><br><span class="line">    sort_k_word();</span><br><span class="line">    gene_rand_words(<span class="number">100</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
       
     </div>
+
+    
+      
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/03/24/note/beauty-of-prog-note/" rel="bookmark">《编程之美》读书笔记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/03/25/prog/my-leetcode-summary/" rel="bookmark">leetcode解题记录</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2016/03/18/book-touchable-tidy-up-life-md/" rel="bookmark">《怦然心动的人生整理魔法》读书笔记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2016/03/24/book-liaoge-linux-course-md/" rel="bookmark">《鸟哥的Linux私房菜》读书笔记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2016/02/02/code-complete-2-learn-note/" rel="bookmark">《Code Complete 2》读书笔记</a></div>
+      
+    </li>
+  
+  </ul>
+
 
     
 
@@ -510,8 +553,6 @@ BST&#x4E2D;.</p>
     <footer class="post-footer">
       
         <div class="post-tags">
-          
-            <a href="/tags/自写/" rel="tag"># 自写</a>
           
             <a href="/tags/读书笔记/" rel="tag"># 读书笔记</a>
           
@@ -703,7 +744,7 @@ BST&#x4E2D;.</p>
                     
                       
                     
-                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
