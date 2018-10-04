@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="学习Java编程思想的笔记。">
+<meta name="keywords" content="读书笔记,java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Java编程思想》读书笔记">
+<meta property="og:url" content="http://whiledoing.me/2018/10/01/prog/book-thinking-in-java/index.html">
+<meta property="og:site_name" content="whiledoing">
+<meta property="og:description" content="学习Java编程思想的笔记。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.linuxtopia.org/online_books/programming_books/thinking_in_java/TIJ325.png">
+<meta property="og:updated_time" content="2018-10-04T16:03:30.926Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《Java编程思想》读书笔记">
+<meta name="twitter:description" content="学习Java编程思想的笔记。">
+<meta name="twitter:image" content="https://www.linuxtopia.org/online_books/programming_books/thinking_in_java/TIJ325.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://whiledoing.me/2018/10/01/prog/book-thinking-in-java/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>《Java编程思想》读书笔记 | whiledoing</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117714040-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117714040-1');
+</script>
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6de2920425778ca5a4ee717be5055e96";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">whiledoing</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">喜欢一切简单且美的事物，包括人。</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://whiledoing.me/2018/10/01/prog/book-thinking-in-java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="whiledoing">
+      <meta itemprop="description" content="喜欢一切简单且美的事物，包括人。">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="whiledoing">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">《Java编程思想》读书笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-01 15:50:22" itemprop="dateCreated datePublished" datetime="2018-10-01T15:50:22+08:00">2018-10-01</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&#x5B66;&#x4E60;<a href="https://book.douban.com/subject/2061172/" target="_blank" rel="noopener">Java&#x7F16;&#x7A0B;&#x601D;&#x60F3;</a>&#x7684;&#x7B14;&#x8BB0;&#x3002;</p>
+<a id="more"></a>
+<h2 id="&#x5185;&#x90E8;&#x7C7B;">&#x5185;&#x90E8;&#x7C7B;</h2>
+<p>java&#x7684;&#x5185;&#x90E8;&#x7C7B;&#x5E76;&#x4E0D;&#x53EA;&#x662F;&#x7C7B;&#x4F3C;&#x4E8E;C++&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x5305;&#x88F9;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x79CD;&#x548C;&#x5916;&#x90E8;&#x7C7B;&#x8FDB;&#x884C;&#x7EC4;&#x5408;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x3002;&#x5728;&#x5185;&#x90E8;&#x7C7B;&#x4E2D;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5916;&#x56F4;&#x5BF9;&#x8C61;&#x7684;<strong>&#x6240;&#x6709;&#x6210;&#x5458;</strong>&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x4EFB;&#x4F55;&#x7279;&#x6B8A;&#x6761;&#x4EF6;&#xFF0C;&#x5C31;&#x50CF;&#x81EA;&#x5DF1;&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x4E00;&#x6837;&#x3002;&#x6240;&#x4EE5;&#x5185;&#x90E8;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x5FC5;&#x987B;&#x4F9D;&#x6258;&#x4E8E;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x7C7B;&#x6784;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x5728;&#x5916;&#x90E8;&#x7C7B;&#x7684;&#x63A5;&#x53E3;&#x4E2D;&#x63D0;&#x4F9B;&#x751F;&#x6210;&#x5185;&#x90E8;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#xFF08;this&#x88AB;&#x81EA;&#x52A8;&#x7684;&#x5305;&#x88F9;&#x5230;&#x5185;&#x90E8;&#x7C7B;&#x4E2D;&#xFF09;&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x901A;&#x8FC7;&#x5916;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#x6784;&#x9020;&#x5185;&#x90E8;&#x7C7B;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>{</span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Inter</span> </span>{</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">getOuterObject</span><span class="params">()</span> </span>{</span><br><span class="line">            <span class="comment">// &#x8FD9;&#x4E2A;&#x8BED;&#x6CD5;&#x6765;&#x5F97;&#x5230;&#x5916;&#x90E8;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;</span></span><br><span class="line">            <span class="keyword">return</span> Outer.<span class="keyword">this</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">getInterObject</span><span class="params">()</span> </span>{ <span class="keyword">return</span> <span class="keyword">new</span> Inter(); }</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        Outer out = <span class="keyword">new</span> Outer();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// &#x6CE8;&#x610F;&#x8FD9;&#x4E2A;&#x8BED;&#x6CD5;&#xFF0C;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x7684;&#x5BF9;&#x8C61;&#x6784;&#x5EFA;&#xFF0C;&#x56E0;&#x4E3A;&#x4E24;&#x8005;&#x662F;&#x7EC4;&#x5408;&#x7684;&#x5173;&#x7CFB;</span></span><br><span class="line">        Inter in = out.new Inter();</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x6240;&#x4EE5;&#x4ECE;&#x8BBE;&#x8BA1;&#x4E0A;&#x8BF4;&#xFF0C;&#x5185;&#x90E8;&#x7C7B;&#x662F;&#x5BF9;&#x5916;&#x90E8;&#x7C7B;&#x903B;&#x8F91;&#x7684;&#x91CD;&#x65B0;&#x5212;&#x5206;&#x3002;&#x6BD4;&#x5982;&#x8BBE;&#x8BA1;&#x7C7B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53D1;&#x73B0;&#x90E8;&#x5206;&#x903B;&#x8F91;&#x53EF;&#x4EE5;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#x81EA;&#x6210;&#x5355;&#x5143;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5185;&#x90E8;&#x7C7B;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7EC4;&#x7EC7;&#x3002;&#x6BD4;&#x5982;Iterator&#x7ECF;&#x5E38;&#x8FD9;&#x4E48;&#x641E;&#xFF1A;</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SomeCollection</span>&lt;<span class="title">T</span>&gt; </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterator&lt;T&gt; <span class="title">iterator</span><span class="params">()</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Itr();</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// &#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;private&#x6765;&#x4FEE;&#x9970;&#x5185;&#x90E8;&#x7C7B;&#xFF0C;&#x4E0D;&#x5BF9;&#x5916;&#x53EF;&#x89C1;&#xFF0C;&#x503C;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#xFF0C;&#x89E3;&#x8026;&#x903B;&#x8F91;</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Itr</span> <span class="keyword">implements</span> <span class="title">Iterator</span>&lt;<span class="title">T</span>&gt; </span>{</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span> </span>{ ... }</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> T <span class="title">next</span><span class="params">()</span> </span>{ <span class="keyword">return</span> ... }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x5185;&#x90E8;&#x7C7B;&#x53EB;&#x505A;&#x5D4C;&#x5957;&#x7C7B;&#xFF0C;&#x4F7F;&#x7528;<span class="keyword">static</span>&#x4FEE;&#x9970;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;C++&#x4E2D;&#x7684;&#x5185;&#x90E8;&#x7C7B;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x7C7B;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7BA1;&#x7406;&#x65B9;&#x5F0F;&#x3002;&#xFF08;&#x4E0D;&#x540C;&#x5730;&#x65B9;&#x5728;&#x4E8E;C++&#x7684;&#x5185;&#x90E8;&#x7C7B;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#x5916;&#x90E8;&#x7C7B;&#x7684;<span class="keyword">private</span>&#x65B9;&#x6CD5;&#xFF0C;&#x800C;java&#x53EF;&#x4EE5;&#xFF0C;&#x8BA4;&#x4E3A;&#x662F;&#x5916;&#x90E8;&#x7C7B;&#x7684;&#x5185;&#x90E8;&#x7A7A;&#x95F4;&#xFF0C;&#x8FDB;&#x800C;&#x8C03;&#x7528;<span class="keyword">private</span>&#x65B9;&#x6CD5;&#xFF09;&#xFF1A;</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>{</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">            Outer out = <span class="keyword">new</span> Outer();</span><br><span class="line">            out.test();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">&#x4E0A;&#x9762;&#x7528;&#x6CD5;&#x5C06;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x59D4;&#x6258;&#x5230;&#x5355;&#x72EC;&#x7684;&#x5185;&#x90E8;&#x5D4C;&#x5957;&#x7C7B;&#x4E2D;&#x8FDB;&#x884C;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x53D1;&#x5E03;&#x4EE3;&#x7801;&#x65F6;&#x53EF;&#x4EE5;&#x5C06;`Outer$Test.class`&#x5220;&#x9664;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x5C06;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x53D1;&#x5E03;&#x51FA;&#x53BB;&#x3002;&#x8C03;&#x7528;&#x6D4B;&#x8BD5;&#xFF0C;&#x6267;&#x884C;`java Outer$Test`&#x5373;&#x53EF;&#x3002;</span><br><span class="line"></span><br><span class="line">## enum</span><br><span class="line"></span><br><span class="line">java&#x4E2D;&#x7684;<span class="keyword">enum</span>&#x975E;&#x5E38;&#x6709;&#x610F;&#x601D;&#xFF0C;&#x58F0;&#x660E;<span class="keyword">enum</span>&#x7684;&#x7C7B;&#x4F1A;&#x9ED8;&#x8BA4;&#x7EE7;&#x627F;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;`Enum`&#x57FA;&#x7C7B;&#xFF0C;&#x63D0;&#x4F9B;&#x57FA;&#x672C;&#x7684;&#x64CD;&#x4F5C;&#x679A;&#x4E3E;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x540C;&#x65F6;&#xFF0C;<span class="keyword">enum</span>&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x5E38;&#x91CF;&#x4F1A;&#x53D8;&#x6210;&#x7C7B;&#x4F3C;<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span>&#x7684;<span class="keyword">enum</span>&#x7C7B;&#x53D8;&#x91CF;&#xFF1A;</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line"><span class="keyword">enum</span> Fruit {</span><br><span class="line">    <span class="comment">// &#x7B49;&#x4EF7;&#x4E8E;&#x5B9A;&#x4E49;&#x4E86; public static final APPLE = new Fruit()</span></span><br><span class="line">    APPLE,</span><br><span class="line">    BANNA</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x6BCF;&#x4E00;&#x4E2A;&#x5B9A;&#x4E49;&#x7684;&#x5E38;&#x91CF;&#x8FD8;&#x5BF9;&#x5E94;&#x4E86;&#x4E00;&#x4E2A;&#x6570;&#x503C;&#xFF0C;&#x4F7F;&#x7528;<code>APPLE.ordinal()</code>&#x83B7;&#x53D6;&#xFF0C;&#x901A;&#x8FC7;&#x63A5;&#x53E3;<code>Fruit.values()</code>&#x5F97;&#x5230;&#x5F53;&#x524D;&#x6240;&#x6709;&#x5E38;&#x91CF;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>enum&#x6709;&#x8DA3;&#x7684;&#x7684;&#x5730;&#x65B9;&#x662F;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5E38;&#x91CF;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5F88;&#x65B9;&#x4FBF;&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;&#x72B6;&#x6001;&#x673A;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">enum</span> Handler {</span><br><span class="line">    <span class="comment">// &#x8FD9;&#x91CC;&#x7B49;&#x4EF7;&#x4E8E;&#x662F; public static final A = new Handler() { ... }</span></span><br><span class="line">    A {</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">handle</span><span class="params">()</span> </span>{</span><br><span class="line">            System.out.println(<span class="string">&quot;precess by &quot;</span> + <span class="keyword">this</span>);</span><br><span class="line">            B.handle();</span><br><span class="line">        }</span><br><span class="line">    },</span><br><span class="line">    B {</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">handle</span><span class="params">()</span> </span>{</span><br><span class="line">            System.out.println(<span class="string">&quot;precess by &quot;</span> + <span class="keyword">this</span>);</span><br><span class="line">            C.handle();</span><br><span class="line">        }</span><br><span class="line">    },</span><br><span class="line">    C {</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">handle</span><span class="params">()</span> </span>{</span><br><span class="line">            System.out.println(<span class="string">&quot;precess by &quot;</span> + <span class="keyword">this</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;finish process&quot;</span>);</span><br><span class="line">        }</span><br><span class="line">    };</span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">handle</span><span class="params">()</span></span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x6BCF;&#x4E00;&#x4E2A;<code>Handler</code>&#x4E2D;&#x7684;&#x5E38;&#x91CF;&#x90FD;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x4E86;&#x5177;&#x4F53;&#x7684;&#x63A5;&#x53E3;&#x3002;&#x914D;&#x5408;&#x5BB9;&#x5668;<code>EnumSet</code>&#x548C;<code>EnumMap</code>&#x53EF;&#x4EE5;&#x5BF9;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;&#xFF08;&#x5185;&#x90E8;&#x4F7F;&#x7528;bitset&#x7ED3;&#x6784;&#x9AD8;&#x6548;&#x7D22;&#x5F15;&#xFF0C;&#x53EA;&#x5BF9;EnumMap&#x7C7B;&#x578B;&#x6709;&#x6548;&#xFF09;&#x3002;</p>
+<h2 id="&#x6CE8;&#x89E3;">&#x6CE8;&#x89E3;</h2>
+<p>&#x672C;&#x6765;&#x4EE5;&#x4E3A;&#x6CE8;&#x89E3;&#x7C7B;&#x4F3C;&#x4E8E;python&#x7684;&#x4FEE;&#x9970;&#x5668;&#xFF0C;&#x5B66;&#x4E60;&#x4E86;&#x4E00;&#x4E0B;&#x53D1;&#x73B0;&#x6839;&#x672C;&#x4E0D;&#x662F;&#x4E00;&#x56DE;&#x4E8B;&#x3002;java&#x7684;&#x6CE8;&#x89E3;&#x5E76;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x88AB;&#x4FEE;&#x9970;&#x5185;&#x5BB9;&#x7684;&#x8FD0;&#x884C;&#x903B;&#x8F91;&#xFF0C;&#x53EA;&#x662F;&#x5728;&#x88AB;&#x4FEE;&#x9970;&#x7269;&#x4F53;&#x4E0A;&#x52A0;&#x5165;&#x4E86;&#x6807;&#x7B7E;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x4E9B;&#x6807;&#x7B7E;&#x4FE1;&#x606F;&#x9700;&#x8981;&#x88AB;&#x989D;&#x5916;&#x7684;APT&#xFF08;Anonotation Processing Tool&#xFF09;&#x7EC4;&#x4EF6;&#x6240;&#x5904;&#x7406;&#x624D;&#x53EF;&#x4EE5;hook&#x751F;&#x6548;&#x8FD0;&#x884C;&#x6548;&#x679C;&#x3002;</p>
+<p>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6CE8;&#x89E3;&#x7C7B;&#x4F3C;&#x4E8E;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x53EA;&#x662F;&#x4F7F;&#x7528;&#x5173;&#x952E;&#x5B57;<code>@interface</code>&#x3002;&#x540C;&#x65F6;&#x8FD8;&#x53EF;&#x4EE5;&#x52A0;&#x5165;&#x4E00;&#x4E9B;<strong>&#x5143;&#x6CE8;&#x89E3;</strong>&#xFF08;&#x7528;&#x6765;&#x4FEE;&#x9970;&#x6CE8;&#x89E3;&#x7684;&#x6CE8;&#x89E3;&#xFF09;&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x6709; <code>@Target</code>&#x8868;&#x793A;&#x5F53;&#x524D;&#x6CE8;&#x89E3;&#x7528;&#x5728;&#x4EC0;&#x4E48;&#x5730;&#x65B9;&#xFF0C;&#x800C;<code>@Retention</code>&#x8868;&#x793A;&#x6CE8;&#x89E3;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF1A;</p>
+<ul>
+<li>SOURCE&#xFF1A;&#x53EA;&#x4FDD;&#x7559;&#x5728;&#x6E90;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x7F16;&#x8BD1;&#x65F6;&#xFF0C;&#x76F4;&#x63A5;&#x4E22;&#x5F03;&#x8FD9;&#x79CD;&#x6CE8;&#x89E3;&#xFF0C;&#x4E0D;&#x8BB0;&#x5F55;&#x5728;.class&#x6587;&#x4EF6;&#x4E2D;&#x3002;</li>
+<li>CLASS&#xFF1A;&#x7F16;&#x8BD1;&#x5668;&#x628A;&#x6CE8;&#x89E3;&#x8BB0;&#x5F55;&#x5728;class&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x5F53;&#x8FD0;&#x884C;Java&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;JVM&#x4E2D;&#x4E0D;&#x53EF;&#x83B7;&#x53D6;&#x8BE5;&#x6CE8;&#x89E3;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x662F;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</li>
+<li>RUNTIME&#xFF1A;&#x7F16;&#x8BD1;&#x5668;&#x628A;&#x6CE8;&#x89E3;&#x8BB0;&#x5F55;&#x5728;class&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x5F53;&#x8FD0;&#x884C;Java&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;JVM&#x53EF;&#x83B7;&#x53D6;&#x8BE5;&#x6CE8;&#x89E3;&#x4FE1;&#x606F;&#xFF0C;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x83B7;&#x53D6;&#x8BE5;&#x6CE8;&#x89E3;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+<p>&#x6CE8;&#x89E3;&#x4E5F;&#x53EF;&#x4EE5;&#x6709;&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x4E14;&#x53EF;&#x4EE5;&#x5728;&#x8C03;&#x7528;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#x3002;&#x5982;&#x679C;&#x6CE8;&#x89E3;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x53EB;<code>value</code>&#xFF0C;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x4E0D;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x540D;&#x800C;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x89C4;&#x5219;&#x3002;</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Target</span>(ElementType.METHOD)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Test {</span><br><span class="line">    <span class="function"><span class="keyword">long</span> <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestClss</span> </span>{</span><br><span class="line">    <span class="comment">// &#x96C6;&#x4E2D;&#x8C03;&#x7528;&#x90FD;&#x53EF;&#x4EE5;&#xFF0C;&#x56E0;&#x4E3A;&#x4F7F;&#x7528;&#x4E86;&#x9ED8;&#x8BA4;&#x7684;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x3002;</span></span><br><span class="line">    <span class="meta">@Test</span>(value = <span class="number">100</span>)</span><br><span class="line">    <span class="meta">@Test</span>(<span class="number">100</span>)</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">testMethod</span><span class="params">()</span> </span>{}</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x5F88;&#x591A;&#x7C7B;&#x5E93;&#x4F7F;&#x7528;&#x6CE8;&#x89E3;&#x6765;&#x5BF9;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x8FDB;&#x884C;hook&#xFF0C;&#x4EE5;&#x4FBF;&#x63D0;&#x4F9B;&#x7B80;&#x5355;&#x5FEB;&#x6377;&#x7684;&#x6846;&#x67B6;&#x8C03;&#x7528;&#x3002;java&#x7F16;&#x7A0B;&#x601D;&#x60F3;&#x4E66;&#x4E2D;&#x63D0;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6D4B;&#x8BD5;&#x6846;&#x67B6;&#xFF0C;&#x4F7F;&#x7528;RUNTIME&#x7EA7;&#x522B;&#x7684;&#x6CE8;&#x89E3;&#x914D;&#x5408;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x6765;&#x52A8;&#x6001;&#x7684;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x5E76;&#x53CD;&#x6620;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x3002;&#x5927;&#x81F4;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> &lt;T&gt; process(Class&lt;T&gt; testClass) {</span><br><span class="line">    <span class="keyword">for</span>(Method m : testClass.getDeclaredMethods()) {</span><br><span class="line">        <span class="comment">// &#x68C0;&#x6D4B;&#x5F53;&#x524D;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5426;&#x88AB;Test Annotation&#x6240;&#x4FEE;&#x9970;</span></span><br><span class="line">        <span class="keyword">if</span>(!m.isAnnotationPresent(Test.class)) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// invoke&#x8C03;&#x7528;&#x6210;&#x5458;&#x65B9;&#x6CD5;</span></span><br><span class="line">        <span class="keyword">if</span>(!m.invoke(testCalss.newInstance())) {</span><br><span class="line">            System.out.println(<span class="string">&quot;somethin wrong&quot;</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x53C2;&#x8003;&#x8D44;&#x6599;&#xFF1A;</p>
+<ul>
+<li><a href="http://blinkfox.com/javazhu-jie-de-li-jie-he-ying-yong/" target="_blank" rel="noopener">java&#x6CE8;&#x89E3;&#x7684;&#x7406;&#x89E3;&#x548C;&#x5E94;&#x7528;</a></li>
+<li><a href="https://blog.csdn.net/briblue/article/details/73824058" target="_blank" rel="noopener">&#x79D2;&#x61C2;java Annotation</a></li>
+</ul>
+<h2 id="&#x5BB9;&#x5668;">&#x5BB9;&#x5668;</h2>
+<p>java&#x7684;&#x5BB9;&#x5668;&#x7684;&#x7528;&#x4E0B;&#x9762;&#x8FD9;&#x5F20;&#x56FE;&#x53EF;&#x4EE5;&#x5B8C;&#x7F8E;&#x7684;&#x5C55;&#x793A;&#xFF1A;</p>
+<p><img src="https://www.linuxtopia.org/online_books/programming_books/thinking_in_java/TIJ325.png" alt=""></p>
+<p>&#x5176;&#x4E2D;&#x6CA1;&#x6709;&#x8BF4;&#x660E;&#x7684;&#x662F;<code>Queue</code>&#x63A5;&#x53E3;&#xFF0C;<code>Queue</code>&#x63A5;&#x53E3;&#x6709;&#x4E24;&#x4E2A;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;<code>LinkedList</code>&#xFF0C;&#x4E00;&#x4E2A;&#x662F;<code>PriorityQueue</code>&#x3002;&#x6CE8;&#x610F;<code>Queue</code>&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x3002;</p>
+<p>&#x7EE7;&#x627F;&#x4F53;&#x7CFB;&#x4E2D;&#xFF0C;&#x5176;&#x5B9E;&#x53EA;&#x6709;&#x56DB;&#x79CD;&#x63A5;&#x53E3;&#x5BB9;&#x5668;&#xFF1A;Map&#x3001;List&#x3001;Set&#x548C;Queue&#xFF0C;&#x5B83;&#x4EEC;&#x5404;&#x81EA;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x73B0;&#x7248;&#x672C;&#x3002;&#x9664;&#x4E86;Map&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x5B9E;&#x73B0;&#x4F53;&#x90FD;&#x662F;Collection&#x7C7B;&#x578B;&#xFF0C;Map&#x548C;Collection&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x7BA1;&#x7406;&#x7684;&#x5143;&#x7D20;&#x662F;&#x4E00;&#x7EF4;&#x7684;&#x8FD8;&#x662F;&#x4E00;&#x4E2A;tuple&#x3002;&#x4E5F;&#x56E0;&#x6B64;&#xFF0C;Map&#x7C7B;&#x578B;&#x5355;&#x72EC;&#x6784;&#x9020;&#x4E86;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x4E8E;Collection&#x5916;&#x7684;&#x7EE7;&#x627F;&#x4F53;&#x7CFB;&#xFF0C;&#x867D;&#x7136;&#x4E24;&#x8005;&#x63D0;&#x4F9B;&#x7684;&#x64CD;&#x4F5C;&#x8BED;&#x4E49;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#x3002;</p>
+<p>java&#x7684;&#x5BB9;&#x5668;&#x7ED3;&#x6784;&#x4E2D;&#xFF0C;&#x9664;&#x4E86;&#x5B9A;&#x4E49;&#x57FA;&#x672C;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x8FD8;&#x5B9A;&#x4E49;&#x4E86;&#x4EE5;Abstract&#x4E3A;&#x524D;&#x7F00;&#x7684;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x8FD9;&#x4E9B;&#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x7ED3;&#x6784;&#x7684;&#x90E8;&#x5206;&#x5B9E;&#x73B0;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x8FD9;&#x4E9B;&#x62BD;&#x8C61;&#x7C7B;&#x8FDB;&#x884C;&#x518D;&#x5B9A;&#x4E49;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x4F7F;&#x7528;<code>Arrays.asList</code>&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x7ED9;&#x6570;&#x7EC4;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;list&#x7684;&#x89C6;&#x56FE;&#xFF0C;&#x4F46;&#x662F;&#x6CE8;&#x610F;&#xFF0C;&#x4E0D;&#x53EF;&#x4EE5;&#x589E;&#x52A0;&#x6216;&#x8005;&#x5220;&#x9664;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x4FEE;&#x6539;&#x4E86;list&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4E5F;&#x4F1A;&#x5BFC;&#x81F4;&#x5E95;&#x5C42;&#x7684;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x4FEE;&#x6539;&#x3002;</p>
+<p>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x5BF9;&#x5BB9;&#x5668;&#x7684;api&#x8FDB;&#x884C;&#x4E86;&#x66F4;&#x52A0;&#x8BE6;&#x7EC6;&#x7684;&#x8BF4;&#x660E;&#xFF1A;<a href="http://jiangjun.name/thinking-in-java/chapter17" target="_blank" rel="noopener">&#x53C2;&#x8003;</a></p>
+<h2 id="&#x5F02;&#x5E38;">&#x5F02;&#x5E38;</h2>
+<p>java&#x7684;&#x5F02;&#x5E38;&#x8BF4;&#x660E;&#x662F;&#x4E00;&#x79CD;&#x81EA;&#x4E0A;&#x800C;&#x4E0B;&#x5F3A;&#x5236;&#x6267;&#x884C;&#x5F02;&#x5E38;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x5728;&#x7F16;&#x8BD1;&#x5668;&#x5C31;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4E00;&#x5B9A;&#x7684;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x58F0;&#x660E;&#x5C06;&#x629B;&#x51FA;&#x7279;&#x5B9A;&#x7684;&#x5F02;&#x5E38;A&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x5E76;&#x4E0D;&#x629B;&#x51FA;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#x3002;&#x8FD9;&#x6837;&#x5B50;&#x505A;&#x662F;&#x63D0;&#x524D;&#x7ED9;&#x53EF;&#x80FD;&#x5C06;&#x6765;&#x51FA;&#x73B0;&#x7684;&#x5F02;&#x5E38;&#x5360;&#x4E2A;&#x5751;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x8C03;&#x7528;&#x7AEF;&#x5FC5;&#x987B;&#x63D0;&#x524D;&#x5BF9;&#x8BE5;&#x5F02;&#x5E38;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<p><code>Throwable</code>&#x662F;java&#x7684;&#x5F02;&#x5E38;&#x57FA;&#x7C7B;&#xFF0C;&#x7EE7;&#x627F;&#x4F53;&#x7CFB;&#x4E2D;&#x6709;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li><code>Error</code>&#x8868;&#x793A;&#x7F16;&#x8BD1;&#x5668;&#x548C;&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x5FC3;&#x3002;</li>
+<li><code>Exception</code>&#x8868;&#x793A;&#x53EF;&#x4EE5;&#x88AB;&#x629B;&#x51FA;&#x7684;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x3002;</li>
+</ul>
+<p>&#x4ECE;<code>Exception</code>&#x4E2D;&#x7EE7;&#x627F;&#x51FA;&#x7684;<code>RuntimeExceptoin</code>&#x8868;&#x793A;&#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;&#xFF0C;&#x6BD4;&#x5982;<code>NullPointerException</code>&#x5F02;&#x5E38;&#x3002;&#x8FD9;&#x7C7B;&#x5F02;&#x5E38;&#x4E0D;&#x9700;&#x8981;&#x5728;<strong>&#x5F02;&#x5E38;&#x8BF4;&#x660E;&#x4E2D;&#x5217;&#x51FA;&#x6765;&#xFF0C;&#x4E5F;&#x88AB;&#x53EB;&#x505A;&#x300E;&#x4E0D;&#x53D7;&#x68C0;&#x67E5;&#x7684;&#x5F02;&#x5E38;&#x300F;</strong>&#x3002;</p>
+<p><code>RuntimeException</code>&#x5F02;&#x5E38;&#x5982;&#x679C;&#x4E00;&#x76F4;&#x4F20;&#x9012;&#x5230;main&#x51FD;&#x6570;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#xFF0C;&#x5E76;&#x5728;<code>System.err</code>&#x4E2D;&#x6253;&#x5370;&#x5F02;&#x5E38;&#x5806;&#x6808;&#x4FE1;&#x606F;&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x597D;&#x518D;&#x67D0;&#x4E00;&#x4E2A;&#x4E0A;&#x5C42;&#x4E0A;&#x8FDB;&#x884C;&#x7EDF;&#x4E00;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x7EE7;&#x627F;&#x4F53;&#x7CFB;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x57FA;&#x7C7B;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x4E86;A&#xFF0C;B&#x4E24;&#x4E2A;&#x5F02;&#x5E38;&#xFF0C;&#x90A3;&#x4E48;&#x5B50;&#x7C7B;&#x8986;&#x76D6;&#x57FA;&#x7C7B;&#x7684;&#x63A5;&#x53E3;<strong>&#x53EA;&#x53EF;&#x4EE5;&#x7F29;&#x5C0F;&#x5F02;&#x5E38;&#x8303;&#x56F4;&#xFF0C;&#x800C;&#x4E0D;&#x53EF;&#x4EE5;&#x589E;&#x52A0;</strong>&#x3002;&#x6BD4;&#x5982;&#x53EA;&#x58F0;&#x660E;&#x4F1A;&#x629B;&#x51FA;A&#x5F02;&#x5E38;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x58F0;&#x660E;&#x629B;&#x51FA;C&#x5F02;&#x5E38;&#x3002;</p>
+<hr>
+<p>&#x4F5C;&#x8005;&#x5728;&#x4E66;&#x4E2D;&#x5206;&#x6790;&#x4E86;java&#x5F02;&#x5E38;&#x8BF4;&#x660E;&#x7684;&#x4F18;&#x7F3A;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x5F02;&#x5E38;&#x8BBE;&#x8BA1;&#x7684;&#x672C;&#x610F;&#x662F;&#x5C06;&#x4EE3;&#x7801;&#x7684;&#x8C03;&#x7528;&#x548C;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x5206;&#x5F00;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x4E0D;&#x5FC5;&#x5C06;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x4EE3;&#x7801;&#x6563;&#x843D;&#x5728;&#x5404;&#x5904;&#xFF0C;&#x53EF;&#x4EE5;&#x7EDF;&#x4E00;&#x5904;&#x7406;&#x3002;&#xFF08;&#x5982;&#x679C;&#x6709;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x903B;&#x8F91;&#xFF0C;&#x5F02;&#x5E38;&#x662F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x7684;&#x7EDF;&#x4E00;&#x805A;&#x5408;&#x70B9;&#xFF09;</li>
+<li>&#x5F02;&#x5E38;&#x8BF4;&#x660E;&#x8BBE;&#x8BA1;&#x4E4B;&#x521D;&#x53C2;&#x8003;&#x4E86;C<ins>&#x7684;&#x5F02;&#x5E38;&#x8BF4;&#x660E;&#x673A;&#x5236;&#xFF0C;&#x53EA;&#x662F;C</ins>&#x7684;&#x5F02;&#x5E38;&#x8BF4;&#x660E;&#xFF08;throws&#x8BED;&#x53E5;&#xFF09;&#x5E76;&#x4E0D;&#x4F1A;&#x5728;&#x7F16;&#x8BD1;&#x5668;&#x5F3A;&#x5236;&#x8981;&#x6C42;&#x8C03;&#x7528;&#x8005;&#x5BF9;&#x5F02;&#x5E38;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x53EA;&#x4F1A;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x68C0;&#x6D4B;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x548C;&#x5F02;&#x5E38;&#x8BF4;&#x660E;&#x662F;&#x5426;&#x4E00;&#x81F4;&#x3002;&#x800C;java&#x9700;&#x8981;&#x975E;&#x5E38;&#x4E25;&#x683C;&#x7684;&#x7F16;&#x8BD1;&#x5668;&#x5F02;&#x5E38;&#x8BF4;&#x660E;&#x68C0;&#x6D4B;&#x3002;</li>
+<li>java&#x7684;&#x5F3A;&#x5236;&#x5F02;&#x5E38;&#x8BF4;&#x660E;&#x5BFC;&#x81F4;&#x9700;&#x8981;&#x5199;&#x66F4;&#x591A;&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x4EE3;&#x7801;&#xFF0C;&#x8FD9;&#x8FDD;&#x80CC;&#x4E86;&#x5F02;&#x5E38;&#x7684;&#x672C;&#x610F;&#xFF0C;&#x4E5F;&#x4F1A;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x5458;&#x4E3A;&#x4E86;&#x5077;&#x5DE5;&#x7701;&#x4E8B;&#x800C;&#x76F4;&#x63A5;&#x541E;&#x566C;&#x5F02;&#x5E38;&#x3002;</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x4F5C;&#x8005;&#x63A8;&#x8350;&#x5904;&#x7406;java&#x5F02;&#x5E38;&#x7684;&#x65B9;&#x6CD5;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x53EA;&#x5728;&#x4F60;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x5904;&#x7406;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x77E5;&#x9053;&#xFF0C;&#x5C31;&#x91CD;&#x65B0;&#x629B;&#x51FA;&#x3002;</li>
+<li>&#x5C06;&#x4E0D;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x5904;&#x7406;&#x7684;&#x5F02;&#x5E38;&#x5305;&#x88F9;&#x6210;RunTimeException&#x629B;&#x51FA;&#x3002;</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WrapCheckedException</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">throwRuntimeException</span><span class="params">(<span class="keyword">int</span> type)</span> </span>{</span><br><span class="line">        <span class="keyword">try</span> {</span><br><span class="line">            <span class="keyword">switch</span>(type) {</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">throw</span> <span class="keyword">new</span> FileNotFoundException();</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">throw</span> <span class="keyword">new</span> IOException();</span><br><span class="line">                <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">throw</span> <span class="keyword">new</span> RunTimeException(<span class="string">&quot;Where am I?&quot;</span>);</span><br><span class="line">                <span class="keyword">default</span>: <span class="keyword">return</span>;</span><br><span class="line">            }</span><br><span class="line">        } <span class="keyword">catch</span> (Exception e) {</span><br><span class="line">            <span class="comment">// &#x901A;&#x8FC7;java&#x7684;&#x5F02;&#x5E38;&#x94FE;&#xFF0C;&#x5C06;&#x5F53;&#x524D;&#x7684;&#x5F02;&#x5E38;e&#x5305;&#x88F9;&#x5230;RuntimeException&#x4E2D;</span></span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TurnOffChecking</span> </span>{</span><br><span class="line">    WrapCheckedException wce = <span class="keyword">new</span> WrapCheckedException();</span><br><span class="line">    <span class="keyword">try</span> {</span><br><span class="line">        wce.throwRuntimeException(<span class="number">1</span>);</span><br><span class="line">        wce.throwRuntimeException(<span class="number">2</span>);</span><br><span class="line">        wce.throwRuntimeException(<span class="number">3</span>);</span><br><span class="line">    } <span class="keyword">catch</span> (RunTimeException e) {</span><br><span class="line">        <span class="comment">// &#x5C06;&#x539F;&#x6765;&#x7684;&#x9519;&#x8BEF;&#x8FD8;&#x539F;</span></span><br><span class="line">        <span class="keyword">try</span> {</span><br><span class="line">            <span class="keyword">throw</span> e.getCause()</span><br><span class="line">        } <span class="keyword">catch</span> (FileNotFoundException e) {</span><br><span class="line">            print(<span class="string">&quot;I can handle this exception &quot;</span> + e);</span><br><span class="line">        } <span class="keyword">catch</span> (Throwable e) {</span><br><span class="line">            print(<span class="string">&quot;I can not handle, move forward &quot;</span> + e);</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RunTimeException(e);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x601D;&#x8DEF;&#xFF0C;&#x5C06;&#x53D7;&#x68C0;&#x6D4B;&#x7684;&#x5F02;&#x5E38;&#x5305;&#x88F9;&#x5230;&#x4E0D;&#x53D7;&#x68C0;&#x5F02;&#x5E38;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x5F02;&#x5E38;&#x4E0D;&#x53D7;&#x68C0;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;&#x88AB;&#x65E0;&#x6545;&#x541E;&#x566C;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x5229;&#x7528;&#x5F02;&#x5E38;&#x8C03;&#x7528;&#x94FE;&#x5C06;&#x539F;&#x59CB;&#x5F02;&#x5E38;&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#xFF0C;&#x518D;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x5F02;&#x5E38;&#x7684;diff&#xFF0C;&#x53D6;&#x51FA;&#x4E0D;&#x53D7;&#x68C0;&#x5F02;&#x5E38;&#x4E2D;&#x7684;&#x539F;&#x59CB;&#x5F02;&#x5E38;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x6216;&#x8005;&#x5728;&#x4E0D;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x5904;&#x7406;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7EE7;&#x7EED;&#x629B;&#x51FA;&#x3002;</p>
+<h2 id="&#x53CD;&#x5C04;">&#x53CD;&#x5C04;</h2>
+<p>java&#x7684;&#x53CD;&#x5C04;&#x4E3B;&#x8981;&#x901A;&#x8FC7;Object&#x7CFB;&#x7EDF;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;<code>Class</code>&#x6765;&#x5B9E;&#x73B0;&#x3002;Class&#x5BF9;&#x8C61;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5B57;&#x6BB5;&#xFF0C;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#xFF0C;&#x6807;&#x8BB0;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8BE5;&#x4FE1;&#x606F;&#x6765;&#x505A;&#x4E00;&#x4E9B;&#x52A8;&#x6001;hook&#x3002;</p>
+<p>&#x83B7;&#x53D6;Class&#x5BF9;&#x8C61;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &#x4F7F;&#x7528;forName&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5168;&#x9650;&#x5B9A;&#x7C7B;&#x540D;&#xFF0C;java&#x4F1A;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x8BE5;&#x7C7B;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x7C7B;&#x5BF9;&#x8C61;&#xFF08;&#x5F53;&#x7136;&#x5DF2;&#x7ECF;&#x52A0;&#x8F7D;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x521D;&#x59CB;&#x5316;&#x7C7B;&#x4E86;&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x63D0;&#x4F9B;&#x7C7B;&#x5BF9;&#x8C61;&#xFF09;</span></span><br><span class="line"><span class="comment">// &#x4F7F;&#x7528;?&#x8868;&#x793A;&#x6CDB;&#x578B;&#x7C7B;&#x578B;&#xFF0C;&#x8868;&#x793A;&#x300E;&#x4EFB;&#x4F55;&#x4E8B;&#x7269;&#x300F;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5176;&#x7B49;&#x4EF7;&#x4E8E;&#x6CA1;&#x6709;&#x6CDB;&#x578B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; Class &#x7B49;&#x540C;&#x4E8E; Class&lt;?&gt;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x540E;&#x8005;&#x66F4;&#x80FD;&#x8BF4;&#x660E;&#x76EE;&#x7684;&#xFF1A;&#x6211;&#x4EEC;&#x662F;&#x660E;&#x786E;&#x77E5;&#x9053;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x758F;&#x5FFD;&#x4E86;&#x7C7B;&#x578B;&#x3002;</span></span><br><span class="line">Class&lt;?&gt; c = Class.forName(<span class="string">&quot;me.whiledoing.test.TestReflection&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x6216;&#x8005;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7C7B;&#x5BF9;&#x8C61;&#x7684;class&#x5BF9;&#x8C61;</span></span><br><span class="line">Class&lt;TestReflection&gt; cRef = TestReflection.class;</span><br></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x7C7B;&#x578B;&#x662F;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5411;&#x4E0A;&#x8F6C;&#x578B;&#xFF0C;&#x4F7F;&#x7528;&#x7236;&#x7C7B;&#x7C7B;&#x578B;&#x6765;&#x5F15;&#x7528;&#x5B50;&#x7C7B;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x4F46;&#x5982;&#x679C;&#x5C06;&#x7C7B;&#x578B;&#x7528;&#x5230;&#x6CDB;&#x578B;&#x53C2;&#x6570;&#x4E2D;&#xFF0C;&#x4E0D;&#x518D;&#x7EE7;&#x7EED;&#x7B26;&#x5408;&#x5BF9;&#x5E94;&#x7684;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#xFF1A;</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">Base</span> </span>{}</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x62A5;&#x9519;&#xFF0C;&#x653E;&#x5230;&#x6CDB;&#x578B;&#x53C2;&#x6570;&#x4E2D;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x7236;&#x5B50;&#x5173;&#x7CFB;</span></span><br><span class="line">Class&lt;Base&gt; baseClass = Derived.class;</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x4F7F;&#x7528;java&#x63D0;&#x4F9B;&#x7684;extends&#x53C2;&#x6570;&#x6765;&#x63D0;&#x793A;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x8FD9;&#x91CC;&#x4FDD;&#x5B58;&#x7684;&#x6CDB;&#x578B;&#x7C7B;&#x578B;&#x662F;&#x7EE7;&#x627F;&#x4E8E;Base&#x7C7B;&#x578B;</span></span><br><span class="line">Class&lt;? extends Base&gt; baseClass = Derived.class;</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x540C;&#x6837;&#x62A5;&#x9519;&#xFF0C;&#x8FD9;&#x91CC;&#x7F16;&#x8BD1;&#x5668;&#x5E76;&#x4E0D;&#x652F;&#x6301;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x5F97;&#x5230;&#x5177;&#x4F53;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF08;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x65B9;&#x6CD5;&#x662F;&#x4E3A;&#x4E86;&#x5F97;&#x5230;&#x57FA;&#x7C7B;&#xFF0C;&#x4F46;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#xFF0C;java&#x5E76;&#x4E0D;&#x5206;&#x6790;&#x8FD0;&#x884C;&#x671F;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7ED3;&#x679C;&#xFF09;</span></span><br><span class="line">Class&lt;Base&gt; baseClass = Derived.class.getSuperclass();</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x9700;&#x8981;&#x5199;&#x6210;&#xFF0C;&#x63D0;&#x793A;&#x7F16;&#x8BD1;&#x5668;&#x5927;&#x81F4;&#x7684;&#x7C7B;&#x578B;&#x8303;&#x56F4;&#x3002;</span></span><br><span class="line"><span class="comment">// &#x6362;&#x4E2A;&#x7406;&#x89E3;&#xFF0C;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;Derived.class.getSuperclass()&#x7684;&#x7C7B;&#x578B;&#x5C31;&#x662F;Class&lt;? super Derived&gt;&#xFF0C;&#x800C;&#x8FD0;&#x884C;&#x671F;&#xFF0C;&#x624D;&#x4F1A;&#x53D8;&#x6210;Class&lt;Base&gt;</span></span><br><span class="line">Class&lt;? <span class="keyword">super</span> Derived&gt; baseClass = Derived.class.getSuperclass();</span><br></pre></td></tr></table></figure>
+<hr>
+<p>&#x52A8;&#x6001;&#x4EE3;&#x7406;&#x673A;&#x5236;&#x6BD4;&#x8F83;&#x6709;&#x610F;&#x601D;&#xFF0C;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5BF9;<strong>&#x7279;&#x5B9A;&#x63A5;&#x53E3;</strong>&#x8FDB;&#x884C;&#x4EE3;&#x7406;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x6267;&#x884C;&#x5185;&#x5BB9;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x52A8;&#x6001;hook&#x3002;&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4E3A;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x8C03;&#x7528;&#x90FD;&#x52A0;&#x5165;&#x4E86;&#x8F93;&#x51FA;&#xFF1A;</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &#x5B9E;&#x9645;&#x6267;&#x884C;&#x7684;&#x5BF9;&#x8C61;</span></span><br><span class="line">Interface obj = <span class="keyword">new</span> RealObject();</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x5305;&#x88C5;&#x7684;&#x6267;&#x884C;&#x5BF9;&#x8C61;proxy&#xFF0C;&#x63D0;&#x4F9B;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;1&#xFF09;&#x7C7B;&#x52A0;&#x8F7D;&#x5BF9;&#x8C61;&#xFF08;&#x8C8C;&#x4F3C;&#x968F;&#x4FBF;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5373;&#x53EF;&#xFF09; 2&#xFF09;proxy&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;Class&#x6570;&#x7EC4; 3&#xFF09;&#x6267;&#x884C;hook&#x7684;InvocationHandler&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;lambda&#x66FF;&#x6362;&#x4E86;&#x533F;&#x540D;&#x5BF9;&#x8C61;</span></span><br><span class="line">Interface proxy = (Interface) Proxy.newProxyInstance(</span><br><span class="line">        Interface.class.getClassLoader(),</span><br><span class="line">        <span class="keyword">new</span> Class&lt;?&gt;[] {Interface.class},</span><br><span class="line">        (proxy1, method, args1) -&gt; {</span><br><span class="line">            System.out.println(String.format(<span class="string">&quot;calling method %s with args %s&quot;</span>, method.getName(), args1));</span><br><span class="line">            <span class="keyword">return</span> method.invoke(obj, args1);</span><br><span class="line">        }</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x76F4;&#x63A5;&#x8C03;&#x7528;obj.doSomething(1)</span></span><br><span class="line">proxy.doSomething(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+      
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/09/05/note/java-concurrency-in-practice-note/" rel="bookmark">《Java并发编程实战》读书笔记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2016/02/01/the-art-of-unix-programming-reading-notes/" rel="bookmark">《The Art of UNIX Programming》读书笔记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2016/06/28/book-thinking-about-running-md/" rel="bookmark">《当我跑步时我谈些什么》读书笔记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2016/03/24/book-liaoge-linux-course-md/" rel="bookmark">《鸟哥的Linux私房菜》读书笔记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2016/02/02/code-complete-2-learn-note/" rel="bookmark">《Code Complete 2》读书笔记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2016/04/01/how-to-life-learn-note/" rel="bookmark">《活法》读书笔记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/02/19/how-to-measure-your-life-reading-notes/" rel="bookmark">《如何衡量你的人生》读书笔记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/11/30/money-hacker-reading-note/" rel="bookmark">《富爸爸穷爸爸》&《小狗钱钱》读书笔记</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>whiledoing</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://whiledoing.me/2018/10/01/prog/book-thinking-in-java/" title="《Java编程思想》读书笔记">http://whiledoing.me/2018/10/01/prog/book-thinking-in-java/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/读书笔记/" rel="tag"># 读书笔记</a>
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/05/note/java-concurrency-in-practice-note/" rel="next" title="《Java并发编程实战》读书笔记">
+                <i class="fa fa-chevron-left"></i> 《Java并发编程实战》读书笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="whiledoing" />
+            
+              <p class="site-author-name" itemprop="name">whiledoing</p>
+              <p class="site-description motion-element" itemprop="description">喜欢一切简单且美的事物，包括人。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">62</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">豆瓣</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">知乎</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#内部类"><span class="nav-number">1.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注解"><span class="nav-number">2.</span> <span class="nav-text">注解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器"><span class="nav-number">3.</span> <span class="nav-text">容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常"><span class="nav-number">4.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反射"><span class="nav-number">5.</span> <span class="nav-text">反射</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">whiledoing</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.4.2"></script>
+
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+</body>
+</html>
