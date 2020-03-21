@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="学习 go-lang 的笔记，主要的学习站点：  go-lang-articles go-lang-blog go-vs-python go-by-example">
+<meta name="keywords" content="go">
+<meta property="og:type" content="article">
+<meta property="og:title" content="learn-go-lang">
+<meta property="og:url" content="http://whiledoing.me/2020/03/21/prog/learn-go-lang/index.html">
+<meta property="og:site_name" content="whiledoing">
+<meta property="og:description" content="学习 go-lang 的笔记，主要的学习站点：  go-lang-articles go-lang-blog go-vs-python go-by-example">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://blog.golang.org/slices-intro/slice-1.png">
+<meta property="og:updated_time" content="2020-03-21T15:27:33.965Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="learn-go-lang">
+<meta name="twitter:description" content="学习 go-lang 的笔记，主要的学习站点：  go-lang-articles go-lang-blog go-vs-python go-by-example">
+<meta name="twitter:image" content="https://blog.golang.org/slices-intro/slice-1.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://whiledoing.me/2020/03/21/prog/learn-go-lang/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>learn-go-lang | whiledoing</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117714040-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117714040-1');
+</script>
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6de2920425778ca5a4ee717be5055e96";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">whiledoing</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">喜欢一切简单且美的事物，包括人。</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://whiledoing.me/2020/03/21/prog/learn-go-lang/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="whiledoing">
+      <meta itemprop="description" content="喜欢一切简单且美的事物，包括人。">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="whiledoing">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">learn-go-lang
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-21 22:40:02" itemprop="dateCreated datePublished" datetime="2020-03-21T22:40:02+08:00">2020-03-21</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&#x5B66;&#x4E60; go-lang &#x7684;&#x7B14;&#x8BB0;&#xFF0C;&#x4E3B;&#x8981;&#x7684;&#x5B66;&#x4E60;&#x7AD9;&#x70B9;&#xFF1A;</p>
+<ul>
+<li><a href="https://golang.org/doc/#articles" target="_blank" rel="noopener">go-lang-articles</a></li>
+<li><a href="https://blog.golang.org/" target="_blank" rel="noopener">go-lang-blog</a></li>
+<li><a href="http://govspy.peterbe.com/" target="_blank" rel="noopener">go-vs-python</a></li>
+<li><a href="https://gobyexample.com/" target="_blank" rel="noopener">go-by-example</a></li>
+</ul>
+<a id="more"></a>
+<h2 id="go-by-example">go-by-example</h2>
+<p>&#x5B66;&#x4E60;&#x4E00;&#x4E0B;<a href="https://gobyexample.com/switch" target="_blank" rel="noopener">go by example</a></p>
+<h3 id="switch">switch</h3>
+<p>switch &#x53EF;&#x4EE5;&#x5F53;&#x505A; if/else &#x6765;&#x4F7F;&#x7528;, &#x6CE8;&#x610F; case &#x7684;&#x540E;&#x9762;&#x9700;&#x8981;&#x52A0;&#x5165;&#x5192;&#x53F7;&#xFF1A;</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> {</span><br><span class="line"><span class="keyword">case</span> t.Hour() &lt; <span class="number">12</span>:</span><br><span class="line">    fmt.Println(<span class="string">&quot;It&apos;s before noon&quot;</span>)</span><br><span class="line"><span class="keyword">case</span> t.Hour() &lt; <span class="number">18</span>:</span><br><span class="line">    fmt.Println(<span class="string">&quot;It&apos;s noon&quot;</span>)</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">    fmt.Println(<span class="string">&quot;It&apos;s evening&quot;</span>)</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x6709;&#x7528;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x5229;&#x7528; switch &#x4F5C;&#x4E3A; type &#x7684;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x5728; interface &#x7684;&#x9009;&#x62E9;&#x4E2D;&#x5F88;&#x6709;&#x7528;&#xFF1A;</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">whatAmI := function(i <span class="keyword">interface</span>{}) {</span><br><span class="line">    <span class="keyword">switch</span> t := i.(<span class="keyword">type</span>) {</span><br><span class="line">    <span class="keyword">case</span> <span class="keyword">bool</span>:</span><br><span class="line">        fmt.Println(<span class="string">&quot;I&apos;m a bool&quot;</span>)</span><br><span class="line">    <span class="keyword">case</span> <span class="keyword">int</span>:</span><br><span class="line">        fmt.Println(<span class="string">&quot;I&apos;m a int&quot;</span>)</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="comment">// &#x4F7F;&#x7528;%T&#x8868;&#x793A;&#x53D8;&#x91CF;&#x4E3A;&#x7C7B;&#x578B;&#x53C2;&#x6570;</span></span><br><span class="line">        fmt.Println(<span class="string">&quot;Don&apos;t know type %T\n&quot;</span>, t)</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">whatAmI(<span class="literal">true</span>)</span><br><span class="line">whatAmI(<span class="number">1</span>)</span><br><span class="line">whatAmI(<span class="string">&quot;hello&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="slice">slice</h3>
+<p>&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#xFF0C;&#x9700;&#x8981;&#x660E;&#x786E;&#x6307;&#x5B9A;&#x6570;&#x7EC4;&#x7684;&#x7EAC;&#x5EA6;&#xFF1A;</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &#x6570;&#x7EC4;&#x7684;&#x7EAC;&#x5EA6;&#x8BB0;&#x5F55;&#x5728;&#x7C7B;&#x578B;&#x4E4B;&#x524D;&#xFF0C;&#x548C;&#x4E00;&#x822C;&#x7684;&#x8BED;&#x8A00;&#x4E0D;&#x592A;&#x4E00;&#x6837;</span></span><br><span class="line"><span class="comment">// &#x6570;&#x7EC4;&#x7684;&#x7C7B;&#x578B;&#x5305;&#x62EC;&#x5F53;&#x524D;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x6CE8;&#x610F;[5]int&#x548C;[10]int&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;</span></span><br><span class="line"><span class="keyword">var</span> a [<span class="number">5</span>]<span class="keyword">int</span> = [<span class="number">5</span>]<span class="keyword">int</span>{<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>}</span><br><span class="line"><span class="comment">// &#x81EA;&#x52A8;&#x8BA1;&#x7B97;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x7EC4;</span></span><br><span class="line">b := [...]<span class="keyword">int</span>{<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>}</span><br><span class="line"><span class="keyword">var</span> c [<span class="number">10</span>]<span class="keyword">int</span></span><br></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x7EAC;&#x5EA6;&#xFF0C;&#x5C31;&#x53D8;&#x6210;&#x4E86; slice &#x7C7B;&#x578B;&#xFF0C;&#x5C31;&#x662F;&#x5217;&#x8868;&#xFF0C;&#x66F4;&#x591A;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://blog.golang.org/slices-intro" target="_blank" rel="noopener">slice-intro</a></p>
+<p>slice &#x5185;&#x5B58;&#x7ED3;&#x6784;&#x56FE;&#xFF1A;<img src="https://blog.golang.org/slices-intro/slice-1.png" alt="memory-of-slice"></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">s := []<span class="keyword">byte</span>{<span class="string">&apos;a&apos;</span>, <span class="string">&apos;b&apos;</span>, <span class="string">&apos;c&apos;</span>, <span class="string">&apos;d&apos;</span>}</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x4F7F;&#x7528;make&#x53EF;&#x4EE5;&#x6307;&#x5B9A;len&#x548C;cap</span></span><br><span class="line">s2 := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">10</span>, <span class="number">20</span>)</span><br><span class="line"><span class="comment">// slice&#x7684;&#x5207;&#x7247;&#x516C;&#x7528;&#x6570;&#x636E;&#xFF1A;slice&#x7ED3;&#x6784;&#x7C7B;&#x4F3C; {point_to_array, len, cap}</span></span><br><span class="line">s3 := s2[:<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// append&#x7684;&#x4EE3;&#x7801;&#x5927;&#x81F4;&#x5982;&#x4E0B;</span></span><br><span class="line">function AppendByte(slice []<span class="keyword">byte</span>, data ...<span class="keyword">byte</span>) []<span class="keyword">byte</span> {</span><br><span class="line">    m := <span class="built_in">len</span>(slice)</span><br><span class="line">    n := m + <span class="built_in">len</span>(data)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> n &gt; <span class="built_in">cap</span>(slice) {</span><br><span class="line">        <span class="comment">// n+1&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x957F;&#x5EA6;&#x4E3A;0</span></span><br><span class="line">        newSlice := <span class="built_in">make</span>([]<span class="keyword">byte</span>, (n+<span class="number">1</span>)*<span class="number">2</span>)</span><br><span class="line">        <span class="built_in">copy</span>(newSlice, slice)</span><br><span class="line">        slice = newSlice</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// slice&#x6570;&#x636E;&#x8FD8;&#x662F;&#x539F;&#x6765;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x8BA9;slice&#x7684;&#x957F;&#x5EA6;&#x8FD8;&#x662F;n&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6269;&#x5C55;&#x540E;&#x7684;&#x957F;&#x5EA6;</span></span><br><span class="line">    slice = slice[:n]</span><br><span class="line"></span><br><span class="line">    <span class="comment">// &#x586B;&#x5145;&#x65B0;&#x7684;&#x6570;&#x503C;</span></span><br><span class="line">    <span class="built_in">copy</span>(slice[m:n], <span class="keyword">byte</span>)</span><br><span class="line">    <span class="keyword">return</span> slice</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x6240;&#x4EE5;&#x4F7F;&#x7528;append&#x64CD;&#x4F5C;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x8BB0;&#x5F55;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;</span></span><br><span class="line">s4 := <span class="built_in">append</span>(s2, <span class="number">100</span>, <span class="number">200</span>)</span><br><span class="line"><span class="comment">// &#x8FD9;&#x4E2A;&#x8BED;&#x6CD5;&#x7B49;&#x4E8E;&#x662F;list&#x7684;extend&#x64CD;&#x4F5C;&#xFF0C;&#x6CE8;&#x610F;&#x70B9;&#x597D;&#x653E;&#x5728;&#x540E;&#x9762;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;python&#x7684;&#x5217;&#x8868;&#x89E3;&#x6790;</span></span><br><span class="line">s5 := <span class="built_in">append</span>(s2, s4...)</span><br></pre></td></tr></table></figure>
+<h3 id="range">range</h3>
+<p>go &#x7684; range &#x64CD;&#x4F5C;&#x652F;&#x6301;&#x591A;&#x6A21;&#x6001;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x662F; value &#x6216;&#x8005;&#x662F; map &#x7684; key-list&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4E24;&#x4E2A;&#xFF0C;&#x5C31;&#x662F; enumerate &#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x6216;&#x8005;&#x662F; map &#x7684; items &#x7684;&#x6982;&#x5FF5;&#xFF1A;</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">nums := []{<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>}</span><br><span class="line"></span><br><span class="line"><span class="comment">// ignore index</span></span><br><span class="line"><span class="keyword">for</span> _, value := <span class="keyword">range</span> nums {</span><br><span class="line">    <span class="keyword">if</span> value == <span class="number">3</span> {</span><br><span class="line">        fmt.Println(value)</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// just index in slice</span></span><br><span class="line"><span class="keyword">for</span> index := <span class="keyword">range</span> nums {</span><br><span class="line">    fmt.Println(index)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">kvs := <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span> {<span class="string">&quot;a&quot;</span>: <span class="string">&quot;apple&quot;</span>, <span class="string">&quot;b&quot;</span>: <span class="string">&quot;banana&quot;</span>}</span><br><span class="line"><span class="keyword">for</span> k, v := <span class="keyword">range</span> kvs {</span><br><span class="line">    fmt.Println(k, v)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// only keys</span></span><br><span class="line"><span class="keyword">for</span> k := <span class="keyword">range</span> kvs {</span><br><span class="line">    fmt.Println(k)</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h3 id="error">error</h3>
+<p>go &#x7684; error &#x673A;&#x5236;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E; C &#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5728;&#x8FD4;&#x56DE;&#x503C;&#x4E2D;&#x900F;&#x4F20;&#x3002;&#x4E2A;&#x4EBA;&#x89C9;&#x5F97;&#x8FD8;&#x662F;&#x633A;&#x597D;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x6301;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x540E;&#xFF0C;&#x4F18;&#x5148;&#x5224;&#x65AD;&#x9519;&#x8BEF;&#xFF0C;&#x7136;&#x540E;&#x77ED;&#x8DEF;&#x8FD4;&#x56DE;&#x7684;&#x8C03;&#x7528;&#x98CE;&#x683C;&#x3002;&#x8BD5;&#x7684;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x66F4;&#x52A0;&#x5065;&#x58EE;,&#x4F46;&#x662F;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x4E5F;&#x589E;&#x52A0;&#x4E86;&#x5197;&#x4F59;.</p>
+<p>go &#x7684; error &#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A; interface &#x53EA;&#x8981;&#x5B9A;&#x4E49;&#x5BF9;&#x5E94;&#x7684;<code>Error() string</code>&#x65B9;&#x6CD5;&#x7B7E;&#x540D;,&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684; error &#x7C7B;&#xFF1A;</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(e *argError)</span> <span class="title">Error</span><span class="params">()</span> <span class="title">string</span></span> {</span><br><span class="line">    <span class="keyword">return</span> fmt.Sprintf(<span class="string">&quot;%d - %s&quot;</span>, e.arg, e.prob)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">testError</span><span class="params">()</span></span> {</span><br><span class="line">    testFunc := <span class="function"><span class="keyword">func</span> <span class="params">(i <span class="keyword">int</span>)</span> <span class="params">(<span class="keyword">int</span>, error)</span></span> {</span><br><span class="line">        <span class="keyword">switch</span> i {</span><br><span class="line">        <span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">            <span class="comment">// &#x6784;&#x9020;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;error&#x7684;pointer</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>, &amp;argError{i, <span class="string">&quot;can&apos;t work&quot;</span>}</span><br><span class="line">        <span class="keyword">case</span> <span class="number">11</span>:</span><br><span class="line">            <span class="comment">// errors.New&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;errors.errorString&#x7684;&#x6307;&#x9488;</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>, errors.New(<span class="string">&quot;can&apos;t work two&quot;</span>)</span><br><span class="line">        <span class="keyword">case</span> <span class="number">12</span>:</span><br><span class="line">            <span class="comment">// &#x52A0;&#x5165;&#x4E86;printf&#x7684;errors.New&#x8C03;&#x7528;.</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>, fmt.Errorf(<span class="string">&quot;can&apos;t work three of value: %v&quot;</span>, i)</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> i+<span class="number">3</span>, <span class="literal">nil</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> _, err := testFunc(<span class="number">10</span>); err != <span class="literal">nil</span> {</span><br><span class="line">        fmt.Println(<span class="string">&quot;failed, &quot;</span>, err)</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> _, err := testFunc(<span class="number">11</span>); err != <span class="literal">nil</span> {</span><br><span class="line">        fmt.Println(<span class="string">&quot;failed, &quot;</span>, err)</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> _, err := testFunc(<span class="number">12</span>); err != <span class="literal">nil</span> {</span><br><span class="line">        fmt.Println(<span class="string">&quot;failed, &quot;</span>, err)</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x4E3A;&#x4EC0;&#x4E48; error &#x9ED8;&#x8BA4;&#x90FD;&#x4F7F;&#x7528;&#x6307;&#x9488;&#xFF0C;&#x6839;&#x636E;&#x8FD9;&#x4E2A;<a href="https://stackoverflow.com/questions/50333428/custom-errors-in-golang-and-pointer-receivers" target="_blank" rel="noopener">custom-errors-in-golang-and-pointer-receivers</a>&#x7684;&#x56DE;&#x7B54;&#x3002;&#x4E00;&#x4E2A;&#x53EF;&#x80FD;&#x7684;&#x8003;&#x8651;&#x70B9;&#x662F;&#xFF0C;&#x4F7F;&#x7528; error &#x8FDB;&#x884C;&#x903B;&#x8F91;&#x5224;&#x5B9A;&#x65F6;, &#x4F1A;&#x8FDB;&#x884C;&#x7B49;&#x53F7;&#x68C0;&#x6D4B;&#xFF0C;&#x9700;&#x8981;&#x5224;&#x5B9A;&#x7684;&#x662F; is &#x6982;&#x5FF5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x503C;&#x76F8;&#x540C;&#x7684;&#x6982;&#x5FF5;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4F7F;&#x7528;&#x6307;&#x9488;&#x8868;&#x793A;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x7B49;&#x53F7;&#x8FDB;&#x884C; is &#x68C0;&#x6D4B;&#x3002;</p>
+<h3 id="channel">channel</h3>
+<p>channel &#x771F;&#x662F; go-lang &#x7684;&#x7CBE;&#x9AD3;&#x3002;</p>
+<ul>
+<li>none-buffer &#x7684;&#x901A;&#x9053;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x6709;&#x6570;&#x636E;&#x7B49;&#x5F85;&#x63A5;&#x53D7;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x5199;&#x5165;&#xFF1B;&#x800C; buffer &#x7684;&#x901A;&#x9053;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5199;&#x5165;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x6709;&#x6570;&#x636E;&#x63A5;&#x6536;&#x3002;</li>
+<li>&#x4F7F;&#x7528; select &#x53EF;&#x4EE5;<strong>&#x540C;&#x6B65;&#x7B49;&#x5F85;&#x591A;&#x4E2A;&#x901A;&#x9053;</strong>&#xFF1B;&#x6216;&#x8005;&#x4F7F;&#x7528;<strong>default</strong>&#x8BED;&#x53E5;&#xFF0C;&#x8868;&#x793A;&#x7B49;&#x5F85;&#x4E0D;&#x5230;&#x6570;&#x636E;&#x7684;&#x9ED8;&#x8BA4;&#x9009;&#x62E9;&#xFF1B;&#x6216;&#x8005;&#x4F7F;&#x7528;<code>time.After(time.Seconds)</code>&#x8868;&#x793A;&#x7B49;&#x5F85;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#x7684;&#x8D85;&#x65F6;&#x3002;</li>
+<li><code>close</code>&#x4E00;&#x4E2A;&#x901A;&#x9053;&#xFF0C;&#x8868;&#x793A;&#x901A;&#x9053;&#x5185;&#x4E0D;&#x4F1A;&#x518D;&#x6709;&#x66F4;&#x591A;&#x7684;&#x6570;&#x636E;&#x5199;&#x5165;&#xFF0C;&#x63A5;&#x53D7;&#x901A;&#x9053;&#x6570;&#x636E;&#x7684;&#x643A;&#x7A0B;&#xFF0C;&#x53EF;&#x4EE5;&#x611F;&#x77E5;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528;<code>for job := range jobs</code>&#x7684;&#x65B9;&#x5F0F;&#x7B49;&#x5F85;&#x901A;&#x9053;&#xFF0C;&#x4F1A;&#x5728;&#x901A;&#x9053;&#x5173;&#x95ED;&#x540E;&#x7ED3;&#x675F;&#xFF0C;&#x975E;&#x5E38;&#x8D5E;&#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6280;&#x5DE7;&#xFF0C;&#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x7684;&#x5B9E;&#x73B0;<strong>&#x534F;&#x7A0B;&#x6C60;</strong>&#xFF0C;&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#x5E76;&#x53D1;&#x7684;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x7684;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;&#xFF0C;&#x5B9E;&#x73B0;&#x53C2;&#x8003;<a href="https://gobyexample.com/worker-pools" target="_blank" rel="noopener">worker-pools</a></li>
+</ul>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ping</span><span class="params">(pings <span class="keyword">chan</span>&lt;- <span class="keyword">string</span>, msg <span class="keyword">string</span>)</span></span> {</span><br><span class="line">    pings &lt;- msg</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x8FD9;&#x91CC;pings&#x53EA;&#x8D1F;&#x8D23;&#x8F93;&#x51FA;&#xFF1B;&#x800C;pongs&#x8D1F;&#x8D23;&#x8F93;&#x5165;</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">pong</span><span class="params">(pings &lt;-<span class="keyword">chan</span> <span class="keyword">string</span>, pongs <span class="keyword">chan</span>&lt;- <span class="keyword">string</span>)</span></span> {</span><br><span class="line">    msg := &lt;-pings</span><br><span class="line">    pongs &lt;- msg</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    pings := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">string</span>, <span class="number">1</span>)</span><br><span class="line">    pongs := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">string</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    ping(pings, <span class="string">&quot;hello world&quot;</span>)</span><br><span class="line">    pong(pings, pongs)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> {</span><br><span class="line">        time.Sleep(time.Second)</span><br><span class="line">        c1 &lt;- <span class="string">&quot;v1&quot;</span></span><br><span class="line">    }()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> {</span><br><span class="line">        time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">        c2 &lt;- <span class="string">&quot;v2&quot;</span></span><br><span class="line">    }()</span><br><span class="line"></span><br><span class="line">    <span class="comment">// select&#x975E;&#x5E38;&#x5F3A;&#x5927;&#xFF0C;&#x591A;&#x8DEF;&#x9009;&#x62E9;</span></span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">2</span>; i++ {</span><br><span class="line">        <span class="keyword">select</span> {</span><br><span class="line">        <span class="keyword">case</span> msg1 := &lt;- c1:</span><br><span class="line">            fmt.Println(<span class="string">&quot;c1: &quot;</span>, msg1)</span><br><span class="line">        <span class="keyword">case</span> msg2 := &lt;- c2:</span><br><span class="line">            fmt.Println(<span class="string">&quot;c2: &quot;</span>, msg2)</span><br><span class="line">        <span class="keyword">case</span> &lt;-time.After(time.Second):</span><br><span class="line">            fmt.Println(<span class="string">&quot;timeout&quot;</span>)</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    jobs := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">5</span>)</span><br><span class="line">    done := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">bool</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> {</span><br><span class="line">        <span class="comment">// if job, more := &lt;-jobs; !more {</span></span><br><span class="line">        <span class="comment">//     fmt.Println(&quot;all jobs done!&quot;)</span></span><br><span class="line">        <span class="comment">//     done &lt;- true</span></span><br><span class="line">        <span class="comment">//     return</span></span><br><span class="line">        <span class="comment">// } else {</span></span><br><span class="line">        <span class="comment">//     fmt.Println(&quot;received job: &quot;, job)</span></span><br><span class="line">        <span class="comment">// }</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// &#x548C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E00;&#x81F4;&#xFF0C;&#x4F7F;&#x7528;range&#x7B80;&#x5316;&#x4E86;&#x903B;&#x8F91;</span></span><br><span class="line">        <span class="keyword">for</span> job := <span class="keyword">range</span> jobs {</span><br><span class="line">            fmt.Println(<span class="string">&quot;received job: &quot;</span>, job)</span><br><span class="line">        }</span><br><span class="line">        done &lt;- <span class="literal">true</span></span><br><span class="line">    }()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">3</span>; i++ {</span><br><span class="line">        jobs &lt;- i</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// close&#x5173;&#x95ED;&#x4E86;&#x901A;&#x9053;&#xFF0C;&#x4F7F;&#x7528;&#x901A;&#x9053;&#x63A5;&#x53D7;&#x6570;&#x636E;&#x7684;&#x534F;&#x7A0B;&#x4F1A;&#x611F;&#x77E5;</span></span><br><span class="line">    <span class="built_in">close</span>(jobs)</span><br><span class="line">    &lt;- done</span><br><span class="line">    fmt.Println(<span class="string">&quot;jobs done&quot;</span>)</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x4F7F;&#x7528;<code>WaitGroup</code>&#x505A;&#x4E3A;&#x540C;&#x6B65;&#x673A;&#x5236;&#xFF0C;&#x63A7;&#x5236;&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#x7684;&#x6267;&#x884C;&#x8BA1;&#x6570;&#xFF1A;</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &#x6CE8;&#x610F;&#x4F7F;&#x7528;WaitGroup&#x9700;&#x8981;&#x4F20;&#x9012;&#x6307;&#x6B63;&#xFF0C;&#x56E0;&#x4E3A;&#x4F1A;&#x4FEE;&#x6539;&#x5176;&#x6570;&#x636E;</span></span><br><span class="line">worker := <span class="function"><span class="keyword">func</span><span class="params">(id <span class="keyword">int</span>, wg *sync.WaitGroup)</span></span> {</span><br><span class="line">    <span class="comment">// defer&#x975E;&#x5E38;&#x7CBE;&#x9AD3;&#xFF0C;&#x4FDD;&#x8BC1;&#x4E00;&#x5B9A;&#x53EF;&#x4EE5;&#x9000;&#x51FA;&#x6267;&#x884C;</span></span><br><span class="line">    <span class="keyword">defer</span> wg.Done()</span><br><span class="line"></span><br><span class="line">    fmt.Printf(<span class="string">&quot;Worker %d starting\n&quot;</span>, id)</span><br><span class="line">    time.Sleep(time.Second)</span><br><span class="line">    fmt.Printf(<span class="string">&quot;Worker %d done\n&quot;</span>, id)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">wg := sync.WaitGroup{}</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">4</span>; i++ {</span><br><span class="line">    wg.Add(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">go</span> worker(i, &amp;wg)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x5230;&#x4E86;&#x8FD9;&#x91CC;&#xFF0C;&#x4E00;&#x5B9A;&#x6267;&#x884C;&#x4E86;4&#x6B21;Add&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x6267;&#x884C;4&#x6B21;&#x7684;Done&#x64CD;&#x4F5C;&#x624D;&#x53EF;&#x4EE5;&#x7ED3;&#x675F;&#x963B;&#x585E;&#x7B49;&#x5F85;</span></span><br><span class="line">wg.Wait()</span><br></pre></td></tr></table></figure>
+<p>&#x4F7F;&#x7528; go &#x7684; channel &#x963B;&#x585E;&#x673A;&#x5236;&#xFF0C;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#x5B9E;&#x73B0;&#x4EE4;&#x724C;&#x6876;&#x9650;&#x6D41;&#x3002;&#x6BCF;&#x9694;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5C31;&#x5F80; channel &#x4E2D;&#x653E;&#x5165;&#x4EE4;&#x724C;&#xFF0C;&#x800C;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x65F6;&#x5019;&#xFF0C;&#x5FC5;&#x987B;&#x6709;&#x4EE4;&#x724C;&#x624D;&#x53EF;&#x4EE5;&#x653E;&#x884C;&#x3002;&#x57FA;&#x4E8E; channel &#x7684; buffer &#x673A;&#x5236;&#xFF0C;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x521D;&#x59CB;&#x7684;&#x4EE4;&#x724C;&#x4E2A;&#x6570;&#xFF1A;</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &#x521D;&#x59CB;&#x4E2A;&#x6570;</span></span><br><span class="line">burstyLimiter := <span class="built_in">make</span>(<span class="keyword">chan</span> time.Time, <span class="number">3</span>)</span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">3</span>; i++ {</span><br><span class="line">    burstyLimiter &lt;- time.Now()</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x6BCF;&#x9694;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x6295;&#x653E;&#x6570;&#x636E;&#x5230;&#x4EE4;&#x724C;&#x6876;&#x4E2D;</span></span><br><span class="line"><span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> {</span><br><span class="line">    <span class="keyword">for</span> t := <span class="keyword">range</span> time.Tick(<span class="number">200</span> * time.Millisecond) {</span><br><span class="line">        burstyLimiter &lt;- t</span><br><span class="line">    }</span><br><span class="line">} ()</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x6295;&#x653E;&#x4EFB;&#x52A1;&#xFF0C;&#x4F7F;&#x7528;close&#x4FBF;&#x4E8E;&#x4F7F;&#x7528;range</span></span><br><span class="line">jobs := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">5</span>; i++ {</span><br><span class="line">    jobs &lt;- i</span><br><span class="line">}</span><br><span class="line"><span class="built_in">close</span>(jobs)</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x7B49;&#x5F85;&#x4EE4;&#x724C;&#x6876;&#x4E2D;&#x6709;&#x6570;&#x636E;&#x624D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x963B;&#x585E;</span></span><br><span class="line"><span class="keyword">for</span> job := <span class="keyword">range</span> jobs {</span><br><span class="line">    t := &lt;- burstyLimiter</span><br><span class="line">    fmt.Printf(<span class="string">&quot;get job %v: %v\n&quot;</span>, job, t)</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>go &#x7684;&#x540C;&#x6B65;&#x54F2;&#x5B66;&#xFF1A;&#x901A;&#x8FC7; channel &#x5171;&#x4EAB;&#x5185;&#x5B58;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x53EA;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x4E2D;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x901A;&#x8FC7; channel &#x8FDB;&#x884C;&#x540C;&#x6B65;&#x3002;</p>
+<p>&#x8003;&#x8651;&#x5E76;&#x53D1;&#x8BFB;&#x5199;&#x8BF7;&#x6C42;&#x4E00;&#x4E2A; map&#xFF0C;&#x6B63;&#x5E38;&#x7684;&#x5B9E;&#x73B0;&#x662F;&#x5728;&#x8BFB;&#x5199;&#x65F6;&#xFF0C;&#x7D66; map &#x52A0;&#x9501;&#x3002;&#x800C; go &#x7684;&#x65B9;&#x5F0F;&#x662F;&#x5C06; map &#x653E;&#x5728;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x534F;&#x7A0B;&#x4E2D;&#xFF0C;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x90FD;&#x53D8;&#x6210;&#x4EFB;&#x52A1;&#x653E;&#x5165;&#x8BF7;&#x6C42;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x5728;&#x72B6;&#x6001;&#x534F;&#x7A0B;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x901A;&#x8FC7;&#x901A;&#x9053;&#x8FD4;&#x56DE;&#x7D66;&#x8BF7;&#x6C42;&#x534F;&#x7A0B;&#x3002;&#x53C2;&#x8003;<a href="https://gobyexample.com/stateful-goroutines" target="_blank" rel="noopener">stateful-goroutines</a></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &#x8BFB;&#x8BF7;&#x6C42;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x9700;&#x8981;&#x900F;&#x4F20;&#x4EA4;&#x4E92;&#x7528;&#x7684;channel</span></span><br><span class="line"><span class="keyword">type</span> readOp <span class="keyword">struct</span> {</span><br><span class="line">    key <span class="keyword">int</span></span><br><span class="line">    resp <span class="keyword">chan</span> <span class="keyword">int</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x5199;&#x8BF7;&#x6C42;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x540C;&#x6837;&#x9700;&#x8981;channal&#x8FDB;&#x884C;&#x4EA4;&#x4E92;</span></span><br><span class="line"><span class="keyword">type</span> writeOp <span class="keyword">struct</span> {</span><br><span class="line">    key <span class="keyword">int</span></span><br><span class="line">    value <span class="keyword">int</span></span><br><span class="line">    resp <span class="keyword">chan</span> <span class="keyword">bool</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x8BFB;&#x5199;&#x7684;&#x8BF7;&#x6C42;&#x961F;&#x5217;&#xFF0C;&#x4E0D;&#x662F;buffer&#x7684;&#x961F;&#x5217;&#x5F88;&#x7CBE;&#x9AD3;&#xFF1A;&#x5982;&#x679C;&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x7684;&#x534F;&#x7A0B;&#x6CA1;&#x6709;&#x5728;&#x7B49;&#x5F85;&#x4EFB;&#x52A1;&#xFF0C;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x5199;&#x5165;&#x7684;</span></span><br><span class="line">reads := <span class="built_in">make</span>(<span class="keyword">chan</span> readOp)</span><br><span class="line">writes := <span class="built_in">make</span>(<span class="keyword">chan</span> writeOp)</span><br><span class="line"></span><br><span class="line"><span class="comment">// go&#x7684;&#x540C;&#x6B65;&#x54F2;&#x5B66;&#xFF1A;&#x6570;&#x636E;&#x53EA;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x4E2D;&#x7BA1;&#x7406;&#x3002;&#x901A;&#x8FC7;channel&#x8FDB;&#x884C;&#x901A;&#x4FE1;</span></span><br><span class="line"><span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> {</span><br><span class="line">    m := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">int</span>]<span class="keyword">int</span>)</span><br><span class="line">    <span class="keyword">for</span> {</span><br><span class="line">        <span class="comment">// &#x53EF;&#x5B9E;&#x73B0;&#x5168;&#x5C40;mutex&#x529F;&#x80FD;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x53EF;&#x8FDB;&#x5165;&#x8BFB;&#x6216;&#x8005;&#x5199;&#x7684;&#x72B6;&#x6001;</span></span><br><span class="line">        <span class="comment">// &#x5982;&#x679C;&#x63A5;&#x53D7;&#x5230;&#x4E00;&#x4E2A;&#x8BFB;&#x5199;&#x8BF7;&#x6C42;&#xFF0C;&#x8BFB;&#x5199;&#x7684;&#x7B49;&#x5F85;&#x90FD;&#x6D88;&#x9664;&#x8FDB;&#x884C;case&#x7684;&#x5904;&#x7406;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&#x65B0;&#x7684;&#x8BFB;&#x5199;&#x8BF7;&#x6C42;&#x8FDB;&#x4E0D;&#x6765;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x7B49;&#x5F85;&#x5C31;&#x6CA1;&#x6709;&#x5199;&#x5165;&#x3002;</span></span><br><span class="line">        <span class="keyword">select</span> {</span><br><span class="line">        <span class="keyword">case</span> read := &lt;-reads:</span><br><span class="line">            read.resp &lt;- m[read.key]</span><br><span class="line">        <span class="keyword">case</span> write := &lt;-writes:</span><br><span class="line">            m[write.key] = m[write.value]</span><br><span class="line">            write.resp &lt;- <span class="literal">true</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}()</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> readCnt, writeCnt <span class="keyword">uint64</span></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">100</span>; i++ {</span><br><span class="line">    <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> {</span><br><span class="line">        readResp := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>)</span><br><span class="line">        <span class="keyword">for</span> {</span><br><span class="line">            reads &lt;- readOp{ key: rand.Intn(<span class="number">5</span>), resp: readResp }</span><br><span class="line">            &lt;- readResp</span><br><span class="line">            atomic.AddUint64(&amp;readCnt, <span class="number">1</span>)</span><br><span class="line">            time.Sleep(time.Millisecond)</span><br><span class="line">        }</span><br><span class="line">    }()</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">10</span>; i++ {</span><br><span class="line">    <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> {</span><br><span class="line">        writeResp := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">bool</span>)</span><br><span class="line">        <span class="keyword">for</span> {</span><br><span class="line">            writes &lt;- writeOp{key: rand.Intn(<span class="number">5</span>), value: rand.Intn(<span class="number">100</span>), resp: writeResp}</span><br><span class="line">            &lt;- writeResp</span><br><span class="line">            atomic.AddUint64(&amp;writeCnt, <span class="number">1</span>)</span><br><span class="line">            time.Sleep(time.Millisecond)</span><br><span class="line">        }</span><br><span class="line">    }()</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">time.Sleep(time.Second)</span><br><span class="line">fmt.Println(<span class="string">&quot;readCnts: &quot;</span>, atomic.LoadUint64(&amp;readCnt))</span><br><span class="line">fmt.Println(<span class="string">&quot;writeCnts: &quot;</span>, atomic.LoadUint64(&amp;writeCnt))</span><br></pre></td></tr></table></figure>
+<h2 id="module-and-package">module-and-package</h2>
+<p>&#x53C2;&#x8003;<a href="https://golang.org/doc/code.html" target="_blank" rel="noopener">how-to-write-go-code</a></p>
+<p>go &#x4EE3;&#x7801;&#x7684;&#x7EC4;&#x7EC7;&#x5173;&#x7CFB;&#x6309;&#x7167;&#xFF1A;repo --&gt; module --&gt; package &#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x7EC4;&#x7EC7;&#x7BA1;&#x7406;&#x3002;&#x5728;&#x4EE3;&#x7801;&#x7684; repo &#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x9700;&#x8981;&#x914D;&#x7F6E;<code>go.mod</code>&#xFF0C;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x5E93;&#x7684;&#x524D;&#x7F00;&#xFF1A;</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">module github.com/whiledong/test</span><br></pre></td></tr></table></figure>
+<p>&#x8FD9;&#x6837;&#x5B50;&#xFF0C;&#x7B49;&#x4E8E;&#x5728;&#x8BE5; repo &#x4E2D;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x6709;&#x8FD9;&#x4E2A;&#x5168;&#x5C40;&#x7684;&#x524D;&#x7F00;&#x9650;&#x5B9A;&#x7B26;&#x3002;&#x5728; repo &#x4E2D;&#x5EFA;&#x7ACB;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x6216;&#x8005;&#x5B50;&#x76EE;&#x5F55;&#xFF0C;&#x90FD;&#x662F;&#x5728;&#x8BE5; module &#x524D;&#x7F00;&#x540E;&#x6269;&#x5C55;&#x3002;go &#x7684;&#x76EE;&#x5F55;&#x540D;&#x79F0;&#x8981;&#x548C; package &#x7684;&#x540D;&#x79F0;&#x4E00;&#x81F4;&#x3002;import &#x4EE3;&#x7801;&#x7684;&#x7EA7;&#x522B;&#x662F; package&#xFF0C;&#x800C;&#x9879;&#x76EE;&#x8F93;&#x51FA;&#x7684;&#x7EA7;&#x522B;&#x662F; module&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;<code>go install</code>&#x547D;&#x4EE4;&#xFF0C;&#x5B89;&#x88C5;&#x7684;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x653E;&#x5728;<code>$GOPATH/bin/test</code>&#x4E2D;&#xFF0C;&#x7B49;&#x4E8E; module &#x9650;&#x5B9A;&#x7B26;&#x7684;&#x6700;&#x540E;&#x4E00;&#x90E8;&#x5206;&#x5C31;&#x662F;&#x7A0B;&#x5E8F;&#x7EA7;&#x522B;&#x7684;&#x8F93;&#x51FA;&#x540D;&#x5B57;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E; go &#x800C;&#x8A00;&#xFF0C;package &#x7684;&#x540D;&#x79F0;&#x548C; package &#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x540D;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#xFF0C;&#x9664;&#x4E86;&#x662F; main &#x7684; package&#xFF0C;&#x522B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x6700;&#x597D;&#x8981;&#x4E00;&#x81F4;&#xFF1A;</p>
+<ul>
+<li>go &#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#x540D;&#x8FDB;&#x884C; import &#x7684;&#x5BFC;&#x5165;</li>
+<li>&#x5BFC;&#x5165;&#x540E;&#xFF0C;&#x4F7F;&#x7528;&#x5BF9;&#x5E94;&#x8DEF;&#x5F84;&#x4E0B;&#x7684; package &#x540D;&#x79F0;&#x505A;&#x4E3A;&#x5BFC;&#x5165;&#x7684;&#x5305;&#x524D;&#x7F00;</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x5BFC;&#x5165;&#x7684;&#x8DEF;&#x5F84;&#x540D;&#x79F0;&#x548C;&#x4F7F;&#x7528;&#x7684;&#x5305;&#x540D;&#x79F0;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x6BD4;&#x8F83;&#x5947;&#x602A;&#x3002;<a href="https://medium.com/rungo/everything-you-need-to-know-about-packages-in-go-b8bac62b74cc" target="_blank" rel="noopener">everything-you-need-to-know-about-packages-in-go</a></p>
+<h2 id="misc">misc</h2>
+<h3 id="slices-of-interfaces">slices-of-interfaces</h3>
+<p>go &#x4E2D;&#x4E3A;&#x4EC0;&#x4E48;&#xFF0C;<code>[]T</code>&#x7684; slice &#x4E0D;&#x53EF;&#x4EE5;&#x5F3A;&#x8F6C;&#x6362;&#x4E3A;<code>[]interface{}</code>&#xFF1A;&#x56E0;&#x4E3A;<code>interface{}</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5305;&#x542B; 2 &#x4E2A;&#x4FE1;&#x606F;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x6570;&#x636E;&#x672C;&#x8EAB;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5177;&#x4F53;&#x7684;&#x7C7B;&#x578B;&#xFF08;&#x8FD9;&#x6837;&#x5B50;&#x624D;&#x6709;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x53CD;&#x5C04;&#x548C;&#x52A8;&#x6001;&#x7C7B;&#x578B;&#x89E3;&#x6790;&#xFF09;&#x3002;&#x4F46;&#x666E;&#x901A;&#x7C7B;&#x578B;<code>T</code>&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x52A8;&#x6001;&#x7C7B;&#x578B;&#x89E3;&#x6790;&#x7684;&#xFF0C;&#x5176;&#x7C7B;&#x578B;&#x53EA;&#x5B58;&#x5728;&#x4E8E;&#x7F16;&#x8BD1;&#x671F;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5728; go &#x4E2D;&#x5982;&#x679C;&#x8FD9;&#x6837;&#x5B50;&#x8F6C;&#x6362;&#xFF0C;&#x9700;&#x8981;<code>O(n)</code>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF0C;&#x800C;&#x5728; go &#x7684;&#x8BBE;&#x8BA1;&#x54F2;&#x5B66;&#x4E2D;&#xFF0C;<strong>&#x8BED;&#x6CD5;&#x662F;&#x4E0D;&#x80FD;&#x591F;&#x9690;&#x85CF;&#x590D;&#x6742;&#x5EA6;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5B9E;&#x73B0;&#xFF0C;&#x5229;&#x7528;&#x53CD;&#x5C04;&#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#xFF1A;</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">InterfaceSlice</span><span class="params">(slice <span class="keyword">interface</span>{})</span> []<span class="title">interface</span></span>{} {</span><br><span class="line">    s := reflect.ValueOf(slice)</span><br><span class="line">    <span class="keyword">if</span> s.Kind() != reflect.Slice {</span><br><span class="line">        <span class="built_in">panic</span>(<span class="string">&quot;InterfaceSlice() given a non-slice type&quot;</span>)</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    ret := <span class="built_in">make</span>([]<span class="keyword">interface</span>{}, s.Len())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i:=<span class="number">0</span>; i&lt;s.Len(); i++ {</span><br><span class="line">        ret[i] = s.Index(i).Interface()</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ret</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<ul>
+<li>&#x5177;&#x4F53;&#x53C2;&#x8003; stackoverflow &#x7684;&#x56DE;&#x7B54;<a href="https://stackoverflow.com/questions/12753805/type-converting-slices-of-interfaces" target="_blank" rel="noopener">type-converting-slices-of-interfaces</a></li>
+<li>golang &#x5B98;&#x65B9;&#x7684;&#x8BF4;&#x660E;<a href="https://github.com/golang/go/wiki/InterfaceSlice" target="_blank" rel="noopener">go-wiki-interface-slice</a></li>
+<li>&#x975E;&#x5E38;&#x597D;&#x7684;&#x4ECB;&#x7ECD; interface &#x7684;&#x7591;&#x70B9;<a href="https://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go" target="_blank" rel="noopener">how-to-use-interfaces-in-go</a></li>
+</ul>
+<h3 id="formatting">formatting</h3>
+<p>go &#x4E2D;&#x51E0;&#x4E2A;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x548C;&#x522B;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E0D;&#x592A;&#x4E00;&#x6837;&#x7684;&#x683C;&#x5F0F;&#x63A7;&#x5236;&#x7B26;&#xFF1A;</p>
+<ul>
+<li><code>%v</code>&#xFF1A;&#x6253;&#x5370; go &#x7C7B;&#x578B;&#x7684;&#x57FA;&#x672C;&#x8868;&#x793A;&#x3002;</li>
+<li><code>%+v</code>&#xFF1A;&#x6253;&#x5370; struct &#x65F6;&#xFF0C;&#x52A0;&#x5165; filed &#x540D;&#x79F0;&#x3002;</li>
+<li><code>%#v</code>&#xFF1A;&#x6253;&#x5370; struct &#x65F6;&#xFF0C;&#x540C;&#x65F6;&#x52A0;&#x5165; struct &#x7684;&#x540D;&#x79F0;&#x548C; filed &#x540D;&#x79F0;&#x3002;</li>
+<li><code>%T</code>&#xFF1A;&#x6253;&#x5370;&#x7C7B;&#x578B;</li>
+</ul>
+
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>whiledoing</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://whiledoing.me/2020/03/21/prog/learn-go-lang/" title="learn-go-lang">http://whiledoing.me/2020/03/21/prog/learn-go-lang/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/go/" rel="tag"># go</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/01/prog/book-thinking-in-java/" rel="next" title="《Java编程思想》读书笔记">
+                <i class="fa fa-chevron-left"></i> 《Java编程思想》读书笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="whiledoing" />
+            
+              <p class="site-author-name" itemprop="name">whiledoing</p>
+              <p class="site-description motion-element" itemprop="description">喜欢一切简单且美的事物，包括人。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">63</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/whiledoing" target="_blank" title="GitHub">GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.douban.com/people/58249409" target="_blank" title="豆瓣">豆瓣</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/whiledoing" target="_blank" title="知乎">知乎</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#go-by-example"><span class="nav-number">1.</span> <span class="nav-text">go-by-example</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#switch"><span class="nav-number">1.1.</span> <span class="nav-text">switch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slice"><span class="nav-number">1.2.</span> <span class="nav-text">slice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#range"><span class="nav-number">1.3.</span> <span class="nav-text">range</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#error"><span class="nav-number">1.4.</span> <span class="nav-text">error</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#channel"><span class="nav-number">1.5.</span> <span class="nav-text">channel</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#module-and-package"><span class="nav-number">2.</span> <span class="nav-text">module-and-package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#misc"><span class="nav-number">3.</span> <span class="nav-text">misc</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#slices-of-interfaces"><span class="nav-number">3.1.</span> <span class="nav-text">slices-of-interfaces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#formatting"><span class="nav-number">3.2.</span> <span class="nav-text">formatting</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">whiledoing</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.4.2"></script>
+
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+</body>
+</html>
